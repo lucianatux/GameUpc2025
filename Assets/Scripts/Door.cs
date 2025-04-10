@@ -2,23 +2,38 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public string requiredKeyID;
+    [SerializeField] private string requiredKeyID;
+    [SerializeField] private GameObject doorVisual;
+    private Collider2D physicalCollider;
+    private bool isOpen = false;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Awake()
     {
-        if (other.CompareTag("Player"))
+        physicalCollider = GetComponent<Collider2D>();
+    }
+
+    public void TryOpen(PlayerInventory inventory)
+    {
+        if (isOpen) return;
+
+        if (!inventory.HasKey(requiredKeyID))
         {
-            PlayerKeys playerKeys = other.GetComponent<PlayerKeys>();
-            if (playerKeys != null && playerKeys.HasKey(requiredKeyID))
-            {
-                OpenDoor();
-            }
+            Debug.Log("¡No tenés la llave para esta puerta!");
+            return;
         }
+
+        OpenDoor();
     }
 
     private void OpenDoor()
     {
         Debug.Log("Puerta abierta con llave: " + requiredKeyID);
-        gameObject.SetActive(false); // o animación, sonido, etc.
+        isOpen = true;
+
+        if (doorVisual != null)
+            doorVisual.SetActive(false);
+
+        if (physicalCollider != null)
+            physicalCollider.enabled = false;
     }
 }
