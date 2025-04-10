@@ -5,9 +5,19 @@ namespace StatePattern
 public class WanderState : IEnemyState
 {
     private EnemyAI enemyAI;
+<<<<<<< Updated upstream
     private float wanderTimeMin = 2;
     private float wanderTimeMax = 5;
     private float wanderDistance = 4;
+=======
+
+    private float wanderTimeMin = 2;
+
+    private float wanderTimeMax = 5;
+
+    private float wanderDistance = 4;
+    
+>>>>>>> Stashed changes
     private float followRange;
 
     public WanderState(float _followRange)
