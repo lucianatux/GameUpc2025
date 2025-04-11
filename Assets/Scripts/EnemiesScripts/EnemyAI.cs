@@ -6,7 +6,7 @@ namespace StatePattern
 private IEnemyState currentState;
 
 #region Estados del Enemigo
-[HideInInspector] public WanderState enemyWanderState;
+[HideInInspector] public WaitingState enemyWaitingState;
 [HideInInspector] public AttackState enemyAttackState;
 [HideInInspector] public ChaseState enemyChaseState;
 #endregion
@@ -88,6 +88,10 @@ private bool isStunned = false;
 [Tooltip("Duración del aturdimiento tras recibir daño.")]
 
 [SerializeField] private float stunDuration = 0.5f;
+[SerializeField] private int waveID;
+
+[SerializeField] private int roomID;
+
 
 [SerializeField] GameObject player;
        private void InitializeStates()
@@ -96,8 +100,8 @@ private bool isStunned = false;
             playerTransform = player.transform;
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
             enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab);
-            enemyWanderState = new WanderState(followRange);
-            SetState(enemyWanderState);
+            enemyWaitingState = new WaitingState(roomID, waveID);
+            SetState(enemyWaitingState);
         }
 
         public float GetDistanceToPlayer()

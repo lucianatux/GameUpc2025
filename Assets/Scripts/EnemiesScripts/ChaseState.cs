@@ -37,7 +37,7 @@ public class ChaseState : IEnemyState
         }
         else if (distToPlayer > followRange)
         {
-            enemyAI.SetState(enemyAI.enemyWanderState);
+            enemyAI.SetState(enemyAI.enemyWaitingState);
         }
         else if (distToPlayer <= attackRange)
         {
@@ -49,7 +49,6 @@ public class ChaseState : IEnemyState
     {
         enemyAI.MoveTowards(playerTransform.position);
         //enemyAI.LookAt(playerTransform.position);
-
     }
     
 
