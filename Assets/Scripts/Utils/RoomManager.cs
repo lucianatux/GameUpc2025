@@ -8,9 +8,6 @@ public class RoomManager : MonoBehaviour
     public static RoomManager Instance => _instance;
     private static RoomManager _instance;
 
-    private int _currentRoomID;
-    public int CurrentRoomID => _currentRoomID;
-
     public event Action<int> OnRoomEntered;
 
     private void Awake()
@@ -26,7 +23,6 @@ public class RoomManager : MonoBehaviour
 
     public void SetCurrentRoom(int roomID)
     {
-        _currentRoomID = roomID; // dato a enviar 
         Debug.Log("Jugador entró a la room " + roomID);
         OnRoomEntered?.Invoke(roomID); // Evento para que lo escuchen, envia room ID
     }

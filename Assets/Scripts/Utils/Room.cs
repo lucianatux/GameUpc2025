@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Room Settings")]
 
-    // Update is called once per frame
-    void Update()
+    [Tooltip("ID único para esta habitación.")]
+    
+    [SerializeField] private int roomID;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+                RoomManager.Instance.SetCurrentRoom(roomID);
+        }
     }
 }
