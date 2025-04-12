@@ -13,8 +13,8 @@ public class Room : MonoBehaviour
     [Min(0)]
 
     [Header("Cantidad de Waves")]
-    [Tooltip("Número total de oleadas en el nivel")][SerializeField, InspectorName("Oleadas Totales")]
-    public int waveCount;
+    [Tooltip("Número total de oleadas en el nivel")]
+        public int waveCount;
     [Tooltip("Cantidad de enemigos en cada oleada")]
     public List<int> enemyCount = new List<int>();
 

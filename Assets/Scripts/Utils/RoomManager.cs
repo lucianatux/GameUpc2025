@@ -33,7 +33,7 @@ public class RoomManager : MonoBehaviour
     }
      private void Start()
     {
-        StartWave(currentWave);
+        CallEnemies(currentWave);
     }  
 /*
         void StartWave(int waveIndex)
