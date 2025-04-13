@@ -50,7 +50,7 @@ public class Room : MonoBehaviour
     {
         Debug.Log("El jugador SALIÓ del cuarto: " + name);
         // Podés notificar al RoomManager si querés
-        RoomManager.Instance.SetCurrentRoom(null);
+        RoomManager.Instance.OnPlayerLeftRoom(this);
     }
     }
 

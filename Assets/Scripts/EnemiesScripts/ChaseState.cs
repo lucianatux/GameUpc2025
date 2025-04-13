@@ -22,8 +22,6 @@ public class ChaseState : IEnemyState
     {
         Debug.Log("Cambia a estado chase");
         enemyAI = _enemyAI;
-        
-
     }
 
     public void UpdateState()

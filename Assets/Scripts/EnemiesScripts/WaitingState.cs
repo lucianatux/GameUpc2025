@@ -6,36 +6,49 @@ public class WaitingState : IEnemyState
 {
     private EnemyAI enemyAI;
     
-    private int roomID; 
+    private int enemyRoomID; 
 
-    private int waveID;
+    private int enemyWaveID;
 
     private int currentWave;
-    public WaitingState(int _roomID, int _waveID)
+
+    private bool isActive;
+
+    private int enemyCount;
+
+    public WaitingState(int _enemyRoomID, int _enemyWaveID, bool _isActive)
     {
-        roomID = _roomID;
-        waveID = _waveID;
+        enemyRoomID = _enemyRoomID;
+        enemyWaveID = _enemyWaveID;
+        isActive = _isActive;
     }
     
     public void EnterState(EnemyAI _enemyAI)
     {
-        Debug.Log("Cambia a estado wander");
-        // GameManager.Instance.OnEnterEvent += StartEnemyWaves;
+        Debug.Log("estado waiting");
+        RoomManager.Instance.OnRoomEntered += WakeUp;
+        RoomManager.Instance.OnCallWaves += SpawnWaves;
         enemyAI = _enemyAI;
     }
 
-    private void StartEnemyWaves(int room)
+    private void WakeUp(int room)
     {
-        if (room != roomID) return;
-        currentWave = 1;        
-        WakeUp(currentWave);
+        if (room != enemyRoomID) return;
+        SpawnWaves(1);
+        RoomManager.Instance.OnRoomEntered -= WakeUp;
+
     }
-    private void WakeUp(int waveNumber)
+    private void SpawnWaves(int waveNumber)
     {
-            if (waveNumber != waveID) return;
-            // starCoroutine, donde paase el tiempo de la animacion de despertarse/activarse
-            enemyAI.Attention();
-            enemyAI.SetState(enemyAI.enemyChaseState);        
+        if (waveNumber != enemyWaveID) return;
+
+        // starCoroutine, donde paase el tiempo de la animacion de despertarse/activarse
+        enemyAI.Attention();
+                enemyAI.isActive = true;
+
+        RoomManager.Instance.enemyCount++;
+        RoomManager.Instance.OnCallWaves -= SpawnWaves;
+        enemyAI.SetState(enemyAI.enemyChaseState);        
     }
     
     public void UpdateState()

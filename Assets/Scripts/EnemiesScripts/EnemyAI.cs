@@ -88,10 +88,11 @@ private bool isStunned = false;
 [Tooltip("Duración del aturdimiento tras recibir daño.")]
 
 [SerializeField] private float stunDuration = 0.5f;
-[SerializeField] private int waveID;
+[SerializeField] private int enemyWaveID;
 
-[SerializeField] private int roomID;
+[SerializeField] private int enemyRoomID;
 
+public bool isActive;
 
 [SerializeField] GameObject player;
        private void InitializeStates()
@@ -100,10 +101,11 @@ private bool isStunned = false;
             playerTransform = player.transform;
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
             enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab);
-            enemyWaitingState = new WaitingState(roomID, waveID);
+            enemyWaitingState = new WaitingState(enemyRoomID, enemyWaveID, isActive);
+            isActive = false;
             SetState(enemyWaitingState);
         }
-
+        
         public float GetDistanceToPlayer()
         {
             return Vector2.Distance(transform.position, playerTransform.position);
@@ -159,11 +161,14 @@ public void MoveTowards(Vector2 destination, float speedMultiplier = 1)
         }
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K)) 
+            if (isActive && Input.GetKeyDown(KeyCode.K)) 
             {
                 EnemyTakeDamage();
+                Die();
             }  
             currentState.UpdateState();
+
+            
         }
 
         public void SetState(IEnemyState iEnemyState)
@@ -226,6 +231,15 @@ public void EnemyTakeDamage()
         GameObject attention = Object.Instantiate(attentionPrefab, transform.position,  Quaternion.Euler(0, 0, 0));
         GameObject.Destroy (attention, 2);
         }
+    }
+
+    public void Die()
+    {   
+        Debug.Log("se muere");
+        isActive = false;
+        RoomManager.Instance.NotifyEnemyDeath(); // le avisás al RoomManager
+        gameObject.SetActive(false);
+        // También podés lanzar un evento si querés avisarle al RoomManager
     }
 
 }

@@ -15,13 +15,15 @@ public class RoomManager : MonoBehaviour
 
     public event Action<int> OnRoomEntered;
 
-    public static event Action<int> OnCallEnemies;
-
+    public event Action<int> OnCallWaves;
 
     public Room room;
 
     private int currentWave = 0;
     
+    public int enemyCount; 
+
+    public int currentEnemies;
     private void Awake()
     {
         if (Instance == null)
@@ -29,7 +31,6 @@ public class RoomManager : MonoBehaviour
             _instance = this; // si no hay una instancia, que la cree
             return;
         }
-
         Destroy(gameObject); // si hay una instancia, que la destruya
     }
 
@@ -58,28 +59,44 @@ public class RoomManager : MonoBehaviour
             return;
         }
 
-        OnCallEnemies?.Invoke(currentWave); // envia informacion de la wave actual
+        OnCallWaves?.Invoke(currentWave); // envia informacion de la wave actual
     }
     public void SetCurrentRoom(Room newRoom)
     {
-        
         currentRoom = newRoom; // dato a enviar 
-        if (currentRoom == null) return;
+
+        if (currentRoom == null) return; // si no estas referenciando a un cuarto, te vas
+
+        currentWave = 1; //la wave seria la primera
         Debug.Log("Jugador entró a la room " + newRoom.roomID);
-        Debug.Log("Tiene " + newRoom.waveCount + " oleadas ");
+        Debug.Log("Oleada nro " + currentWave );
         OnRoomEntered?.Invoke(newRoom.roomID); // Evento para que lo escuchen, envia
+        currentEnemies = enemyCount;
+
     }
     public void OnPlayerLeftRoom(Room room)
 {
     if (currentRoom == room)
     {
+        
         currentRoom = null;
         Debug.Log("Room actual vaciado porque el jugador salió.");
     }
 }
-    private void UpdateWaves()
+    
+    public void NotifyEnemyDeath()
+    {   
+        currentEnemies--;
+        if (currentEnemies <= 0)
+        {
+            Debug.Log("Todos los enemigos murieron, pasar a siguiente wave");
+            currentWave ++;
+            OnCallWaves?.Invoke(currentWave); // envia informacion de la wave actual 
+        }
+    }
+    private void EnemyDeath()
     {
-        currentWave ++;
+        
     }
 
 
