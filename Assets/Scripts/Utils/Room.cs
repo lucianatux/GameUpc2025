@@ -8,13 +8,13 @@ public class Room : MonoBehaviour
 
     [Tooltip("ID único para esta habitación.")]
     
-    [SerializeField] private int roomID;
-
+    [SerializeField] public int roomID;
+    public int waveCount;
+/*
     [Min(0)]
 
     [Header("Cantidad de Waves")]
     [Tooltip("Número total de oleadas en el nivel")]
-        public int waveCount;
     [Tooltip("Cantidad de enemigos en cada oleada")]
     public List<int> enemyCount = new List<int>();
 
@@ -33,12 +33,14 @@ public class Room : MonoBehaviour
             enemyCount.RemoveRange(waveCount, enemyCount.Count - waveCount);
         }
     }
-
+*/
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-                RoomManager.Instance.SetCurrentRoom(roomID);
+                RoomManager.Instance.SetCurrentRoom(this);
+                Debug.Log("se envia la info a room manager del room " + roomID);
                 // RoomManager.Instance.S
         }
     }

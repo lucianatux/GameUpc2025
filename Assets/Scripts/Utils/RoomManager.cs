@@ -11,6 +11,8 @@ public class RoomManager : MonoBehaviour
     private int _currentRoomID;
     public int CurrentRoomID => _currentRoomID;
 
+    public Room currentRoom;
+
     public event Action<int> OnRoomEntered;
 
     public static event Action<int> OnCallEnemies;
@@ -31,10 +33,7 @@ public class RoomManager : MonoBehaviour
 
         Destroy(gameObject); // si hay una instancia, que la destruya
     }
-     private void Start()
-    {
-        CallEnemies(currentWave);
-    }  
+
 /*
         void StartWave(int waveIndex)
     {
@@ -53,23 +52,27 @@ public class RoomManager : MonoBehaviour
     */
      void CallEnemies(int waveIndex)
     {
-        if (waveIndex >= room.waveCount)
+        if (currentRoom == null) return;
+        if (waveIndex >= currentRoom.waveCount)
         {
             Debug.Log("🎉 Todas las oleadas completas");
             return;
         }
-
-        int enemyCount = room.enemyCount[waveIndex];
-        remainingEnemies = enemyCount; // los remaining enemies se reinician
-
-        Debug.Log($"▶️ Llamando a wave {waveIndex + 1} con {enemyCount} enemigos");
-
-        OnCallEnemies?.Invoke(waveIndex); // envia informacion de la wave actual
+        
+        OnCallEnemies?.Invoke(currentWave); // envia informacion de la wave actual
     }
-    public void SetCurrentRoom(int roomID)
+    public void SetCurrentRoom(Room newRoom)
     {
-        _currentRoomID = roomID; // dato a enviar 
-        Debug.Log("Jugador entró a la room " + roomID);
-        OnRoomEntered?.Invoke(roomID); // Evento para que lo escuchen, envia
+        currentRoom = newRoom; // dato a enviar 
+        Debug.Log("Jugador entró a la room " + newRoom.roomID);
+        Debug.Log("Tiene " + newRoom.waveCount + " oleadas ");
+        OnRoomEntered?.Invoke(newRoom.roomID); // Evento para que lo escuchen, envia
     }
+
+    private void UpdateWaves()
+    {
+        currentWave ++;
+    }
+
+
 }
