@@ -21,8 +21,7 @@ public class RoomManager : MonoBehaviour
     public Room room;
 
     private int currentWave = 0;
-    private int remainingEnemies = 0;
-
+    
     private void Awake()
     {
         if (Instance == null)
@@ -53,22 +52,31 @@ public class RoomManager : MonoBehaviour
      void CallEnemies(int waveIndex)
     {
         if (currentRoom == null) return;
-        if (waveIndex >= currentRoom.waveCount)
+        if (currentWave >= currentRoom.waveCount)
         {
             Debug.Log("🎉 Todas las oleadas completas");
             return;
         }
-        
+
         OnCallEnemies?.Invoke(currentWave); // envia informacion de la wave actual
     }
     public void SetCurrentRoom(Room newRoom)
     {
+        
         currentRoom = newRoom; // dato a enviar 
+        if (currentRoom == null) return;
         Debug.Log("Jugador entró a la room " + newRoom.roomID);
         Debug.Log("Tiene " + newRoom.waveCount + " oleadas ");
         OnRoomEntered?.Invoke(newRoom.roomID); // Evento para que lo escuchen, envia
     }
-
+    public void OnPlayerLeftRoom(Room room)
+{
+    if (currentRoom == room)
+    {
+        currentRoom = null;
+        Debug.Log("Room actual vaciado porque el jugador salió.");
+    }
+}
     private void UpdateWaves()
     {
         currentWave ++;
