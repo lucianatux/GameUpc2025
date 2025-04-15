@@ -12,6 +12,7 @@ public class GeyserBehaviour : MonoBehaviour
     public GameObject geyseroneHit;
     public GameObject geysertwoHits;
     public GameObject geyserHits;
+
         
     void Start()
     {
@@ -42,12 +43,10 @@ public class GeyserBehaviour : MonoBehaviour
         if (currentHits == 2) 
         {
             geyseroneHit.SetActive(false);
-            geysertwoHits.SetActive(true); // Mostrar el VFX
+            StartCoroutine(Eruption());
         }
         if(currentHits == 3) 
         {
-            geysertwoHits.SetActive(false); // Mostrar el VFX
-            StartCoroutine(Eruption());
         }
 
     }
@@ -55,10 +54,12 @@ public class GeyserBehaviour : MonoBehaviour
     IEnumerator Eruption()
     {
         Debug.Log("¡Comienza la erupción!");
+        geysertwoHits.SetActive(true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(eruptionDuration);
+        geysertwoHits.SetActive(false);
+
         currentHits = 0;
         Debug.Log("¡Erupción terminada!");
-
     }
 }
