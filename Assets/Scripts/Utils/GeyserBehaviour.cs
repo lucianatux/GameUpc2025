@@ -11,25 +11,55 @@ public class GeyserBehaviour : MonoBehaviour
     public GameObject geyserzeroHits;
     public GameObject geyseroneHit;
     public GameObject geysertwoHits;
-    public GameObject geyserHits;
+    private bool isCharged;
+    [SerializeField] private Animator animator;
+    private bool eruptionEnded;
+    [SerializeField] float chargingRange;
 
-        
+
+
+
     void Start()
     {
         currentHits = 0;
+        eruptionEnded = false;
+        isCharged = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateDamage();
-        if (Input.GetKeyDown(KeyCode.K))
+        ChargeGeyser();
+        if (isCharged && Input.GetKeyDown(KeyCode.K))
         {
             currentHits ++;
+            animator.SetInteger("currentHits", currentHits);
+
         }
     }
 
-    private void UpdateDamage()
+
+    private void ChargeGeyser()
+    {
+        float chargingCooldown = Random.Range(5, chargingRange);
+        float chargingTimer = chargingCooldown;
+        chargingRange -= Time.deltaTime;
+        Debug.Log("cargadando");
+
+        if (chargingRange <= 0)
+        {
+            animator.SetBool("isCharged", isCharged);
+
+            Debug.Log("cargada");
+            isCharged = true;
+        }
+
+
+
+    }
+private void UpdateDamage()
     {
         if (currentHits == 0)
         {
@@ -45,9 +75,6 @@ public class GeyserBehaviour : MonoBehaviour
             geyseroneHit.SetActive(false);
             StartCoroutine(Eruption());
         }
-        if(currentHits == 3) 
-        {
-        }
 
     }
 
@@ -58,6 +85,8 @@ public class GeyserBehaviour : MonoBehaviour
 
         yield return new WaitForSeconds(eruptionDuration);
         geysertwoHits.SetActive(false);
+        eruptionEnded = true;
+        animator.SetBool("eruptionEnded", eruptionEnded);
 
         currentHits = 0;
         Debug.Log("¡Erupción terminada!");
