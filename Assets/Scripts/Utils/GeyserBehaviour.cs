@@ -10,6 +10,7 @@ public class GeyserBehaviour : MonoBehaviour
     [SerializeField] private float eruptionDuration;
     public GameObject geyserzeroHits;
     public GameObject geyseroneHit;
+        public GameObject geysernotCharged;
     public GameObject geysertwoHits;
     private bool isCharged;
     [SerializeField] private Animator animator;
@@ -54,6 +55,7 @@ public class GeyserBehaviour : MonoBehaviour
 
             Debug.Log("cargada");
             isCharged = true;
+            UpdateDamage();
         }
 
 
@@ -61,9 +63,15 @@ public class GeyserBehaviour : MonoBehaviour
     }
 private void UpdateDamage()
     {
-        if (currentHits == 0)
+        if (currentHits == 0 && isCharged == true)
         {
             geyserzeroHits.SetActive(true);
+            geysernotCharged.SetActive(false);
+        }
+        if (currentHits == 0 && isCharged == false)
+        {
+            geysernotCharged.SetActive(true);
+            geyserzeroHits.SetActive(false);
         }
         if (currentHits == 1) 
         {
