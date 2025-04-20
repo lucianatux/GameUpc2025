@@ -1,0 +1,2226 @@
+fileFormatVersion: 2
+guid: efb8121ad37166844ad7d707be3649f7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tileset_bowel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3809d18417a8394389babfa82316d5d
+      internalID: -797205289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10734fd4077c834cbd692900f0f6265
+      internalID: -1606193270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c93cfabe468b04084124c9dce795dc
+      internalID: -1219777792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfe7526b2b096549856cfd4d2e12e57
+      internalID: 2077999413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c5c45c6f6e3ef949a9a54ca74a314c6
+      internalID: -2033006988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_5
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61207ea2ef1674e4a85b8420baab415d
+      internalID: 1049505097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_6
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff172cfe32c1e4343a7125c137592115
+      internalID: 28939748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d1460f4eac73845b988c1826eb2913
+      internalID: -682572443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_8
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb03261b461c33c45bbdddbd9ca17154
+      internalID: -120319189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_9
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb31202f8f169e0419e8390445eb2db9
+      internalID: -230383210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_10
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf274330e40bb244aa2ae086ea0c2531
+      internalID: 853846661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_11
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b861d41b8f56240bb4ad2d15806ee7
+      internalID: -1143182868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_12
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec1a03adfd94dd4f88afb7193badde0
+      internalID: 380889085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_13
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e830347daeb290f45a4372192f79a048
+      internalID: 1526578823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_14
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb601102287b2b0458f88368c32ebd1d
+      internalID: 843901227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_15
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac7e85d80bb6bb46ac05c46354d41dd
+      internalID: 1203402035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397dc32fa5cc5ed4688c84a70a9d2cab
+      internalID: -1969353053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c25eaa8fdc84b47a98f04b01ac14fc
+      internalID: 754731001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_18
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f141772e46d27884f819ee8886bf0ab6
+      internalID: -917178020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_19
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a350603672ddf4e99df62073028659
+      internalID: 1619654066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415d9e33a7cc4604589cf233f2ae1deb
+      internalID: 1753007144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_21
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803b7ba9afd4be2479026b377e2d5315
+      internalID: 1060852414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_22
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73d63533fecd78409f2c379d0f94314
+      internalID: -1044776355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_23
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d3db5891fc73b4dac976136ea42884
+      internalID: 151248645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_24
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a85ddfbf47a714d82090131360cf0d
+      internalID: -1314613101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_25
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab9a3e396e679a4d9e7999b0fa564be
+      internalID: 1625113382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_26
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9c1936044721f40a434671892ad7bc
+      internalID: 1044794926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_27
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78112b920a7bec47b51079b21955d21
+      internalID: 1160525850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_28
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e93464dd7af7141afc35eeb6bc82d2
+      internalID: 135780704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_29
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7923859ca501e04ea05655939c14e88
+      internalID: 367059734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_30
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e07e0b6f9f8824db790702c9d8253b
+      internalID: -943649883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_31
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 474
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d36e18f81706304e8d2e914d1cda260
+      internalID: -395913433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe13414483fb8b44b77de6e82d7fda5
+      internalID: -1967135880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_33
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d425d9107c49c4b9bca08ab53dab1a
+      internalID: 248442722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a409bedb5636d7489225e7e4a076bc4
+      internalID: 1971180977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be6203f33e78424a910254850144fc2
+      internalID: -430253025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_36
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5f7f62a5c04ce479b4738759f7fcfe
+      internalID: -1601777395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_37
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247450e6c6aa59b4f93bcf760b5a1262
+      internalID: -1234823779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_38
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec8b02824cbd8c44b52ea76babbed67
+      internalID: -866891090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_39
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c25822db09914a468972fe3eac47e11
+      internalID: 282771056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_40
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ea711945663eb498b604c44d1f737e
+      internalID: 658934675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_41
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af5be6d39c44db45a268e4127ca5516
+      internalID: -1214790014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_42
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9475ef98a81f62d4eb999ad85bef949e
+      internalID: 772824092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_43
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ad235ef5e4f9d438e4e19036e3638d
+      internalID: 1912707119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_44
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1712d5e7d057ac4f93e73726dc815ad
+      internalID: -1127511965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_45
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e346ca12d80972e4993f8d1e8e8c88df
+      internalID: -396003114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_46
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e346290ed77464841b1d6a4ea9ebe0e4
+      internalID: -1727479732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_47
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 372
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6491f4dbce69330479945c64d6cc6cb0
+      internalID: 1765508196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ef89537bd9ec649b8c8887bf195589
+      internalID: 928601628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_49
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67bfb633fc44824ca74ae78222f37a4
+      internalID: -1049700050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_50
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52e941fc1faefe4190747a7ed40f83f
+      internalID: -1723018514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_51
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451d0baade7d15b45ba5f59f400fd9cc
+      internalID: 65842212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_52
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cca55a87714fe64297dac7ca995b792
+      internalID: -54732186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_53
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2651d07dae6d4344580295582b79024b
+      internalID: -1648992669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_54
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb193c9cc0bcc6840b732fc66b0b44e0
+      internalID: 1556206609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_55
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cbf52f326f1894ead4ccd1e9060600
+      internalID: 1012761618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_56
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bcf4adb96a8ef49a17b150fa902dce
+      internalID: -560706814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_57
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8429773d4cec1439de3cf8f7071349
+      internalID: -1097516821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_58
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5863b7d769a7363498096f817027e96f
+      internalID: 1528303485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_59
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c87aa43c681a94f858f20bb1abc24f
+      internalID: 851062643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_60
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0023526216ee6d4ea8619e0ad48a225
+      internalID: -1170170419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_61
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da4edeb491eb3e4faa27ab8277cb9c5
+      internalID: -2096244101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_62
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e447fcd746d3747ac797c05c1c3965
+      internalID: -833147653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_63
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 270
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0825126b85c80a43b55c3ef6ed6cd10
+      internalID: 939033054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92393e64af858e64b90f9776e815aee7
+      internalID: 1529771734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_65
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbd772f3737ae246ada617e1ba11f1c
+      internalID: -1154662212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_66
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd3d621662bd5149b91f5bd9a2a8325
+      internalID: 1890717123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_67
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47c312905413d249b74b70c9062bed1
+      internalID: -1059485086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_68
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f708f5bf53b25d44eb7849e9f8ffd380
+      internalID: -1960521089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_69
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07012e6f3641b3240895c978ac68413d
+      internalID: -28796415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_70
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa5d20e7010c11438088151d097b6d4
+      internalID: -1632378356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_71
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec113d7cbed9174db094aafd7fce884
+      internalID: -1375008217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_72
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47159199fc0be34dbc0e3c6408cd1c3
+      internalID: -856200249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_73
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541b9a9861d7f6f408f0dc73eefd5eaa
+      internalID: -61858239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_74
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454016ed8edec31499f97a002b8483a6
+      internalID: 358629331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_75
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174a911ace6cd6f49aa5584a5cb42a6c
+      internalID: -1049370143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_76
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939dc3356cbb4824eab264dd35f2f649
+      internalID: -344981370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_77
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7861ee2c30d96a46849348c72bcec74
+      internalID: -952329319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_78
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1beb80a8ea02c0e4685dd73b5cd52bda
+      internalID: 1634363832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_79
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 168
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3c13860e2aebb4da811f0869b71c97
+      internalID: -724139772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a342ce745c3d84cbce9feeee2420a8
+      internalID: -1190671857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_81
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394a7384193285a43ae77cffbe251944
+      internalID: 928863298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_82
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df82ececb988e70439b4b2c47034f227
+      internalID: 1637881650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_83
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2086d6e0cc14ac4ab1aa07b15eafc42
+      internalID: 1344481199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_84
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5006524c28589d4eb9e49c7133364c3
+      internalID: -17612899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_85
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b876499185989e4fb5ae2977af6ee37
+      internalID: 335399099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_86
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941c5527d1ec2294b9145b82b4b77e01
+      internalID: 1551449532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_87
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df67c12f5bca8a3488ec412fc5a6c0d3
+      internalID: 908847800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_88
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a531c778b200f142bfa7faca2475547
+      internalID: 374917596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_89
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ee6c2a9ed794b4aad763401603ccd5
+      internalID: -1523550503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_90
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4018c77707b946241a9655ece21a0328
+      internalID: 1812366207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_91
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5a3afad73252b44b082e5192a0bbe9
+      internalID: 610330706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_92
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a3961e615ac6642aeaae6cf1546b4e
+      internalID: -2040086271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_93
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85664591fbae1bf40a5619d9b65ec937
+      internalID: 1101363476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_94
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099807b3fe4abfa459ef3ea4ecc83535
+      internalID: -611720288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_bowel_95
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 66
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfb9d5c1d6cf98449369aeb15d32ad6
+      internalID: -782140229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tileset_bowel_0: -797205289
+      tileset_bowel_1: -1606193270
+      tileset_bowel_10: 853846661
+      tileset_bowel_11: -1143182868
+      tileset_bowel_12: 380889085
+      tileset_bowel_13: 1526578823
+      tileset_bowel_14: 843901227
+      tileset_bowel_15: 1203402035
+      tileset_bowel_16: -1969353053
+      tileset_bowel_17: 754731001
+      tileset_bowel_18: -917178020
+      tileset_bowel_19: 1619654066
+      tileset_bowel_2: -1219777792
+      tileset_bowel_20: 1753007144
+      tileset_bowel_21: 1060852414
+      tileset_bowel_22: -1044776355
+      tileset_bowel_23: 151248645
+      tileset_bowel_24: -1314613101
+      tileset_bowel_25: 1625113382
+      tileset_bowel_26: 1044794926
+      tileset_bowel_27: 1160525850
+      tileset_bowel_28: 135780704
+      tileset_bowel_29: 367059734
+      tileset_bowel_3: 2077999413
+      tileset_bowel_30: -943649883
+      tileset_bowel_31: -395913433
+      tileset_bowel_32: -1967135880
+      tileset_bowel_33: 248442722
+      tileset_bowel_34: 1971180977
+      tileset_bowel_35: -430253025
+      tileset_bowel_36: -1601777395
+      tileset_bowel_37: -1234823779
+      tileset_bowel_38: -866891090
+      tileset_bowel_39: 282771056
+      tileset_bowel_4: -2033006988
+      tileset_bowel_40: 658934675
+      tileset_bowel_41: -1214790014
+      tileset_bowel_42: 772824092
+      tileset_bowel_43: 1912707119
+      tileset_bowel_44: -1127511965
+      tileset_bowel_45: -396003114
+      tileset_bowel_46: -1727479732
+      tileset_bowel_47: 1765508196
+      tileset_bowel_48: 928601628
+      tileset_bowel_49: -1049700050
+      tileset_bowel_5: 1049505097
+      tileset_bowel_50: -1723018514
+      tileset_bowel_51: 65842212
+      tileset_bowel_52: -54732186
+      tileset_bowel_53: -1648992669
+      tileset_bowel_54: 1556206609
+      tileset_bowel_55: 1012761618
+      tileset_bowel_56: -560706814
+      tileset_bowel_57: -1097516821
+      tileset_bowel_58: 1528303485
+      tileset_bowel_59: 851062643
+      tileset_bowel_6: 28939748
+      tileset_bowel_60: -1170170419
+      tileset_bowel_61: -2096244101
+      tileset_bowel_62: -833147653
+      tileset_bowel_63: 939033054
+      tileset_bowel_64: 1529771734
+      tileset_bowel_65: -1154662212
+      tileset_bowel_66: 1890717123
+      tileset_bowel_67: -1059485086
+      tileset_bowel_68: -1960521089
+      tileset_bowel_69: -28796415
+      tileset_bowel_7: -682572443
+      tileset_bowel_70: -1632378356
+      tileset_bowel_71: -1375008217
+      tileset_bowel_72: -856200249
+      tileset_bowel_73: -61858239
+      tileset_bowel_74: 358629331
+      tileset_bowel_75: -1049370143
+      tileset_bowel_76: -344981370
+      tileset_bowel_77: -952329319
+      tileset_bowel_78: 1634363832
+      tileset_bowel_79: -724139772
+      tileset_bowel_8: -120319189
+      tileset_bowel_80: -1190671857
+      tileset_bowel_81: 928863298
+      tileset_bowel_82: 1637881650
+      tileset_bowel_83: 1344481199
+      tileset_bowel_84: -17612899
+      tileset_bowel_85: 335399099
+      tileset_bowel_86: 1551449532
+      tileset_bowel_87: 908847800
+      tileset_bowel_88: 374917596
+      tileset_bowel_89: -1523550503
+      tileset_bowel_9: -230383210
+      tileset_bowel_90: 1812366207
+      tileset_bowel_91: 610330706
+      tileset_bowel_92: -2040086271
+      tileset_bowel_93: 1101363476
+      tileset_bowel_94: -611720288
+      tileset_bowel_95: -782140229
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
