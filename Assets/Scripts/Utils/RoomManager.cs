@@ -66,7 +66,7 @@ public class RoomManager : MonoBehaviour
             OnCallWaves?.Invoke(currentWave); // envia informacion de la wave actual 
         }
     }
-    private void NotifyEnemyDeath()
+    public void NotifyEnemyDeath()
     {
         currentEnemies--;
         UpdateWave();

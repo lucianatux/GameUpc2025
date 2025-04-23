@@ -115,40 +115,12 @@ public void MoveTowards(Vector2 destination, float speedMultiplier = 1)
 {
     if (isStunned) return; // al estar estuneado, no se podra mover
 
-    Vector2 direction = (destination - (Vector2)transform.position).normalized; //calculamos la direccion 
-    float moveDistance = enemyMoveSpeed * Time.deltaTime * speedMultiplier;
+        Vector2 direction = (destination - (Vector2)transform.position).normalized; //calculamos la direccion 
+        float moveDistance = enemyMoveSpeed * Time.deltaTime * speedMultiplier;
     
-    // Raycast frontal
-    RaycastHit2D hitFront = Physics2D.Raycast(transform.position, direction, moveDistance, LayerMask.GetMask("Wall"));
+        transform.position -= (Vector3)direction * moveDistance;
+       
     
-    if (hitFront.collider != null) // REVISARR
-    {
-        // Intenta moverse en una dirección alternativa (izquierda o derecha)
-        Vector2 altDirection1 = new Vector2(-direction.y, direction.x); // Gira 90° a la izquierda
-        Vector2 altDirection2 = new Vector2(direction.y, -direction.x); // Gira 90° a la derecha
-
-        bool canMoveLeft = !Physics2D.Raycast(transform.position, altDirection1, moveDistance, LayerMask.GetMask("Wall"));
-        bool canMoveRight = !Physics2D.Raycast(transform.position, altDirection2, moveDistance, LayerMask.GetMask("Wall"));
-
-        if (canMoveLeft)
-        {
-            transform.position += (Vector3)altDirection1 * moveDistance;
-        }
-        else if (canMoveRight)
-        {
-            transform.position += (Vector3)altDirection2 * moveDistance;
-        }
-        else
-        {
-            // Si está totalmente bloqueado, retrocede
-            transform.position -= (Vector3)direction * moveDistance;
-        }
-    }
-    else
-    {
-        // Si no hay colisión, avanza normalmente
-        transform.position += (Vector3)direction * moveDistance;
-    }
 }
         private void Start()
         {

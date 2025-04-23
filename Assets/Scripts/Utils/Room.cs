@@ -22,11 +22,11 @@ public class Room : MonoBehaviour
     public void OnTriggerExit2D(Collider2D other)
     {
             if (other.CompareTag("Player"))
-    {
+        {
         Debug.Log("El jugador SALIÓ del cuarto: " + name);
         // Podés notificar al RoomManager si querés
         RoomManager.Instance.OnPlayerLeftRoom(this);
-    }
+        }
     }
 
 }
