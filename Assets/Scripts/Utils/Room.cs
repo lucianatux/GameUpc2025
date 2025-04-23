@@ -10,38 +10,13 @@ public class Room : MonoBehaviour
     
     [SerializeField] public int roomID;
     public int waveCount;
-/*
-    [Min(0)]
-
-    [Header("Cantidad de Waves")]
-    [Tooltip("Número total de oleadas en el nivel")]
-    [Tooltip("Cantidad de enemigos en cada oleada")]
-    public List<int> enemyCount = new List<int>();
-
-    private void OnValidate()
-    {
-        // ajustar  en el editor cada vez que cambie la wavecount
-        if (enemyCount.Count < waveCount)
-        {
-            while (enemyCount.Count < waveCount)
-            {
-                enemyCount.Add(0);
-            }
-        }
-        else if (enemyCount.Count > waveCount)
-        {
-            enemyCount.RemoveRange(waveCount, enemyCount.Count - waveCount);
-        }
-    }
-*/
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) //detecta al player entrar a la room
     {
         if (other.CompareTag("Player"))
         {
-                RoomManager.Instance.SetCurrentRoom(this);
+                RoomManager.Instance.SetCurrentRoom(this); //
                 Debug.Log("se envia la info a room manager del room " + roomID);
-                // RoomManager.Instance.S
         }
     }
     public void OnTriggerExit2D(Collider2D other)

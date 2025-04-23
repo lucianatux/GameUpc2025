@@ -34,33 +34,6 @@ public class RoomManager : MonoBehaviour
         Destroy(gameObject); // si hay una instancia, que la destruya
     }
 
-/*
-        void StartWave(int waveIndex)
-    {
-        if (waveIndex >= room.waveCount)
-        {
-            Debug.Log("🎉 Todas las oleadas completas");
-            return;
-        }   
-                                                                                            
-        int enemyCount = room.enemyCount[waveIndex];
-        remainingEnemies = enemyCount;
-
-        Debug.Log($"▶️ Iniciando wave {waveIndex + 1} con {enemyCount} enemigos");
-        CallEnemies(waveIndex);
-    }
-    */
-     void CallEnemies(int waveIndex)
-    {
-        if (currentRoom == null) return;
-        if (currentWave >= currentRoom.waveCount)
-        {
-            Debug.Log("🎉 Todas las oleadas completas");
-            return;
-        }
-
-        OnCallWaves?.Invoke(currentWave); // envia informacion de la wave actual
-    }
     public void SetCurrentRoom(Room newRoom)
     {
         currentRoom = newRoom; // dato a enviar 
@@ -84,9 +57,8 @@ public class RoomManager : MonoBehaviour
     }
 }
     
-    public void NotifyEnemyDeath()
+    public void UpdateWave()
     {   
-        currentEnemies--;
         if (currentEnemies <= 0)
         {
             Debug.Log("Todos los enemigos murieron, pasar a siguiente wave");
@@ -94,9 +66,10 @@ public class RoomManager : MonoBehaviour
             OnCallWaves?.Invoke(currentWave); // envia informacion de la wave actual 
         }
     }
-    private void EnemyDeath()
+    private void NotifyEnemyDeath()
     {
-        
+        currentEnemies--;
+        UpdateWave();
     }
 
 
