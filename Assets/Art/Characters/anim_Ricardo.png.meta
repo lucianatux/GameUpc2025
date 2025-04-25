@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anim_Ricardo_0
+      name: idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,20 +105,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebbdc51438079247b1748376e99a6eb
-      internalID: -384025490
+      spriteID: b6c5fe7c40176b14aa37a96342b43687
+      internalID: 536637349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_1
+      name: idle_1
       rect:
         serializedVersion: 2
         x: 480
@@ -126,20 +126,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11ed045e2d8ede40b8589b67aff5580
-      internalID: -1044131954
+      spriteID: 12b05758dc45dce498b0b2d44686d829
+      internalID: -53060815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_2
+      name: idle_2
       rect:
         serializedVersion: 2
         x: 960
@@ -147,20 +147,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcb9487605775da448165bc25aecd8f9
-      internalID: 1415176718
+      spriteID: d083f335a69061d4ea397f3237dd2daa
+      internalID: -1931113146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_3
+      name: idle_3
       rect:
         serializedVersion: 2
         x: 1440
@@ -168,20 +168,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c12b554fda31b0a4db28de17357aa321
-      internalID: 689861731
+      spriteID: 25f3b7378901d6340986444900034442
+      internalID: -1617466158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_4
+      name: idle_4
       rect:
         serializedVersion: 2
         x: 1920
@@ -189,20 +189,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d148b352c9af4c4287bffba048ac8e4
-      internalID: 632517425
+      spriteID: 41fae3cfbd7d0e649a56865b5b7a2dab
+      internalID: -101455993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_5
+      name: walk_0
       rect:
         serializedVersion: 2
         x: 2400
@@ -210,20 +210,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bd96c7a522458545a8133038f2ad8c5
-      internalID: 1193555033
+      spriteID: 38e0573bf98b25044a071708f2fdfff0
+      internalID: -1930948637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_6
+      name: walk_1
       rect:
         serializedVersion: 2
         x: 2880
@@ -231,20 +231,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b0b1bcdb1241764992aedb9e8c43bcf
-      internalID: -27374164
+      spriteID: d595879d4b16d2c40aa981981da8372d
+      internalID: -1130370268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_7
+      name: walk_2
       rect:
         serializedVersion: 2
         x: 3360
@@ -252,20 +252,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb838e7f4a7222543957743fa962ab9c
-      internalID: -117808762
+      spriteID: a341db2f7920b2d4980c37fbd3a00a4a
+      internalID: -766629067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_8
+      name: walk_3
       rect:
         serializedVersion: 2
         x: 3840
@@ -273,20 +273,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb49e98db8f9e084f90661341964a974
-      internalID: -432718326
+      spriteID: bc125e0115d19164ab93f82fa6692dac
+      internalID: 2064793574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_9
+      name: walk_4
       rect:
         serializedVersion: 2
         x: 4320
@@ -294,20 +294,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0204c8f5dd718542b55fef579c6a0cc
-      internalID: -1357876846
+      spriteID: 03759513d3b594c479f1b07a4b4db91c
+      internalID: 1795401554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_10
+      name: croak_0
       rect:
         serializedVersion: 2
         x: 4800
@@ -315,20 +315,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 200c70ac8decdcd439029dfc3561e613
-      internalID: 1245901926
+      spriteID: 19394b645be423340bb166fe01fd7b9a
+      internalID: 232326792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_11
+      name: croak_1
       rect:
         serializedVersion: 2
         x: 5280
@@ -336,20 +336,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c0860ac2f9930a4db868f9791ea4571
-      internalID: -863879121
+      spriteID: 8f07d274057f23642990598b7a097a0e
+      internalID: 401443029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_12
+      name: croak_2
       rect:
         serializedVersion: 2
         x: 0
@@ -357,20 +357,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a77010ff60b8d146a6d01c14fcb8cbc
-      internalID: 1698214584
+      spriteID: 7795b4e53029d1f439804188029a58eb
+      internalID: 1799323295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_13
+      name: croak_3
       rect:
         serializedVersion: 2
         x: 480
@@ -378,20 +378,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1612a56675a56f544807ef07f3f69c17
-      internalID: 1894425537
+      spriteID: b765821e428b0cd49b7b66b81c1b38ce
+      internalID: -839742865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_14
+      name: croak_4
       rect:
         serializedVersion: 2
         x: 960
@@ -399,20 +399,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd4417131000ce044b17dbd91fc0a2bc
-      internalID: -1820500952
+      spriteID: 9d686189575685040b650288a26b699c
+      internalID: -27602518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_15
+      name: croak_5
       rect:
         serializedVersion: 2
         x: 1440
@@ -420,20 +420,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb3a32b623320394da2499c109a0c69a
-      internalID: -1171106332
+      spriteID: f2ca9b73766e6674bbe50e227736a2b5
+      internalID: 640953396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_16
+      name: croak_6
       rect:
         serializedVersion: 2
         x: 1920
@@ -441,20 +441,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd6ef3ca066a4f844925cc4a4c250eca
-      internalID: 1927803244
+      spriteID: 2bcca676e0079d04a9a33ce0faf01849
+      internalID: 88479353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_17
+      name: fire_0
       rect:
         serializedVersion: 2
         x: 2400
@@ -462,20 +462,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd5053f4a5135a34689da8c2c5772a02
-      internalID: -946111093
+      spriteID: d112270ec5a15bb40ae202726d4abb83
+      internalID: -350410725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_18
+      name: fire_1
       rect:
         serializedVersion: 2
         x: 2880
@@ -483,20 +483,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ae2ae7cdc13184a893ac3f1630bc0e
-      internalID: 1890909065
+      spriteID: 6cf48ffdab07a164f87a45d2bef51f91
+      internalID: -1621951292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_19
+      name: fire_2
       rect:
         serializedVersion: 2
         x: 3360
@@ -504,20 +504,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eae30a8f621fbf24b88625119b27c720
-      internalID: -256213690
+      spriteID: f92aa5b96c778f84ba06abbb351b0ef8
+      internalID: 1099436641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_20
+      name: kick_0
       rect:
         serializedVersion: 2
         x: 3840
@@ -525,20 +525,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f025827138c485247a181ee49dee965d
-      internalID: -933939102
+      spriteID: 1f5fab4094811e84e827d8a600da35f7
+      internalID: 1606253026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_21
+      name: kick_1
       rect:
         serializedVersion: 2
         x: 4320
@@ -546,20 +546,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c5f36eb505c0fb44bd7f133ca801a23
-      internalID: -499236781
+      spriteID: 8e718e839a15aee44a467ece5f8436ab
+      internalID: -401034176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_22
+      name: kick_2
       rect:
         serializedVersion: 2
         x: 4800
@@ -567,20 +567,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3acba0898f4b07841bb55d48cc903e49
-      internalID: -1920284458
+      spriteID: f85b6ad33bec8f743800e092be7fec6a
+      internalID: 657010684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_23
+      name: damage_0
       rect:
         serializedVersion: 2
         x: 5280
@@ -588,20 +588,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0144e32780366b84db61c013d96bfebe
-      internalID: -1346039652
+      spriteID: a361049475910a94e870b239d95f1709
+      internalID: 63497150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_24
+      name: damage_1
       rect:
         serializedVersion: 2
         x: 0
@@ -609,20 +609,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9900e7616a83074cb6166bd26af146c
-      internalID: 9411315
+      spriteID: d37db66f3e7a2604f992d6aeae123926
+      internalID: -742842461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_25
+      name: damage_2
       rect:
         serializedVersion: 2
         x: 480
@@ -630,20 +630,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d62f7a1506186e499b69d8fcbf60e98
-      internalID: 989605362
+      spriteID: cd0a63c4572a93c488ba4a7933a9137c
+      internalID: 607926938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_26
+      name: die_0
       rect:
         serializedVersion: 2
         x: 960
@@ -651,20 +651,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0297f517efd9ae48a61d930e16e04d4
-      internalID: -1000195074
+      spriteID: c9fa55fcc5d52bc4a8ecb77e0422eb33
+      internalID: -1645564302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_27
+      name: die_1
       rect:
         serializedVersion: 2
         x: 1440
@@ -672,20 +672,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba44da27102f4c14a926fa5169d1dd83
-      internalID: -932341302
+      spriteID: df5b50ead1d20124ab773d0c94e27339
+      internalID: -1611284673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_28
+      name: die_2
       rect:
         serializedVersion: 2
         x: 1920
@@ -693,20 +693,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4735800678cd38d41a482694b7c558a7
-      internalID: 1954786709
+      spriteID: 339704a6adce15946842e71b7d577e48
+      internalID: 5979380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_29
+      name: die_3
       rect:
         serializedVersion: 2
         x: 2400
@@ -714,20 +714,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914587f24f9700a4382d43a9dbdd6367
-      internalID: -863088933
+      spriteID: 11143edfa30313a4bb8499c983a03774
+      internalID: 1752715320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_30
+      name: die_4
       rect:
         serializedVersion: 2
         x: 2880
@@ -735,20 +735,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 847a4025224ec694e8490f660d8a141b
-      internalID: -876004916
+      spriteID: e22ff035191882c4295297747282c7e5
+      internalID: 552604370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_31
+      name: die_5
       rect:
         serializedVersion: 2
         x: 3360
@@ -756,20 +756,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9138fc33b251d4e4a91e83988fc3f49f
-      internalID: 1270513124
+      spriteID: cd2ab118b583e124cbd17f4e7046bcbd
+      internalID: 463224652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_32
+      name: die_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -777,20 +777,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f926655ff802754797ea141811122c8
-      internalID: -883277941
+      spriteID: 7af66e67dff4f8e42b1918d39df9456f
+      internalID: -1148279019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_33
+      name: die_7
       rect:
         serializedVersion: 2
         x: 4320
@@ -798,20 +798,20 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4607ce7babb4a6245aca0e1fb5cfa641
-      internalID: -313679092
+      spriteID: 1cd7e81d80b74a64a8246e47dc5d8cd2
+      internalID: -575891902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_Ricardo_34
+      name: die_8
       rect:
         serializedVersion: 2
         x: 4800
@@ -819,14 +819,14 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b806bee928d036f48b26980f644c719a
-      internalID: -2053394277
+      spriteID: 4d5f66362b3fe844bb1788f858b29e24
+      internalID: 1498925956
       vertices: []
       indices: 
       edges: []
@@ -842,41 +842,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anim_Ricardo_0: -384025490
-      anim_Ricardo_1: -1044131954
-      anim_Ricardo_10: 1245901926
-      anim_Ricardo_11: -863879121
-      anim_Ricardo_12: 1698214584
-      anim_Ricardo_13: 1894425537
-      anim_Ricardo_14: -1820500952
-      anim_Ricardo_15: -1171106332
-      anim_Ricardo_16: 1927803244
-      anim_Ricardo_17: -946111093
-      anim_Ricardo_18: 1890909065
-      anim_Ricardo_19: -256213690
-      anim_Ricardo_2: 1415176718
-      anim_Ricardo_20: -933939102
-      anim_Ricardo_21: -499236781
-      anim_Ricardo_22: -1920284458
-      anim_Ricardo_23: -1346039652
-      anim_Ricardo_24: 9411315
-      anim_Ricardo_25: 989605362
-      anim_Ricardo_26: -1000195074
-      anim_Ricardo_27: -932341302
-      anim_Ricardo_28: 1954786709
-      anim_Ricardo_29: -863088933
-      anim_Ricardo_3: 689861731
-      anim_Ricardo_30: -876004916
-      anim_Ricardo_31: 1270513124
-      anim_Ricardo_32: -883277941
-      anim_Ricardo_33: -313679092
-      anim_Ricardo_34: -2053394277
-      anim_Ricardo_4: 632517425
-      anim_Ricardo_5: 1193555033
-      anim_Ricardo_6: -27374164
-      anim_Ricardo_7: -117808762
-      anim_Ricardo_8: -432718326
-      anim_Ricardo_9: -1357876846
+      croak_0: 232326792
+      croak_1: 401443029
+      croak_2: 1799323295
+      croak_3: -839742865
+      croak_4: -27602518
+      croak_5: 640953396
+      croak_6: 88479353
+      damage_0: 63497150
+      damage_1: -742842461
+      damage_2: 607926938
+      die_0: -1645564302
+      die_1: -1611284673
+      die_2: 5979380
+      die_3: 1752715320
+      die_4: 552604370
+      die_5: 463224652
+      die_6: -1148279019
+      die_7: -575891902
+      die_8: 1498925956
+      fire_0: -350410725
+      fire_1: -1621951292
+      fire_2: 1099436641
+      idle_0: 536637349
+      idle_1: -53060815
+      idle_2: -1931113146
+      idle_3: -1617466158
+      idle_4: -101455993
+      kick_0: 1606253026
+      kick_1: -401034176
+      kick_2: 657010684
+      walk_0: -1930948637
+      walk_1: -1130370268
+      walk_2: -766629067
+      walk_3: 2064793574
+      walk_4: 1795401554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
