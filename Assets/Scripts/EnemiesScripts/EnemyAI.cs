@@ -19,7 +19,7 @@ private IEnemyState currentState;
 [SerializeField] private float enemyMoveSpeed = 4;
 
 [Tooltip("Distancia máxima a la que el enemigo empieza a perseguir.")]
-[SerializeField] private float followRange = 7;
+[SerializeField] private float followRange = 7  ;
 
 [Tooltip("Distancia a la que el enemigo entra en estado de ataque.")]
 [SerializeField] private float attackRange = 4;
@@ -109,45 +109,7 @@ private bool isStunned = false;
             return Vector2.Distance(transform.position, playerTransform.position);
         }
 
-public void MoveTowards(Vector2 destination, float speedMultiplier = 1)
-{
-    if (isStunned) return; // al estar estuneado, no se podra mover
 
-    Vector2 direction = (destination - (Vector2)transform.position).normalized; //calculamos la direccion 
-    float moveDistance = enemyMoveSpeed * Time.deltaTime * speedMultiplier;
-    
-    // Raycast frontal
-    RaycastHit2D hitFront = Physics2D.Raycast(transform.position, direction, moveDistance, LayerMask.GetMask("Wall"));
-    
-    if (hitFront.collider != null) // REVISARR
-    {
-        // Intenta moverse en una dirección alternativa (izquierda o derecha)
-        Vector2 altDirection1 = new Vector2(-direction.y, direction.x); // Gira 90° a la izquierda
-        Vector2 altDirection2 = new Vector2(direction.y, -direction.x); // Gira 90° a la derecha
-
-        bool canMoveLeft = !Physics2D.Raycast(transform.position, altDirection1, moveDistance, LayerMask.GetMask("Wall"));
-        bool canMoveRight = !Physics2D.Raycast(transform.position, altDirection2, moveDistance, LayerMask.GetMask("Wall"));
-
-        if (canMoveLeft)
-        {
-            transform.position += (Vector3)altDirection1 * moveDistance;
-        }
-        else if (canMoveRight)
-        {
-            transform.position += (Vector3)altDirection2 * moveDistance;
-        }
-        else
-        {
-            // Si está totalmente bloqueado, retrocede
-            transform.position -= (Vector3)direction * moveDistance;
-        }
-    }
-    else
-    {
-        // Si no hay colisión, avanza normalmente
-        transform.position += (Vector3)direction * moveDistance;
-    }
-}
         private void Start()
         {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -219,6 +181,7 @@ public void EnemyTakeDamage()
         public float attentionTimer = 0;
         public void Attention()
     {
+        if (attentionPrefab == null) return;
         if (attentionTimer <= 0)
         {
         

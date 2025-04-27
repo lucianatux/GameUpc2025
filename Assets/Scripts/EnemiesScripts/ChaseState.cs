@@ -22,8 +22,6 @@ public class ChaseState : IEnemyState
     {
         Debug.Log("Cambia a estado chase");
         enemyAI = _enemyAI;
-        
-
     }
 
     public void UpdateState()
@@ -47,7 +45,6 @@ public class ChaseState : IEnemyState
     
     private void Chase()
     {
-        enemyAI.MoveTowards(playerTransform.position);
         //enemyAI.LookAt(playerTransform.position);
     }
     

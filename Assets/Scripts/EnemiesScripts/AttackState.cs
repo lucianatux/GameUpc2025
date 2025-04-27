@@ -87,6 +87,8 @@ private IEnumerator CheckAttacking()
 }
     private void Warning()
     {
+    if (warningPrefab == null) return;
+
     GameObject warning = Object.Instantiate(warningPrefab, enemyAI.transform.position,  Quaternion.Euler(0, 0, 0));
     GameObject.Destroy (warning, 2);
 
@@ -95,7 +97,7 @@ private IEnumerator CheckAttacking()
     public void Retreat(Transform enemy)
     {
         
-        enemyAI.MoveTowards(enemy.position, -.8f);
+        //enemyAI.MoveTowards(enemy.position, -.8f);
     }
 
 }
