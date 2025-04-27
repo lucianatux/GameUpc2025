@@ -10,7 +10,7 @@ public class ChaseState : IEnemyState
     private EnemyAI enemyAI;
     private GameObject attentionPrefab;
 
-    private NavMeshAgent agent;
+    private NavMeshAgent sagent;
 
     public ChaseState(float _followRange, float _attackRange, Transform _playerTransform, GameObject _attentionPrefab, NavMeshAgent _agent)
     {
@@ -18,7 +18,7 @@ public class ChaseState : IEnemyState
         attackRange = _attackRange;
         playerTransform = _playerTransform;
         attentionPrefab = _attentionPrefab;
-        agent = _agent;
+        sagent = _agent;
     }
 
 
@@ -35,19 +35,14 @@ public class ChaseState : IEnemyState
         float distToPlayer = enemyAI.GetDistanceToPlayer();
         if(distToPlayer > attackRange)
         {
-            Chase();
+            enemyAI.Chase(playerTransform);
         }
         else if (distToPlayer <= attackRange)
         {
             enemyAI.SetState(enemyAI.enemyAttackState);
         }
     }
-    
-    private void Chase()
-    {
-        agent.SetDestination(playerTransform.position);
-    }
-    
+        
 
 }
 }

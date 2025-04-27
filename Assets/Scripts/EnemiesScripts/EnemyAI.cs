@@ -93,8 +93,9 @@ namespace StatePattern
 
     [SerializeField] private int roomID;
 
-    NavMeshAgent agent;
+    NavMeshAgent agent; 
 
+    public bool isActive;
      GameObject player;
        private void InitializeStates()
         {
@@ -196,5 +197,19 @@ public void EnemyTakeDamage()
         }
     }
 
+    
+    public void Die()
+    {   
+        Debug.Log("se muere");
+        isActive = false;
+        RoomManager.Instance.NotifyEnemyDeath(); // le avisás al RoomManager
+        gameObject.SetActive(false);
+        // También podés lanzar un evento si querés avisarle al RoomManager
+    }
+
+   public void Chase(Transform toChase)
+    {
+        agent.SetDestination(toChase.position);
+    }
 }
 }

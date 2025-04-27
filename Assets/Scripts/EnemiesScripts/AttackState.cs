@@ -80,10 +80,12 @@ private IEnumerator CheckAttacking()
     public void Shoot(GameObject bullet, Transform enemy)
 {
     // Calcula la dirección al enemigo
+    if(weaponTransform == null || bulletPrefab == null) return;
     Vector2 direction = (enemy.position - enemyAI.transform.position).normalized;
     float angle = enemyAI.GetAngleToPlayer();
-    GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle));
+    GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle - 90));
     GameObject.Destroy (NewBullet, 2);
+    Debug.Log(angle);
 }
     private void Warning()
     {

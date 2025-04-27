@@ -16,11 +16,11 @@ public class WaitingState : IEnemyState
 
     private int enemyCount;
 
-    public WaitingState(int _enemyRoomID, int _enemyWaveID, bool _isActive)
+    public WaitingState(int _enemyRoomID, int _enemyWaveID)
     {
         enemyRoomID = _enemyRoomID;
         enemyWaveID = _enemyWaveID;
-        isActive = _isActive;
+        
     }
     
     public void EnterState(EnemyAI _enemyAI)
