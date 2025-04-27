@@ -1,105 +1,107 @@
 using UnityEngine;
+using UnityEngine.AI;
 namespace StatePattern
 {
     public class EnemyAI : MonoBehaviour
     {
-private IEnemyState currentState;
+    private IEnemyState currentState;
 
-#region Estados del Enemigo
-[HideInInspector] public WaitingState enemyWaitingState;
-[HideInInspector] public AttackState enemyAttackState;
-[HideInInspector] public ChaseState enemyChaseState;
-#endregion
+    #region Estados del Enemigo
+    [HideInInspector] public WaitingState enemyWaitingState;
+    [HideInInspector] public AttackState enemyAttackState;
+    [HideInInspector] public ChaseState enemyChaseState;
+    #endregion
 
-// -------------------------------------------
-// Movimiento y Rango de Detección
-// -------------------------------------------
-[Header("Movimiento y Detección")]
-[Tooltip("Velocidad de movimiento del enemigo.")]
-[SerializeField] private float enemyMoveSpeed = 4;
+    // -------------------------------------------
+    // Movimiento y Rango de Detección
+    // -------------------------------------------
+    [Header("Movimiento y Detección")]
+    [Tooltip("Velocidad de movimiento del enemigo.")]
+    [SerializeField] private float enemyMoveSpeed = 4;
 
-[Tooltip("Distancia máxima a la que el enemigo empieza a perseguir.")]
-[SerializeField] private float followRange = 7  ;
+    [Tooltip("Distancia máxima a la que el enemigo empieza a perseguir.")]
+    [SerializeField] private float followRange = 7  ;
 
-[Tooltip("Distancia a la que el enemigo entra en estado de ataque.")]
-[SerializeField] private float attackRange = 4;
+    [Tooltip("Distancia a la que el enemigo entra en estado de ataque.")]
+    [SerializeField] private float attackRange = 4;
 
-[Tooltip("Distancia de retroceso cuando recibe daño.")]
-[SerializeField] public float retreatDistance = 3;
+    [Tooltip("Distancia de retroceso cuando recibe daño.")]
+    [SerializeField] public float retreatDistance = 3;
 
-[Tooltip("Velocidad de rotación del enemigo hacia el jugador.")]
-[SerializeField] private float rotationSpeed = 200;
-[SerializeField] public LayerMask walkableLayer; // Asigna esto en el Inspector
-
-
-// -------------------------------------------
-// Ataque
-// -------------------------------------------
-[Header("Ataque")]
-[Tooltip("Tiempo de espera entre ataques.")]
-[SerializeField] private float attackCooldown = 2;
-
-[Tooltip("Prefab del proyectil que dispara el enemigo.")]
-[SerializeField] private GameObject bulletPrefab;
-
-[Tooltip("Transform del arma desde donde se dispara el proyectil.")]
-public Transform weaponTransform;
-
-[Tooltip("Temporizador para controlar el ataque.")]
-public float attackTimer;
-
-// -------------------------------------------
-// Prefabs de Aviso
-// -------------------------------------------
-[Header("Prefabs de Aviso")]
-[Tooltip("Prefab de la advertencia antes de atacar.")]
-[SerializeField] private GameObject warningPrefab;
-
-[Tooltip("Prefab que se muestra cuando el enemigo detecta al jugador.")]
-[SerializeField] private GameObject attentionPrefab;
-
-// -------------------------------------------
-// Referencias de Componentes
-// -------------------------------------------
-[Header("Referencias de Componentes")]
-[Tooltip("Referencia al transform del jugador.")]
-private Transform playerTransform;
-
-[Tooltip("SpriteRenderer del enemigo para efectos visuales.")]
-private SpriteRenderer spriteRenderer;
-
-[Tooltip("Rigidbody2D del enemigo para aplicar físicas.")]
-private Rigidbody2D rb;
-
-// -------------------------------------------
-// Daño y Knockback
-// -------------------------------------------
-[Header("Daño y Knockback")]
-[Tooltip("Color original del enemigo antes de recibir daño.")]
-private Color originalColor;
-
-[Tooltip("Duración del parpadeo blanco cuando recibe daño.")]
-[SerializeField] private float flashDuration = 0.1f;
-
-[Tooltip("Indica si el enemigo está aturdido.")]
-
-private bool isStunned = false;
-
-[Tooltip("Duración del aturdimiento tras recibir daño.")]
-
-[SerializeField] private float stunDuration = 0.5f;
-[SerializeField] private int waveID;
-
-[SerializeField] private int roomID;
+    [Tooltip("Velocidad de rotación del enemigo hacia el jugador.")]
+    [SerializeField] private float rotationSpeed = 200;
+    [SerializeField] public LayerMask walkableLayer; // Asigna esto en el Inspector
 
 
-[SerializeField] GameObject player;
+    // -------------------------------------------
+    // Ataque
+    // -------------------------------------------
+    [Header("Ataque")]
+    [Tooltip("Tiempo de espera entre ataques.")]
+    [SerializeField] private float attackCooldown = 2;
+
+    [Tooltip("Prefab del proyectil que dispara el enemigo.")]
+    [SerializeField] private GameObject bulletPrefab;
+
+    [Tooltip("Transform del arma desde donde se dispara el proyectil.")]
+    public Transform weaponTransform;
+
+    [Tooltip("Temporizador para controlar el ataque.")]
+    public float attackTimer;
+
+    // -------------------------------------------
+    // Prefabs de Aviso
+    // -------------------------------------------
+    [Header("Prefabs de Aviso")]
+    [Tooltip("Prefab de la advertencia antes de atacar.")]
+    [SerializeField] private GameObject warningPrefab;
+
+    [Tooltip("Prefab que se muestra cuando el enemigo detecta al jugador.")]
+    [SerializeField] private GameObject attentionPrefab;
+
+    // -------------------------------------------
+    // Referencias de Componentes
+    // -------------------------------------------
+    [Header("Referencias de Componentes")]
+    [Tooltip("Referencia al transform del jugador.")]
+    private Transform playerTransform;
+
+    [Tooltip("SpriteRenderer del enemigo para efectos visuales.")]
+    private SpriteRenderer spriteRenderer;
+
+    [Tooltip("Rigidbody2D del enemigo para aplicar físicas.")]
+    private Rigidbody2D rb;
+
+    // -------------------------------------------
+    // Daño y Knockback
+    // -------------------------------------------
+    [Header("Daño y Knockback")]
+    [Tooltip("Color original del enemigo antes de recibir daño.")]
+    private Color originalColor;
+
+    [Tooltip("Duración del parpadeo blanco cuando recibe daño.")]
+    [SerializeField] private float flashDuration = 0.1f;
+
+    [Tooltip("Indica si el enemigo está aturdido.")]
+
+    private bool isStunned = false;
+
+    [Tooltip("Duración del aturdimiento tras recibir daño.")]
+
+    [SerializeField] private float stunDuration;
+    [SerializeField] private int waveID;
+
+    [SerializeField] private int roomID;
+
+    NavMeshAgent agent;
+
+     GameObject player;
        private void InitializeStates()
         {
             player = GameObject.FindWithTag("Player");
             playerTransform = player.transform;
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
-            enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab);
+            enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab, agent);
             enemyWaitingState = new WaitingState(roomID, waveID);
             SetState(enemyWaitingState);
         }
@@ -112,6 +114,9 @@ private bool isStunned = false;
 
         private void Start()
         {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 

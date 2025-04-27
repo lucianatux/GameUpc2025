@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 namespace StatePattern
 {
 public class ChaseState : IEnemyState
@@ -9,12 +10,15 @@ public class ChaseState : IEnemyState
     private EnemyAI enemyAI;
     private GameObject attentionPrefab;
 
-    public ChaseState(float _followRange, float _attackRange, Transform _playerTransform, GameObject _attentionPrefab)
+    private NavMeshAgent agent;
+
+    public ChaseState(float _followRange, float _attackRange, Transform _playerTransform, GameObject _attentionPrefab, NavMeshAgent _agent)
     {
         followRange = _followRange;
         attackRange = _attackRange;
         playerTransform = _playerTransform;
         attentionPrefab = _attentionPrefab;
+        agent = _agent;
     }
 
 
@@ -29,13 +33,9 @@ public class ChaseState : IEnemyState
         enemyAI.attackTimer -= Time.deltaTime;
         enemyAI.attentionTimer -= Time.deltaTime;
         float distToPlayer = enemyAI.GetDistanceToPlayer();
-        if(distToPlayer < followRange && distToPlayer > attackRange)
+        if(distToPlayer > attackRange)
         {
             Chase();
-        }
-        else if (distToPlayer > followRange)
-        {
-            enemyAI.SetState(enemyAI.enemyWaitingState);
         }
         else if (distToPlayer <= attackRange)
         {
@@ -45,7 +45,7 @@ public class ChaseState : IEnemyState
     
     private void Chase()
     {
-        //enemyAI.LookAt(playerTransform.position);
+        agent.SetDestination(playerTransform.position);
     }
     
 
