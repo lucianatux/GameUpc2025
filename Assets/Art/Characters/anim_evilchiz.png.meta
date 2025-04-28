@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_0
+      name: atack0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,7 +105,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_1
+      name: atack1
       rect:
         serializedVersion: 2
         x: 480
@@ -126,7 +126,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_2
+      name: atack2
       rect:
         serializedVersion: 2
         x: 960
@@ -147,7 +147,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_3
+      name: atack3
       rect:
         serializedVersion: 2
         x: 1440
@@ -168,7 +168,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_4
+      name: atack4
       rect:
         serializedVersion: 2
         x: 1920
@@ -189,7 +189,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_5
+      name: atack5
       rect:
         serializedVersion: 2
         x: 2400
@@ -210,7 +210,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_6
+      name: atack6
       rect:
         serializedVersion: 2
         x: 2880
@@ -231,7 +231,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_7
+      name: idle0
       rect:
         serializedVersion: 2
         x: 3360
@@ -252,7 +252,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_8
+      name: idle1
       rect:
         serializedVersion: 2
         x: 3840
@@ -273,7 +273,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_9
+      name: idle2
       rect:
         serializedVersion: 2
         x: 4320
@@ -294,7 +294,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_10
+      name: idle3
       rect:
         serializedVersion: 2
         x: 4800
@@ -315,7 +315,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_11
+      name: idle4
       rect:
         serializedVersion: 2
         x: 5280
@@ -336,7 +336,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +357,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_13
+      name: walk0
       rect:
         serializedVersion: 2
         x: 6240
@@ -378,7 +378,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,7 +391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_14
+      name: walk1
       rect:
         serializedVersion: 2
         x: 6720
@@ -399,7 +399,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_16
+      name: damage0
       rect:
         serializedVersion: 2
         x: 7680
@@ -441,7 +441,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,7 +454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_17
+      name: damage1
       rect:
         serializedVersion: 2
         x: 8160
@@ -462,7 +462,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -475,7 +475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_18
+      name: damage2
       rect:
         serializedVersion: 2
         x: 8640
@@ -483,7 +483,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,7 +496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_19
+      name: damage3
       rect:
         serializedVersion: 2
         x: 9120
@@ -504,7 +504,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -517,7 +517,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_20
+      name: damage4
       rect:
         serializedVersion: 2
         x: 9600
@@ -525,7 +525,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,7 +538,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_21
+      name: damage5
       rect:
         serializedVersion: 2
         x: 10080
@@ -546,7 +546,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,7 +559,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_22
+      name: die0
       rect:
         serializedVersion: 2
         x: 10560
@@ -567,7 +567,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,7 +580,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_23
+      name: die1
       rect:
         serializedVersion: 2
         x: 11040
@@ -588,7 +588,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -601,7 +601,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_24
+      name: die2
       rect:
         serializedVersion: 2
         x: 11520
@@ -609,7 +609,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -622,7 +622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_25
+      name: die3
       rect:
         serializedVersion: 2
         x: 12000
@@ -630,7 +630,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -643,7 +643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_26
+      name: wakeup0
       rect:
         serializedVersion: 2
         x: 12480
@@ -651,7 +651,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,7 +664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_27
+      name: wakeup1
       rect:
         serializedVersion: 2
         x: 12960
@@ -672,7 +672,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -685,7 +685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_28
+      name: wakeup2
       rect:
         serializedVersion: 2
         x: 13440
@@ -693,7 +693,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -706,7 +706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_29
+      name: wakeup3
       rect:
         serializedVersion: 2
         x: 13920
@@ -714,7 +714,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -727,7 +727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animacion evilchixito-Sheet_30
+      name: wakeup4
       rect:
         serializedVersion: 2
         x: 14400
@@ -735,7 +735,7 @@ TextureImporter:
         width: 480
         height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -758,37 +758,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animacion evilchixito-Sheet_0: 519886546
-      animacion evilchixito-Sheet_1: 61205995
-      animacion evilchixito-Sheet_10: -1135087629
-      animacion evilchixito-Sheet_11: 647964511
       animacion evilchixito-Sheet_12: -1812411422
-      animacion evilchixito-Sheet_13: 1868373916
-      animacion evilchixito-Sheet_14: 1558299312
       animacion evilchixito-Sheet_15: 1738197553
-      animacion evilchixito-Sheet_16: -1944775117
-      animacion evilchixito-Sheet_17: -1960009339
-      animacion evilchixito-Sheet_18: -1138303711
-      animacion evilchixito-Sheet_19: 1611745886
-      animacion evilchixito-Sheet_2: 1974488185
-      animacion evilchixito-Sheet_20: 302587571
-      animacion evilchixito-Sheet_21: 2015056524
-      animacion evilchixito-Sheet_22: -1604322955
-      animacion evilchixito-Sheet_23: 1477166913
-      animacion evilchixito-Sheet_24: -1812443593
-      animacion evilchixito-Sheet_25: -753052394
-      animacion evilchixito-Sheet_26: 1525244663
-      animacion evilchixito-Sheet_27: -1636781267
-      animacion evilchixito-Sheet_28: 1000065684
-      animacion evilchixito-Sheet_29: 899790915
-      animacion evilchixito-Sheet_3: 1993158713
-      animacion evilchixito-Sheet_30: -325285380
-      animacion evilchixito-Sheet_4: -1742364415
-      animacion evilchixito-Sheet_5: 456528015
-      animacion evilchixito-Sheet_6: 1218569651
-      animacion evilchixito-Sheet_7: -301738349
-      animacion evilchixito-Sheet_8: -54565445
-      animacion evilchixito-Sheet_9: 678065200
+      atack0: 519886546
+      atack1: 61205995
+      atack2: 1974488185
+      atack3: 1993158713
+      atack4: -1742364415
+      atack5: 456528015
+      atack6: 1218569651
+      damage0: -1944775117
+      damage1: -1960009339
+      damage2: -1138303711
+      damage3: 1611745886
+      damage4: 302587571
+      damage5: 2015056524
+      die0: -1604322955
+      die1: 1477166913
+      die2: -1812443593
+      die3: -753052394
+      idle0: -301738349
+      idle1: -54565445
+      idle2: 678065200
+      idle3: -1135087629
+      idle4: 647964511
+      wakeup0: 1525244663
+      wakeup1: -1636781267
+      wakeup2: 1000065684
+      wakeup3: 899790915
+      wakeup4: -325285380
+      walk0: 1868373916
+      walk1: 1558299312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
