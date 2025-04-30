@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
+
 namespace StatePattern
 {
 public class WaitingState : IEnemyState
@@ -26,9 +28,11 @@ public class WaitingState : IEnemyState
     public void EnterState(EnemyAI _enemyAI)
     {
         Debug.Log("estado waiting");
+        
         RoomManager.Instance.OnRoomEntered += WakeUp;
         RoomManager.Instance.OnCallWaves += SpawnWaves;
         enemyAI = _enemyAI;
+        enemyAI.ChangeAnimationState(AnimName.InactiveAnim);
     }
 
     private void WakeUp(int room)
@@ -44,13 +48,24 @@ public class WaitingState : IEnemyState
 
         // starCoroutine, donde paase el tiempo de la animacion de despertarse/activarse
         enemyAI.Attention();
-                enemyAI.isActive = true;
-
+        enemyAI.isActive = true;
+        enemyAI.StartCoroutine(WakeUpAnimation()); // Esperar antes de disparar
         RoomManager.Instance.enemyCount++;
         RoomManager.Instance.OnCallWaves -= SpawnWaves;
-        enemyAI.SetState(enemyAI.enemyChaseState);        
     }
     
+    private IEnumerator WakeUpAnimation()
+{
+
+    enemyAI.ChangeAnimationState(AnimName.WakeUpAnim);
+    yield return new WaitForSeconds(1f); // Espera antes de volver a moverse
+    enemyAI.SetState(enemyAI.enemyChaseState);        
+
+    Debug.Log("Se despierta");
+}
+
+
+
     public void UpdateState()
     {
 

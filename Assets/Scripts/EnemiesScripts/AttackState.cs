@@ -36,15 +36,13 @@ public class AttackState : IEnemyState
 
     public void UpdateState()
     {
-        attackTimer -= Time.deltaTime;
         float distToPlayer = enemyAI.GetDistanceToPlayer();
+        enemyAI.attackTimer -= Time.deltaTime;
+
         if (distToPlayer <= attackRange)
         {
             Attack();
-            if (!isAttacking)
-            {
-                Retreat(playerTransform);
-            }
+
         }
         else if (distToPlayer > attackRange && !isAttacking)
         {
@@ -53,54 +51,50 @@ public class AttackState : IEnemyState
     }
 
     bool isAttacking = false;
-private void Attack()  
-{   
-    enemyAI.attackTimer -= Time.deltaTime;
+    private void Attack()  
+    {   
 
-    if (enemyAI.attackTimer < 0)
-    {
-        
-       // Mostrar la advertencia antes de atacar
-        enemyAI.attackTimer = attackCooldown;
-        Warning();
-        enemyAI.StartCoroutine(CheckAttacking()); // Esperar antes de disparar
-        Debug.Log("Malo prepara ataque");
-    }
-}
-
-private IEnumerator CheckAttacking()
-{
-    isAttacking = true; // Activa el estado de ataque
-    yield return new WaitForSeconds(.3f); // Espera antes de disparar
-    Shoot(bulletPrefab, playerTransform);
-    yield return new WaitForSeconds(1f); // Espera antes de volver a moverse
-    isAttacking = false; // Termina el ataque
-    Debug.Log("Malo termina ataque");
-}
-    public void Shoot(GameObject bullet, Transform enemy)
-{
-    // Calcula la dirección al enemigo
-    if(weaponTransform == null || bulletPrefab == null) return;
-    Vector2 direction = (enemy.position - enemyAI.transform.position).normalized;
-    float angle = enemyAI.GetAngleToPlayer();
-    GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle - 90));
-    GameObject.Destroy (NewBullet, 2);
-    Debug.Log(angle);
-}
-    private void Warning()
-    {
-    if (warningPrefab == null) return;
-
-    GameObject warning = Object.Instantiate(warningPrefab, enemyAI.transform.position,  Quaternion.Euler(0, 0, 0));
-    GameObject.Destroy (warning, 2);
-
+        if (enemyAI.attackTimer <= 0)
+        {
+            enemyAI.attackTimer = attackCooldown;
+            enemyAI.StartCoroutine(CheckAttacking()); // Esperar antes de disparar
+            Debug.Log("Malo prepara ataque");
+        }
     }
 
-    public void Retreat(Transform enemy)
+    private IEnumerator CheckAttacking()
     {
-        
-        //enemyAI.MoveTowards(enemy.position, -.8f);
-    }
+        isAttacking = true; // Activa el estado de ataque
+        Warning(); //manda advertencia
+        yield return new WaitForSeconds(.3f); // Espera antes de disparar
+        enemyAI.ChangeAnimationState(AnimName.AttackAnim);
+        //Shoot(bulletPrefab, playerTransform);
+        yield return new WaitForSeconds(1f); // Espera antes de volver a moverse
+        enemyAI.ChangeAnimationState(AnimName.IdleAnim);
+        isAttacking = false; // Termina el ataque
 
-}
-}
+
+        Debug.Log("Malo termina ataque");
+    }
+        public void Shoot(GameObject bullet, Transform enemy)
+    {
+        // Calcula la dirección al enemigo
+        if(weaponTransform == null || bulletPrefab == null) return;
+        Vector2 direction = (enemy.position - enemyAI.transform.position).normalized;
+        float angle = enemyAI.GetAngleToPlayer();
+        GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle - 90));
+        GameObject.Destroy (NewBullet, 2);
+        Debug.Log(angle);
+    }
+        private void Warning()
+        {
+        if (warningPrefab == null) return;
+
+        GameObject warning = Object.Instantiate(warningPrefab, enemyAI.transform.position,  Quaternion.Euler(0, 0, 0));
+        GameObject.Destroy (warning, 2);
+
+        }
+
+
+    }
+    }

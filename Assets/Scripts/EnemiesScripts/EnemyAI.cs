@@ -17,7 +17,7 @@ namespace StatePattern
     // -------------------------------------------
     [Header("Movimiento y Detección")]
     [Tooltip("Velocidad de movimiento del enemigo.")]
-    [SerializeField] private float enemyMoveSpeed = 4;
+    [SerializeField] private float enemyMoveSpeed;
 
     [Tooltip("Distancia máxima a la que el enemigo empieza a perseguir.")]
     [SerializeField] private float followRange = 7  ;
@@ -94,6 +94,9 @@ namespace StatePattern
     [SerializeField] private int roomID;
 
     NavMeshAgent agent; 
+    Animator animator;
+    private string currentAnim; 
+
 
     public bool isActive;
      GameObject player;
@@ -116,6 +119,8 @@ namespace StatePattern
         private void Start()
         {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -132,6 +137,10 @@ namespace StatePattern
                 EnemyTakeDamage();
             }  
             currentState.UpdateState();
+
+            // Si el jugador está a la derecha
+
+            UpdateSprite();
         }
 
         public void SetState(IEnemyState iEnemyState)
@@ -149,32 +158,55 @@ namespace StatePattern
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime * speedMultiplier);
         }
     
-        public float GetAngleToPlayer()
-        {
-        Vector2 direction = (playerTransform.position - transform.position).normalized;
-        float angle;
-        
-        return angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        }
-
-public void EnemyTakeDamage()
+    public float GetAngleToPlayer()
     {
-        Debug.Log("Enemy recibió daño");
-        attackTimer = attackCooldown / 2;
-        // Cambio de color a blanco
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.color = Color.red;
-            Invoke(nameof(ResetColor), flashDuration);
-        }
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Se queda quieto por el tiempo de stun
-        isStunned = true;
-        Invoke(nameof(RemoveStun), stunDuration);
+        // Convertimos de -180°~180° a 0°~360°
+        if (angle < 0)
+        
+        angle += 360f;
+
+        return angle;
+        
     }
+
+
+        public void UpdateSprite()
+        {
+            float angle = GetAngleToPlayer();
+
+            if (angle <= 90 || angle >= 270)
+            {
+                spriteRenderer.flipX = false;
+            }
+                    // Si el player está a la izquierda
+            else
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
+    public void EnemyTakeDamage()
+        {
+            Debug.Log("Enemy recibió daño");
+            attackTimer = attackCooldown / 2;
+                // Cambio de color a blanco
+               if (spriteRenderer != null)
+            {
+                spriteRenderer.color = Color.red;
+                Invoke(nameof(ResetColor), flashDuration);
+            }
+
+                // Se queda quieto por el tiempo de stun
+                isStunned = true;
+                ChangeAnimationState(AnimName.DamageAnim);
+                Invoke(nameof(RemoveStun), stunDuration);
+            }
     private void RemoveStun()
     {
         isStunned = false;
+        
     }
     private void ResetColor()
     {
@@ -209,7 +241,24 @@ public void EnemyTakeDamage()
 
    public void Chase(Transform toChase)
     {
+        if (isStunned) return;
+        ChangeAnimationState(AnimName.WalkAnim); //seteamos su animacion
         agent.SetDestination(toChase.position);
     }
+
+    public void ChangeAnimationState (AnimName newAnim)
+    {
+        string newAnimString = newAnim.ToAnimString();
+
+        if (currentAnim == newAnimString) return; //chequeamos que no se interrumpa a si misma
+
+        animator.Play(newAnimString); //empieza la animacion
+
+        currentAnim = newAnimString; //reseteamos la current animation a la que esta sucediendo
+    }
+
+
+
+
 }
 }
