@@ -15,9 +15,9 @@ public class RoomManager : MonoBehaviour
 
     public event Action<int> OnRoomEntered;
 
-    public event Action<int> OnCallWaves;
+    public event Action<int> OnRoomExited;
 
-    public Room room;
+    public event Action<int> OnCallWaves;
 
     private int currentWave = 0;
     
@@ -37,21 +37,21 @@ public class RoomManager : MonoBehaviour
     public void SetCurrentRoom(Room newRoom)
     {
         currentRoom = newRoom; // dato a enviar 
-
+    
         if (currentRoom == null) return; // si no estas referenciando a un cuarto, te vas
 
-        currentWave = 1; //la wave seria la primera
+        if (currentRoom.currentWave == 0) newRoom.currentWave = 1; // si la wave fuese la primera
         Debug.Log("Jugador entró a la room " + newRoom.roomID);
-        Debug.Log("Oleada nro " + currentWave );
+        Debug.Log("Oleada nro " + newRoom.currentWave );
         OnRoomEntered?.Invoke(newRoom.roomID); // Evento para que lo escuchen, envia
         currentEnemies = enemyCount;
 
     }
-    public void OnPlayerLeftRoom(Room room)
+    public void OnPlayerLeftRoom(Room _room)
 {
-    if (currentRoom == room)
+    if (currentRoom == _room)
     {
-        
+        OnRoomExited?.Invoke(currentRoom.roomID);
         currentRoom = null;
         Debug.Log("Room actual vaciado porque el jugador salió.");
     }
@@ -62,8 +62,8 @@ public class RoomManager : MonoBehaviour
         if (currentEnemies <= 0)
         {
             Debug.Log("Todos los enemigos murieron, pasar a siguiente wave");
-            currentWave ++;
-            OnCallWaves?.Invoke(currentWave); // envia informacion de la wave actual 
+            currentRoom.currentWave ++;
+            OnCallWaves?.Invoke(currentRoom.currentWave); // envia informacion de la wave actual 
         }
     }
     public void NotifyEnemyDeath()

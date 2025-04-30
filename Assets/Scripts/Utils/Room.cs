@@ -9,7 +9,8 @@ public class Room : MonoBehaviour
     [Tooltip("ID único para esta habitación.")]
     
     [SerializeField] public int roomID;
-    public int waveCount;
+    
+    public int currentWave;
     
     private void OnTriggerEnter2D(Collider2D other) //detecta al player entrar a la room
     {
