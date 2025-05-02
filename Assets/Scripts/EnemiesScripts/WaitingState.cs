@@ -28,7 +28,7 @@ public class WaitingState : IEnemyState
     public void EnterState(EnemyAI _enemyAI)
     {
         Debug.Log("estado waiting");
-        
+        enemyAI.isActive = false;
         RoomManager.Instance.OnRoomEntered += WakeUp;
         RoomManager.Instance.OnCallWaves += SpawnWaves;
         enemyAI = _enemyAI;

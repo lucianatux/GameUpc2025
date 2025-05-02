@@ -136,6 +136,7 @@ namespace StatePattern
         {
             if (_roomID != roomID) return;
             SetState(enemyWaitingState);
+            Debug.Log("se desactiva al player salir de la room");
             RoomManager.Instance.OnRoomEntered -= Deactivate;
 
         }
