@@ -118,6 +118,7 @@ namespace StatePattern
 
         private void Start()
         {
+        RoomManager.Instance.OnRoomExited += Deactivate;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
@@ -130,6 +131,15 @@ namespace StatePattern
             originalColor = spriteRenderer.color;
             InitializeStates();
         }
+
+        private void Deactivate(int _roomID)
+        {
+            if (_roomID != roomID) return;
+            SetState(enemyWaitingState);
+            RoomManager.Instance.OnRoomEntered -= Deactivate;
+
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K)) 
@@ -257,7 +267,7 @@ namespace StatePattern
         currentAnim = newAnimString; //reseteamos la current animation a la que esta sucediendo
     }
 
-
+    
 
 
 }
