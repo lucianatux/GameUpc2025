@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyHealth : LifeSystem
 {
-    private Animator animator;
     [SerializeField] private GameObject lifeOrbPrefab;
     [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.3f; // 30% por defecto
 
@@ -20,6 +19,8 @@ public class EnemyHealth : LifeSystem
       public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
+        ChangeAnimationState(AnimName.DamageAnim);
+
       //  enemyAI.StopAttackingTemporarily();
 
     }
@@ -28,17 +29,18 @@ public class EnemyHealth : LifeSystem
         base.Die();
         GetComponent<Collider2D>().enabled = false;
         //GetComponent<EnemyAI>()?.enabled = false;
-        animator.SetTrigger("Die");
+        TrySpawnLifeOrb();
+        ChangeAnimationState(AnimName.DieAnim);
     //    enemyAI.enabled = false;
     }
 
-    private void TrySpawnLifeOrb()
-{
-    float rng = Random.value; // entre 0 y 1 un rango aleatorio
-    if (rng <= lifeOrbDropChance && lifeOrbPrefab != null)
+    private void TrySpawnLifeOrb() //funcion que intenta spawnear un orbe de vida, usando la probabilidad 
     {
-        Instantiate(lifeOrbPrefab, transform.position, Quaternion.identity);
+        float rng = Random.value; // entre 0 y 1 un rango aleatorio
+        if (rng <= lifeOrbDropChance && lifeOrbPrefab != null)
+        {
+            Instantiate(lifeOrbPrefab, transform.position, Quaternion.identity);
+        }
     }
-}
 
 }
