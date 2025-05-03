@@ -2,52 +2,59 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class LifeSystem : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
-    private int currentHealth;
-    [SerializeField] private float invulnerabilityTime;
-    private float invulnerabilityTimer;
-    void Start()
+    [SerializeField] protected int maxHealth;
+    protected int currentHealth;
+    [SerializeField] protected float invulnerabilityTime;
+    protected float invulnerabilityTimer;
+    [SerializeField] protected bool canHeal = false;
+
+    protected virtual void Start()
     {
         currentHealth = maxHealth;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         invulnerabilityTimer -= Time.deltaTime;
     }
-    
-    public void TakeDamage(int damage)
+
+    public virtual void TakeDamage(int damage)
     {
-        if (invulnerabilityTimer >= 0) return;
-        if (currentHealth <= 0) return;
+        if (invulnerabilityTimer > 0 || currentHealth <= 0) return;
+
         currentHealth -= damage;
+        Debug.Log($"{gameObject.name} recibe {damage} de daño. Vida restante: {currentHealth}");
+
         invulnerabilityTimer = invulnerabilityTime;
+
         if (currentHealth <= 0)
         {
-            Die();
             currentHealth = 0;
+            Die();
         }
-        
     }
 
-
-    
-    private void Die()
+    protected virtual void Die()
     {
-        if (currentHealth >= 0) return;
+        StartCoroutine(WaitAndDestroy(1.5f)); // o animación.length si lo calculás
     }
 
-    public void Heal(int healAmount)
+    private IEnumerator WaitAndDestroy(float delay)
     {
-        if (currentHealth >= maxHealth) return;
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
+
+    public virtual void Heal(int healAmount)
+    {
+        if (!canHeal || currentHealth >= maxHealth) return;
+
         currentHealth += healAmount;
-        if (currentHealth >= maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
+        Debug.Log($"{gameObject.name} se cura. Vida actual: {currentHealth}");
     }
-
 }
+
