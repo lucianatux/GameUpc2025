@@ -15,5 +15,18 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         _rb.velocity = moveInput * _moveSpeed;
+         if (Input.GetKeyDown(KeyCode.C))
+        {
+            GameEventsManager.Instance.PlayerCroak(); // Activás el evento
+        }
+         if (Input.GetKeyDown(KeyCode.D))
+        {
+            GameEventsManager.Instance.PlayerDamaged(); // Activás el evento
+        }
+         if (Input.GetKeyDown(KeyCode.K))
+        {
+            GameEventsManager.Instance.PlayerKick(); // Activás el evento
+        }
     }
+    
 }
