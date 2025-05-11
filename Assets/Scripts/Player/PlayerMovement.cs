@@ -11,10 +11,7 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
-    {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        _rb.velocity = moveInput * _moveSpeed;
+    void Update(){
          if (Input.GetKeyDown(KeyCode.C))
         {
             GameEventsManager.Instance.PlayerCroak(); // Activás el evento
@@ -27,6 +24,12 @@ public class PlayerMovement : MonoBehaviour
         {
             GameEventsManager.Instance.PlayerKick(); // Activás el evento
         }
+    }
+
+    void FixedUpdate()
+    {
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        _rb.velocity = moveInput * _moveSpeed;
     }
     
 }
