@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public static SoundManager Instance;
+
+    [SerializeField] private AudioSource audioSource;   // Efectos
+    [SerializeField] private AudioSource musicSource;   // Música
+    [SerializeField] private AudioClip backgroundMusic;  // música
 
     // Player Clips
     public AudioClip playerCroakClip;
@@ -35,8 +39,28 @@ public class SoundManager : MonoBehaviour
     public AudioClip doorOpenClip;
     public AudioClip levelCompleteClip;
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);  // Aseguramos que solo haya una instancia
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);  // La instancia no se destruye al cambiar de escena
+        }
+    }
+
     void Start()
     {
+        // Reproduce la música en loop
+        if (musicSource != null && backgroundMusic != null)
+        {
+            musicSource.clip = backgroundMusic;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
           if (GameEventsManager.Instance != null)
         {
         var g = GameEventsManager.Instance;
@@ -143,8 +167,16 @@ public class SoundManager : MonoBehaviour
 
     void PlayClip(AudioClip clip)
     {
+        if (audioSource == null)
+        {
+            Debug.LogWarning("SoundManager: audioSource is not assigned!");
+            return;
+        }
+
         if (clip != null)
+        {
             audioSource.PlayOneShot(clip);
+        }
     }
 }
 
