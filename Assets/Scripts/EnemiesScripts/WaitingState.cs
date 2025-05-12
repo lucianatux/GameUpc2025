@@ -1,3 +1,4 @@
+
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
@@ -28,16 +29,24 @@ public class WaitingState : IEnemyState
     public void EnterState(EnemyAI _enemyAI)
     {
         Debug.Log("estado waiting");
-        enemyAI.isActive = false;
         RoomManager.Instance.OnRoomEntered += WakeUp;
         RoomManager.Instance.OnCallWaves += SpawnWaves;
         enemyAI = _enemyAI;
-        enemyAI.ChangeAnimationState(AnimName.InactiveAnim);
-    }
+        enemyAI.isActive = false;
 
+    }
+   private IEnumerator UnlockAfter(float seconds)
+    {
+        Debug.Log("empieza devloqueo");
+        yield return new WaitForSeconds(seconds);
+        Debug.Log("termina devloqueo");
+        //enemyAI.animController.Unlock();
+    }
     private void WakeUp(int room)
     {
         if (room != enemyRoomID) return;
+        //RoomManager.Instance.NotifyEnemySpawn();
+
         SpawnWaves(1);
         RoomManager.Instance.OnRoomEntered -= WakeUp;
 
@@ -50,18 +59,22 @@ public class WaitingState : IEnemyState
         enemyAI.Attention();
         enemyAI.isActive = true;
         enemyAI.StartCoroutine(WakeUpAnimation()); // Esperar antes de disparar
-        RoomManager.Instance.enemyCount++;
         RoomManager.Instance.OnCallWaves -= SpawnWaves;
     }
     
     private IEnumerator WakeUpAnimation()
 {
-
-    enemyAI.ChangeAnimationState(AnimName.WakeUpAnim);
+    //enemyAI.animController.Play(AnimName.WakeUpAnim, 2, true); //seteamos su animacion
+    enemyAI.StartCoroutine(UnlockAfter(.5f));
+    //RoomManager.Instance.NotifyEnemySpawn();
     yield return new WaitForSeconds(1f); // Espera antes de volver a moverse
-    enemyAI.SetState(enemyAI.enemyChaseState);        
-
-    Debug.Log("Se despierta");
+    if (enemyAI.rb != null)
+                {
+                    enemyAI.rb.bodyType = RigidbodyType2D.Kinematic; // para que no lo afecte la física
+                }
+        enemyAI.SetState(enemyAI.enemyChaseState);   
+        enemyAI.GetComponent<Collider2D>().enabled = true;
+        Debug.Log("Se despierta");
 }
 
 
@@ -74,7 +87,4 @@ public class WaitingState : IEnemyState
 
 }
 }
-
-
-
 
