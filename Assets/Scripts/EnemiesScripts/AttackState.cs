@@ -38,7 +38,6 @@ public class AttackState : IEnemyState
     {
         float distToPlayer = enemyAI.GetDistanceToPlayer();
         enemyAI.attackTimer -= Time.deltaTime;
-
         if (distToPlayer <= attackRange)
         {
             Attack();
@@ -48,14 +47,18 @@ public class AttackState : IEnemyState
         {
             enemyAI.SetState(enemyAI.enemyChaseState);
         }
+
     }
 
     bool isAttacking = false;
     private void Attack()  
     {   
+        if (!playerTransform) return;   
 
         if (enemyAI.attackTimer <= 0)
         {
+            if (enemyAI.isStunned) return;
+
             enemyAI.attackTimer = attackCooldown;
             enemyAI.StartCoroutine(CheckAttacking()); // Esperar antes de disparar
             Debug.Log("Malo prepara ataque");
@@ -63,38 +66,49 @@ public class AttackState : IEnemyState
     }
 
     private IEnumerator CheckAttacking()
-    {
-        isAttacking = true; // Activa el estado de ataque
-        Warning(); //manda advertencia
-        yield return new WaitForSeconds(.3f); // Espera antes de disparar
-        enemyAI.ChangeAnimationState(AnimName.AttackAnim);
-        //Shoot(bulletPrefab, playerTransform);
-        yield return new WaitForSeconds(1f); // Espera antes de volver a moverse
-        enemyAI.ChangeAnimationState(AnimName.IdleAnim);
-        isAttacking = false; // Termina el ataque
+{
+    isAttacking = true;
+    Warning();
+    yield return new WaitForSeconds(0.2f);
+
+    //enemyAI.animController.Play(AnimName.AttackAnim, 2, true);
+    yield return new WaitForSeconds(1f); // Espera antes de desbloquear
+    //enemyAI.animController.Unlock();       // 🔓 desbloquea justo antes de cambiar de animación
+    Shoot(bulletPrefab, weaponTransform);
+    //enemyAI.animController.Play(AnimName.IdleAnim, 1, false); // Ahora sí cambia a idle
+
+    yield return new WaitForSeconds(1.3f);
+    //enemyAI.animController.Play(AnimName.IdleAnim, 1, false);
+
+    isAttacking = false;
+    Debug.Log("Malo termina ataque");
+}
 
 
-        Debug.Log("Malo termina ataque");
-    }
         public void Shoot(GameObject bullet, Transform enemy)
     {
         // Calcula la dirección al enemigo
         if(weaponTransform == null || bulletPrefab == null) return;
         Vector2 direction = (enemy.position - enemyAI.transform.position).normalized;
         float angle = enemyAI.GetAngleToPlayer();
-        GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle - 90));
-        GameObject.Destroy (NewBullet, 2);
+        GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle));
+        GameObject.Destroy (NewBullet, 0.2f);
         Debug.Log(angle);
     }
         private void Warning()
         {
         if (warningPrefab == null) return;
-
         GameObject warning = Object.Instantiate(warningPrefab, enemyAI.transform.position,  Quaternion.Euler(0, 0, 0));
         GameObject.Destroy (warning, 2);
 
         }
 
-
+    private IEnumerator UnlockAfter(float seconds)
+    {
+        Debug.Log("empieza desbloqueo");
+        yield return new WaitForSeconds(seconds);
+        Debug.Log("termina desbloqueo");
+        //enemyAI.animController.Unlock();
+    }
     }
     }

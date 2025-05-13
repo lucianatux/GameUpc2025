@@ -70,7 +70,7 @@ namespace StatePattern
     private SpriteRenderer spriteRenderer;
 
     [Tooltip("Rigidbody2D del enemigo para aplicar físicas.")]
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     // -------------------------------------------
     // Daño y Knockback
@@ -84,19 +84,18 @@ namespace StatePattern
 
     [Tooltip("Indica si el enemigo está aturdido.")]
 
-    private bool isStunned = false;
+    public bool isStunned = false;
 
     [Tooltip("Duración del aturdimiento tras recibir daño.")]
 
     [SerializeField] private float stunDuration;
-    [SerializeField] private int waveID;
-
+    [SerializeField] private int _waveID;
+    //[HideInInspector] public AnimationStateController animController;
     [SerializeField] private int roomID;
 
     NavMeshAgent agent; 
     Animator animator;
     private string currentAnim; 
-
 
     public bool isActive;
      GameObject player;
@@ -104,32 +103,39 @@ namespace StatePattern
         {
             player = GameObject.FindWithTag("Player");
             playerTransform = player.transform;
+            enemyWaitingState = new WaitingState(roomID, _waveID);
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
             enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab, agent);
-            enemyWaitingState = new WaitingState(roomID, waveID);
             SetState(enemyWaitingState);
         }
-
+        void Awake()
+        {
+        animator = GetComponent<Animator>();
+        //animController = GetComponent<AnimationStateController>();
+        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody2D>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        }
         public float GetDistanceToPlayer()
         {
+            if(playerTransform == null) return 0f;
             return Vector2.Distance(transform.position, playerTransform.position);
         }
 
 
         private void Start()
         {
-        RoomManager.Instance.OnRoomExited += Deactivate;
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-
-        if (spriteRenderer != null)
-            originalColor = spriteRenderer.color;
+        //RoomManager.Instance.OnRoomExited += Deactivate;
             InitializeStates();
+            GetComponent<Collider2D>().enabled = false;
+            if (rb != null)
+            {
+                rb.velocity = Vector2.zero;
+                rb.bodyType = RigidbodyType2D.Static; // para que no lo afecte la física
+            }
+            originalColor = spriteRenderer.color;
         }
 
         private void Deactivate(int _roomID)
@@ -143,15 +149,9 @@ namespace StatePattern
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K)) 
-            {
-                EnemyTakeDamage();
-            }  
             currentState.UpdateState();
-
-            // Si el jugador está a la derecha
-
             UpdateSprite();
+
         }
 
         public void SetState(IEnemyState iEnemyState)
@@ -186,6 +186,7 @@ namespace StatePattern
 
         public void UpdateSprite()
         {
+            if (!isActive) return;
             float angle = GetAngleToPlayer();
 
             if (angle <= 90 || angle >= 270)
@@ -193,10 +194,11 @@ namespace StatePattern
                 spriteRenderer.flipX = false;
             }
                     // Si el player está a la izquierda
-            else
+            else 
             {
                 spriteRenderer.flipX = true;
             }
+            
         }
     public void EnemyTakeDamage()
         {
@@ -208,10 +210,7 @@ namespace StatePattern
                 spriteRenderer.color = Color.red;
                 Invoke(nameof(ResetColor), flashDuration);
             }
-
-                // Se queda quieto por el tiempo de stun
                 isStunned = true;
-                ChangeAnimationState(AnimName.DamageAnim);
                 Invoke(nameof(RemoveStun), stunDuration);
             }
     private void RemoveStun()
@@ -244,8 +243,8 @@ namespace StatePattern
     public void Die()
     {   
         Debug.Log("se muere");
+        Debug.Log("se muere " + this + " por el enemy ai");
         isActive = false;
-        RoomManager.Instance.NotifyEnemyDeath(); // le avisás al RoomManager
         gameObject.SetActive(false);
         // También podés lanzar un evento si querés avisarle al RoomManager
     }
@@ -253,19 +252,8 @@ namespace StatePattern
    public void Chase(Transform toChase)
     {
         if (isStunned) return;
-        ChangeAnimationState(AnimName.WalkAnim); //seteamos su animacion
+        //animController.Play(AnimName.WalkAnim, 1);
         agent.SetDestination(toChase.position);
-    }
-
-    public void ChangeAnimationState (AnimName newAnim)
-    {
-        string newAnimString = newAnim.ToAnimString();
-
-        if (currentAnim == newAnimString) return; //chequeamos que no se interrumpa a si misma
-
-        animator.Play(newAnimString); //empieza la animacion
-
-        currentAnim = newAnimString; //reseteamos la current animation a la que esta sucediendo
     }
 
     
