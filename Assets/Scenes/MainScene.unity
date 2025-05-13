@@ -14185,8 +14185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 96
-  m_RefResolutionX: 1920
-  m_RefResolutionY: 1080
+  m_RefResolutionX: 2560
+  m_RefResolutionY: 1440
   m_UpscaleRT: 1
   m_PixelSnapping: 0
   m_CropFrameX: 1
@@ -85464,6 +85464,7 @@ GameObject:
   - component: {fileID: 1777845585}
   - component: {fileID: 1777845586}
   - component: {fileID: 1777845587}
+  - component: {fileID: 1777845588}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -85621,6 +85622,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1777845588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777845581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6388097c3d1174184f204b986cc322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMove: 1
 --- !u!1 &1915419250
 GameObject:
   m_ObjectHideFlags: 0
