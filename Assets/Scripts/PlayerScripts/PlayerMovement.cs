@@ -25,10 +25,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         _rb.velocity = moveInput * _moveSpeed;
         }
-        CheckAnimation();
+        //CheckAnimation();
     }
 
-    private void CheckAnimation()
+   /* private void CheckAnimation()
     {
         if (_rb.velocity.x > 0)
         {
@@ -47,5 +47,5 @@ public class PlayerMovement : MonoBehaviour
         {
             _animController.Play(AnimName.IdleAnim, 1);
         }
-    }
+    }*/
 }
