@@ -13,9 +13,12 @@ public class LifeSystem : MonoBehaviour
 
     protected Animator animator;
     protected string currentAnim;
+
+    protected AnimationStateController animController;
     protected virtual void Start()
     {
         currentHealth = maxHealth; 
+        animController = GetComponent<AnimationStateController>();
     }
 
     protected virtual void Update() 
@@ -29,27 +32,40 @@ public class LifeSystem : MonoBehaviour
     {
         if (invulnerabilityTimer > 0 || currentHealth <= 0) return; // si estas en invulnerable, o con menos de 0 de vida, no recibis
         currentHealth -= damage; 
-
         Debug.Log($"{gameObject.name} recibe {damage} de daño. Vida restante: {currentHealth}");
-
         invulnerabilityTimer = invulnerabilityTime; // se resetea el tiempo de invulnerabilidad
-
         if (currentHealth <= 0) // si el ataque baja la vida a menos de 0 o 0 se llama a la funcion morir
         {
             currentHealth = 0;
             Die();
         }
+        animController.Play(AnimName.DamageAnim, 1, true);
+        StartCoroutine(UnlockAfter(.15f));
+    }
+    private IEnumerator UnlockAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        animController.Unlock();
+        animController.Play(AnimName.IdleAnim, 1);
     }
     // protected porque es privada para otras clases, publica para clases hijas
-    // cirtual porque es abstracta y se puede modificar desde otra clase
+    // virtual porque es abstracta y se puede modificar desde otra clase
     protected virtual void Die() 
     {
-        StartCoroutine(WaitAndDestroy(1.5f)); // o animación.length si lo calculás
+        animController.Play(AnimName.DieAnim, 4, true);
+        StartCoroutine(WaitAndDestroy(3f)); // o animación.length si lo calculás
     }
 
     private IEnumerator WaitAndDestroy(float delay)
     {
+        animController.Play(AnimName.DieAnim, 10, true);
+        yield return new WaitForSeconds(.2f);
+        
+        animController.Play(AnimName.DieAnim, 10, true);
+
         yield return new WaitForSeconds(delay);
+        animController.Play(AnimName.DieAnim, 10, true);
+
         Destroy(gameObject);
     }
 
