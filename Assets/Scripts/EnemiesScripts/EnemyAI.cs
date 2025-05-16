@@ -19,17 +19,12 @@ namespace StatePattern
     [Tooltip("Velocidad de movimiento del enemigo.")]
     [SerializeField] private float enemyMoveSpeed;
 
-    [Tooltip("Distancia máxima a la que el enemigo empieza a perseguir.")]
-    [SerializeField] private float followRange = 7  ;
 
     [Tooltip("Distancia a la que el enemigo entra en estado de ataque.")]
-    [SerializeField] private float attackRange = 4;
+    [SerializeField] protected float attackRange = 4;
 
     [Tooltip("Distancia de retroceso cuando recibe daño.")]
     [SerializeField] public float retreatDistance = 3;
-
-    [Tooltip("Velocidad de rotación del enemigo hacia el jugador.")]
-    [SerializeField] private float rotationSpeed = 200;
     [SerializeField] public LayerMask walkableLayer; // Asigna esto en el Inspector
 
 
@@ -38,10 +33,10 @@ namespace StatePattern
     // -------------------------------------------
     [Header("Ataque")]
     [Tooltip("Tiempo de espera entre ataques.")]
-    [SerializeField] private float attackCooldown = 2;
+    [SerializeField] protected float attackCooldown = 2;
 
     [Tooltip("Prefab del proyectil que dispara el enemigo.")]
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] protected GameObject bulletPrefab;
 
     [Tooltip("Transform del arma desde donde se dispara el proyectil.")]
     public Transform weaponTransform;
@@ -64,10 +59,10 @@ namespace StatePattern
     // -------------------------------------------
     [Header("Referencias de Componentes")]
     [Tooltip("Referencia al transform del jugador.")]
-    private Transform playerTransform;
+    protected Transform playerTransform;
 
     [Tooltip("SpriteRenderer del enemigo para efectos visuales.")]
-    private SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
 
     [Tooltip("Rigidbody2D del enemigo para aplicar físicas.")]
     public Rigidbody2D rb;
@@ -77,7 +72,7 @@ namespace StatePattern
     // -------------------------------------------
     [Header("Daño y Knockback")]
     [Tooltip("Color original del enemigo antes de recibir daño.")]
-    private Color originalColor;
+    protected Color originalColor;
 
     [Tooltip("Duración del parpadeo blanco cuando recibe daño.")]
     [SerializeField] private float flashDuration = 0.1f;
@@ -88,24 +83,24 @@ namespace StatePattern
 
     [Tooltip("Duración del aturdimiento tras recibir daño.")]
 
-    [SerializeField] private float stunDuration;
-    [SerializeField] private int _waveID;
+    [SerializeField] protected float stunDuration;
+    [SerializeField] protected int _waveID;
     //[HideInInspector] public AnimationStateController animController;
-    [SerializeField] private int roomID;
+    [SerializeField] protected int roomID;
 
-    NavMeshAgent agent; 
+    protected NavMeshAgent agent; 
     Animator animator;
     private string currentAnim; 
 
     public bool isActive;
-     GameObject player;
-       private void InitializeStates()
+    protected GameObject player;
+       protected virtual void InitializeStates()
         {
             player = GameObject.FindWithTag("Player");
             playerTransform = player.transform;
             enemyWaitingState = new WaitingState(roomID, _waveID);
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
-            enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab, agent);
+            enemyChaseState  = new ChaseState( attackRange, playerTransform, attentionPrefab, agent);
             SetState(enemyWaitingState);
         }
         void Awake()
@@ -125,7 +120,7 @@ namespace StatePattern
         }
 
 
-        private void Start()
+        protected void Start()
         {
         //RoomManager.Instance.OnRoomExited += Deactivate;
             InitializeStates();
@@ -147,7 +142,7 @@ namespace StatePattern
 
         }
 
-        private void Update()
+        protected void Update()
         {
             currentState.UpdateState();
             UpdateSprite();
@@ -161,14 +156,7 @@ namespace StatePattern
         }
     
 
-    public void LookAt(Vector2 destination, float speedMultiplier = 1)
-        {
-            Vector3 direction = (Vector3)destination - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime * speedMultiplier);
-        }
-    
+
     public float GetAngleToPlayer()
     {
         Vector2 direction = (playerTransform.position - transform.position).normalized;
@@ -213,12 +201,12 @@ namespace StatePattern
                 isStunned = true;
                 Invoke(nameof(RemoveStun), stunDuration);
             }
-    private void RemoveStun()
+    protected void RemoveStun()
     {
         isStunned = false;
         
     }
-    private void ResetColor()
+    protected void ResetColor()
     {
         if (spriteRenderer != null)
         {

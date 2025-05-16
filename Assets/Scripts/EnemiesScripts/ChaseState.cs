@@ -5,7 +5,6 @@ namespace StatePattern
 {
 public class ChaseState : IEnemyState
 {   
-    private float followRange;
     private float attackRange;
     private Transform playerTransform;
     private EnemyAI enemyAI;
@@ -13,9 +12,8 @@ public class ChaseState : IEnemyState
 
     private NavMeshAgent sagent;
 
-    public ChaseState(float _followRange, float _attackRange, Transform _playerTransform, GameObject _attentionPrefab, NavMeshAgent _agent)
+    public ChaseState(float _attackRange, Transform _playerTransform, GameObject _attentionPrefab, NavMeshAgent _agent)
     {
-        followRange = _followRange;
         attackRange = _attackRange;
         playerTransform = _playerTransform;
         attentionPrefab = _attentionPrefab;
