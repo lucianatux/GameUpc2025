@@ -54,14 +54,14 @@ public class PlayerMovement : MonoBehaviour
             _spriteRenderer.flipX = true;
         }
 
-        if (_rb.velocity.x != 0 || _rb.velocity.y != 0)
+        /*if (_rb.velocity.x != 0 || _rb.velocity.y != 0)
         {
             _animController.Play(AnimName.WalkAnim, 1);
         }
         else if (_rb.velocity.x == 0 && _rb.velocity.y == 0)
         {
             _animController.Play(AnimName.IdleAnim, 1);
-        }
+        }*/
     }
     
 }

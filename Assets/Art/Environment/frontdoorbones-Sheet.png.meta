@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 37295f0cce91aae4e9ea84aec99d242d
+guid: 52323b89bb918c4459341897c4d0ece6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_0
+      name: frontdoorbones-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1344
-        width: 576
-        height: 672
+        y: 192
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a2e7a05f3e366440bf8e003645a44f8
-      internalID: 1662950478
+      spriteID: c47b781535002a44580aef39576e4816
+      internalID: -1225759749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_1
+      name: frontdoorbones-Sheet_1
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1344
-        width: 576
-        height: 672
+        x: 384
+        y: 192
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7a270fb31da136438fd75c808d1c426
-      internalID: -1815618986
+      spriteID: 97e9be2f5e49e204289eedc925015ad3
+      internalID: 1521153416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_2
+      name: frontdoorbones-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 1344
-        width: 576
-        height: 672
+        x: 768
+        y: 192
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,104 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed91d89f50bb85241bfd7146026144f5
-      internalID: -952561282
+      spriteID: a2b2664e3fbe6224fbd489127f829cc3
+      internalID: 599898573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1728
-        y: 1344
-        width: 576
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07526edf4a1cc7b4899fccbddcde384b
-      internalID: -154501855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anim_door3keys-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 2304
-        y: 1344
-        width: 576
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a6feb6904e7f474691dcb2adc71a3dc
-      internalID: -1386277418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anim_door3keys-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 672
-        width: 576
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f2800b9b7bee8743b5767cdbf779008
-      internalID: -1367938724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anim_door3keys-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 672
-        width: 576
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ff7d6ca135750a4e9af606d37924c66
-      internalID: -540847990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anim_door3keys-Sheet_7
+      name: frontdoorbones-Sheet_3
       rect:
         serializedVersion: 2
         x: 1152
-        y: 672
-        width: 576
-        height: 672
+        y: 192
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cdc7a54d5d651843b67a39633cdfe6a
-      internalID: 36505863
+      spriteID: 9f1a357068af39348bedddd01ea04dc1
+      internalID: -569265902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_8
+      name: frontdoorbones-Sheet_4
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 672
-        width: 576
-        height: 672
+        x: 1536
+        y: 192
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +195,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 512b956c0e32c534190b15995fad617c
-      internalID: -487533495
+      spriteID: ae080c6d0cb143e429eae4f273995768
+      internalID: -292026305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_9
+      name: frontdoorbones-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 192
+        width: 384
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9387aa1984ca146ae173549380fed1
+      internalID: 1187756681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontdoorbones-Sheet_6
       rect:
         serializedVersion: 2
         x: 2304
-        y: 672
-        width: 576
-        height: 672
+        y: 192
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +237,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1ce2140b0728c41831e68ce53df892
-      internalID: 732242302
+      spriteID: c44a6bae6725f04479d1edb72ca3caac
+      internalID: -2010043405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_10
+      name: frontdoorbones-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 192
+        width: 384
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e74c7aa7778664ba876a71b4c1acc8
+      internalID: -337175124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontdoorbones-Sheet_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 576
-        height: 672
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e5b3e6bce405d49bcac5b4f26a2cb7
-      internalID: -1227245460
+      spriteID: 5a7b40c0357e2c04c913dd23b366d20a
+      internalID: -379944283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_11
+      name: frontdoorbones-Sheet_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 384
         y: 0
-        width: 576
-        height: 672
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +300,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada2f128da19dda4285bc7613a587b80
-      internalID: -1388291106
+      spriteID: 0fdc59a33a6e8fe40a96b3bdfdcf4ea3
+      internalID: 827451700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_12
+      name: frontdoorbones-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a909be1dee41da34abe812a1c1c6633b
+      internalID: 1451146018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontdoorbones-Sheet_11
       rect:
         serializedVersion: 2
         x: 1152
         y: 0
-        width: 576
-        height: 672
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4565129be90a554da5a2567a8e09cf2
-      internalID: 1319733710
+      spriteID: 969d079c96bbc7541806503129172cec
+      internalID: -895269189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_13
+      name: frontdoorbones-Sheet_12
       rect:
         serializedVersion: 2
-        x: 1728
+        x: 1536
         y: 0
-        width: 576
-        height: 672
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,20 +363,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79163ba4dd547d4880cf8192ff96c1b
-      internalID: -1250700983
+      spriteID: c6470fa073bc2de449dc33e616f18a4f
+      internalID: 34531326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim_door3keys-Sheet_14
+      name: frontdoorbones-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 384
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c660a188adb536d4a861a68fa118cd94
+      internalID: 1804873614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontdoorbones-Sheet_14
       rect:
         serializedVersion: 2
         x: 2304
         y: 0
-        width: 576
-        height: 672
+        width: 384
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,8 +405,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43c263ed436b70e4cb0541bef6c706b0
-      internalID: -1737750893
+      spriteID: 1facdaed48067f2468e6673d593ca52a
+      internalID: 510814866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontdoorbones-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 384
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80cea40244d0e449ab8fe6c432ae394
+      internalID: -639410592
       vertices: []
       indices: 
       edges: []
@@ -422,21 +443,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anim_door3keys-Sheet_0: 1662950478
-      anim_door3keys-Sheet_1: -1815618986
-      anim_door3keys-Sheet_10: -1227245460
-      anim_door3keys-Sheet_11: -1388291106
-      anim_door3keys-Sheet_12: 1319733710
-      anim_door3keys-Sheet_13: -1250700983
-      anim_door3keys-Sheet_14: -1737750893
-      anim_door3keys-Sheet_2: -952561282
-      anim_door3keys-Sheet_3: -154501855
-      anim_door3keys-Sheet_4: -1386277418
-      anim_door3keys-Sheet_5: -1367938724
-      anim_door3keys-Sheet_6: -540847990
-      anim_door3keys-Sheet_7: 36505863
-      anim_door3keys-Sheet_8: -487533495
-      anim_door3keys-Sheet_9: 732242302
+      frontdoorbones-Sheet_0: -1225759749
+      frontdoorbones-Sheet_1: 1521153416
+      frontdoorbones-Sheet_10: 1451146018
+      frontdoorbones-Sheet_11: -895269189
+      frontdoorbones-Sheet_12: 34531326
+      frontdoorbones-Sheet_13: 1804873614
+      frontdoorbones-Sheet_14: 510814866
+      frontdoorbones-Sheet_15: -639410592
+      frontdoorbones-Sheet_2: 599898573
+      frontdoorbones-Sheet_3: -569265902
+      frontdoorbones-Sheet_4: -292026305
+      frontdoorbones-Sheet_5: 1187756681
+      frontdoorbones-Sheet_6: -2010043405
+      frontdoorbones-Sheet_7: -337175124
+      frontdoorbones-Sheet_8: -379944283
+      frontdoorbones-Sheet_9: 827451700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
