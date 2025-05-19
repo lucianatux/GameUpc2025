@@ -9,7 +9,7 @@ public class EnemyHealth : LifeSystem
     [SerializeField] private GameObject lifeOrbPrefab;
     SpriteRenderer spriteRenderer;
     EnemyAI enemyAI;
-    bool isStunned = false;
+    //bool isStunned = false;
     Color originalColor;
     Rigidbody2D rb;
     [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.3f; // 30% por defecto
