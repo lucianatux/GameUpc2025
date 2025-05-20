@@ -18,21 +18,6 @@ public class PlayerMovement : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update(){
-         if (Input.GetKeyDown(KeyCode.C))
-        {
-            GameEventsManager.Instance.PlayerCroak(); // Activás el evento
-        }
-         if (Input.GetKeyDown(KeyCode.D))
-        {
-            GameEventsManager.Instance.PlayerDamaged(); // Activás el evento
-        }
-         if (Input.GetKeyDown(KeyCode.K))
-        {
-            GameEventsManager.Instance.PlayerKick(); // Activás el evento
-        }
-    }
-
     void FixedUpdate()
     {
         if (canMove == true)
@@ -63,6 +48,4 @@ public class PlayerMovement : MonoBehaviour
             _animController.Play(AnimName.IdleAnim, 1);
         }*/
     }
-    
 }
-

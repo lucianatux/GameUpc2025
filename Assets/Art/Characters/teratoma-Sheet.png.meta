@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: 930ef3cdaea8eb543ab9c9068d49aacf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: teratoma-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179233802ffba4d45a44ccd9ed2eea82
+      internalID: -949413968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1edbe3d2651ee04c9c7d82f209345ee
+      internalID: -37147872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cba06e57b528e94f95b1f245e1f3ff8
+      internalID: -243770068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7378141862120644c93f384b6c63350b
+      internalID: -2038862121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbf4afadfb1d6f449dd7dc834e10b8c
+      internalID: -1371082379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9cf24b659f0f440b3fb4b859d39b24
+      internalID: -1478411946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91444ddef00c3784babc4996f4d488a5
+      internalID: 109519898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c79df4cefe8cdf438d8fafbd2b9b3f7
+      internalID: 1228686231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e36e26bce0f144e93496f040a06496
+      internalID: 1761261453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 1152
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7849216e0cfd1b84bae9414072c37de7
+      internalID: -968570301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43343378892871a45a2e6d794aed91f3
+      internalID: 287562929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dacebcda34b51f47b8c8facdda6a796
+      internalID: -1094457626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d76eb54a4f99c145ab2693ad2d56c3f
+      internalID: 1992341466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac585d4db62f8ce44915a015cfddbf9d
+      internalID: 745022065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d370707af26ed4ba5ab7e9a37f9fd8
+      internalID: -547947224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e5752c088638640b20148432dbaf12
+      internalID: -213907545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca49e586403207488125cef32ea57e6
+      internalID: 1843931953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451ec74994182ff48ba658d58419e537
+      internalID: -89411179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a9c68660feb724a848ff492e66a2cd
+      internalID: -692902703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 768
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c414bdff669714785e8d22241a5280
+      internalID: 1878686799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef635c6fb4db2f84aa1cde916ad6de95
+      internalID: 2073706145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099d08d1bbd64a44fba56351d807a576
+      internalID: 29405469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ea2159a700bdd43a68dc92896e98d3
+      internalID: -1733153598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b8bf1cb3bc0d343b76821f7e0a6b71
+      internalID: 932087067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5527b053cc41e94697308cae5db2279
+      internalID: -578364534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1a68637d5a6e54e84a6c8dd3afe5da
+      internalID: -603556159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f950dcbbf6f2514e89881cd4cb6d668
+      internalID: -1041708564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d83f75d17f2cea439cb4818ece5a642
+      internalID: 1710961012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8612c8d7d399742b3cae8c003fe035
+      internalID: -110471470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 384
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbadb3bd2e3c2943a1d6998fa62d53b
+      internalID: 903270924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9124b6be3ce3cdc4580ad30e0dcdda76
+      internalID: -1809080033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb5b22f96d0d1348afa282e9401a5de
+      internalID: 459116539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563b471078afce741b5411433c4fca68
+      internalID: -305086064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b4d9202fc23224cb572967c4885378
+      internalID: 1002738683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cd31c01888ed146a496682fe853760
+      internalID: 1852612275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d2ff3d2639fbd4eb7cb05eefa800a2
+      internalID: 2060374030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f4ae8275945574794e965b29e4d1ad
+      internalID: 1697901951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c722237f33f8a4681c57c05d127734
+      internalID: 1265565659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teratoma-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becbb27d0ee123f4a940249db1d9b43d
+      internalID: 1357238302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      teratoma-Sheet_0: -949413968
+      teratoma-Sheet_1: -37147872
+      teratoma-Sheet_10: 287562929
+      teratoma-Sheet_11: -1094457626
+      teratoma-Sheet_12: 1992341466
+      teratoma-Sheet_13: 745022065
+      teratoma-Sheet_14: -547947224
+      teratoma-Sheet_15: -213907545
+      teratoma-Sheet_16: 1843931953
+      teratoma-Sheet_17: -89411179
+      teratoma-Sheet_18: -692902703
+      teratoma-Sheet_19: 1878686799
+      teratoma-Sheet_2: -243770068
+      teratoma-Sheet_20: 2073706145
+      teratoma-Sheet_21: 29405469
+      teratoma-Sheet_22: -1733153598
+      teratoma-Sheet_23: 932087067
+      teratoma-Sheet_24: -578364534
+      teratoma-Sheet_25: -603556159
+      teratoma-Sheet_26: -1041708564
+      teratoma-Sheet_27: 1710961012
+      teratoma-Sheet_28: -110471470
+      teratoma-Sheet_29: 903270924
+      teratoma-Sheet_3: -2038862121
+      teratoma-Sheet_30: -1809080033
+      teratoma-Sheet_31: 459116539
+      teratoma-Sheet_32: -305086064
+      teratoma-Sheet_33: 1002738683
+      teratoma-Sheet_34: 1852612275
+      teratoma-Sheet_35: 2060374030
+      teratoma-Sheet_36: 1697901951
+      teratoma-Sheet_37: 1265565659
+      teratoma-Sheet_38: 1357238302
+      teratoma-Sheet_4: -1371082379
+      teratoma-Sheet_5: -1478411946
+      teratoma-Sheet_6: 109519898
+      teratoma-Sheet_7: 1228686231
+      teratoma-Sheet_8: 1761261453
+      teratoma-Sheet_9: -968570301
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

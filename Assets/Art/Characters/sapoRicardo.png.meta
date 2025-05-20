@@ -1,0 +1,1522 @@
+fileFormatVersion: 2
+guid: 523530b5df10b87428378519559f44ec
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sapoRicardo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f861012f438f94b946eb9adc3ff9c5
+      internalID: -1681297398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_1
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecfb6cb809f01d4da292adb51ebf87d
+      internalID: 1411052945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_2
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9b5f5c7adb0d344979c6682f488d99
+      internalID: 336925909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_3
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85235e633ba0cdc4d92aa5b627f908b9
+      internalID: 1140756568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_4
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4b579fce0c2f44783d3291150a5e61
+      internalID: 942796492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_5
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a7f84b349d1534a9822b1af612eac9
+      internalID: -341366186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_6
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d980d9f55caba44d9615e44589aaf30
+      internalID: 1767791760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_7
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 5376
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a215cdb074b94a04f905890e4a301d65
+      internalID: 755714690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9245a1213c6ca4f8497e7c1d10f7e9
+      internalID: 1247644915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a01a5cf360c574db3320c7dea3b680
+      internalID: 1390446876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970e7c4d23b6d2b4bb30714b048d3f0f
+      internalID: -425001968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_11
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dd8fa8691bbc84fbb504aca02c00e3
+      internalID: -278262074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a6c6afe32051746a007785fb51f630
+      internalID: -2002198793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_13
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbcbf13c9dfda5448de526fe0912578
+      internalID: 1753453733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_14
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b7249edef27454994a3ef1ac3cbff0
+      internalID: 1829932601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_15
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 4608
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6177dd80217e5524480e7dfb51b2cd7d
+      internalID: -521018835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ba5c6579b478b47bfe3174246a5713
+      internalID: 1015060148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cbe076f3717fd43876caa29a4f1d30
+      internalID: 1207891646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6e07cd70748104da30c0dee21afbd9
+      internalID: 1883417517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_19
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16835308ea75160499b59785afa9a717
+      internalID: -1395119332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_20
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f506e4772ad99cc41ae9062ffb232cb2
+      internalID: 1209962195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_21
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc562abe0800a0b40bdfc2bac9522036
+      internalID: -720310928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_22
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa00725d7aa5f5c4ea03d4d0c0db1e40
+      internalID: 560062767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_23
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3840
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e475e9644734884abdc1286447b160b
+      internalID: -439648726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d2c08c3a237a040870c3d9f043f1e8
+      internalID: -1394741696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_25
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcf92af3f5b6b14bb6cba593bda9a86
+      internalID: 1116279323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_26
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7468c56ad9e6e3d489b75bc48af04de5
+      internalID: -1533931274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_27
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16ca42b2ff6ef7408ef8ce0ce6664e2
+      internalID: -1695011025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb49ad39653b23b4ba7e89ed837db005
+      internalID: 1652775582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_29
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59106c80086cb1a4e844d2e4e5a9159e
+      internalID: 1788202217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_30
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14c11c64a2816249941fa238593c369
+      internalID: -1421203419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_31
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3072
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e12e063468e38c40a48495327a91f02
+      internalID: 138105123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1224fba84cbd0c4689f654c7d3027b1
+      internalID: -1944928792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_33
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ceb893d1ea389438cefb0962053164
+      internalID: 1733858703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_34
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e0af758f64ee048b33e743ab94f33d
+      internalID: -1271539187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_35
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4753639b306dd924193ef05d3cb29dff
+      internalID: -1552984735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_36
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f6d061b34b5d04692dc208a25dd942
+      internalID: 48609059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_37
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d64c9ca9f078c429edc236aa924f64
+      internalID: -334334714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_38
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795246b3d46663445aa2343610d277ca
+      internalID: -1744409202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_39
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 2304
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92944dad0ebcf04fabfc7832379aca3
+      internalID: -719971458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4080ffd25bfe58f4da8fd4307751b72c
+      internalID: -135605161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e9fdb015b36a940a588a11525a762a
+      internalID: 1858113426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_42
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2ecb7a3aa4b4e45b6b05cf6703f1f5
+      internalID: -1082913392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_43
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1736062d11dbe04cbb9a1ee7888380b
+      internalID: -687622999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_44
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4528331a03394934691110b31a235af6
+      internalID: 1278433643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_45
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d62f0dd2991ff41995ec0119d7bad5
+      internalID: -1461088451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_46
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2612439d3a83b234c8539cfc4d359aec
+      internalID: -1966798687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_47
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 1536
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8555e7b693dd94498872292cf2e2f2
+      internalID: -305590460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400ae72ab1e16364a8c53bc0bf9b9735
+      internalID: 1720014638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_49
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc66d16768aee5479a3f99c8213922a
+      internalID: 584856916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_50
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df10d25fbae27854bb9fb168a61a02c5
+      internalID: 640162263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_51
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c1ec573c93ff440b0e342ffd523456
+      internalID: 1562939794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_52
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c561086e98a44744ae1c0b436d5207a
+      internalID: -2035556414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_53
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd577a46071784c4fa8bc3464371efd6
+      internalID: -1596350596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_54
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa085725f049924a839b956044608a9
+      internalID: -519827997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_55
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 768
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab06a1e34d15924588ac1bf7f61190f
+      internalID: 2080019200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df76218a0606f74e85f770afd5c3e3b
+      internalID: -1987817538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_57
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b15fff118f1682478064a181dc43075
+      internalID: 930470143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_58
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d706648f35e8949ab7dbd225e986f1
+      internalID: -589437191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_59
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f74991c3d9029a4586aec186eb364db
+      internalID: -1064357850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_60
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1690069f9028c344938adb06542c944
+      internalID: -773247601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_61
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f54dbeddce6ef4691b0fc0f2a74062
+      internalID: 1934030171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_62
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bba6aa77c0839408ec120044e6eaf6
+      internalID: 646329561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sapoRicardo_63
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e416ea512e5e704e844a6d864f58e1e
+      internalID: -83441959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sapoRicardo_0: -1681297398
+      sapoRicardo_1: 1411052945
+      sapoRicardo_10: -425001968
+      sapoRicardo_11: -278262074
+      sapoRicardo_12: -2002198793
+      sapoRicardo_13: 1753453733
+      sapoRicardo_14: 1829932601
+      sapoRicardo_15: -521018835
+      sapoRicardo_16: 1015060148
+      sapoRicardo_17: 1207891646
+      sapoRicardo_18: 1883417517
+      sapoRicardo_19: -1395119332
+      sapoRicardo_2: 336925909
+      sapoRicardo_20: 1209962195
+      sapoRicardo_21: -720310928
+      sapoRicardo_22: 560062767
+      sapoRicardo_23: -439648726
+      sapoRicardo_24: -1394741696
+      sapoRicardo_25: 1116279323
+      sapoRicardo_26: -1533931274
+      sapoRicardo_27: -1695011025
+      sapoRicardo_28: 1652775582
+      sapoRicardo_29: 1788202217
+      sapoRicardo_3: 1140756568
+      sapoRicardo_30: -1421203419
+      sapoRicardo_31: 138105123
+      sapoRicardo_32: -1944928792
+      sapoRicardo_33: 1733858703
+      sapoRicardo_34: -1271539187
+      sapoRicardo_35: -1552984735
+      sapoRicardo_36: 48609059
+      sapoRicardo_37: -334334714
+      sapoRicardo_38: -1744409202
+      sapoRicardo_39: -719971458
+      sapoRicardo_4: 942796492
+      sapoRicardo_40: -135605161
+      sapoRicardo_41: 1858113426
+      sapoRicardo_42: -1082913392
+      sapoRicardo_43: -687622999
+      sapoRicardo_44: 1278433643
+      sapoRicardo_45: -1461088451
+      sapoRicardo_46: -1966798687
+      sapoRicardo_47: -305590460
+      sapoRicardo_48: 1720014638
+      sapoRicardo_49: 584856916
+      sapoRicardo_5: -341366186
+      sapoRicardo_50: 640162263
+      sapoRicardo_51: 1562939794
+      sapoRicardo_52: -2035556414
+      sapoRicardo_53: -1596350596
+      sapoRicardo_54: -519827997
+      sapoRicardo_55: 2080019200
+      sapoRicardo_56: -1987817538
+      sapoRicardo_57: 930470143
+      sapoRicardo_58: -589437191
+      sapoRicardo_59: -1064357850
+      sapoRicardo_6: 1767791760
+      sapoRicardo_60: -773247601
+      sapoRicardo_61: 1934030171
+      sapoRicardo_62: 646329561
+      sapoRicardo_63: -83441959
+      sapoRicardo_7: 755714690
+      sapoRicardo_8: 1247644915
+      sapoRicardo_9: 1390446876
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
