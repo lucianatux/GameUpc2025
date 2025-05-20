@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance;
-
     [SerializeField] private AudioSource audioSource;   // Efectos
     [SerializeField] private AudioSource musicSource;   // Música
     [SerializeField] private AudioClip backgroundMusic;  // música
@@ -25,12 +23,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip bossDamagedClip;
     public AudioClip bossDefeatedClip;
 
-    // Hazard Clips
+    // Environment Clips
     public AudioClip geyserEruptClip;
     public AudioClip acidRiverSplashClip;
     public AudioClip acidRiverFlowClip;
-
-    // Item/Interaction Clips
     public AudioClip keyCollectedClip;
     public AudioClip keyUsedClip;
     public AudioClip pepperCollectedClip;
@@ -39,19 +35,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip doorOpenClip;
     public AudioClip levelCompleteClip;
 
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);  // Aseguramos que solo haya una instancia
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);  // La instancia no se destruye al cambiar de escena
-        }
-    }
-
+  
     void Start()
     {
         // Reproduce la música en loop
@@ -61,79 +45,89 @@ public class SoundManager : MonoBehaviour
             musicSource.loop = true;
             musicSource.Play();
         }
-          if (GameEventsManager.Instance != null)
+        if (PlayerEventsManager.Instance != null)
         {
-        var g = GameEventsManager.Instance;
-
+        var p = PlayerEventsManager.Instance;
         // Player
-        g.OnPlayerCroak += PlayPlayerCroak;
-        g.OnPlayerDamaged += PlayPlayerDamaged;
-        g.OnPlayerKick += PlayPlayerKick;
-        g.OnPlayerFireball += PlayPlayerFireball;
-        g.OnPlayerHeal += PlayPlayerHeal;
+        p.OnPlayerCroak += PlayPlayerCroak;
+        p.OnPlayerDamaged += PlayPlayerDamaged;
+        p.OnPlayerKick += PlayPlayerKick;
+        p.OnPlayerFireball += PlayPlayerFireball;
+        p.OnPlayerHeal += PlayPlayerHeal;
+        }
 
+         if (EnemiesEventsManager.Instance != null)
+        {
+        var enem = EnemiesEventsManager.Instance;
         // Enemy & Boss
-        g.OnEnemyDefeated += PlayEnemyDefeated;
-        g.OnEnemyDamaged += PlayEnemyDamaged;
-        g.OnEnemySwordAttack += PlayEnemySwordAttack;
-        g.OnEnemySodaAttack += PlayEnemySodaAttack;
-        g.OnBossCherryBombs += PlayBossCherryBombs;
-        g.OnBossCharge += PlayBossCharge;
-        g.OnBossDamaged += PlayBossDamaged;
-        g.OnBossDefeated += PlayBossDefeated;
+        enem.OnEnemyDefeated += PlayEnemyDefeated;
+        enem.OnEnemyDamaged += PlayEnemyDamaged;
+        enem.OnEnemySwordAttack += PlayEnemySwordAttack;
+        enem.OnEnemySodaAttack += PlayEnemySodaAttack;
+        enem.OnBossCherryBombs += PlayBossCherryBombs;
+        enem.OnBossCharge += PlayBossCharge;
+        enem.OnBossDamaged += PlayBossDamaged;
+        enem.OnBossDefeated += PlayBossDefeated;
+        }
 
-        // Hazards
-        g.OnGeyserErupt += PlayGeyserErupt;
-        g.OnAcidRiverSplash += PlayAcidRiverSplash;
-        g.OnAcidRiverFlow += PlayAcidRiverFlow;
-
-        // Items & Interactions
-        g.OnKeyCollected += PlayKeyCollected;
-        g.OnKeyUsed += PlayKeyUsed;
-        g.OnPepperCollected += PlayPepperCollected;
-        g.OnTeratomaInteract += PlayTeratomaInteract;
-        g.OnDoorClose += PlayDoorClose;
-        g.OnDoorOpen += PlayDoorOpen;
-        g.OnLevelComplete += PlayLevelComplete;
+         if (EnvironmentEventsManager.Instance != null)
+        {
+        var env = EnvironmentEventsManager.Instance;
+        // Environment
+        env.OnGeyserErupt += PlayGeyserErupt;
+        env.OnAcidRiverSplash += PlayAcidRiverSplash;
+        env.OnAcidRiverFlow += PlayAcidRiverFlow;
+        env.OnKeyCollected += PlayKeyCollected;
+        env.OnKeyUsed += PlayKeyUsed;
+        env.OnPepperCollected += PlayPepperCollected;
+        env.OnTeratomaInteract += PlayTeratomaInteract;
+        env.OnDoorClose += PlayDoorClose;
+        env.OnDoorOpen += PlayDoorOpen;
+        env.OnLevelComplete += PlayLevelComplete;
         }
     }
 
     void OnDestroy()
     { 
-        if (GameEventsManager.Instance != null)
+        if (PlayerEventsManager.Instance != null)
         {
-        var g = GameEventsManager.Instance;
-
+        var p = PlayerEventsManager.Instance;
         // Player
-        g.OnPlayerCroak -= PlayPlayerCroak;
-        g.OnPlayerDamaged -= PlayPlayerDamaged;
-        g.OnPlayerKick -= PlayPlayerKick;
-        g.OnPlayerFireball -= PlayPlayerFireball;
-        g.OnPlayerHeal -= PlayPlayerHeal;
+        p.OnPlayerCroak -= PlayPlayerCroak;
+        p.OnPlayerDamaged -= PlayPlayerDamaged;
+        p.OnPlayerKick -= PlayPlayerKick;
+        p.OnPlayerFireball -= PlayPlayerFireball;
+        p.OnPlayerHeal -= PlayPlayerHeal;
+        }
 
+        if (EnemiesEventsManager.Instance != null)
+        {
+        var enem = EnemiesEventsManager.Instance;
         // Enemy & Boss
-        g.OnEnemyDefeated -= PlayEnemyDefeated;
-        g.OnEnemyDamaged -= PlayEnemyDamaged;
-        g.OnEnemySwordAttack -= PlayEnemySwordAttack;
-        g.OnEnemySodaAttack -= PlayEnemySodaAttack;
-        g.OnBossCherryBombs -= PlayBossCherryBombs;
-        g.OnBossCharge -= PlayBossCharge;
-        g.OnBossDamaged -= PlayBossDamaged;
-        g.OnBossDefeated -= PlayBossDefeated;
+        enem.OnEnemyDefeated -= PlayEnemyDefeated;
+        enem.OnEnemyDamaged -= PlayEnemyDamaged;
+        enem.OnEnemySwordAttack -= PlayEnemySwordAttack;
+        enem.OnEnemySodaAttack -= PlayEnemySodaAttack;
+        enem.OnBossCherryBombs -= PlayBossCherryBombs;
+        enem.OnBossCharge -= PlayBossCharge;
+        enem.OnBossDamaged -= PlayBossDamaged;
+        enem.OnBossDefeated -= PlayBossDefeated;
+        }
 
-        // Hazards
-        g.OnGeyserErupt -= PlayGeyserErupt;
-        g.OnAcidRiverSplash -= PlayAcidRiverSplash;
-        g.OnAcidRiverFlow -= PlayAcidRiverFlow;
-
-        // Items & Interactions
-        g.OnKeyCollected -= PlayKeyCollected;
-        g.OnKeyUsed -= PlayKeyUsed;
-        g.OnPepperCollected -= PlayPepperCollected;
-        g.OnTeratomaInteract -= PlayTeratomaInteract;
-        g.OnDoorClose -= PlayDoorClose;
-        g.OnDoorOpen -= PlayDoorOpen;
-        g.OnLevelComplete -= PlayLevelComplete;
+        if (EnvironmentEventsManager.Instance != null)
+        {
+        var env = EnvironmentEventsManager.Instance;
+        // Environment
+        env.OnGeyserErupt -= PlayGeyserErupt;
+        env.OnAcidRiverSplash -= PlayAcidRiverSplash;
+        env.OnAcidRiverFlow -= PlayAcidRiverFlow;
+        env.OnKeyCollected -= PlayKeyCollected;
+        env.OnKeyUsed -= PlayKeyUsed;
+        env.OnPepperCollected -= PlayPepperCollected;
+        env.OnTeratomaInteract -= PlayTeratomaInteract;
+        env.OnDoorClose -= PlayDoorClose;
+        env.OnDoorOpen -= PlayDoorOpen;
+        env.OnLevelComplete -= PlayLevelComplete;
         }
     }
 
@@ -172,11 +166,12 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("SoundManager: audioSource is not assigned!");
             return;
         }
-
         if (clip != null)
         {
             audioSource.PlayOneShot(clip);
+        }else
+        {
+            Debug.LogWarning("SoundManager: AudioClip is missing for one of the sounds!");
         }
     }
 }
-

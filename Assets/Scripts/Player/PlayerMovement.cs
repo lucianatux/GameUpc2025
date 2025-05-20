@@ -20,12 +20,38 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!canMove) return;
-
-        if (Input.GetKeyDown(KeyCode.Z)) TriggerAnim("fireball");
-        if (Input.GetKeyDown(KeyCode.X)) TriggerAnim("kick");
-        if (Input.GetKeyDown(KeyCode.C)) TriggerAnim("croak");
-        if (Input.GetKeyDown(KeyCode.V)) TriggerAnim("damage");
-        if (Input.GetKeyDown(KeyCode.B)) TriggerAnim("die");
+        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            TriggerAnim("fireball");
+            PlayerEventsManager.Instance.PlayerFireball();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            TriggerAnim("kick");
+            PlayerEventsManager.Instance.PlayerKick();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            TriggerAnim("croak");
+            PlayerEventsManager.Instance.PlayerCroak(); 
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            TriggerAnim("damage");
+            PlayerEventsManager.Instance.PlayerDamaged();
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            TriggerAnim("die");
+            // reutilizar el evento de daño, o crear uno de muerte 
+            PlayerEventsManager.Instance.PlayerDamaged(); // o PlayerDied();
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            TriggerAnim("heal");
+            PlayerEventsManager.Instance.PlayerHeal();
+        }
     }
 
     void TriggerAnim(string triggerName)
