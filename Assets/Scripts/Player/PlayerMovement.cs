@@ -1,51 +1,59 @@
-using System;
 using UnityEngine;
-
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float _moveSpeed = 10f;
-    private Rigidbody2D _rb;
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    private Rigidbody2D rb;
     public bool canMove = true;
-    private AnimationStateController _animController;
-    private SpriteRenderer _spriteRenderer;
+    private bool isBack = false;
 
     void Start()
     {
-        canMove = true;
-        _rb = GetComponent<Rigidbody2D>();
-        _animController = GetComponent<AnimationStateController>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        if (animator == null) animator = GetComponent<Animator>();
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+    void Update()
+    {
+        if (canMove && Input.GetKeyDown(KeyCode.C))
+        {
+            animator.SetTrigger("croak");
+        }
+    }
+
 
     void FixedUpdate()
     {
-        if (canMove == true)
+        if (canMove)
         {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        _rb.velocity = moveInput * _moveSpeed;
-        }
-        CheckAnimation();
-    }
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            Vector2 velocity = input.normalized * moveSpeed;
+            rb.velocity = velocity;
 
-    private void CheckAnimation()
-    {
-        if (_rb.velocity.x > 0)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        else if (_rb.velocity.x < 0)
-        {
-            _spriteRenderer.flipX = true;
-        }
+            // Flip X si se mueve hacia la izquierda o derecha
+            if (Mathf.Abs(input.x) > 0.1f)
+            {
+                spriteRenderer.flipX = (input.x < 0);
+            }
 
-        /*if (_rb.velocity.x != 0 || _rb.velocity.y != 0)
-        {
-            _animController.Play(AnimName.WalkAnim, 1);
+            // Cambia entre modo "back" y "frente"
+            if (input.y > 0.1f)
+                isBack = true;
+            else if (input.y < -0.1f)
+                isBack = false;
+
+            animator.SetBool("isBack", isBack);
+            animator.SetFloat("Speed", rb.velocity.magnitude);
         }
-        else if (_rb.velocity.x == 0 && _rb.velocity.y == 0)
+        else
         {
-            _animController.Play(AnimName.IdleAnim, 1);
-        }*/
+            rb.velocity = Vector2.zero;
+            animator.SetFloat("Speed", 0f);
+        }
     }
 }
+
