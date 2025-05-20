@@ -19,10 +19,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (canMove && Input.GetKeyDown(KeyCode.C))
-        {
-            animator.SetTrigger("croak");
-        }
+        if (!canMove) return;
+
+        if (Input.GetKeyDown(KeyCode.Z)) TriggerAnim("fireball");
+        if (Input.GetKeyDown(KeyCode.X)) TriggerAnim("kick");
+        if (Input.GetKeyDown(KeyCode.C)) TriggerAnim("croak");
+        if (Input.GetKeyDown(KeyCode.V)) TriggerAnim("damage");
+        if (Input.GetKeyDown(KeyCode.B)) TriggerAnim("die");
+    }
+
+    void TriggerAnim(string triggerName)
+    {
+        animator.ResetTrigger(triggerName);
+        animator.SetTrigger(triggerName);
     }
 
 
