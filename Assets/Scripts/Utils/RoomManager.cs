@@ -19,7 +19,7 @@ public class RoomManager : MonoBehaviour
 
     public event Action<int> OnCallWaves;
 
-    private int currentWave = 0;
+    //private int currentWave = 0;
     
     public int enemyCount; 
 
