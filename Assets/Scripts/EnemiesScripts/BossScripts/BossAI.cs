@@ -43,12 +43,16 @@ public class BossAI : EnemyAI
     protected override void InitializeStates()
     {
         Debug.Log("se inician los estados");
+
         player = GameObject.FindWithTag("Player");
-        originalPosition = transform.position;
         playerTransform = player.transform;
+
+        originalPosition = transform.position;
+
         bossWaitingState = new BossWaitingState(roomID, _waveID);
         bossChaseState = new BossChaseState(isInAttackSight, playerTransform);
-        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange);     
+        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange);    
+        
         SetState(bossWaitingState);
    
     }
@@ -76,18 +80,6 @@ public class BossAI : EnemyAI
         }
 
         else return false;
-    }
-
-    protected override void Update()
-    {
-        
-    }
-    
-
-        public void SetState(IBossState iBossState)
-    {
-        bossCurrentState = iBossState;
-        iBossState.EnterState(this);
     }
 
 }

@@ -1,8 +1,9 @@
+using StatePattern;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossChaseState : IBossState
+public class BossChaseState : IEnemyState
 {
     private BossAI bossAI;
 
@@ -18,13 +19,22 @@ public class BossChaseState : IBossState
         playerTransform = _playerTransform;
 
     }
-    public void EnterState(BossAI _bossAI)
+
+    public void EnterState(EnemyAI _enemyAI)
     {
         Debug.Log("se entra al chase state");
-        bossAI = _bossAI;
+
+        if (_enemyAI is BossAI enemy)
+        {
+            bossAI = enemy;
+        }
+        else
+        {
+            Debug.LogError("");
+        }
     }
 
-    public void UpdateBossState()
+    public void UpdateState()
     {
         isInAttackSight = bossAI.GetPlayerInSight();
         bossAI.ChaseHorizontally(playerTransform);
@@ -34,5 +44,4 @@ public class BossChaseState : IBossState
             // bossAI.SetState(bossAI.bossAttackState);
         }
     }
-
 }

@@ -1,8 +1,9 @@
+using StatePattern;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossWaitingState : IBossState
+public class BossWaitingState : IEnemyState
 {
     private BossAI bossAI;
 
@@ -15,15 +16,6 @@ public class BossWaitingState : IBossState
         enemyRoomID = _enemyRoomID;
         enemyWaveID = _enemyWaveID;
         
-    }
-
-    public void EnterState(BossAI _bossAI)
-    {
-        Debug.Log("estado waiting");
-        RoomManager.Instance.OnRoomEntered += BossWakeUp;
-        bossAI = _bossAI;
-        bossAI.isActive = false;
-
     }
 
     private void BossWakeUp(int roomID)
@@ -41,9 +33,28 @@ public class BossWaitingState : IBossState
         bossAI.SetState(bossAI.bossChaseState);   
     }
 
-    
-    public void UpdateBossState()
+   
+
+    public void EnterState(EnemyAI _enemyAI)
     {
 
+        if (_enemyAI is BossAI enemy)
+        {
+            bossAI = enemy;
+        }
+        else
+        {
+            Debug.LogError("");
+        }
+
+        Debug.Log("estado waiting");
+        RoomManager.Instance.OnRoomEntered += BossWakeUp;
+
+        
+        bossAI.isActive = false;
+    }
+
+    public void UpdateState()
+    {
     }
 }
