@@ -22,7 +22,7 @@ public class BossAttackState : IBossState
         bossAI = _bossAI;
     }
 
-    public void UpdateState()
+    public void UpdateBossState()
     {
 
     }

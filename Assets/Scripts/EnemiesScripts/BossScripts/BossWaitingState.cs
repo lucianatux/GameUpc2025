@@ -36,11 +36,13 @@ public class BossWaitingState : IBossState
             bossAI.rb.bodyType = RigidbodyType2D.Kinematic; // para que no lo afecte la física
         }
         bossAI.GetComponent<Collider2D>().enabled = true;
+            Debug.Log("se despierta");
+
         bossAI.SetState(bossAI.bossChaseState);   
     }
 
     
-    public void UpdateState()
+    public void UpdateBossState()
     {
 
     }

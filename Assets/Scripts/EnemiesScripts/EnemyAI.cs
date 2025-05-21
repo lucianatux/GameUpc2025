@@ -16,17 +16,10 @@ namespace StatePattern
     // Movimiento y Rango de Detección
     // -------------------------------------------
     [Header("Movimiento y Detección")]
-    [Tooltip("Velocidad de movimiento del enemigo.")]
-    [SerializeField] private float enemyMoveSpeed;
-
+ 
 
     [Tooltip("Distancia a la que el enemigo entra en estado de ataque.")]
     [SerializeField] protected float attackRange = 4;
-
-    [Tooltip("Distancia de retroceso cuando recibe daño.")]
-    [SerializeField] public float retreatDistance = 3;
-    [SerializeField] public LayerMask walkableLayer; // Asigna esto en el Inspector
-
 
     // -------------------------------------------
     // Ataque
@@ -42,7 +35,7 @@ namespace StatePattern
     public Transform weaponTransform;
 
     [Tooltip("Temporizador para controlar el ataque.")]
-    public float attackTimer;
+    [HideInInspector] public float attackTimer;
 
     // -------------------------------------------
     // Prefabs de Aviso
@@ -59,13 +52,13 @@ namespace StatePattern
     // -------------------------------------------
     [Header("Referencias de Componentes")]
     [Tooltip("Referencia al transform del jugador.")]
-    protected Transform playerTransform;
+    [HideInInspector] protected Transform playerTransform;
 
     [Tooltip("SpriteRenderer del enemigo para efectos visuales.")]
-    protected SpriteRenderer spriteRenderer;
+    [HideInInspector] protected SpriteRenderer spriteRenderer;
 
     [Tooltip("Rigidbody2D del enemigo para aplicar físicas.")]
-    public Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
 
     // -------------------------------------------
     // Daño y Knockback
@@ -94,16 +87,18 @@ namespace StatePattern
 
     public bool isActive;
     protected GameObject player;
+    
+
        protected virtual void InitializeStates()
         {
             player = GameObject.FindWithTag("Player");
             playerTransform = player.transform;
             enemyWaitingState = new WaitingState(roomID, _waveID);
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
-            enemyChaseState  = new ChaseState( attackRange, playerTransform, attentionPrefab, agent);
+            enemyChaseState = new ChaseState(attackRange, playerTransform, attentionPrefab, agent);
             SetState(enemyWaitingState);
         }
-        void Awake()
+        protected void Awake()
         {
         animator = GetComponent<Animator>();
         //animController = GetComponent<AnimationStateController>();
@@ -120,7 +115,7 @@ namespace StatePattern
         }
 
 
-        protected void Start()
+        protected virtual void Start()
         {
         //RoomManager.Instance.OnRoomExited += Deactivate;
             InitializeStates();
@@ -142,7 +137,7 @@ namespace StatePattern
 
         }
 
-        protected void Update()
+        protected virtual void Update()
         {
             currentState.UpdateState();
             UpdateSprite();

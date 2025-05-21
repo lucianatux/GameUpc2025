@@ -10,24 +10,28 @@ public class BossChaseState : IBossState
 
     private bool isInAttackSight;
     private GameObject bulletPrefab;
-
+    private Transform playerTransform;
     private int attackRange;
-    public BossChaseState(bool _isInAttackSight)
+    public BossChaseState(bool _isInAttackSight, Transform _playerTransform)
     {
         isInAttackSight = _isInAttackSight;
+        playerTransform = _playerTransform;
 
     }
     public void EnterState(BossAI _bossAI)
     {
+        Debug.Log("se entra al chase state");
         bossAI = _bossAI;
     }
 
-    public void UpdateState()
+    public void UpdateBossState()
     {
         isInAttackSight = bossAI.GetPlayerInSight();
-        if (isInAttackSight)
+        bossAI.ChaseHorizontally(playerTransform);
+        Debug.Log("chase update");
+        if (isInAttackSight && attackTimer < 0)
         {
-            bossAI.SetState(bossAI.bossAttackState);   
+            // bossAI.SetState(bossAI.bossAttackState);
         }
     }
 

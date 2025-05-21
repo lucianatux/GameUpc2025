@@ -26,16 +26,31 @@ public class BossAI : EnemyAI
     public Vector3 originalPosition;    
 
 
-
+        protected override void Start()
+        {
+        //RoomManager.Instance.OnRoomExited += Deactivate;
+            InitializeStates();
+            Debug.Log("se activa el boss");
+            GetComponent<Collider2D>().enabled = false;
+            if (rb != null)
+            {
+                rb.velocity = Vector2.zero;
+                rb.bodyType = RigidbodyType2D.Static; // para que no lo afecte la física
+            }
+            originalColor = spriteRenderer.color;
+        }
 
     protected override void InitializeStates()
     {
+        Debug.Log("se inician los estados");
         player = GameObject.FindWithTag("Player");
         originalPosition = transform.position;
         playerTransform = player.transform;
         bossWaitingState = new BossWaitingState(roomID, _waveID);
-        bossChaseState = new BossChaseState(isInAttackSight);
-        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange);        
+        bossChaseState = new BossChaseState(isInAttackSight, playerTransform);
+        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange);     
+        SetState(bossWaitingState);
+   
     }
 
 
@@ -44,7 +59,6 @@ public class BossAI : EnemyAI
         if (isStunned) return;
         Vector3 toChaseH  = new Vector3(toChase.position.x, originalPosition.y, 0);
         Debug.DrawLine(transform.position, toChaseH, Color.red);
-
         //animController.Play(AnimName.WalkAnim, 1);
         agent.SetDestination(toChaseH);
     }
@@ -64,11 +78,16 @@ public class BossAI : EnemyAI
         else return false;
     }
 
+    protected override void Update()
+    {
+        
+    }
+    
 
         public void SetState(IBossState iBossState)
-        {
-            bossCurrentState = iBossState;
-            iBossState.EnterState(this);
-        }
+    {
+        bossCurrentState = iBossState;
+        iBossState.EnterState(this);
+    }
 
 }
