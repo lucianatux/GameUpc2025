@@ -29,8 +29,8 @@ public class AttackState : IEnemyState
 
     public void EnterState(EnemyAI _enemyAI)
     {   
-        
         Debug.Log("Cambia a estado Attack");
+
         enemyAI = _enemyAI;
     }
 
@@ -60,39 +60,40 @@ public class AttackState : IEnemyState
             if (enemyAI.isStunned) return;
 
             enemyAI.attackTimer = attackCooldown;
+
             enemyAI.StartCoroutine(CheckAttacking()); // Esperar antes de disparar
+
             Debug.Log("Malo prepara ataque");
         }
     }
 
     private IEnumerator CheckAttacking()
-{
-    isAttacking = true;
-    Warning();
-    yield return new WaitForSeconds(0.2f);
+    {
+        isAttacking = true;
+        Warning();
+        yield return new WaitForSeconds(0.4f);
 
-    //enemyAI.animController.Play(AnimName.AttackAnim, 2, true);
-    yield return new WaitForSeconds(1f); // Espera antes de desbloquear
-    //enemyAI.animController.Unlock();       // 🔓 desbloquea justo antes de cambiar de animación
-    Shoot(bulletPrefab, weaponTransform);
-    //enemyAI.animController.Play(AnimName.IdleAnim, 1, false); // Ahora sí cambia a idle
+        //animacion
+        Shoot(bulletPrefab, weaponTransform);
 
-    yield return new WaitForSeconds(1.3f);
-    //enemyAI.animController.Play(AnimName.IdleAnim, 1, false);
+        yield return new WaitForSeconds(1f);
+        isAttacking = false;
 
-    isAttacking = false;
-    Debug.Log("Malo termina ataque");
-}
+        Debug.Log("Enemy termina ataque");
+    }
 
 
         public void Shoot(GameObject bullet, Transform enemy)
     {
         // Calcula la dirección al enemigo
         if(weaponTransform == null || bulletPrefab == null) return;
+
         Vector2 direction = (enemy.position - enemyAI.transform.position).normalized;
         float angle = enemyAI.GetAngleToPlayer();
         GameObject NewBullet = Object.Instantiate(bullet, weaponTransform.position, Quaternion.Euler(0, 0, angle));
+
         GameObject.Destroy (NewBullet, 0.2f);
+        
         Debug.Log(angle);
     }
         private void Warning()

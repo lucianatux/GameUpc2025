@@ -37,14 +37,13 @@ public class BossWaitingState : IEnemyState
 
     public void EnterState(EnemyAI _enemyAI)
     {
-
         if (_enemyAI is BossAI enemy)
         {
             bossAI = enemy;
         }
         else
         {
-            Debug.LogError("");
+            Debug.LogError(this + "Error de casteo fallido");
         }
 
         Debug.Log("estado waiting");

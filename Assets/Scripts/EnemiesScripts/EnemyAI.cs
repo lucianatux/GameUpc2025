@@ -81,51 +81,71 @@ namespace StatePattern
         //[HideInInspector] public AnimationStateController animController;
         [SerializeField] protected int roomID;
 
-        protected NavMeshAgent agent; 
+        public NavMeshAgent agent; 
         Animator animator;
-        private string currentAnim; 
 
         public bool isActive;
         protected GameObject player;
     
+        protected Collider2D col;
 
            protected virtual void InitializeStates()
             {
-                player = GameObject.FindWithTag("Player");
-                playerTransform = player.transform;
+
                 enemyWaitingState = new WaitingState(roomID, _waveID);
                 enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
                 enemyChaseState = new ChaseState(attackRange, playerTransform, attentionPrefab, agent);
+
                 SetState(enemyWaitingState);
             }
-            protected void Awake()
+        protected void Awake()
             {
-            animator = GetComponent<Animator>();
-            //animController = GetComponent<AnimationStateController>();
-            agent = GetComponent<NavMeshAgent>();
-            rb = GetComponent<Rigidbody2D>();
-            agent.updateRotation = false;
-            agent.updateUpAxis = false;
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            }
-            public float GetDistanceToPlayer()
-            {
-                if(playerTransform == null) return 0f;
-                return Vector2.Distance(transform.position, playerTransform.position);
+                player = GameObject.FindWithTag("Player");
+
+                if (player != null)
+                {
+                    playerTransform = player.transform;
+                }
+
+                col = GetComponent<Collider2D>();
+                animator = GetComponent<Animator>();
+                agent = GetComponent<NavMeshAgent>();
+                rb = GetComponent<Rigidbody2D>();
+                spriteRenderer = GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer != null)
+                {
+                    originalColor = spriteRenderer.color;
+                }
+
+                if (agent != null)
+                {
+                    agent.updateRotation = false;
+                    agent.updateUpAxis = false;
+                }
+
+                }
+                public float GetDistanceToPlayer()
+                {
+                    if(playerTransform == null) return 0f;
+                    return Vector2.Distance(transform.position, playerTransform.position);
             }
 
 
             protected virtual void Start()
             {
-            //RoomManager.Instance.OnRoomExited += Deactivate;
-                InitializeStates();
-                GetComponent<Collider2D>().enabled = false;
+
+                if (col != null)
+                {
+                    col.enabled = false;
+                }
+
                 if (rb != null)
                 {
                     rb.velocity = Vector2.zero;
                     rb.bodyType = RigidbodyType2D.Static; // para que no lo afecte la física
                 }
-                originalColor = spriteRenderer.color;
+
             }
 
             private void Deactivate(int _roomID)
@@ -139,6 +159,7 @@ namespace StatePattern
 
             protected virtual void Update()
             {
+            if (currentState == null) return;
                 currentState.UpdateState();
                 UpdateSprite();
 
@@ -228,13 +249,12 @@ namespace StatePattern
             Debug.Log("se muere " + this + " por el enemy ai");
             isActive = false;
             gameObject.SetActive(false);
-            // También podés lanzar un evento si querés avisarle al RoomManager
+        
         }
 
        public void Chase(Transform toChase)
         {
             if (isStunned) return;
-            //animController.Play(AnimName.WalkAnim, 1);
             agent.SetDestination(toChase.position);
         }
 

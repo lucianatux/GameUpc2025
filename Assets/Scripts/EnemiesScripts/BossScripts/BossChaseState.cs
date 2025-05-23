@@ -30,15 +30,18 @@ public class BossChaseState : IEnemyState
         }
         else
         {
-            Debug.LogError("");
+            Debug.LogError(this + "Error de casteo fallido");
         }
     }
 
     public void UpdateState()
     {
-        isInAttackSight = bossAI.GetPlayerInSight();
-        bossAI.ChaseHorizontally(playerTransform);
+        isInAttackSight = bossAI.GetPlayerInSight(); // Chequea si esta frente al player
+
+        bossAI.ChaseHorizontally(playerTransform); // Persecución al player
+
         Debug.Log("chase update");
+        //se fija si tiene al player y si puede atacar
         if (isInAttackSight && attackTimer < 0)
         {
             // bossAI.SetState(bossAI.bossAttackState);

@@ -6,8 +6,6 @@ using UnityEngine.AI;
 
 public class BossAI : EnemyAI
 {
-    private IBossState bossCurrentState;
-
     [HideInInspector] public BossWaitingState bossWaitingState;
     [HideInInspector] public BossAttackState bossAttackState;
     [HideInInspector] public BossChaseState bossChaseState;
@@ -18,40 +16,36 @@ public class BossAI : EnemyAI
     [Tooltip("Tiempo de espera entre ataques 2.")]    
     [SerializeField] private float secondAttackCooldown = 3;
 
+    [Tooltip("Tiempo de espera entre ataques 2.")]    
+    [SerializeField] private float chargeVelocity;
+
+
     private bool isInAttackSight;
 
 
     [Tooltip("Posicion original del Boss.")]
 
-    public Vector3 originalPosition;    
+    public Vector3 originalPosition;
 
 
         protected override void Start()
-        {
-        //RoomManager.Instance.OnRoomExited += Deactivate;
-            InitializeStates();
-            Debug.Log("se activa el boss");
-            GetComponent<Collider2D>().enabled = false;
-            if (rb != null)
-            {
-                rb.velocity = Vector2.zero;
-                rb.bodyType = RigidbodyType2D.Static; // para que no lo afecte la física
-            }
-            originalColor = spriteRenderer.color;
-        }
+    {
+        base.Start();
+
+        originalPosition = transform.position;
+        originalColor = spriteRenderer.color;
+
+        Debug.Log("se activa el boss");
+
+    }
 
     protected override void InitializeStates()
     {
         Debug.Log("se inician los estados");
 
-        player = GameObject.FindWithTag("Player");
-        playerTransform = player.transform;
-
-        originalPosition = transform.position;
-
         bossWaitingState = new BossWaitingState(roomID, _waveID);
         bossChaseState = new BossChaseState(isInAttackSight, playerTransform);
-        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange);    
+        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange,chargeVelocity, rb);    
         
         SetState(bossWaitingState);
    
@@ -66,17 +60,23 @@ public class BossAI : EnemyAI
         //animController.Play(AnimName.WalkAnim, 1);
         agent.SetDestination(toChaseH);
     }
+    public void GoBackToOriginalY()
+    {
+        Vector3 originalY  = new Vector3(transform.position.x, originalPosition.y, 0);
+        agent.SetDestination(originalY);
+
+    }
 
     public bool GetPlayerInSight()
     {
-        float rayDistance = 100f;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, rayDistance);
+        float rayDistance = 30f;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayDistance);
 
         Debug.DrawRay(transform.position, transform.right * rayDistance, Color.red);
 
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
-        return true;
+            return true;
         }
 
         else return false;
