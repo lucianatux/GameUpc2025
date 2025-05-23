@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.AI;
-using System.Collections;namespace StatePattern
+namespace StatePattern
 {
     public class ChaseState : IEnemyState
     {

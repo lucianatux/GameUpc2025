@@ -14,17 +14,14 @@ namespace StatePattern
 
         #region Movimiento y Detección
         [Header("Movimiento y Detección")]
-        [SerializeField] private float enemyMoveSpeed;
-        [SerializeField] private float followRange = 7;
-        [SerializeField] private float attackRange = 4;
-        [SerializeField] public float retreatDistance = 3;
-        [SerializeField] private float rotationSpeed = 200;
+
+        [SerializeField] private float attackRange;
         [SerializeField] public LayerMask walkableLayer;
         #endregion
 
         #region Ataque
         [Header("Ataque")]
-        [SerializeField] private float attackCooldown = 2;
+        [SerializeField] private float attackCooldown;
         [SerializeField] private GameObject bulletPrefab;
         public Transform weaponTransform;
         public float attackTimer;
@@ -136,6 +133,7 @@ namespace StatePattern
             //set initial state
             SetState(enemyWaitingState);
         }
+
         /// <summary>
         //Returns distance to player
         /// <summary>
@@ -160,6 +158,7 @@ namespace StatePattern
 
             UpdateSprite();
         }
+
         /// <summary>
         //Sets states when called
         /// <summary>
