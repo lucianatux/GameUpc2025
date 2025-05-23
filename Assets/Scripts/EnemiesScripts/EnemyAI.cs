@@ -12,254 +12,286 @@ namespace StatePattern
         [HideInInspector] public ChaseState enemyChaseState;
         #endregion
 
-        // -------------------------------------------
-        // Movimiento y Rango de Detección
-        // -------------------------------------------
+        #region Movimiento y Detección
         [Header("Movimiento y Detección")]
- 
 
-        [Tooltip("Distancia a la que el enemigo entra en estado de ataque.")]
-        [SerializeField] protected float attackRange = 4;
+        [SerializeField] private float attackRange;
+        [SerializeField] public LayerMask walkableLayer;
+        #endregion
 
-        // -------------------------------------------
-        // Ataque
-        // -------------------------------------------
+        #region Ataque
         [Header("Ataque")]
-        [Tooltip("Tiempo de espera entre ataques.")]
-        [SerializeField] protected float attackCooldown = 2;
-
-        [Tooltip("Prefab del proyectil que dispara el enemigo.")]
-        [SerializeField] protected GameObject bulletPrefab;
-
-        [Tooltip("Transform del arma desde donde se dispara el proyectil.")]
+        [SerializeField] private float attackCooldown;
+        [SerializeField] private GameObject bulletPrefab;
         public Transform weaponTransform;
+        public float attackTimer;
+        #endregion
 
-        [Tooltip("Temporizador para controlar el ataque.")]
-        [HideInInspector] public float attackTimer;
-
-        // -------------------------------------------
-        // Prefabs de Aviso
-        // -------------------------------------------
+        #region Prefabs de Aviso
         [Header("Prefabs de Aviso")]
-        [Tooltip("Prefab de la advertencia antes de atacar.")]
         [SerializeField] private GameObject warningPrefab;
-
-        [Tooltip("Prefab que se muestra cuando el enemigo detecta al jugador.")]
         [SerializeField] private GameObject attentionPrefab;
+        #endregion
 
-        // -------------------------------------------
-        // Referencias de Componentes
-        // -------------------------------------------
+        #region Referencias de Componentes
         [Header("Referencias de Componentes")]
-        [Tooltip("Referencia al transform del jugador.")]
-        [HideInInspector] protected Transform playerTransform;
+        private Transform playerTransform;
+        private SpriteRenderer spriteRenderer;
+        public Rigidbody2D rb;
+        private NavMeshAgent agent;
+        private Animator animator;
+        public Collider2D col;
+        #endregion
 
-        [Tooltip("SpriteRenderer del enemigo para efectos visuales.")]
-        [HideInInspector] protected SpriteRenderer spriteRenderer;
-
-        [Tooltip("Rigidbody2D del enemigo para aplicar físicas.")]
-        [HideInInspector] public Rigidbody2D rb;
-
-        // -------------------------------------------
-        // Daño y Knockback
-        // -------------------------------------------
+        #region Daño y Knockback
         [Header("Daño y Knockback")]
-        [Tooltip("Color original del enemigo antes de recibir daño.")]
-        protected Color originalColor;
-
-        [Tooltip("Duración del parpadeo blanco cuando recibe daño.")]
+        private Color originalColor;
         [SerializeField] private float flashDuration = 0.1f;
-
-        [Tooltip("Indica si el enemigo está aturdido.")]
-
         public bool isStunned = false;
+        [SerializeField] private float stunDuration;
+        #endregion
 
-        [Tooltip("Duración del aturdimiento tras recibir daño.")]
-
-        [SerializeField] protected float stunDuration;
-        [SerializeField] protected int _waveID;
-        //[HideInInspector] public AnimationStateController animController;
-        [SerializeField] protected int roomID;
-
-        public NavMeshAgent agent; 
-        Animator animator;
-
+        #region Otros
+        [SerializeField] private int _waveID;
+        [SerializeField] private int roomID;
         public bool isActive;
-        protected GameObject player;
-    
-        protected Collider2D col;
+        private GameObject player;
+        public float attentionTimer = 0;
+        #endregion
 
-           protected virtual void InitializeStates()
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+            if (animator == null) Debug.LogError("EnemyAI: Animator no encontrado");
+
+            agent = GetComponent<NavMeshAgent>();
+            if (agent == null) Debug.LogError("EnemyAI: NavMeshAgent no encontrado");
+
+            rb = GetComponent<Rigidbody2D>();
+            if (rb == null) Debug.LogError("EnemyAI: Rigidbody2D no encontrado");
+
+             col = GetComponent<Collider2D>();
+
+            if (col == null)
             {
-
-                enemyWaitingState = new WaitingState(roomID, _waveID);
-                enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
-                enemyChaseState = new ChaseState(attackRange, playerTransform, attentionPrefab, agent);
-
-                SetState(enemyWaitingState);
+                Debug.LogError("EnemyAI: Collider2D no encontrado");
             }
-        protected void Awake()
+            else
             {
-                player = GameObject.FindWithTag("Player");
-
-                if (player != null)
-                {
-                    playerTransform = player.transform;
-                }
-
-                col = GetComponent<Collider2D>();
-                animator = GetComponent<Animator>();
-                agent = GetComponent<NavMeshAgent>();
-                rb = GetComponent<Rigidbody2D>();
-                spriteRenderer = GetComponent<SpriteRenderer>();
-
-                if (spriteRenderer != null)
-                {
-                    originalColor = spriteRenderer.color;
-                }
-
-                if (agent != null)
-                {
-                    agent.updateRotation = false;
-                    agent.updateUpAxis = false;
-                }
-
-                }
-                public float GetDistanceToPlayer()
-                {
-                    if(playerTransform == null) return 0f;
-                    return Vector2.Distance(transform.position, playerTransform.position);
+                col.enabled = false;
             }
+            if (col != null) col.enabled = false; else Debug.LogError("EnemyAI: Collider2D componenent not found");
 
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer == null) Debug.LogError("EnemyAI: SpriteRenderer componenent not found");
 
-            protected virtual void Start()
+            player = GameObject.FindWithTag("Player");
+
+            if (player == null)
             {
-
-                if (col != null)
-                {
-                    col.enabled = false;
-                }
-
-                if (rb != null)
-                {
-                    rb.velocity = Vector2.zero;
-                    rb.bodyType = RigidbodyType2D.Static; // para que no lo afecte la física
-                }
+                Debug.LogError("EnemyAI: Player with 'Player' tag not found"); return;
+            }
+            else
+            {
+                playerTransform = player.transform;
 
             }
 
-            private void Deactivate(int _roomID)
+            if (playerTransform == null)
             {
-                if (_roomID != roomID) return;
-                SetState(enemyWaitingState);
-                Debug.Log("se desactiva al player salir de la room");
-                RoomManager.Instance.OnRoomEntered -= Deactivate;
-
+                Debug.LogError("EnemyAI: Player trasform componenent not found");
             }
 
-            protected virtual void Update()
-            {
-            if (currentState == null) return;
-                currentState.UpdateState();
-                UpdateSprite();
+            agent.updateRotation = false;
+            agent.updateUpAxis = false;
+        }
 
+        private void Start()
+        {
+            InitializeStates();
+
+            //Initialize enemy with no collision or physics
+            if (rb != null)
+            {
+                rb.velocity = Vector2.zero;
+                rb.bodyType = RigidbodyType2D.Static;
             }
 
-            public void SetState(IEnemyState iEnemyState)
+            //Get original color 
+            if (spriteRenderer != null)
+                originalColor = spriteRenderer.color;
+        }
+        /// <summary>
+        //Initialize states and give them their respectives variables
+        /// <summary>
+        private void InitializeStates()
+        {
+            enemyWaitingState = new WaitingState(roomID, _waveID);
+            enemyAttackState = new AttackState(attackCooldown, attackRange, bulletPrefab, weaponTransform, playerTransform);
+            enemyChaseState = new ChaseState(attackRange, playerTransform);
+
+            //set initial state
+            SetState(enemyWaitingState);
+        }
+
+        /// <summary>
+        //Returns distance to player
+        /// <summary>
+        public float GetDistanceToPlayer()
+        {
+            if (playerTransform == null) return 0f;
+            return Vector2.Distance(transform.position, playerTransform.position);
+        }
+
+        private void Update()
+        {
+            if (currentState == null)
             {
-                currentState = iEnemyState;
-                iEnemyState.EnterState(this);
+                Debug.LogError("current state not found");
             }
-    
-
-
-            public float GetAngleToPlayer()
+            else
             {
-                Vector2 direction = (playerTransform.position - transform.position).normalized;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            currentState?.UpdateState();
+            }
 
-                // Convertimos de -180°~180° a 0°~360°
-                if (angle < 0)
-        
+            attackTimer -= Time.deltaTime;
+
+            UpdateSprite();
+        }
+
+        /// <summary>
+        //Sets states when called
+        /// <summary>
+        public void SetState(IEnemyState iEnemyState)
+        {
+            currentState = iEnemyState;
+            iEnemyState.EnterState(this);
+        }
+
+        /// <summary>
+        //Returns angle to player
+        /// <summary>
+        public float GetAngleToPlayer()
+        {
+            if (playerTransform == null) return 0f;
+
+            Vector2 direction = (playerTransform.position - transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            if (angle < 0)
                 angle += 360f;
 
-                return angle;
-        
-            }
+            return angle;
+        }
+        /// <summary>
+        //Flips enemy sprite when needed
+        /// <summary>
+        public void UpdateSprite()
+        {
+            if (!isActive || playerTransform == null || spriteRenderer == null) return;
 
-
-            public void UpdateSprite()
-            {
-                if (!isActive) return;
-                float angle = GetAngleToPlayer();
-
-                if (angle <= 90 || angle >= 270)
-                {
-                    spriteRenderer.flipX = false;
-                }
-                        // Si el player está a la izquierda
-                else 
-                {
-                    spriteRenderer.flipX = true;
-                }
-            
-            }
+            float angle = GetAngleToPlayer();
+            spriteRenderer.flipX = angle > 90 && angle < 270;
+        }
+        /// <summary>
+        //In charge of displaying enemy in red
+        /// <summary>
         public void EnemyTakeDamage()
         {
-                Debug.Log("Enemy recibió daño");
-                attackTimer = attackCooldown / 2;
-                    // Cambio de color a blanco
-                   if (spriteRenderer != null)
-                {
-                    spriteRenderer.color = Color.red;
-                    Invoke(nameof(ResetColor), flashDuration);
-                }
-                    isStunned = true;
-                    Invoke(nameof(RemoveStun), stunDuration);
-                }
-            protected void RemoveStun()
+            Debug.Log("Enemy recibió daño");
+            attackTimer = attackCooldown / 2;
+
+            if (spriteRenderer != null)
             {
-                isStunned = false;
-            }
-            protected void ResetColor()
-            {
-                if (spriteRenderer != null)
-                   {
-                       spriteRenderer.color = originalColor;
-                    }
+                spriteRenderer.color = Color.red;
+                Invoke(nameof(ResetColor), flashDuration);
             }
 
-            public float attentionTimer = 0;
-            public void Attention()
-        {
-            if (attentionPrefab == null) return;
-            if (attentionTimer <= 0)
-            {
-        
-            attentionTimer = .3f;
-            GameObject attention = Object.Instantiate(attentionPrefab, transform.position,  Quaternion.Euler(0, 0, 0));
-            GameObject.Destroy (attention, 2);
-            }
+            isStunned = true;
+            Invoke(nameof(RemoveStun), stunDuration);
         }
 
-    
+        private void ResetColor()
+        {
+            if (spriteRenderer != null)
+                spriteRenderer.color = originalColor;
+        }
+
+        private void RemoveStun()
+        {
+            isStunned = false;
+        }
+
+        /// <summary>
+        //summons each alert VFX 
+        /// <summary>
+        public void ShowAlert(string type)
+        {
+            GameObject prefabToSpawn = null;
+
+            if (type == "Attention")
+            {
+                if (attentionPrefab == null)
+                {
+                    Debug.LogError("EnemyAI: attentionPrefab no asignado");
+                    return;
+                }
+
+                if (attentionTimer > 0) return;
+
+                attentionTimer = 0.3f;
+                prefabToSpawn = attentionPrefab;
+            }
+            else if (type == "Warning")
+            {
+                if (warningPrefab == null)
+                {
+                    Debug.LogError("EnemyAI: warningPrefab no asignado");
+                    return;
+                }
+
+                prefabToSpawn = warningPrefab;
+            }
+            else
+            {
+                Debug.LogError("EnemyAI: tipo de alerta desconocido: " + type);
+                return;
+            }
+
+            GameObject alert = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+            Destroy(alert, 2f);
+        }
+
         public void Die()
-        {   
-            Debug.Log("se muere");
-            Debug.Log("se muere " + this + " por el enemy ai");
+        {
+            Debug.Log(this + " dies");
+
             isActive = false;
             gameObject.SetActive(false);
-        
         }
+        /// <summary>
+        //In charge of chasing player with navmesh
+        /// <summary>
 
-       public void Chase(Transform toChase)
+        public void Chase(Transform toChase)
         {
+            if (agent == null)
+            {
+                Debug.LogError("NavMesh agent not found");
+            }
             if (isStunned) return;
+
             agent.SetDestination(toChase.position);
         }
 
-    
-
-
+        /*Testing
+        private void Deactivate(int _roomID)
+        {
+            if (_roomID != roomID) return;
+            SetState(enemyWaitingState);
+            Debug.Log("se desactiva al player salir de la room");
+            RoomManager.Instance.OnRoomEntered -= Deactivate;
+        }
+        */
     }
 }
