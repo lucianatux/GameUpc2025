@@ -83,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetBool("isBack", isBack);
             animator.SetFloat("Speed", rb.velocity.magnitude);
+            animator.SetBool("isWalkingDown", input.y < -0.1f);
+
         }
         else
         {
