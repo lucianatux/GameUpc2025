@@ -13,9 +13,8 @@ public class BossChaseState : IEnemyState
     private GameObject bulletPrefab;
     private Transform playerTransform;
     private int attackRange;
-    public BossChaseState(bool _isInAttackSight, Transform _playerTransform)
+    public BossChaseState (Transform _playerTransform)
     {
-        isInAttackSight = _isInAttackSight;
         playerTransform = _playerTransform;
 
     }
@@ -37,14 +36,15 @@ public class BossChaseState : IEnemyState
     public void UpdateState()
     {
         isInAttackSight = bossAI.GetPlayerInSight(); // Chequea si esta frente al player
-
+        Debug.Log(isInAttackSight);
         bossAI.ChaseHorizontally(playerTransform); // Persecución al player
 
         Debug.Log("chase update");
         //se fija si tiene al player y si puede atacar
-        if (isInAttackSight && attackTimer < 0)
+        if (isInAttackSight && bossAI.attackTimer < 0f)
         {
-            // bossAI.SetState(bossAI.bossAttackState);
+            Debug.Log("se manda al attackstate");
+            bossAI.SetState(bossAI.bossAttackState);
         }
     }
 }

@@ -1,6 +1,7 @@
 using StatePattern;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 
 
@@ -19,8 +20,8 @@ public class BossAI : EnemyAI
     [Tooltip("Tiempo de espera entre ataques 2.")]    
     [SerializeField] private float chargeVelocity;
 
+     public List<GameObject> cherryBombs = new List<GameObject>();
 
-    private bool isInAttackSight;
 
 
     [Tooltip("Posicion original del Boss.")]
@@ -43,7 +44,7 @@ public class BossAI : EnemyAI
         Debug.Log("se inician los estados");
 
         bossWaitingState = new BossWaitingState(roomID, _waveID);
-        bossChaseState = new BossChaseState(isInAttackSight, playerTransform);
+        bossChaseState = new BossChaseState(playerTransform);
         bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange,chargeVelocity, rb);    
         
         SetState(bossWaitingState);
@@ -68,13 +69,14 @@ public class BossAI : EnemyAI
 
     public bool GetPlayerInSight()
     {
-        float rayDistance = 30f;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayDistance);
-
-        Debug.DrawRay(transform.position, transform.right * rayDistance, Color.red);
+        float rayDistance = 15;
+        var layer = 1 << LayerMask.NameToLayer("Player");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0,-1), rayDistance, layer);
+        Debug.DrawRay(transform.position, new Vector2(0,-1) * rayDistance, Color.red);
 
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
+            Debug.Log("Boss Raycast meets player");
             return true;
         }
 
