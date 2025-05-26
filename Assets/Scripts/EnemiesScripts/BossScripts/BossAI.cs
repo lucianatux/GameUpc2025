@@ -33,7 +33,6 @@ public class BossAI : EnemyAI
         base.Start();
 
         originalPosition = transform.position;
-        originalColor = spriteRenderer.color;
 
         Debug.Log("se activa el boss");
 

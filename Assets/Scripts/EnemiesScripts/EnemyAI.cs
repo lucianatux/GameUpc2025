@@ -4,7 +4,7 @@ namespace StatePattern
 {
     public class EnemyAI : MonoBehaviour
     {
-        private IEnemyState currentState;
+        protected IEnemyState currentState;
 
         #region Estados del Enemigo
         [HideInInspector] public WaitingState enemyWaitingState;
@@ -15,51 +15,51 @@ namespace StatePattern
         #region Movimiento y Detección
         [Header("Movimiento y Detección")]
 
-        [SerializeField] private float attackRange;
+        [SerializeField] protected float attackRange;
         [SerializeField] public LayerMask walkableLayer;
         #endregion
 
         #region Ataque
         [Header("Ataque")]
-        [SerializeField] private float attackCooldown;
-        [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] protected float attackCooldown;
+        [SerializeField] protected GameObject bulletPrefab;
         public Transform weaponTransform;
         public float attackTimer;
         #endregion
 
         #region Prefabs de Aviso
         [Header("Prefabs de Aviso")]
-        [SerializeField] private GameObject warningPrefab;
-        [SerializeField] private GameObject attentionPrefab;
+        [SerializeField] protected GameObject warningPrefab;
+        [SerializeField] protected GameObject attentionPrefab;
         #endregion
 
         #region Referencias de Componentes
         [Header("Referencias de Componentes")]
-        private Transform playerTransform;
-        private SpriteRenderer spriteRenderer;
+        protected Transform playerTransform;
+        protected SpriteRenderer spriteRenderer;
         public Rigidbody2D rb;
-        private NavMeshAgent agent;
-        private Animator animator;
+        protected NavMeshAgent agent;
+        protected Animator animator;
         public Collider2D col;
         #endregion
 
         #region Daño y Knockback
         [Header("Daño y Knockback")]
-        private Color originalColor;
-        [SerializeField] private float flashDuration = 0.1f;
+        protected Color originalColor;
+        [SerializeField] protected float flashDuration = 0.1f;
         public bool isStunned = false;
-        [SerializeField] private float stunDuration;
+        [SerializeField] protected float stunDuration;
         #endregion
 
         #region Otros
-        [SerializeField] private int _waveID;
-        [SerializeField] private int roomID;
+        [SerializeField] protected int _waveID;
+        [SerializeField] protected int roomID;
         public bool isActive;
-        private GameObject player;
+        protected GameObject player;
         public float attentionTimer = 0;
         #endregion
 
-        private void Awake()
+        protected void Awake()
         {
             animator = GetComponent<Animator>();
             if (animator == null) Debug.LogError("EnemyAI: Animator no encontrado");
@@ -106,7 +106,7 @@ namespace StatePattern
             agent.updateUpAxis = false;
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             InitializeStates();
 
@@ -124,7 +124,7 @@ namespace StatePattern
         /// <summary>
         //Initialize states and give them their respectives variables
         /// <summary>
-        private void InitializeStates()
+        protected virtual void InitializeStates()
         {
             enemyWaitingState = new WaitingState(roomID, _waveID);
             enemyAttackState = new AttackState(attackCooldown, attackRange, bulletPrefab, weaponTransform, playerTransform);
@@ -143,7 +143,7 @@ namespace StatePattern
             return Vector2.Distance(transform.position, playerTransform.position);
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if (currentState == null)
             {
@@ -211,13 +211,13 @@ namespace StatePattern
             Invoke(nameof(RemoveStun), stunDuration);
         }
 
-        private void ResetColor()
+        protected void ResetColor()
         {
             if (spriteRenderer != null)
                 spriteRenderer.color = originalColor;
         }
 
-        private void RemoveStun()
+        protected void RemoveStun()
         {
             isStunned = false;
         }

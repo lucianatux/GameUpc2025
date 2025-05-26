@@ -97,6 +97,7 @@ public class BossAttackState : IEnemyState
         foreach (GameObject bomb in cherryBombs)
         {
             bomb.SetActive(true);
+            Debug.Log("se activa bomb");
         }
     }
 
