@@ -1,49 +1,64 @@
 using UnityEngine;
-using UnityEngine.AI;
-using System.Collections;
 namespace StatePattern
 {
-public class ChaseState : IEnemyState
-{   
-    private float followRange;
-    private float attackRange;
-    private Transform playerTransform;
-    private EnemyAI enemyAI;
-    private GameObject attentionPrefab;
-
-    private NavMeshAgent sagent;
-
-    public ChaseState(float _followRange, float _attackRange, Transform _playerTransform, GameObject _attentionPrefab, NavMeshAgent _agent)
+    public class ChaseState : IEnemyState
     {
-        followRange = _followRange;
-        attackRange = _attackRange;
-        playerTransform = _playerTransform;
-        attentionPrefab = _attentionPrefab;
-        sagent = _agent;
-    }
+        // === Enemy Chase Settings ===
+        private float attackRange;                      // Distance to switch to AttackState
+        private Transform playerTransform;              // Reference to the player
+        private EnemyAI enemyAI;                        // Reference to the enemy AI script
 
-
-    public void EnterState(EnemyAI _enemyAI)
-    {
-        Debug.Log("Cambia a estado chase");
-        enemyAI = _enemyAI;
-    }
-
-    public void UpdateState()
-    {
-        enemyAI.attackTimer -= Time.deltaTime;
-        enemyAI.attentionTimer -= Time.deltaTime;
-        float distToPlayer = enemyAI.GetDistanceToPlayer();
-        if(distToPlayer > attackRange)
+        /// <summary>
+        /// Constructor: sets chase settings like player target and range.
+        /// </summary>
+        public ChaseState(float _attackRange, Transform _playerTransform)
         {
-            enemyAI.Chase(playerTransform);
+            attackRange = _attackRange;
+            playerTransform = _playerTransform;
         }
-        else if (distToPlayer <= attackRange)
+
+        /// <summary>
+        /// Called when the enemy enters the Chase state.
+        /// </summary>
+        public void EnterState(EnemyAI _enemyAI)
         {
-            enemyAI.SetState(enemyAI.enemyAttackState);
+            if (_enemyAI == null)
+            {
+                Debug.LogError("ChaseState: enemyAI is null in EnterState.");
+                return;
+            }
+
+            enemyAI = _enemyAI;
+            Debug.Log("Enemy switched to Chase state.");
+        }
+
+        /// <summary>
+        /// Chases the player unless they're in attack range.
+        /// </summary>
+        public void UpdateState()
+        {
+            if (enemyAI == null)
+            {
+                Debug.LogWarning("ChaseState: Missing enemy AI.");
+                return;
+            }
+
+            if (playerTransform == null)
+            {
+                Debug.LogWarning("ChaseState: Missing player transform.");
+                return;
+            }
+
+            float distToPlayer = enemyAI.GetDistanceToPlayer();
+
+            if (distToPlayer > attackRange)
+            {
+                enemyAI.Chase(playerTransform); // Keep chasing the player
+            }
+            else
+            {
+                enemyAI.SetState(enemyAI.enemyAttackState); // Switch to attack
+            }
         }
     }
-        
-
-}
 }
