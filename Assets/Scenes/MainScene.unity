@@ -14515,7 +14515,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1999998, y: -4.2, z: -10}
+  m_LocalPosition: {x: 2.9799998, y: -3.78, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49603,7 +49603,7 @@ Transform:
   m_GameObject: {fileID: 1097376168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1999998, y: -4.2, z: -10}
+  m_LocalPosition: {x: 2.9799998, y: -3.78, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50112,7 +50112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264631107}
   - component: {fileID: 1264631106}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bordersCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50748,7 +50748,7 @@ GameObject:
   - component: {fileID: 1755731326}
   - component: {fileID: 1755731328}
   - component: {fileID: 1755731327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102171,13 +102171,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 1375352090482533055, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: fireballAbilityObject
+      value: 
+      objectReference: {fileID: 1567509417965010841, guid: 4941fb5057fb10046970fa714f90acfb, type: 3}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.z
@@ -102235,6 +102239,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -1.2467289
       objectReference: {fileID: 0}
+    - target: {fileID: 6718517391212286116, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: projectileSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718517391212286116, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 1567509417965010841, guid: 4941fb5057fb10046970fa714f90acfb, type: 3}
     - target: {fileID: 8191369197704659244, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_IsTrigger
       value: 1

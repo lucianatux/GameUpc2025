@@ -17,7 +17,8 @@ public class AbilityController : MonoBehaviour
     {
         _mainCamera = Camera.main;
 
-        _fireballAbility = fireballAbilityObject.GetComponent<IAttackAbility>();
+       // _fireballAbility = fireballAbilityObject.GetComponent<IAttackAbility>();
+       _fireballAbility = GetComponent<FireballAbility>();
         _meleeAbility = meleeAbilityObject.GetComponent<IAttackAbility>();
     }
 
