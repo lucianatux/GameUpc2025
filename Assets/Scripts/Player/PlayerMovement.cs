@@ -1,96 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Se encarga de aplicar movimiento físico y rotación del sprite.
+/// </summary>
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private Rigidbody2D rb;
+    private PlayerInputHandler inputHandler;
     public bool canMove = true;
-    private bool isBack = false;
 
-    void Start()
+    public Vector2 CurrentVelocity => rb.velocity;
+    public Vector2 CurrentInput { get; private set; }
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (animator == null) animator = GetComponent<Animator>();
+        inputHandler = GetComponent<PlayerInputHandler>();
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
-        if (!canMove) return;
-        
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            TriggerAnim("fireball");
-            PlayerEventsManager.Instance.PlayerFireball();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            TriggerAnim("kick");
-            PlayerEventsManager.Instance.PlayerKick();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            TriggerAnim("croak");
-            PlayerEventsManager.Instance.PlayerCroak(); 
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            TriggerAnim("damage");
-            PlayerEventsManager.Instance.PlayerDamaged();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            TriggerAnim("die");
-            // reutilizar el evento de daño, o crear uno de muerte 
-            PlayerEventsManager.Instance.PlayerDamaged(); // o PlayerDied();
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            TriggerAnim("heal");
-            PlayerEventsManager.Instance.PlayerHeal();
-        }
-    }
-
-    void TriggerAnim(string triggerName)
-    {
-        animator.ResetTrigger(triggerName);
-        animator.SetTrigger(triggerName);
-    }
-
-
     void FixedUpdate()
     {
-        if (canMove)
-        {
-            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            Vector2 velocity = input.normalized * moveSpeed;
-            rb.velocity = velocity;
-
-            // Flip X si se mueve hacia la izquierda o derecha
-            if (Mathf.Abs(input.x) > 0.1f)
-            {
-                spriteRenderer.flipX = (input.x < 0);
-            }
-
-            // Cambia entre modo "back" y "frente"
-            if (input.y > 0.1f)
-                isBack = true;
-            else if (input.y < -0.1f)
-                isBack = false;
-
-            animator.SetBool("isBack", isBack);
-            animator.SetFloat("Speed", rb.velocity.magnitude);
-            animator.SetBool("isWalkingDown", input.y < -0.1f);
-
-        }
-        else
+        if (!canMove)
         {
             rb.velocity = Vector2.zero;
-            animator.SetFloat("Speed", 0f);
+            CurrentInput = Vector2.zero;
+            return;
         }
+
+        CurrentInput = inputHandler.MovementInput;
+        rb.velocity = CurrentInput * moveSpeed;
+
+        if (Mathf.Abs(CurrentInput.x) > 0.1f)
+            spriteRenderer.flipX = (CurrentInput.x < 0);
     }
 }
+
 
