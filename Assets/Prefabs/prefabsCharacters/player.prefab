@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1375352090482533055}
   - component: {fileID: 6718517391212286116}
   - component: {fileID: 1093098817229804238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5561833759303546549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,6 +327,10 @@ PrefabInstance:
     - target: {fileID: 3404848024600516659, guid: 2e2243837c5a6a74f9e6fd8e290e7a3d, type: 3}
       propertyPath: m_Name
       value: AttackPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404848024600516659, guid: 2e2243837c5a6a74f9e6fd8e290e7a3d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3652841003930950313, guid: 2e2243837c5a6a74f9e6fd8e290e7a3d, type: 3}
       propertyPath: m_LocalPosition.x
