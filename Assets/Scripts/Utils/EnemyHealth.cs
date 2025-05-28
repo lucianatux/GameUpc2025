@@ -1,61 +1,108 @@
-using System.Collections;
-using System.Collections.Generic;
-using StatePattern;
-using Unity.VisualScripting;
 using UnityEngine;
-
+using StatePattern;
+/// <summary>
+/// Handles the health, damage feedback, and death behavior of enemy characters.
+/// Inherits from LifeSystem to manage base health functionality.
+/// </summary>
 public class EnemyHealth : LifeSystem
 {
-    [SerializeField] private GameObject lifeOrbPrefab;
-    [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.3f;
+    // === Drop Settings ===
+    [SerializeField] private GameObject lifeOrbPrefab;                      // Prefab to instantiate on death
+    [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.3f; // Chance to drop the orb
 
+    // === Components ===
     private Rigidbody2D rb;
+
+    private Collider2D col;
     private SpriteRenderer spriteRenderer;
-    private Color originalColor;
+
     private EnemyAI enemyAI;
 
+
+    /// <summary>
+    /// Initializes necessary components and references.
+    /// </summary>
     protected override void Start()
     {
         base.Start();
+
         rb = GetComponent<Rigidbody2D>();
+        if (rb == null) Debug.LogError("Rigidbody2D not found on Enemy.");
+
+        col = GetComponent<Collider2D>();
+        if (col == null) Debug.LogError("Collider component not found on Enemy.");
+
         spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
+        if (spriteRenderer == null) Debug.LogError("SpriteRenderer not found on Enemy.");
+
         animator = GetComponent<Animator>();
+        if (animator == null) Debug.LogError("Animator not found on Enemy.");
+
         enemyAI = GetComponent<EnemyAI>();
+        if (enemyAI == null) Debug.LogError("EnemyAI script not found on Enemy.");
     }
 
+    /// <summary>
+    /// Gets called when enemy are taking damage
+    /// </summary>
+    /// <param name="damage">Amount of damage taken.</param>
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
-        Debug.Log("Enemy recibió daño");
+        //Debug.Log("Enemy took damage");
 
-        enemyAI.EnemyTakeDamage(); // aplica el color rojo, etc.
-        animator.SetTrigger("damage");
+        if (enemyAI != null)
+        {
+            enemyAI.EnemyTakeDamage(); // Visual/audio damage feedback
+        }
+
+        if (animator != null)
+        {
+            animator.SetTrigger("damage"); // Damage animation
+        }
     }
 
+    /// <summary>
+    /// Triggers death behavior: disables movement, animations, and notifies systems.
+    /// </summary>
     protected override void Die()
     {
-        rb.velocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Static; // para que no lo afecte la física
+        base.Die(); // Triggers any additional logic in the base class
+
+        Debug.Log("Enemy Dies");
 
         if (enemyAI != null) enemyAI.enabled = false;
-        GetComponent<Collider2D>().enabled = false;
 
-        animator.SetTrigger("die");
+        if (col != null) col.enabled = false;
+        else Debug.LogError("Collider2D not found on Enemy.");
 
-        base.Die();
+        if (animator != null)
+        {
+            animator.SetTrigger("die");
+        }
 
-        RoomManager.Instance.NotifyEnemyDeath();// le avisás al RoomManager
-        TrySpawnLifeOrb();
-        EnemiesEventsManager.Instance?.EnemyDefeated();
+        RoomManager.Instance.NotifyEnemyDeath(); // Inform Room Manager
+        TrySpawnLifeOrb();                        // Possibly drop a health orb // in testing
+        EnemiesEventsManager.Instance?.EnemyDefeated(); // Notify Enemies events Manager
     }
 
-    private void TrySpawnLifeOrb() //funcion que intenta spawnear un orbe de vida, usando la probabilidad 
+    /// <summary>
+    /// Tries to instantiate a life orb with a random chance.
+    /// In TESTING
+    /// </summary>
+    private void TrySpawnLifeOrb()
     {
-        float rng = Random.value; // entre 0 y 1 un rango aleatorio
-        if (rng <= lifeOrbDropChance && lifeOrbPrefab != null)
+        float rng = Random.value;
+        if (rng <= lifeOrbDropChance)
         {
-            Instantiate(lifeOrbPrefab, transform.position, Quaternion.identity);
+            if (lifeOrbPrefab != null)
+            {
+                Instantiate(lifeOrbPrefab, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogError("Life Orb PRefab not found");
+            }
         }
     }
 }

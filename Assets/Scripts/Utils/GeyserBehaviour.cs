@@ -1,24 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the visual and functional behavior of a geyser that can be charged and triggered.
+/// Still In Testing
+/// </summary>
 public class GeyserBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    [SerializeField] private int currentHits;
-    [SerializeField] private float eruptionDuration;
-    public GameObject geyserzeroHits;
-    public GameObject geyseroneHit;
-        public GameObject geysernotCharged;
-    public GameObject geysertwoHits;
+    [Header("Charge Settings")]
+    [SerializeField] private float chargingCooldownMin = 5f;
+    [SerializeField] private float chargingCooldownMax = 10f;
+    private float chargingTimer;
     private bool isCharged;
-    [SerializeField] private Animator animator;
+
+    [Header("Eruption Settings")]
+    [SerializeField] private float eruptionDuration;
     private bool eruptionEnded;
-    [SerializeField] float chargingRange;
 
+    [Header("Hits")]
+    [SerializeField] private int currentHits;
 
+    [Header("Visual States")]
+    public GameObject geyserNotCharged;
+    public GameObject geyserZeroHits;
+    public GameObject geyserOneHit;
+    public GameObject geyserTwoHits;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
 
     void Start()
     {
@@ -26,77 +35,101 @@ public class GeyserBehaviour : MonoBehaviour
         eruptionEnded = false;
         isCharged = false;
 
+        if (animator == null) Debug.LogError("Animator not assigned on GeyserBehaviour.");
+
+        // Start initial charge countdown
+        chargingTimer = Random.Range(chargingCooldownMin, chargingCooldownMax);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        UpdateDamage();
-        ChargeGeyser();
+        HandleCharging();
+        UpdateVisuals();
+
         if (isCharged && Input.GetKeyDown(KeyCode.K))
         {
-            currentHits ++;
+            currentHits++;
             animator.SetInteger("currentHits", currentHits);
-
         }
     }
 
-
-    private void ChargeGeyser()
+    /// <summary>
+    /// Handles the charging logic with a countdown.
+    /// </summary>
+    private void HandleCharging()
     {
-        float chargingCooldown = Random.Range(5, chargingRange);
-        float chargingTimer = chargingCooldown;
-        chargingRange -= Time.deltaTime;
-        Debug.Log("cargadando");
+        if (isCharged) return;
 
-        if (chargingRange <= 0)
+        chargingTimer -= Time.deltaTime;
+
+        if (chargingTimer <= 0)
         {
-            animator.SetBool("isCharged", isCharged);
-
-            Debug.Log("cargada");
             isCharged = true;
-            UpdateDamage();
+            animator.SetBool("isCharged", true);
+            Debug.Log("Geyser is now charged.");
         }
-
-
-
+        else
+        {
+            Debug.Log("Charging... time left: " + chargingTimer.ToString("F2"));
+        }
     }
-private void UpdateDamage()
+
+    /// <summary>
+    /// Updates the VFX depending on the current hits and charge state.
+    /// </summary>
+    private void UpdateVisuals()
     {
-        if (currentHits == 0 && isCharged == true)
+        // Not charged state
+        if (currentHits == 0 && !isCharged)
         {
-            geyserzeroHits.SetActive(true);
-            geysernotCharged.SetActive(false);
+            geyserNotCharged?.SetActive(true);
+            geyserZeroHits?.SetActive(false);
+            geyserOneHit?.SetActive(false);
+            geyserTwoHits?.SetActive(false);
         }
-        if (currentHits == 0 && isCharged == false)
+
+        // Charged but not hit
+        if (currentHits == 0 && isCharged)
         {
-            geysernotCharged.SetActive(true);
-            geyserzeroHits.SetActive(false);
+            geyserNotCharged?.SetActive(false);
+            geyserZeroHits?.SetActive(true);
         }
-        if (currentHits == 1) 
+
+        // First hit
+        if (currentHits == 1)
         {
-            geyserzeroHits.SetActive(false);
-            geyseroneHit.SetActive(true); // Mostrar el VFX
+            geyserZeroHits?.SetActive(false);
+            geyserOneHit?.SetActive(true);
         }
-        if (currentHits == 2) 
+
+        // Second hit triggers eruption
+        if (currentHits == 2)
         {
-            geyseroneHit.SetActive(false);
+            geyserOneHit?.SetActive(false);
             StartCoroutine(Eruption());
         }
-
     }
 
-    IEnumerator Eruption()
+    /// <summary>
+    /// Handles the eruption sequence after two hits.
+    /// </summary>
+    private IEnumerator Eruption()
     {
-        Debug.Log("¡Comienza la erupción!");
-        geysertwoHits.SetActive(true);
+        Debug.Log("Eruption begins!");
+        geyserTwoHits?.SetActive(true);
 
         yield return new WaitForSeconds(eruptionDuration);
-        geysertwoHits.SetActive(false);
+
+        geyserTwoHits?.SetActive(false);
         eruptionEnded = true;
         animator.SetBool("eruptionEnded", eruptionEnded);
 
+        // Reset geyser state
         currentHits = 0;
-        Debug.Log("¡Erupción terminada!");
+        isCharged = false;
+        animator.SetBool("isCharged", false);
+        chargingTimer = Random.Range(chargingCooldownMin, chargingCooldownMax);
+
+        Debug.Log("Eruption ends. Geyser resets.");
     }
 }
