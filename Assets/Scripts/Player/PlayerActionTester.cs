@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Dispara acciones de prueba con teclas Z-X-C-V-B-N
+/// Temporary script for testing player animations and events with key presses.
+/// Not intended for production use.
 /// </summary>
+
 public class PlayerActionTester : MonoBehaviour
 {
     [SerializeField] private PlayerAnimatorController animatorController;
@@ -16,6 +18,7 @@ public class PlayerActionTester : MonoBehaviour
             Debug.LogWarning("PlayerAnimatorController no asignado en PlayerActionTester.");
             return;
         }
+        // Teclas para testeo rápido de animaciones y eventos.
         if (Input.GetKeyDown(KeyCode.C))
         {
             animatorController.TriggerAnim("croak");
@@ -29,7 +32,7 @@ public class PlayerActionTester : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             animatorController.TriggerAnim("die");
-            PlayerEventsManager.Instance.PlayerDamaged(); // o PlayerDied();
+            PlayerEventsManager.Instance.PlayerDamaged(); // o PlayerDied(); según implementación
         }
         if (Input.GetKeyDown(KeyCode.N))
         {

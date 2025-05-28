@@ -23,7 +23,7 @@ public class PlayerAnimatorController : MonoBehaviour
     {
         Vector2 input = movement.CurrentInput;
 
-        // Dirección vertical para determinar "de espaldas"
+         // Si el input vertical es positivo, el personaje está de espaldas.
         if (input.y > 0.1f)
             isBack = true;
         else if (input.y < -0.1f)
@@ -36,6 +36,7 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void TriggerAnim(string triggerName)
     {
+        // Se asegura de reiniciar el trigger antes de activarlo (evita animaciones bloqueadas).
         animator.ResetTrigger(triggerName);
         animator.SetTrigger(triggerName);
     }

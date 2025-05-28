@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         inputHandler = GetComponent<PlayerInputHandler>();
+         // Se intenta obtener el SpriteRenderer si no fue asignado manualmente.
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove)
         {
+            // Se detiene el movimiento si está deshabilitado.
             rb.velocity = Vector2.zero;
             CurrentInput = Vector2.zero;
             return;
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         CurrentInput = inputHandler.MovementInput;
         rb.velocity = CurrentInput * moveSpeed;
 
+        // Se voltea el sprite horizontalmente según la dirección del movimiento.
         if (Mathf.Abs(CurrentInput.x) > 0.1f)
             spriteRenderer.flipX = (CurrentInput.x < 0);
     }

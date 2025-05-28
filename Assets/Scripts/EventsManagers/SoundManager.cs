@@ -1,4 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// SoundManager handles playback of all game sound effects and background music.
+/// It subscribes to various global game events to trigger the appropriate audio.
+/// </summary>
 
 public class SoundManager : MonoBehaviour
 {
@@ -38,28 +45,27 @@ public class SoundManager : MonoBehaviour
   
     void Start()
     {
-        // Reproduce la música en loop
+        // Play background music on loop at game start
         if (musicSource != null && backgroundMusic != null)
         {
             musicSource.clip = backgroundMusic;
             musicSource.loop = true;
             musicSource.Play();
         }
+        // Subscribe to player-related events (Observer Pattern)
         if (PlayerEventsManager.Instance != null)
         {
         var p = PlayerEventsManager.Instance;
-        // Player
         p.OnPlayerCroak += PlayPlayerCroak;
         p.OnPlayerDamaged += PlayPlayerDamaged;
         p.OnPlayerKick += PlayPlayerKick;
         p.OnPlayerFireball += PlayPlayerFireball;
         p.OnPlayerHeal += PlayPlayerHeal;
         }
-
+        // Subscribe to enemy and boss-related events
          if (EnemiesEventsManager.Instance != null)
         {
         var enem = EnemiesEventsManager.Instance;
-        // Enemy & Boss
         enem.OnEnemyDefeated += PlayEnemyDefeated;
         enem.OnEnemyDamaged += PlayEnemyDamaged;
         enem.OnEnemySwordAttack += PlayEnemySwordAttack;
@@ -69,11 +75,10 @@ public class SoundManager : MonoBehaviour
         enem.OnBossDamaged += PlayBossDamaged;
         enem.OnBossDefeated += PlayBossDefeated;
         }
-
+        // Subscribe to environment-related events
          if (EnvironmentEventsManager.Instance != null)
         {
         var env = EnvironmentEventsManager.Instance;
-        // Environment
         env.OnGeyserErupt += PlayGeyserErupt;
         env.OnAcidRiverSplash += PlayAcidRiverSplash;
         env.OnAcidRiverFlow += PlayAcidRiverFlow;
@@ -89,6 +94,7 @@ public class SoundManager : MonoBehaviour
 
     void OnDestroy()
     { 
+        // Unsubscribe from all events to prevent memory leaks or null references
         if (PlayerEventsManager.Instance != null)
         {
         var p = PlayerEventsManager.Instance;
@@ -159,6 +165,7 @@ public class SoundManager : MonoBehaviour
     void PlayDoorOpen() => PlayClip(doorOpenClip);
     void PlayLevelComplete() => PlayClip(levelCompleteClip);
 
+    /// Plays the given AudioClip once through the main audio source.
     void PlayClip(AudioClip clip)
     {
         if (audioSource == null)
