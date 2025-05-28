@@ -263,17 +263,9 @@ namespace StatePattern
             Destroy(alert, 2f);
         }
 
-        public void Die()
-        {
-            Debug.Log(this + " dies");
-
-            isActive = false;
-            gameObject.SetActive(false);
-        }
         /// <summary>
         //In charge of chasing player with navmesh
         /// <summary>
-
         public void Chase(Transform toChase)
         {
             if (agent == null)
