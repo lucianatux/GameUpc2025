@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f0910e2b-b0ab-4046-a363-b1dacb1fc7e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/MeleeAbility.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ablities/MeleeAbility.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/New Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/New Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ablities/FireBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/FireballAbility.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ablities/FireballAbility.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilitySwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilitySwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +24,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilitySwitcher.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2xdehcyvxe2dt1iqyxTZ7uCpmqy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,7 +36,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/Fireball",
+    "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748272499624</updated>
       <workItem from="1748272502643" duration="1017000" />
+      <workItem from="1748371309345" duration="2817000" />
     </task>
     <servers />
   </component>
