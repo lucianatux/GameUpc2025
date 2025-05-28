@@ -13,13 +13,19 @@ public class AbilityController : MonoBehaviour
     private IAttackAbility _fireballAbility;
     private IAttackAbility _meleeAbility;
 
+    private PlayerAnimatorController animatorController;
+
     void Start()
     {
         _mainCamera = Camera.main;
 
-       // _fireballAbility = fireballAbilityObject.GetComponent<IAttackAbility>();
+    // _fireballAbility = fireballAbilityObject.GetComponent<IAttackAbility>();
        _fireballAbility = GetComponent<FireballAbility>();
         _meleeAbility = meleeAbilityObject.GetComponent<IAttackAbility>();
+    }
+    void Awake()
+    {
+        animatorController = GetComponent<PlayerAnimatorController>();
     }
 
     void Update()
@@ -32,17 +38,20 @@ public class AbilityController : MonoBehaviour
         mousePos.z = 0f;
 
         Vector2 direction = (mousePos - firePoint.position).normalized;
-
-        // LMB: bola de fuego
-        if (Input.GetMouseButtonDown(0))
+        
+        // RMB o tecla E: ataque melee
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
         {
             _meleeAbility.UseAbility(firePoint, direction);
+            animatorController.TriggerAnim("kick");
+            PlayerEventsManager.Instance.PlayerKick();
         }
-
-        // RMB o tecla E: ataque melee
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.E))
+        // LMB: bola de fuego
+        if (Input.GetMouseButtonDown(1))
         {
             _fireballAbility.UseAbility(firePoint, direction);
+            animatorController.TriggerAnim("fireball");
+            PlayerEventsManager.Instance.PlayerFireball();
         }
     }
 }

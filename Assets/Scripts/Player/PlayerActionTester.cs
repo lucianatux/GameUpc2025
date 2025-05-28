@@ -16,16 +16,6 @@ public class PlayerActionTester : MonoBehaviour
             Debug.LogWarning("PlayerAnimatorController no asignado en PlayerActionTester.");
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            animatorController.TriggerAnim("fireball");
-            PlayerEventsManager.Instance.PlayerFireball();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            animatorController.TriggerAnim("kick");
-            PlayerEventsManager.Instance.PlayerKick();
-        }
         if (Input.GetKeyDown(KeyCode.C))
         {
             animatorController.TriggerAnim("croak");
