@@ -121,6 +121,7 @@ namespace StatePattern
             if (spriteRenderer != null)
                 originalColor = spriteRenderer.color;
         }
+        
         /// <summary>
         //Initialize states and give them their respectives variables
         /// <summary>
