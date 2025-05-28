@@ -1,76 +1,103 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class RoomManager : MonoBehaviour
 {
+    // Singleton pattern for global access
     public static RoomManager Instance => _instance;
     private static RoomManager _instance;
 
+    // Current active room data
     private int _currentRoomID;
     public int CurrentRoomID => _currentRoomID;
 
     public Room currentRoom;
 
+    // Events triggered when player enters, exits, or advances a wave in a room
     public event Action<int> OnRoomEntered;
-
     public event Action<int> OnRoomExited;
-
     public event Action<int> OnCallWaves;
 
-    //private int currentWave = 0;
-    
-    public int enemyCount; 
-
+    // Enemy counters for the room
+    public int enemyCount;
     public int currentEnemies;
+
     private void Awake()
     {
-        if (Instance == null)
+        // Singleton setup
+        if (_instance == null)
         {
-            _instance = this; // si no hay una instancia, que la cree
-            return;
+            _instance = this; //If there is no _instance it creates it 
         }
-        Destroy(gameObject); // si hay una instancia, que la destruya
+        else if (_instance != this)
+        {
+            Debug.LogWarning("Multiple RoomManager instances detected. Destroying duplicate.");
+            Destroy(gameObject);
+        }
     }
 
+    /// <summary>
+    /// Assigns the current room and triggers the OnRoomEntered event.
+    /// </summary>
+    /// <param name="newRoom">The room the player is entering.</param>
     public void SetCurrentRoom(Room newRoom)
     {
-        currentRoom = newRoom; // dato a enviar 
-    
-        if (currentRoom == null) return; // si no estas referenciando a un cuarto, te vas
-
-        if (currentRoom.currentWave == 0) newRoom.currentWave = 1; // si la wave fuese la primera
-        Debug.Log("Jugador entró a la room " + newRoom.roomID);
-        Debug.Log("Oleada nro " + newRoom.currentWave );
-        OnRoomEntered?.Invoke(newRoom.roomID); // Evento para que lo escuchen, envia
-        currentEnemies = enemyCount;
-
-    }
-    public void OnPlayerLeftRoom(Room _room)
-{
-    if (currentRoom == _room)
-    {
-        OnRoomExited?.Invoke(currentRoom.roomID);
-        currentRoom = null;
-        Debug.Log("Room actual vaciado porque el jugador salió.");
-    }
-}
-    
-    public void UpdateWave()
-    {   
-        if (currentEnemies <= 0)
+        if (newRoom == null)
         {
-            Debug.Log("Todos los enemigos murieron, pasar a siguiente wave");
-            currentRoom.currentWave ++;
-            OnCallWaves?.Invoke(currentRoom.currentWave); // envia informacion de la wave actual 
+            Debug.LogError("Tried to assign a null room to RoomManager.");
+            return;
+        }
+
+        currentRoom = newRoom;
+
+        // Set the initial wave if not set
+        if (currentRoom.currentWave == 0)
+        {
+            currentRoom.currentWave = 1;
+        }
+
+        Debug.Log($"Player entered room {newRoom.roomID}");
+        Debug.Log($"Current wave: {newRoom.currentWave}");
+
+        OnRoomEntered?.Invoke(newRoom.roomID); // Notify listeners
+        currentEnemies = enemyCount;
+    }
+
+    /// <summary>
+    /// Called when the player leaves the current room.
+    /// </summary>
+    public void OnPlayerLeftRoom(Room room)
+    {
+        if (currentRoom == room)
+        {
+            OnRoomExited?.Invoke(currentRoom.roomID); // Notify listeners
+            currentRoom = null;
+            Debug.Log("Current room cleared because the player left.");
         }
     }
+
+    /// <summary>
+    /// Increments the wave if all enemies are defeated.
+    /// </summary>
+    public void UpdateWave()
+    {
+        if (currentEnemies <= 0)
+        {
+            Debug.Log("All enemies defeated. Advancing to next wave.");
+            currentRoom.currentWave++;
+            OnCallWaves?.Invoke(currentRoom.currentWave); // Notify listeners -> EnemyAI
+        }
+    }
+
+    /// <summary>
+    /// Should be called by enemies when they die.
+    /// </summary>
     public void NotifyEnemyDeath()
     {
+        //Deletes a counter on current enemies and Checks in Update Waves
         currentEnemies--;
         UpdateWave();
     }
-
-
 }

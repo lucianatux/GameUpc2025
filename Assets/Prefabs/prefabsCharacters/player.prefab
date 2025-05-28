@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1375352090482533055}
   - component: {fileID: 6718517391212286116}
   - component: {fileID: 1093098817229804238}
+  - component: {fileID: 5211302654773119486}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -190,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   canMove: 1
 --- !u!61 &3281386890898720114
@@ -285,6 +285,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackPoint: {fileID: 183842796839475099}
+--- !u!114 &5211302654773119486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877613240629887599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f2327c51fd526419f0d520fbaa3620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8014211673540729597
 GameObject:
   m_ObjectHideFlags: 0
