@@ -5,15 +5,21 @@ using UnityEngine;
 public class TeleportNode : MonoBehaviour
 {
     [SerializeField] private TeleportNode linkedNode; // Nodo de destino
-
-    [SerializeField] private float teleportCooldown = 1f; // Tiempo para evitar loops
+    [SerializeField] private float teleportCooldown = 2f; // Tiempo para evitar loops
+    
     private bool isOnCooldown = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player") || isOnCooldown || linkedNode == null)
+        if (!other.CompareTag("Player") || isOnCooldown)
             return;
 
+        if (linkedNode == null)
+        {
+            Debug.LogWarning("Linked node is null, teleport aborted.");
+            return;
+        }
+        
         // Teletransportar al jugador
         StartCoroutine(Teleport(other.transform));
     }
@@ -37,5 +43,4 @@ public class TeleportNode : MonoBehaviour
     {
         isOnCooldown = value;
     }
-
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 /// Se encarga de aplicar movimiento físico y rotación del sprite.
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
@@ -22,8 +23,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         inputHandler = GetComponent<PlayerInputHandler>();
+
          // Se intenta obtener el SpriteRenderer si no fue asignado manualmente.
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (inputHandler == null) Debug.LogWarning("PlayerInputHandler component not found.");
+
     }
 
     void FixedUpdate()

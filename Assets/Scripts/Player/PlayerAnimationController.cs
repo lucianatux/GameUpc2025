@@ -16,6 +16,8 @@ public class PlayerAnimatorController : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        if (animator == null) Debug.LogWarning("Animator not found");
+
         if (movement == null) movement = GetComponent<PlayerMovement>();
     }
 
@@ -34,6 +36,12 @@ public class PlayerAnimatorController : MonoBehaviour
         animator.SetBool("isWalkingDown", input.y < -0.1f);
     }
 
+     /// <summary>
+    /// Triggers an animation using a trigger parameter name.
+    /// Ensures the trigger is reset to avoid animation lock.
+    /// </summary>
+    /// <param name="triggerName">The name of the trigger parameter in the Animator.</param>
+    
     public void TriggerAnim(string triggerName)
     {
         // Se asegura de reiniciar el trigger antes de activarlo (evita animaciones bloqueadas).

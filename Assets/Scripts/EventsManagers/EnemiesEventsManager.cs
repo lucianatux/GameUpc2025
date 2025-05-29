@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// EnemiesEventsManager centraliza los eventos relacionados con enemigos y jefes.
+/// Usa el patrón Singleton para permitir que otros scripts accedan fácilmente a sus eventos.
+/// Otros scripts pueden suscribirse a estos eventos para reaccionar (como reproducir sonidos o animaciones).
+/// </summary>
+
 public class EnemiesEventsManager : MonoBehaviour
 {
     public static EnemiesEventsManager Instance;
@@ -18,12 +24,13 @@ public class EnemiesEventsManager : MonoBehaviour
 
     private void Awake()
     {
-    if (Instance != null && Instance != this)
-    {
-        Destroy(gameObject);
-        return;
-    }
-    Instance = this;
+        // Asegura que solo haya una instancia de este manager en la escena (Singleton pattern)
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
    
    // ===== MÉTODOS PÚBLICOS (para invocar eventos) =====
