@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : MonoBehaviour   // This script handles the behavior of a projectile (e.g., a fireball) once it's been launched.
 {
     public float lifetime = 3f;
     public GameObject impactEffect;
@@ -19,19 +19,19 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
         { 
-            Destroy(gameObject); // Destruir la bola de fuego
+            Destroy(gameObject); 
         }
 
-        if (impactEffect != null)
+        if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
         {
             Instantiate(impactEffect, transform.position, Quaternion.identity);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject);   // Destroy the projectile after triggering the effect or hitting something.
         
         Debug.Log ("Choca con " + collision.gameObject.name);
     }

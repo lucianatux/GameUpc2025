@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AbilityController : MonoBehaviour
+public class AbilityController : MonoBehaviour // This class handles the player's abilities, such as melee and ranged (e.g., fireball) attacks.
 {
     public Transform firePoint;
 
@@ -19,7 +19,7 @@ public class AbilityController : MonoBehaviour
     {
         _mainCamera = Camera.main;
 
-    // _fireballAbility = fireballAbilityObject.GetComponent<IAttackAbility>();
+       _fireballAbility = fireballAbilityObject.GetComponent<IAttackAbility>();
        _fireballAbility = GetComponent<FireballAbility>();
         _meleeAbility = meleeAbilityObject.GetComponent<IAttackAbility>();
     }
@@ -30,14 +30,14 @@ public class AbilityController : MonoBehaviour
 
     void Update()
     {
-        Vector3 mousePos = _mainCamera.ScreenToWorldPoint(new Vector3(
+        Vector3 mousePos = _mainCamera.ScreenToWorldPoint(new Vector3( // Convert mouse position from screen space to world space.
             Input.mousePosition.x,
             Input.mousePosition.y,
             _mainCamera.nearClipPlane
         ));
         mousePos.z = 0f;
 
-        Vector2 direction = (mousePos - firePoint.position).normalized;
+        Vector2 direction = (mousePos - firePoint.position).normalized; // Calculate the direction from the firePoint to the mouse position.
         
         // RMB o tecla E: ataque melee
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
