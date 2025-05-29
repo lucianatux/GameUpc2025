@@ -1,79 +1,97 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the behavior of a bomb: falling animation, enabling collision, fall damage,
+/// explosion, and deactivation.
+/// IN TESTING YET
+/// </summary>
 public class BombScript : MonoBehaviour
 {
     private Collider2D col;
     private Rigidbody2D rb;
     private Vector3 originalPosition;
-    private GameObject explosionPrefab;
-    private GameObject fallPrefab;
 
-    void Start()
-    {
+    [Tooltip("Prefab instantiated when the bomb hits the ground.")]
+    [SerializeField] private GameObject fallPrefab;
 
-    }
-    void Awake()
+    [Tooltip("Prefab instantiated when the bomb explodes.")]
+    [SerializeField] private GameObject explosionPrefab;
+
+    //Set references and components
+    private void Awake()
     {
         originalPosition = transform.position;
+
         rb = GetComponent<Rigidbody2D>();
+
+        if (rb == null) Debug.LogError(this + " : Rigidbody2D not found");
+
         col = GetComponent<Collider2D>();
 
-
-        col.enabled = false;
-    }
-
-
-    void OnEnable()
-    {
-        transform.position = originalPosition;
-        //animacion de caida
-        StartCoroutine(BombFall(1f));
-    }
-
-    private IEnumerator BombFall(float seconds)
-    {
-        //animacion
-        yield return new WaitForSeconds(seconds);
-        col.enabled = true;
-        Debug.Log("Falls  " + this);
-
-        if (fallPrefab != null)
+        if (col == null)
         {
-        Debug.Log("Instatiate fall damage  " + this);
-
-        Instantiate(fallPrefab, originalPosition, Quaternion.identity);
+            Debug.LogError(this + " : Collider2D not found");
         }
         else
         {
-            Debug.LogWarning("No fall prefab found");
+            col.enabled = false;
         }
-        StartCoroutine(BombExplosion(1f));
-
     }
 
-    private IEnumerator BombExplosion(float seconds)
+    //Called when BossAI enables it
+    private void OnEnable()
     {
-        //animacion por explotar
-        yield return new WaitForSeconds(seconds);
-        Debug.Log("Explodes " + this);
+        // Reset position and start the fall animation
+        transform.position = originalPosition;
+        StartCoroutine(BombFall(1f));
+    }
+
+    //Bomb Falling CoRoutine
+    private IEnumerator BombFall(float delay)
+    {
+        // Falling cherry animation
+        yield return new WaitForSeconds(delay);
+        col.enabled = true;
+        Debug.Log("Falls: " + this);
+
+        if (fallPrefab != null)
+        {
+            Debug.Log("Instantiate fall damage: " + this);
+            Instantiate(fallPrefab, originalPosition, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogWarning("Fall prefab is not assigned.");
+        }
+
+        // Start explosion after fall
+        StartCoroutine(BombExplosion(1f));
+    }
+
+    //Bomb Explosion CoRoutine
+    private IEnumerator BombExplosion(float delay)
+    {
+        // Wait before exploding
+        //Before Explosion Animation
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Explodes: " + this);
+        //Bomb Explosion animation
 
         if (explosionPrefab != null)
         {
-            Debug.Log("Instatiate explosion " + this);
-
+            Debug.Log("Instantiate explosion: " + this);
             Instantiate(explosionPrefab, originalPosition, Quaternion.identity);
         }
         else
         {
-            Debug.LogWarning("No hay prefab de explosión asignado");
+            Debug.LogWarning("Explosion prefab is not assigned.");
         }
 
-        yield return new WaitForSeconds(.1f);
-        Debug.Log("Disable bomb " + this);
-        gameObject.SetActive(false); // o Destroy(gameObject) si no la vas a volver a usar
+        yield return new WaitForSeconds(0.1f);
 
+        Debug.Log("Disable bomb: " + this);
+
+        gameObject.SetActive(false); //Disable to enable again if needed
     }
 }

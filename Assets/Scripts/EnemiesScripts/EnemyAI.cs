@@ -62,25 +62,27 @@ namespace StatePattern
         protected void Awake()
         {
             animator = GetComponent<Animator>();
-            if (animator == null) Debug.LogError("EnemyAI: Animator no encontrado");
+
+            if (animator == null) Debug.LogError("EnemyAI: Animator not found");
 
             agent = GetComponent<NavMeshAgent>();
-            if (agent == null) Debug.LogError("EnemyAI: NavMeshAgent no encontrado");
+
+            if (agent == null) Debug.LogError("EnemyAI: NavMeshAgent not found");
 
             rb = GetComponent<Rigidbody2D>();
-            if (rb == null) Debug.LogError("EnemyAI: Rigidbody2D no encontrado");
 
-             col = GetComponent<Collider2D>();
+            if (rb == null) Debug.LogError("EnemyAI: Rigidbody2D not found");
+
+            col = GetComponent<Collider2D>();
 
             if (col == null)
             {
-                Debug.LogError("EnemyAI: Collider2D no encontrado");
+                Debug.LogError("EnemyAI: Collider2D not found");
             }
             else
             {
                 col.enabled = false;
             }
-            if (col != null) col.enabled = false; else Debug.LogError("EnemyAI: Collider2D componenent not found");
 
             spriteRenderer = GetComponent<SpriteRenderer>();
             if (spriteRenderer == null) Debug.LogError("EnemyAI: SpriteRenderer componenent not found");
@@ -146,15 +148,17 @@ namespace StatePattern
 
         protected virtual void Update()
         {
+            //Calls current state's UpdateState()
             if (currentState == null)
             {
                 Debug.LogError("current state not found");
             }
             else
             {
-            currentState?.UpdateState();
+                currentState?.UpdateState();
             }
 
+            //Attack Cooldown Handler
             attackTimer -= Time.deltaTime;
 
             UpdateSprite();

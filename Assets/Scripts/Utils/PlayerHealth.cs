@@ -45,8 +45,7 @@ public class PlayerHealth : LifeSystem
     {
         base.Die();
         
-        Debug.Log("Player Dies");
-
+ 
         if (playerMovement != null)
         {
             playerMovement.canMove = false;

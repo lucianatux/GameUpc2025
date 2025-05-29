@@ -1,27 +1,30 @@
 using StatePattern;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// State where the boss chases the player horizontally while checking if it's in attack range.
+/// </summary>
 public class BossChaseState : IEnemyState
 {
     private BossAI bossAI;
 
-    private int attackTimer;
-
     private bool isInAttackSight;
-    private GameObject bulletPrefab;
     private Transform playerTransform;
-    private int attackRange;
-    public BossChaseState (Transform _playerTransform)
+
+    /// <summary>
+    /// Constructor receives the player's transform to follow.
+    /// </summary>
+    public BossChaseState(Transform _playerTransform)
     {
         playerTransform = _playerTransform;
-
     }
 
+    /// <summary>
+    /// Called when entering this state. Attempts to cast the EnemyAI to BossAI.
+    /// </summary>
     public void EnterState(EnemyAI _enemyAI)
     {
-        Debug.Log("se entra al chase state");
+        Debug.Log("Entered Chase State");
 
         if (_enemyAI is BossAI enemy)
         {
@@ -29,21 +32,25 @@ public class BossChaseState : IEnemyState
         }
         else
         {
-            Debug.LogError(this + "Error de casteo fallido");
+            Debug.LogError(this + " Cast to BossAI failed.");
         }
     }
 
+    /// <summary>
+    /// Main logic for the Chase state: move horizontally and switch to Attack state if the player is in sight and cooldown allows.
+    /// </summary>
     public void UpdateState()
     {
-        isInAttackSight = bossAI.GetPlayerInSight(); // Chequea si esta frente al player
+        isInAttackSight = bossAI.GetPlayerInSight();
         Debug.Log(isInAttackSight);
-        bossAI.ChaseHorizontally(playerTransform); // Persecución al player
 
-        Debug.Log("chase update");
-        //se fija si tiene al player y si puede atacar
+        bossAI.ChaseHorizontally(playerTransform); // Follow the player horizontally
+        Debug.Log("Chase update");
+
+        // If player is in sight and the attack cooldown is over, transition to attack state
         if (isInAttackSight && bossAI.attackTimer < 0f)
         {
-            Debug.Log("se manda al attackstate");
+            Debug.Log("Switching to Attack State");
             bossAI.SetState(bossAI.bossAttackState);
         }
     }

@@ -13,12 +13,13 @@ public class Room : MonoBehaviour
     [Tooltip("Current wave in room.")]
     [HideInInspector] public int currentWave;
     
-    private void OnTriggerEnter2D(Collider2D other) //Detects Collision on the room
+    private void OnTriggerEnter2D(Collider2D other) //Detects Collision When entering the room
     {
         // When detects the player entering the room
         if (other.CompareTag("Player"))
         {
-            RoomManager.Instance.SetCurrentRoom(this); //
+            RoomManager.Instance.SetCurrentRoom(this); 
+
             Debug.Log("se envia la info a room manager del room " + roomID);
         }
     }
@@ -27,6 +28,7 @@ public class Room : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player exited the room: " + name);
+            
             RoomManager.Instance.OnPlayerLeftRoom(this); //Calls Function in Room Manager
         }
     }

@@ -74,6 +74,7 @@ public class RoomManager : MonoBehaviour
         {
             OnRoomExited?.Invoke(currentRoom.roomID); // Notify listeners
             currentRoom = null;
+            
             Debug.Log("Current room cleared because the player left.");
         }
     }
@@ -86,6 +87,7 @@ public class RoomManager : MonoBehaviour
         if (currentEnemies <= 0)
         {
             Debug.Log("All enemies defeated. Advancing to next wave.");
+
             currentRoom.currentWave++;
             OnCallWaves?.Invoke(currentRoom.currentWave); // Notify listeners -> EnemyAI
         }

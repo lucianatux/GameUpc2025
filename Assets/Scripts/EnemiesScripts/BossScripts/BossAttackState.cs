@@ -113,7 +113,7 @@ public class BossAttackState : IEnemyState
 
     private void ChargeForward()
     {
-
+        //Not yet implemented
     }
 
     private void PickRandomAttack()
