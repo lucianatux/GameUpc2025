@@ -18,29 +18,29 @@ public class Door : MonoBehaviour
     {
          if (isOpen)
          {
-             Debug.Log("La puerta ya está abierta.");  // If the door is already open, exit early.
+             Debug.Log("Door is already open");  // If the door is already open, exit early.
              return;
          }
 
          if (requiredKeys == null || requiredKeys.Count == 0)
          {
-             Debug.LogWarning("No hay llaves requeridas configuradas en la puerta."); // If no keys are configured, warn and exit.
+             Debug.LogWarning("No keys are required to be set to the door."); // If no keys are configured, warn and exit.
              return;
          }
                
          if (requiredKeys.Any(key => !inventory.HasKey(key.id)))   // Check if the inventory is missing any required key.
          {
-             Debug.Log("¡Te faltan llaves para abrir esta puerta!");
+             Debug.Log("You're missing keys to open this door!");
              return;
          }
 
-         Debug.Log("Todas las llaves presentes. Abriendo puerta.");
+         Debug.Log("All keys present. Unlocking door.");
          OpenDoor();
     }
 
     private void OpenDoor()  //Opens door once all keys are collected
     {
-        Debug.Log("Puerta abierta con llaves: " + string.Join(", ", requiredKeys.Select(k => k.displayName)));
+        Debug.Log("Door open with keys:" + string.Join(", ", requiredKeys.Select(k => k.displayName)));
         isOpen = true;   // Mark the door as open.
 
         if (doorVisual != null)
@@ -49,7 +49,7 @@ public class Door : MonoBehaviour
         if (physicalCollider != null)  // Disable the physical collider so the player can walk through.
             physicalCollider.enabled = false;
 
-        // Evento de puerta abierta
+        // Door Open event
         EnvironmentEventsManager.Instance?.DoorOpen();
     }
 }

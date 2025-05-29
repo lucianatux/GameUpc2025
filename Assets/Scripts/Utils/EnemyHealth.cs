@@ -60,6 +60,7 @@ public class EnemyHealth : LifeSystem
         {
             animator.SetTrigger("damage"); // Damage animation
         }
+        EnemiesEventsManager.Instance?.EnemyDamaged(); //Notify Enemies Events Manager
     }
 
     /// <summary>
