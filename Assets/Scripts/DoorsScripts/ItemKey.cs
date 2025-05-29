@@ -11,6 +11,8 @@ public class ItemKey : MonoBehaviour   // key item in the game world that the pl
             return;
 
         inventory.AddKey(_key);    // If it *is* the player, add the key to the player's inventory.
+        // Key collected event
+        EnvironmentEventsManager.Instance?.KeyCollected();
         Destroy(gameObject);
     }
 }
