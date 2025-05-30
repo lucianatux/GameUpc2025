@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3dbbf90ad6ed4ca48a5e3455b6f6f4b2
+guid: 6eaab9495abe5b043872cf1ac829d539
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SS_CherryExplosion_0
+      name: CherryExplosion-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b1a6269b4065cb40b46f5f08cc0700c
-      internalID: -861791514
+      spriteID: a0198c33751912d4c9ff472fc2636015
+      internalID: -2020319291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_1
+      name: CherryExplosion-Sheet_1
       rect:
         serializedVersion: 2
-        x: 240
+        x: 264
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69ed147562f997e469d1c4ab9f5aa904
-      internalID: 2054045583
+      spriteID: fecd10561f895134d977a888c5dcce9d
+      internalID: 1067860119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_2
+      name: CherryExplosion-Sheet_2
       rect:
         serializedVersion: 2
-        x: 480
+        x: 528
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a37b221958f043544aa0fd4cf829ccba
-      internalID: -361774228
+      spriteID: 0decc78164cce004c8d188bc2e51e5b1
+      internalID: 1404509384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_3
+      name: CherryExplosion-Sheet_3
       rect:
         serializedVersion: 2
-        x: 720
+        x: 792
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6428284166c7694596c847e630b327a
-      internalID: 615546442
+      spriteID: cfe9802ca4cf07f4fb90f7c7981db83f
+      internalID: -1996653388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_4
+      name: CherryExplosion-Sheet_4
       rect:
         serializedVersion: 2
-        x: 960
+        x: 1056
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4abb13d64e85a69409401a15a7d48d0b
-      internalID: 1289013402
+      spriteID: 46ef7b156cd407d448e8f0f2d9cfba10
+      internalID: 1116591819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_5
+      name: CherryExplosion-Sheet_5
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1320
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8acc90d7ad44c7b4ca7e60b272d3fcba
-      internalID: -2049913111
+      spriteID: 0a9904a0c0ccf3c4091c39ae7252e7e3
+      internalID: 1897197467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_6
+      name: CherryExplosion-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 1584
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bacbb97e8dfef0b42bbae3e8f6fb4a79
-      internalID: 605671306
+      spriteID: 7cc2224729bf28e4aa28353f9d032428
+      internalID: 359934346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_7
+      name: CherryExplosion-Sheet_7
       rect:
         serializedVersion: 2
-        x: 1680
+        x: 1848
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f23f586576fa244883fdbfab8a0000d
-      internalID: 1754725035
+      spriteID: b11c614589b0c8e438b0600de82a7916
+      internalID: 2011194678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_8
+      name: CherryExplosion-Sheet_8
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 2112
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51e087a850970cf4cbecaca7bae520b1
-      internalID: 25524851
+      spriteID: 08f8726ce5288284aa549103e5fab0bd
+      internalID: 1755285666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_9
+      name: CherryExplosion-Sheet_9
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 2376
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 622579f06a099e142bf4b0632751ae5d
-      internalID: 163447072
+      spriteID: 915d826f2202e8e48b834bb80e24e277
+      internalID: -1936858425
       vertices: []
       indices: 
       edges: []
@@ -330,16 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SS_CherryExplosion_0: -861791514
-      SS_CherryExplosion_1: 2054045583
-      SS_CherryExplosion_2: -361774228
-      SS_CherryExplosion_3: 615546442
-      SS_CherryExplosion_4: 1289013402
-      SS_CherryExplosion_5: -2049913111
-      SS_CherryExplosion_6: 605671306
-      SS_CherryExplosion_7: 1754725035
-      SS_CherryExplosion_8: 25524851
-      SS_CherryExplosion_9: 163447072
+      CherryExplosion-Sheet_0: -2020319291
+      CherryExplosion-Sheet_1: 1067860119
+      CherryExplosion-Sheet_2: 1404509384
+      CherryExplosion-Sheet_3: -1996653388
+      CherryExplosion-Sheet_4: 1116591819
+      CherryExplosion-Sheet_5: 1897197467
+      CherryExplosion-Sheet_6: 359934346
+      CherryExplosion-Sheet_7: 2011194678
+      CherryExplosion-Sheet_8: 1755285666
+      CherryExplosion-Sheet_9: -1936858425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

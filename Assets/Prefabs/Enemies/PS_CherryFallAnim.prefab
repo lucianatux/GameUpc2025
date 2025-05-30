@@ -119,7 +119,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -343,7 +343,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -609,7 +609,7 @@ ParticleSystem:
     gravitySource: 0
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
-    size3D: 0
+    size3D: 1
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -668,7 +668,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 0
     type: 4
-    angle: 25
+    angle: 0
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -754,7 +754,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -1444,17 +1444,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 6.772962
-          outSlope: 6.772962
+          inSlope: 2.041096
+          outSlope: 2.041096
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.14764589
+          time: 0.4899329
           value: 1
-          inSlope: 6.772962
-          outSlope: 6.772962
+          inSlope: 2.041096
+          outSlope: 2.041096
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1540,7 +1540,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 6
+    tilesX: 7
     tilesY: 1
     animationType: 0
     rowIndex: 0
@@ -4858,7 +4858,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4871,7 +4871,7 @@ ParticleSystemRenderer:
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 0
-  m_Pivot: {x: 0, y: 0.4, z: 0}
+  m_Pivot: {x: 0, y: 0.2, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
@@ -4903,7 +4903,7 @@ GameObject:
   - component: {fileID: 1797361805762826487}
   - component: {fileID: 8723805821256368033}
   m_Layer: 0
-  m_Name: PS_Fall (2)
+  m_Name: PS_Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4918,7 +4918,7 @@ Transform:
   m_GameObject: {fileID: 5125663359341153758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5178,7 +5178,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9759,7 +9759,7 @@ ParticleSystemRenderer:
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 0
-  m_Pivot: {x: 0, y: 0, z: 0}
+  m_Pivot: {x: 0, y: 0.09, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
@@ -9806,7 +9806,7 @@ Transform:
   m_GameObject: {fileID: 5459978068114892564}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14643,7 +14643,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -14688,7 +14688,7 @@ GameObject:
   - component: {fileID: 1093923365928083844}
   - component: {fileID: 8939918842332343686}
   m_Layer: 0
-  m_Name: PS_Fall (1)
+  m_Name: PS_Poof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14703,7 +14703,7 @@ Transform:
   m_GameObject: {fileID: 8510586884128116165}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19540,7 +19540,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

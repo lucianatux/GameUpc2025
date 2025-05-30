@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 933ba2959b9dfce4daf498023c218c08
+guid: 69b5bab1ad9de8a4ea74d95adb63670d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CherryFall-Sheet_0
+      name: SS_CherryFall_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad7f63b2068b7c4ea359344a2d60bd6
-      internalID: 1063496683
+      spriteID: 58a2bfb588c1c83439085f0c8dfc3ece
+      internalID: -1592254922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CherryFall-Sheet_1
+      name: SS_CherryFall_1
       rect:
         serializedVersion: 2
-        x: 240
+        x: 264
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44e8c51ce3462814ebee06d749e865e5
-      internalID: -182870568
+      spriteID: 3b645b4cbf22cde4795c0786513fc7ab
+      internalID: 673602170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CherryFall-Sheet_2
+      name: SS_CherryFall_2
       rect:
         serializedVersion: 2
-        x: 480
+        x: 528
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ae7e44e9a348434faa7f895f2d1f86e
-      internalID: 672178024
+      spriteID: d922c2cb641026a44aaf52419c32f2f5
+      internalID: -951157406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CherryFall-Sheet_3
+      name: SS_CherryFall_3
       rect:
         serializedVersion: 2
-        x: 720
+        x: 792
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3af68b3563a9f1644b593182b09a0ca6
-      internalID: -553583106
+      spriteID: 5b4093e6f73538441960081d9257be30
+      internalID: 2940690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CherryFall-Sheet_4
+      name: SS_CherryFall_4
       rect:
         serializedVersion: 2
-        x: 960
+        x: 1056
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c006a9c8662ccb47b96afa02ea6f14e
-      internalID: 2118841083
+      spriteID: 9ddce79c29fe5794da90bd8b017869cf
+      internalID: -445516194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CherryFall-Sheet_5
+      name: SS_CherryFall_5
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1320
         y: 0
-        width: 240
-        height: 240
+        width: 264
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d183e19125d3e8459740170ab25d666
-      internalID: -1122485858
+      spriteID: 0f92203f512a8da42b184fe03ad4d14b
+      internalID: -1354509932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SS_CherryFall_6
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 0
+        width: 264
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b406c562caad6b46b19a1a6bcaddb84
+      internalID: -237797945
       vertices: []
       indices: 
       edges: []
@@ -246,12 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CherryFall-Sheet_0: 1063496683
-      CherryFall-Sheet_1: -182870568
-      CherryFall-Sheet_2: 672178024
-      CherryFall-Sheet_3: -553583106
-      CherryFall-Sheet_4: 2118841083
-      CherryFall-Sheet_5: -1122485858
+      SS_CherryFall_0: -1592254922
+      SS_CherryFall_1: 673602170
+      SS_CherryFall_2: -951157406
+      SS_CherryFall_3: 2940690
+      SS_CherryFall_4: -445516194
+      SS_CherryFall_5: -1354509932
+      SS_CherryFall_6: -237797945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

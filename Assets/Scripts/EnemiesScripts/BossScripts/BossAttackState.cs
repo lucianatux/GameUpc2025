@@ -88,11 +88,6 @@ public class BossAttackState : IEnemyState
     }
     private void ActivateBombs()
     {
-        if (bombsActivated)
-        {
-            return;
-        }
-
         for (int i = 0; i <= 4; i++)
         {
             if (bossAI.cherryBombs.Count >= i)
