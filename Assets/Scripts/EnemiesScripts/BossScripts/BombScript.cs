@@ -10,8 +10,10 @@ public class BombScript : MonoBehaviour
 {
     private Collider2D col;
     private Rigidbody2D rb;
-    private Vector3 originalPosition;
 
+    [SerializeField] private int damage;
+    private Vector3 originalPosition;
+    private PlayerHealth PlayerHealth;
     [Tooltip("Prefab instantiated when the bomb hits the ground.")]
     [SerializeField] private GameObject fallPrefab;
 
@@ -41,7 +43,7 @@ public class BombScript : MonoBehaviour
     //Called when BossAI enables it
     private void OnEnable()
     {
-                originalPosition = transform.position;
+        originalPosition = transform.position;
 
         // Reset position and start the fall animation
         transform.position = originalPosition;
@@ -95,4 +97,5 @@ public class BombScript : MonoBehaviour
 
         gameObject.SetActive(false); //Disable to enable again if needed
     }
+
 }
