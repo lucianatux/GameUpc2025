@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3dbbf90ad6ed4ca48a5e3455b6f6f4b2
+guid: 933ba2959b9dfce4daf498023c218c08
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SS_CherryExplosion_0
+      name: CherryFall-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b1a6269b4065cb40b46f5f08cc0700c
-      internalID: -861791514
+      spriteID: 9ad7f63b2068b7c4ea359344a2d60bd6
+      internalID: 1063496683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_1
+      name: CherryFall-Sheet_1
       rect:
         serializedVersion: 2
         x: 240
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69ed147562f997e469d1c4ab9f5aa904
-      internalID: 2054045583
+      spriteID: 44e8c51ce3462814ebee06d749e865e5
+      internalID: -182870568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_2
+      name: CherryFall-Sheet_2
       rect:
         serializedVersion: 2
         x: 480
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a37b221958f043544aa0fd4cf829ccba
-      internalID: -361774228
+      spriteID: 9ae7e44e9a348434faa7f895f2d1f86e
+      internalID: 672178024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_3
+      name: CherryFall-Sheet_3
       rect:
         serializedVersion: 2
         x: 720
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6428284166c7694596c847e630b327a
-      internalID: 615546442
+      spriteID: 3af68b3563a9f1644b593182b09a0ca6
+      internalID: -553583106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_4
+      name: CherryFall-Sheet_4
       rect:
         serializedVersion: 2
         x: 960
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4abb13d64e85a69409401a15a7d48d0b
-      internalID: 1289013402
+      spriteID: 2c006a9c8662ccb47b96afa02ea6f14e
+      internalID: 2118841083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SS_CherryExplosion_5
+      name: CherryFall-Sheet_5
       rect:
         serializedVersion: 2
         x: 1200
@@ -229,92 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8acc90d7ad44c7b4ca7e60b272d3fcba
-      internalID: -2049913111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_CherryExplosion_6
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bacbb97e8dfef0b42bbae3e8f6fb4a79
-      internalID: 605671306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_CherryExplosion_7
-      rect:
-        serializedVersion: 2
-        x: 1680
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f23f586576fa244883fdbfab8a0000d
-      internalID: 1754725035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_CherryExplosion_8
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51e087a850970cf4cbecaca7bae520b1
-      internalID: 25524851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_CherryExplosion_9
-      rect:
-        serializedVersion: 2
-        x: 2160
-        y: 0
-        width: 240
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 622579f06a099e142bf4b0632751ae5d
-      internalID: 163447072
+      spriteID: 4d183e19125d3e8459740170ab25d666
+      internalID: -1122485858
       vertices: []
       indices: 
       edges: []
@@ -330,16 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SS_CherryExplosion_0: -861791514
-      SS_CherryExplosion_1: 2054045583
-      SS_CherryExplosion_2: -361774228
-      SS_CherryExplosion_3: 615546442
-      SS_CherryExplosion_4: 1289013402
-      SS_CherryExplosion_5: -2049913111
-      SS_CherryExplosion_6: 605671306
-      SS_CherryExplosion_7: 1754725035
-      SS_CherryExplosion_8: 25524851
-      SS_CherryExplosion_9: 163447072
+      CherryFall-Sheet_0: 1063496683
+      CherryFall-Sheet_1: -182870568
+      CherryFall-Sheet_2: 672178024
+      CherryFall-Sheet_3: -553583106
+      CherryFall-Sheet_4: 2118841083
+      CherryFall-Sheet_5: -1122485858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
