@@ -21,7 +21,6 @@ public class BombScript : MonoBehaviour
     //Set references and components
     private void Awake()
     {
-        originalPosition = transform.position;
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -42,6 +41,8 @@ public class BombScript : MonoBehaviour
     //Called when BossAI enables it
     private void OnEnable()
     {
+                originalPosition = transform.position;
+
         // Reset position and start the fall animation
         transform.position = originalPosition;
         StartCoroutine(BombFall(1f));

@@ -51,7 +51,11 @@ public class BossAttackState : IEnemyState
 
         if (!isAttacking && bossAI.attackTimer < 0 && bossAI.GetPlayerInSight() == true)
         {
-            PickRandomAttack();
+            //  PickRandomAttack();
+            
+                bossAI.StartCoroutine(BombAttack(1f));
+                Debug.Log("Se llama al ataque Bomba");
+         
         }
         Debug.Log("attack state update ");
         Debug.Log("is attacking" +  isAttacking);

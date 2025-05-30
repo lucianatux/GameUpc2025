@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallPrefab: {fileID: 6350118730864401413, guid: ccbf7171a253d5f4db3a04234beb8f3c, type: 3}
+  fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &890916313640456461
 CapsuleCollider2D:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallPrefab: {fileID: 6350118730864401413, guid: ccbf7171a253d5f4db3a04234beb8f3c, type: 3}
+  fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &5241443893446153811
 CapsuleCollider2D:
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallPrefab: {fileID: 6350118730864401413, guid: ccbf7171a253d5f4db3a04234beb8f3c, type: 3}
+  fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &5942477184525102489
 CapsuleCollider2D:
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallPrefab: {fileID: 6350118730864401413, guid: ccbf7171a253d5f4db3a04234beb8f3c, type: 3}
+  fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &6854593953105455384
 CapsuleCollider2D:
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallPrefab: {fileID: 6350118730864401413, guid: ccbf7171a253d5f4db3a04234beb8f3c, type: 3}
+  fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &4675338050352690649
 CapsuleCollider2D:
