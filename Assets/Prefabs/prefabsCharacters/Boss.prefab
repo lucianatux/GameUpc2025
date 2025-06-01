@@ -150,12 +150,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.3, y: -0.52}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2.4157543
 --- !u!195 &3032046557287432296
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &890916313640456461
@@ -493,6 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &5241443893446153811
@@ -639,6 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &5942477184525102489
@@ -785,6 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &6854593953105455384
@@ -931,6 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
 --- !u!70 &4675338050352690649
