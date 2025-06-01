@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class PlayerEventsManager : MonoBehaviour
 {
-    public static PlayerEventsManager Instance;
+    public static PlayerEventsManager Instance { get; private set; }
    
     // Eventos que otros pueden escuchar
     public event Action OnPlayerDamaged;

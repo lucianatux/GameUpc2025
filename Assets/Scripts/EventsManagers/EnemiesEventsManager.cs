@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class EnemiesEventsManager : MonoBehaviour
 {
-    public static EnemiesEventsManager Instance;
+    public static EnemiesEventsManager Instance { get; private set; }
     // Eventos que otros pueden escuchar
     public event Action OnEnemyDefeated;
     public event Action OnEnemyDamaged;

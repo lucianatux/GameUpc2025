@@ -11,7 +11,7 @@ using UnityEngine;
 /// 
 public class EnvironmentEventsManager : MonoBehaviour
 {
-    public static EnvironmentEventsManager Instance;
+    public static EnvironmentEventsManager Instance { get; private set; }
     // Eventos que otros pueden escuchar
     public event Action OnKeyCollected;
     public event Action OnKeyUsed;
