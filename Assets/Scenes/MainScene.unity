@@ -589,11 +589,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dae700b103da5b429906e991ec89794, type: 3}
---- !u!1 &85856374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
-  m_PrefabInstance: {fileID: 6616994508530539433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &150609903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -816,6 +811,7 @@ Transform:
   - {fileID: 1770692421}
   - {fileID: 1030487079}
   - {fileID: 1505869377}
+  - {fileID: 1408794163}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &285585492
@@ -58211,7 +58207,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.1073074}
+  m_Offset: {x: 2.093626, y: 1.7723274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58222,7 +58218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 43.115795, y: 16.730194}
+  m_Size: {x: 38.92854, y: 16.060234}
   m_EdgeRadius: 0
 --- !u!114 &1408794162
 MonoBehaviour:
@@ -58246,12 +58242,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408794160}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.187389, y: 59.795883, z: -0.017966751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.3311615, y: 22.983185, z: 0.09487268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 261709154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1429237195
 PrefabInstance:
@@ -58610,37 +58606,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
   m_PrefabInstance: {fileID: 6616994508530539433}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1525920293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85856374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d842a3cb57a157748837ec2dc7ac2ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 3
-  walkableLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  attackCooldown: 2
-  bulletPrefab: {fileID: 0}
-  weaponTransform: {fileID: 0}
-  attackTimer: 0
-  warningPrefab: {fileID: 0}
-  attentionPrefab: {fileID: 0}
-  rb: {fileID: 0}
-  col: {fileID: 0}
-  flashDuration: 0.1
-  isStunned: 0
-  stunDuration: 0
-  _waveID: 0
-  roomID: 5
-  isActive: 0
-  attentionTimer: 0
 --- !u!4 &1547637236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6459507837004757928, guid: 9dae700b103da5b429906e991ec89794, type: 3}
@@ -119368,18 +119333,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
-    - target: {fileID: 1045689278765545908, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1403761871366558213, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1248858778, guid: 26fafdc97d35d314ea19b56071fb0f52, type: 3}
-    - target: {fileID: 1403761871366558213, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.8194
@@ -119424,10 +119377,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1000
       objectReference: {fileID: 0}
-    - target: {fileID: 6690511382101885096, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e25ff825f56be5a4bb11f3d755d72c25, type: 2}
+    - target: {fileID: 6366498958235008353, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy
@@ -119439,10 +119392,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1525920293}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
 --- !u!1001 &6702832655015827170
 PrefabInstance:
@@ -119834,8 +119784,7 @@ SceneRoots:
   - {fileID: 23883988}
   - {fileID: 912954048}
   - {fileID: 1429473107}
-  - {fileID: 1408794163}
   - {fileID: 1150211841}
+  - {fileID: 261709154}
   - {fileID: 631421729}
   - {fileID: 403442759}
-  - {fileID: 261709154}
