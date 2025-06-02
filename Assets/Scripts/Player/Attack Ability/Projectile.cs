@@ -21,6 +21,8 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
+        if (collision.CompareTag("Room")) return;
+        
         if (collision.CompareTag("Enemy"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
         { 
             Destroy(gameObject); 
