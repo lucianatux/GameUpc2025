@@ -804,7 +804,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210430717
@@ -15083,6 +15083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 649111635}
   - component: {fileID: 649111636}
+  - component: {fileID: 649111637}
   m_Layer: 5
   m_Name: lifebar
   m_TagString: Untagged
@@ -15106,11 +15107,11 @@ RectTransform:
   - {fileID: 553379700}
   m_Father: {fileID: 1389966422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.418, y: 0}
-  m_SizeDelta: {x: 320, y: 64}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 63.80005, y: -66.400024}
+  m_SizeDelta: {x: 362.0706, y: 72.4141}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &649111636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15158,10 +15159,24 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &649111637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649111634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fb603eafd340646a57b890abc9c6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 649111636}
+  playerHealth: {fileID: 1777845592}
 --- !u!1001 &671387838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108323,6 +108338,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1723828344519003406, guid: 75468336585ee1f46b968d9358de8514, type: 3}
   m_PrefabInstance: {fileID: 8987828420104500112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1777845592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -487413458064216045, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+  m_PrefabInstance: {fileID: 8987828420104500112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025d8d3c84828fc459ac48777d0376b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1889355931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6459507837004757928, guid: 9dae700b103da5b429906e991ec89794, type: 3}
@@ -122704,6 +122730,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -1.2467289
       objectReference: {fileID: 0}
+    - target: {fileID: 5472881973771020890, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1777845592}
     - target: {fileID: 6718517391212286116, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: projectileSpeed
       value: 5
