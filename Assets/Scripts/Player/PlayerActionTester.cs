@@ -10,8 +10,6 @@ using UnityEngine;
 public class PlayerActionTester : MonoBehaviour
 {
     [SerializeField] private PlayerAnimatorController animatorController;
-    [SerializeField] private PlayerHealth playerHealth;
-
 
     void Update()
     {
@@ -30,16 +28,6 @@ public class PlayerActionTester : MonoBehaviour
         {
             animatorController.TriggerAnim("damage");
             PlayerEventsManager.Instance.PlayerDamaged();
-
-            // prueba///Aplica daño real (y automáticamente dispara evento)
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(1);
-            }
-            else
-            {
-                Debug.LogWarning("PlayerHealth no asignado en PlayerActionTester.");
-            }
         }
         if (Input.GetKeyDown(KeyCode.B))
         {

@@ -20,7 +20,6 @@ public class PlayerHealth : LifeSystem
         if (animator == null) Debug.LogError("Animator component not found on Player.");
 
         base.Start();
-        PlayerEventsManager.Instance?.PlayerHeal(); // begins with full life
     }
 
     /// <summary>
@@ -37,7 +36,6 @@ public class PlayerHealth : LifeSystem
         }
 
         PlayerEventsManager.Instance?.PlayerDamaged(); //Notify Player Events Manager
-        Debug.Log("El jugador recibe daño");
     }
 
     /// <summary>
