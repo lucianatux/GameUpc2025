@@ -193,8 +193,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8187465798281724320, guid: 2e7cc77ff5abf344a935ebb988ea145c, type: 3}
   weaponTransform: {fileID: 4679960022692193404}
   attackTimer: 0
-  warningPrefab: {fileID: 0}
-  attentionPrefab: {fileID: 0}
+  warningPrefab: {fileID: 3174422643364958423, guid: dd785d8c21cf6d54b800a075d871b140, type: 3}
+  attentionPrefab: {fileID: 350649175611734291, guid: 6c6b479d49c7e28478290cf89bfec583, type: 3}
   rb: {fileID: 0}
   col: {fileID: 0}
   flashDuration: 0.1
@@ -218,7 +218,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 1
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -241,5 +241,5 @@ MonoBehaviour:
   maxHealth: 20
   invulnerabilityTime: 0.01
   canHeal: 0
-  lifeOrbPrefab: {fileID: 0}
-  lifeOrbDropChance: 0.3
+  lifeOrbPrefab: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}
+  lifeOrbDropChance: 0.065
