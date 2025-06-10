@@ -13,6 +13,14 @@ public class Room : MonoBehaviour
     [Tooltip("Current wave in room.")]
     [HideInInspector] public int currentWave;
     
+    [Tooltip("Total waves for this room.")]
+    public int maxWaves = 1;
+    
+    private void Awake()
+    {
+        if (maxWaves <= 0)
+            maxWaves = 1;
+    }
     private void OnTriggerEnter2D(Collider2D other) //Detects Collision When entering the room
     {
         // When detects the player entering the room
