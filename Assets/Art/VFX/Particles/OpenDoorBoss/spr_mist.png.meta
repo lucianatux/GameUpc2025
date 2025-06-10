@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 120d1d61d8166e7429c2d109aa9b90de
+guid: 07c0d1a6d2593db4b83eba09553cdfa9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: undefined - Imgur (7)_0
+      name: mist-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 288
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9091acdb5d2bec42946f91e03cfe9a7
-      internalID: 1310700811
+      spriteID: 0aa82967ab7036043ba1a4864c57c1fd
+      internalID: -729892183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_1
+      name: mist-Sheet_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 960
+        y: 288
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51060d5bb21a2d84099868c6626e2438
-      internalID: 684930140
+      spriteID: 68f3a7309f0630241aeec0ddb7a282b0
+      internalID: 157138329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_2
+      name: mist-Sheet_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
+        x: 1920
+        y: 288
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c4d90b982f2a46419d6418ee9f050cd
-      internalID: 110610843
+      spriteID: 14268fe462bf9fb48be826eaf038fbd5
+      internalID: 1984706404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_3
+      name: mist-Sheet_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
+        x: 2880
+        y: 288
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f947ae0b734fe854a9aec8ccdda5614b
-      internalID: 2060828587
+      spriteID: b3a4a8463daa4fc4690806132b9dd4ec
+      internalID: 1911868304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_4
+      name: mist-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 288
+        width: 960
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0865a9007c7507d4d9c4c299ea4241c5
+      internalID: -1972936608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mist-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 288
+        width: 960
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5caecad62523e2743aa404eac8fd26f2
+      internalID: -1990601720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mist-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 288
+        width: 960
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bca7d995f78d0c49a7dc299d36857a0
+      internalID: 927888112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mist-Sheet_7
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31d85cd82fdcf2d4db69064c2e7a8e99
-      internalID: 1634628142
+      spriteID: 39565bb194237a448909bccb07574810
+      internalID: -453136042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_5
+      name: mist-Sheet_8
       rect:
         serializedVersion: 2
-        x: 256
+        x: 960
         y: 0
-        width: 256
-        height: 256
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1d40a83626463d4eb5a516e898a407f
-      internalID: -1682541935
+      spriteID: df7245b032c0a1a49bb5edf4ca341dfc
+      internalID: 1486009635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_6
+      name: mist-Sheet_9
       rect:
         serializedVersion: 2
-        x: 512
+        x: 1920
         y: 0
-        width: 256
-        height: 256
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a39dd0891151f274ba6b51fffcbc6cfc
-      internalID: -1502116749
+      spriteID: 967182262a4fd7b47b60d62f6e04c3a3
+      internalID: -97387286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur (7)_7
+      name: mist-Sheet_10
       rect:
         serializedVersion: 2
-        x: 768
+        x: 2880
         y: 0
-        width: 256
-        height: 256
+        width: 960
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,8 +321,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae603f6d62a884f4fa0dc6017539ad5b
-      internalID: 54325576
+      spriteID: d01abfda07847c54e94fbaf2d34bbf45
+      internalID: 1341541218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mist-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 960
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b506656c86ea6468c70cd5b50e18b7
+      internalID: -460210151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mist-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 960
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b95399c240c2f4194f0d51f78a0957
+      internalID: -849278313
       vertices: []
       indices: 
       edges: []
@@ -275,14 +380,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      undefined - Imgur (7)_0: 1310700811
-      undefined - Imgur (7)_1: 684930140
-      undefined - Imgur (7)_2: 110610843
-      undefined - Imgur (7)_3: 2060828587
-      undefined - Imgur (7)_4: 1634628142
-      undefined - Imgur (7)_5: -1682541935
-      undefined - Imgur (7)_6: -1502116749
-      undefined - Imgur (7)_7: 54325576
+      mist-Sheet_0: -729892183
+      mist-Sheet_1: 157138329
+      mist-Sheet_10: 1341541218
+      mist-Sheet_11: -460210151
+      mist-Sheet_12: -849278313
+      mist-Sheet_2: 1984706404
+      mist-Sheet_3: 1911868304
+      mist-Sheet_4: -1972936608
+      mist-Sheet_5: -1990601720
+      mist-Sheet_6: 927888112
+      mist-Sheet_7: -453136042
+      mist-Sheet_8: 1486009635
+      mist-Sheet_9: -97387286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

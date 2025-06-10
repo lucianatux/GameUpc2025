@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a6fbbd966463f3149944a45ba4b35baa
+guid: 4393a5b773ade274088d19294e39c797
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: undefined - Imgur_0
+      name: sparkStar-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56a7a8836f51154d95c8946656d017b
-      internalID: 1954092767
+      spriteID: dd5c36dbc848cf94dbd18adc3e78eff5
+      internalID: -1900061953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: undefined - Imgur_1
+      name: sparkStar-Sheet_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 288
         y: 0
-        width: 256
-        height: 256
+        width: 288
+        height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b95dfad97233e04f9f6b065bef1d17b
-      internalID: -117010463
+      spriteID: 9a78149e55edc50488c09c3cda69adfa
+      internalID: -2002477435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparkStar-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f6a43ca5d3c104f8da396fad7d7bfb
+      internalID: 1584521782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparkStar-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d776c60e205fd4b8060e9665be5789
+      internalID: -1121317675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparkStar-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b527f599b509a41a9a3ad3accfdaa5
+      internalID: -965799279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparkStar-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac81d7b6fd02714db68a180e828f06b
+      internalID: -1758792747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sparkStar-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e7bd108b7f7cd4e8592bdbc0f88522
+      internalID: -2052990380
       vertices: []
       indices: 
       edges: []
@@ -149,8 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      undefined - Imgur_0: 1954092767
-      undefined - Imgur_1: -117010463
+      sparkStar-Sheet_0: -1900061953
+      sparkStar-Sheet_1: -2002477435
+      sparkStar-Sheet_2: 1584521782
+      sparkStar-Sheet_3: -1121317675
+      sparkStar-Sheet_4: -965799279
+      sparkStar-Sheet_5: -1758792747
+      sparkStar-Sheet_6: -2052990380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
