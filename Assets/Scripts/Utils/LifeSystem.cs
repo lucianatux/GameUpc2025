@@ -12,6 +12,9 @@ public class LifeSystem : MonoBehaviour
     [SerializeField] protected int maxHealth;
     [SerializeField] protected float invulnerabilityTime;
     [SerializeField] protected bool canHeal = false;
+    public int CurrentHealth => currentHealth;
+    public int MaxHealth => maxHealth;
+
 
     protected int currentHealth;
     protected float invulnerabilityTimer;
