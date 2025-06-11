@@ -19,6 +19,7 @@ public class RoomManager : MonoBehaviour
     public event Action<int> OnRoomEntered;
     public event Action<int> OnRoomExited;
     public event Action<int> OnCallWaves;
+    public event Action<int> OnRoomCleared;
 
     // Enemy counters for the room
     public int enemyCount;
@@ -90,6 +91,11 @@ public class RoomManager : MonoBehaviour
 
             currentRoom.currentWave++;
             OnCallWaves?.Invoke(currentRoom.currentWave); // Notify listeners -> EnemyAI
+        }
+        if (currentRoom.currentWave > currentRoom.maxWaves)
+        {
+            Debug.Log("All waves completed for room " + currentRoom.roomID);
+            OnRoomCleared?.Invoke(currentRoom.roomID);
         }
     }
 
