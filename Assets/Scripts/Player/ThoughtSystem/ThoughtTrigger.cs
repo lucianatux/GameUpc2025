@@ -13,6 +13,7 @@ public class ThoughtTrigger : MonoBehaviour
     {
         if (!hasTriggered && other.CompareTag("Player"))
         {
+            Debug.Log("🧠 Trigger activado por el jugador. Pensamiento: " + thought.text);
             ThoughtManager.Instance.ShowThought(thought);
 
             if (triggerOnce)
