@@ -58,7 +58,7 @@ public class EnemyHealth : LifeSystem
 
         if (animator != null)
         {
-            animator.SetTrigger("damage"); // Damage animation
+            //animator.SetTrigger("damage"); // Damage animation
         }
         EnemiesEventsManager.Instance?.EnemyDamaged(); //Notify Enemies Events Manager
     }

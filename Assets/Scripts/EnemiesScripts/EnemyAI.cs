@@ -40,6 +40,7 @@ namespace StatePattern
         public Rigidbody2D rb;
         protected NavMeshAgent agent;
         protected Animator animator;
+        public EnemyAnimatorController enemyAnimator;
         public Collider2D col;
         #endregion
 
@@ -194,7 +195,10 @@ namespace StatePattern
         public void UpdateSprite()
         {
             if (!isActive || playerTransform == null || spriteRenderer == null) return;
-
+            if (rb.velocity != Vector2.zero)
+            {
+                enemyAnimator.TriggerAnim("walk");
+            }
             float angle = GetAngleToPlayer();
             spriteRenderer.flipX = angle > 90 && angle < 270;
         }

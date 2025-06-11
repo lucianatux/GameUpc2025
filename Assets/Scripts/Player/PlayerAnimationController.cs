@@ -8,12 +8,12 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class PlayerAnimatorController : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement movement;
-    private Animator animator;
+    [SerializeField] protected PlayerMovement movement;
+    protected Animator animator;
 
     private bool isBack = false;
 
-    void Awake()
+    protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
         if (animator == null) Debug.LogWarning("Animator not found");
@@ -21,7 +21,7 @@ public class PlayerAnimatorController : MonoBehaviour
         if (movement == null) movement = GetComponent<PlayerMovement>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         Vector2 input = movement.CurrentInput;
 
