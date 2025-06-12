@@ -69,9 +69,16 @@ namespace StatePattern
             {
                 Attack();
             }
-            else if (!isAttacking)
+            
+            else if (!isAttacking && distToPlayer > attackRange)
             {
                 enemyAI.SetState(enemyAI.enemyChaseState);
+            }
+
+            else if (!isAttacking && distToPlayer < attackRange)
+            {
+                enemyAI.enemyAnimator.TriggerAnim("idle");
+
             }
         }
 
@@ -100,9 +107,10 @@ namespace StatePattern
             enemyAI.ShowAlert("Warning");
             yield return new WaitForSeconds(0.2f);
 
-            //animacion 
+            enemyAI.enemyAnimator.TriggerAnim("attack"); 
 
-            yield return new WaitForSeconds(1f); // Delay before shooting
+            yield return new WaitForSeconds(.9f); // Delay before shooting
+                enemyAI.enemyAnimator.TriggerAnim("idle");
 
             Shoot(bulletPrefab, weaponTransform);
 

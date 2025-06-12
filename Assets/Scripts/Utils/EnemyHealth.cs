@@ -18,6 +18,7 @@ public class EnemyHealth : LifeSystem
 
     private EnemyAI enemyAI;
 
+    private EnemyAnimatorController enemyAnimController;
 
     /// <summary>
     /// Initializes necessary components and references.
@@ -25,6 +26,8 @@ public class EnemyHealth : LifeSystem
     protected override void Start()
     {
         base.Start();
+
+        enemyAnimController = GetComponent<EnemyAnimatorController>();
 
         rb = GetComponent<Rigidbody2D>();
         if (rb == null) Debug.LogError("Rigidbody2D not found on Enemy.");
@@ -55,6 +58,10 @@ public class EnemyHealth : LifeSystem
         {
             enemyAI.EnemyTakeDamage(); // Visual/audio damage feedback
         }
+        else
+        {
+            Debug.LogError("enemyAI not found");
+        }
 
         if (animator != null)
         {
@@ -68,7 +75,6 @@ public class EnemyHealth : LifeSystem
     /// </summary>
     protected override void Die()
     {
-        base.Die(); // Triggers any additional logic in the base class
 
         Debug.Log("Enemy Dies");
 
@@ -79,6 +85,7 @@ public class EnemyHealth : LifeSystem
 
         if (animator != null)
         {
+            Debug.Log("se usa animacion de muerte");
             animator.SetTrigger("die");
         }
 

@@ -42,7 +42,7 @@ public class PlayerAnimatorController : MonoBehaviour
     /// </summary>
     /// <param name="triggerName">The name of the trigger parameter in the Animator.</param>
     
-    public void TriggerAnim(string triggerName)
+    public virtual void TriggerAnim(string triggerName)
     {
         // Se asegura de reiniciar el trigger antes de activarlo (evita animaciones bloqueadas).
         animator.ResetTrigger(triggerName);

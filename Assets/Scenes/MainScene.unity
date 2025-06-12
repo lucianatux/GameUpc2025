@@ -16766,6 +16766,11 @@ Transform:
   - {fileID: 1889355931}
   m_Father: {fileID: 158114950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &797709989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+  m_PrefabInstance: {fileID: 6616994508530539433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &809694972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7535363083179653887, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
@@ -59001,6 +59006,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
   m_PrefabInstance: {fileID: 6616994508530539433}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1525920293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797709989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1ad52b88e984040aa1f5369cb12843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}
 --- !u!4 &1547637236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6459507837004757928, guid: 9dae700b103da5b429906e991ec89794, type: 3}
@@ -122315,6 +122333,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 3996039761230616911, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: stunDuration
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.8194
@@ -122363,6 +122385,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7313290718630489306, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_Speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy
@@ -122374,7 +122400,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1525920293}
   m_SourcePrefab: {fileID: 100100000, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
 --- !u!1001 &6702832655015827170
 PrefabInstance:

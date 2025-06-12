@@ -48,7 +48,7 @@ namespace StatePattern
         [Header("Daño y Knockback")]
         protected Color originalColor;
         [SerializeField] protected float flashDuration = 0.1f;
-        public bool isStunned = false;
+        public bool isStunned;
         [SerializeField] protected float stunDuration;
         #endregion
 
@@ -62,6 +62,8 @@ namespace StatePattern
 
         protected void Awake()
         {
+            enemyAnimator = GetComponent<EnemyAnimatorController>();
+            
             animator = GetComponent<Animator>();
 
             if (animator == null) Debug.LogError("EnemyAI: Animator not found");
@@ -195,10 +197,11 @@ namespace StatePattern
         public void UpdateSprite()
         {
             if (!isActive || playerTransform == null || spriteRenderer == null) return;
-            if (rb.velocity != Vector2.zero)
-            {
-                enemyAnimator.TriggerAnim("walk");
-            }
+           // if (rb.velocity != Vector2.zero)
+          //  {
+           //     Debug.Log(this + "is walking");
+          //      enemyAnimator.TriggerAnim("walk");
+          //  }
             float angle = GetAngleToPlayer();
             spriteRenderer.flipX = angle > 90 && angle < 270;
         }
@@ -209,6 +212,7 @@ namespace StatePattern
         {
             Debug.Log("Enemy recibió daño");
             attackTimer = attackCooldown / 2;
+            isStunned = true;
 
             if (spriteRenderer != null)
             {
@@ -216,7 +220,6 @@ namespace StatePattern
                 Invoke(nameof(ResetColor), flashDuration);
             }
 
-            isStunned = true;
             Invoke(nameof(RemoveStun), stunDuration);
         }
 
@@ -238,7 +241,7 @@ namespace StatePattern
         {
             GameObject prefabToSpawn = null;
 
-            if (type == "Attention")
+            if (type == "attention")
             {
                 if (attentionPrefab == null)
                 {
@@ -276,11 +279,21 @@ namespace StatePattern
         /// <summary>
         public void Chase(Transform toChase)
         {
+
             if (agent == null)
             {
                 Debug.LogError("NavMesh agent not found");
             }
-            if (isStunned) return;
+            if (isStunned)
+            {
+                Debug.Log("esta stunned");
+                return;
+            }
+            if (enemyAnimator == null)
+                {
+                    Debug.LogError("enemy animator  not found");
+                }
+            enemyAnimator.TriggerAnim("walk");
 
             agent.SetDestination(toChase.position);
         }
