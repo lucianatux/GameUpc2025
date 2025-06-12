@@ -22,10 +22,15 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
         if (collision.CompareTag("Room")) return;
-        
+
         if (collision.CompareTag("Enemy"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
-        { 
-            Destroy(gameObject); 
+        {
+            Destroy(gameObject);
+
+            EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+            if (enemyHealth != null) enemyHealth.TakeDamage(5);
+            else Debug.LogError("enemy health not found");
+
         }
 
         if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
