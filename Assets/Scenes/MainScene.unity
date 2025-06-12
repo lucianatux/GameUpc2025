@@ -57283,6 +57283,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 70169208cae18a648ab49965755dff6e, type: 2}
   - {fileID: 11400000, guid: af744e674b75ad64f8037335095f0630, type: 2}
   doorVisual: {fileID: 0}
+  roomID: 0
 --- !u!4 &977827036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7673564019531039144, guid: 55577a292bab3e34bbc7e51ca2c6df45, type: 3}
@@ -57991,6 +57992,7 @@ MonoBehaviour:
   requiredKeys:
   - {fileID: 11400000, guid: 15b8feca0c830694e9fdaabe24b7411b, type: 2}
   doorVisual: {fileID: 0}
+  roomID: 0
 --- !u!61 &1251763403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58780,6 +58782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomID: 13
   currentWave: 0
+  maxWaves: 1
 --- !u!4 &1408794163
 Transform:
   m_ObjectHideFlags: 0

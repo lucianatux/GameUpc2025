@@ -7,14 +7,8 @@
     <list default="true" id="f0910e2b-b0ab-4046-a363-b1dacb1fc7e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/DoorTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/DoorTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/ItemKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/ItemKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Key.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Key.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/FireballAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/FireballAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/ProjectileAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/ProjectileAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/RoomManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +99,7 @@
       <workItem from="1748444752629" duration="630000" />
       <workItem from="1748485604520" duration="486000" />
       <workItem from="1748486161227" duration="8859000" />
+      <workItem from="1749576134642" duration="2112000" />
     </task>
     <servers />
   </component>
