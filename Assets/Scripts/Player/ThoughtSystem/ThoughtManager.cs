@@ -8,8 +8,8 @@ public class ThoughtManager : MonoBehaviour
 {
     public static ThoughtManager Instance;
 
-    public GameObject thoughtBubbleUI;
-    public TextMeshProUGUI thoughtText;
+    [SerializeField] private GameObject thoughtBubbleUI;
+    [SerializeField] private TextMeshProUGUI thoughtText;
 
     private void Awake()
     {
