@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf8a53350bc5b347a7525dfa318ad6f, type: 3}
   m_Name: 02
   m_EditorClassIdentifier: 
-  text: "\xA1WTF que hago aqu\xED?"
+  text: "Tengo que salir de aqu\xED\n"
   duration: 3

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf8a53350bc5b347a7525dfa318ad6f, type: 3}
   m_Name: 01
   m_EditorClassIdentifier: 
-  text: Hola Soy Ricardo
-  duration: 10
+  text: "WTF que hago aqui?... parece ser el est\xF3mago de alguien...\n "
+  duration: 3
