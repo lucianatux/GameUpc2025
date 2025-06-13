@@ -18,7 +18,7 @@ namespace StatePattern
         private GameObject bulletPrefab;
 
         // State flag
-        private bool isAttacking = false;
+        public bool isAttacking = false;
 
         /// <summary>
         /// Receives values and references.
@@ -47,8 +47,12 @@ namespace StatePattern
                 Debug.LogError("AttackState: enemyAI is null when entering state.");
                 return;
             }
-
+                
             enemyAI = _enemyAI;
+            enemyAI.animator.SetBool("isWalking", false);
+
+            enemyAI.animator.SetTrigger("idle");
+
             Debug.Log("Switched to Attack state");
         }
 
@@ -69,17 +73,16 @@ namespace StatePattern
             {
                 Attack();
             }
-            
+
             else if (!isAttacking && distToPlayer > attackRange)
             {
+                enemyAI.animator.ResetTrigger("idle");
+                enemyAI.animator.SetBool("isWalking", true);
+
                 enemyAI.SetState(enemyAI.enemyChaseState);
             }
 
-            else if (!isAttacking && distToPlayer < attackRange)
-            {
-                enemyAI.enemyAnimator.TriggerAnim("idle");
 
-            }
         }
 
         /// <summary>
@@ -93,6 +96,7 @@ namespace StatePattern
             {
                 enemyAI.attackTimer = attackCooldown;
                 enemyAI.StartCoroutine(CheckAttacking());
+                isAttacking = true;
                 Debug.Log("Enemy prepares attack");
             }
         }
@@ -102,17 +106,18 @@ namespace StatePattern
         /// </summary>
         private IEnumerator CheckAttacking()
         {
-            isAttacking = true;
+            enemyAI.isStunned = true;
 
             enemyAI.ShowAlert("Warning");
             yield return new WaitForSeconds(0.2f);
-
-            enemyAI.enemyAnimator.TriggerAnim("attack"); 
+            enemyAI.animator.ResetTrigger("idle");
+            enemyAI.animator.SetTrigger("attack"); 
 
             yield return new WaitForSeconds(.9f); // Delay before shooting
-                enemyAI.enemyAnimator.TriggerAnim("idle");
+            enemyAI.isStunned = false;
 
-            Shoot(bulletPrefab, weaponTransform);
+            enemyAI.animator.ResetTrigger("attack");
+            enemyAI.enemyAnimator.TriggerAnim("idle");
 
             isAttacking = false;
 
@@ -122,23 +127,22 @@ namespace StatePattern
         /// <summary>
         /// Spawns and launches a bullet toward the player.
         /// </summary>
-        private void Shoot(GameObject bullet, Transform weapon)
+        public void Shoot()
         {
             if (weaponTransform == null)
             {
                 Debug.LogError("AttackState: weaponTransform is null in Shoot().");
                 return;
             }
-
+            GameObject bullet = bulletPrefab;
             if (bullet == null)
             {
                 Debug.LogError("AttackState: bulletPrefab is null in Shoot().");
                 return;
             }
-
             float angle = enemyAI.GetAngleToPlayer();
 
-            GameObject newBullet = Object.Instantiate(bullet, weapon.position, Quaternion.Euler(0, 0, angle));
+            GameObject newBullet = Object.Instantiate(bullet, enemyAI.transform.position, Quaternion.Euler(0, 0, angle));
             Object.Destroy(newBullet, 0.2f);
             Debug.Log("Shot fired with angle: " + angle);
         }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3996039761230616911}
   - component: {fileID: 7313290718630489306}
   - component: {fileID: 3315697037466381005}
+  - component: {fileID: 7196878084112974873}
   m_Layer: 0
   m_Name: chizitoEnemy
   m_TagString: Enemy
@@ -196,6 +197,8 @@ MonoBehaviour:
   warningPrefab: {fileID: 3174422643364958423, guid: dd785d8c21cf6d54b800a075d871b140, type: 3}
   attentionPrefab: {fileID: 350649175611734291, guid: 6c6b479d49c7e28478290cf89bfec583, type: 3}
   rb: {fileID: 0}
+  animator: {fileID: 0}
+  enemyAnimator: {fileID: 0}
   col: {fileID: 0}
   flashDuration: 0.1
   isStunned: 0
@@ -243,3 +246,16 @@ MonoBehaviour:
   canHeal: 0
   lifeOrbPrefab: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}
   lifeOrbDropChance: 0.065
+--- !u!114 &7196878084112974873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378838936790032193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1ad52b88e984040aa1f5369cb12843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}

@@ -82,7 +82,7 @@ public class EnemyHealth : LifeSystem
 
         if (col != null) col.enabled = false;
         else Debug.LogError("Collider2D not found on Enemy.");
-
+        enemyAI.Die();
         if (animator != null)
         {
             Debug.Log("se usa animacion de muerte");

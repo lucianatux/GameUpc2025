@@ -29,6 +29,8 @@ namespace StatePattern
             }
 
             enemyAI = _enemyAI;
+            enemyAI.animator.SetBool("isWalking", true);
+
             Debug.Log("Enemy switched to Chase state.");
         }
 
@@ -57,6 +59,8 @@ namespace StatePattern
             }
             else
             {
+                enemyAI.animator.ResetTrigger("walk");
+                enemyAI.animator.SetBool("walk", false);
                 enemyAI.SetState(enemyAI.enemyAttackState); // Switch to attack
             }
         }

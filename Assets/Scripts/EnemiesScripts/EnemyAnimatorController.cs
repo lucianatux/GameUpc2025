@@ -22,7 +22,7 @@ public class EnemyAnimatorController : PlayerAnimatorController
         // Se asegura de reiniciar el trigger antes de activarlo (evita animaciones bloqueadas).
         if (triggerName == "die")
         {
-            animator.SetTrigger(triggerName);
+            animator.SetTrigger("die");
             isDead = true;
             return;
         }

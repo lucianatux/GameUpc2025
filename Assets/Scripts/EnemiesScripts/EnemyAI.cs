@@ -39,7 +39,7 @@ namespace StatePattern
         protected SpriteRenderer spriteRenderer;
         public Rigidbody2D rb;
         protected NavMeshAgent agent;
-        protected Animator animator;
+        public Animator animator;
         public EnemyAnimatorController enemyAnimator;
         public Collider2D col;
         #endregion
@@ -63,7 +63,7 @@ namespace StatePattern
         protected void Awake()
         {
             enemyAnimator = GetComponent<EnemyAnimatorController>();
-            
+
             animator = GetComponent<Animator>();
 
             if (animator == null) Debug.LogError("EnemyAI: Animator not found");
@@ -126,7 +126,7 @@ namespace StatePattern
             if (spriteRenderer != null)
                 originalColor = spriteRenderer.color;
         }
-        
+
         /// <summary>
         //Initialize states and give them their respectives variables
         /// <summary>
@@ -158,12 +158,18 @@ namespace StatePattern
             }
             else
             {
+                if (!isActive) return;
                 currentState?.UpdateState();
             }
+            if (!isActive)
+            {
+                 //           animator.SetBool("isWalking", false);
 
+            }
             //Attack Cooldown Handler
-            attackTimer -= Time.deltaTime;
-
+                attackTimer -= Time.deltaTime;
+            Debug.Log(rb.velocity.x);
+   
             UpdateSprite();
         }
 
@@ -197,12 +203,14 @@ namespace StatePattern
         public void UpdateSprite()
         {
             if (!isActive || playerTransform == null || spriteRenderer == null) return;
-           // if (rb.velocity != Vector2.zero)
-          //  {
-           //     Debug.Log(this + "is walking");
-          //      enemyAnimator.TriggerAnim("walk");
-          //  }
-            float angle = GetAngleToPlayer();
+            //if (!isStunned) return; 
+            // if (rb.velocity != Vector2.zero)
+            //  {
+            //     Debug.Log(this + "is walking");
+            //      enemyAnimator.TriggerAnim("walk");
+            //  }
+        float angle = GetAngleToPlayer();
+
             spriteRenderer.flipX = angle > 90 && angle < 270;
         }
         /// <summary>
@@ -279,25 +287,61 @@ namespace StatePattern
         /// <summary>
         public void Chase(Transform toChase)
         {
-
-            if (agent == null)
-            {
-                Debug.LogError("NavMesh agent not found");
-            }
+            //animator.SetTrigger("walk");
             if (isStunned)
             {
                 Debug.Log("esta stunned");
                 return;
             }
+            if (isActive == false) return;
+
+            if (agent == null)
+            {
+                Debug.LogError("NavMesh agent not found");
+            }
+
             if (enemyAnimator == null)
-                {
-                    Debug.LogError("enemy animator  not found");
-                }
-            enemyAnimator.TriggerAnim("walk");
+            {
+                Debug.LogError("enemy animator  not found");
+            }
 
             agent.SetDestination(toChase.position);
         }
 
+        public void Die()
+        {
+            animator.ResetTrigger("idle");
+            animator.ResetTrigger("attack");
+            animator.SetBool("isWalking", false);
+            animator.ResetTrigger("damage");
+            
+            animator.SetTrigger("die");
+
+            agent.ResetPath();
+            agent.enabled = false;
+            isActive = false;
+
+        }
+
+          public void Shoot()
+        {
+            if (weaponTransform == null)
+            {
+                Debug.LogError("AttackState: weaponTransform is null in Shoot().");
+                return;
+            }
+            GameObject bullet = bulletPrefab;
+            if (bulletPrefab == null)
+            {
+                Debug.LogError("AttackState: bulletPrefab is null in Shoot().");
+                return;
+            }
+            float angle = GetAngleToPlayer();
+
+            GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, angle));
+            Destroy(newBullet, 0.2f);
+            Debug.Log("Shot fired with angle: " + angle);
+        }
         /*Testing
         private void Deactivate(int _roomID)
         {
