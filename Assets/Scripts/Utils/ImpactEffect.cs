@@ -8,6 +8,7 @@ public class ImpactEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Invoke(nameof(DestroyImpactEffect), 2f);
     }
 

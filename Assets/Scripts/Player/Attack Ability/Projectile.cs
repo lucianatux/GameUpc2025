@@ -13,12 +13,12 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     {
         _rb = GetComponent<Rigidbody2D>();
         if (_rb == null) Debug.LogError("Projectile attached to " + gameObject.name + " has no Rigidbody");
-        
+
         _rb.velocity = _rb.velocity * projectileSpeed;
-        
+
         Destroy(gameObject, lifetime);
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
         if (collision.CompareTag("Room")) return;
@@ -39,7 +39,10 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
         }
 
         Destroy(gameObject);   // Destroy the projectile after triggering the effect or hitting something.
-        
-        Debug.Log ("Choca con " + collision.gameObject.name);
+
+        Debug.Log("Choca con " + collision.gameObject.name);
     }
+    
+
+    
 }

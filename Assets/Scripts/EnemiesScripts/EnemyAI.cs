@@ -167,9 +167,7 @@ namespace StatePattern
 
             }
             //Attack Cooldown Handler
-                attackTimer -= Time.deltaTime;
-            Debug.Log(rb.velocity.x);
-   
+                attackTimer -= Time.deltaTime;   
             UpdateSprite();
         }
 

@@ -186,12 +186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d842a3cb57a157748837ec2dc7ac2ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 2.5
+  attackRange: 4
   walkableLayer:
     serializedVersion: 2
     m_Bits: 0
   attackCooldown: 4
-  bulletPrefab: {fileID: 8187465798281724320, guid: 2e7cc77ff5abf344a935ebb988ea145c, type: 3}
+  bulletPrefab: {fileID: 8045203721785702592, guid: 67a24f38a93d09746a9f323dd3ec1213, type: 3}
   weaponTransform: {fileID: 4679960022692193404}
   attackTimer: 0
   warningPrefab: {fileID: 3174422643364958423, guid: dd785d8c21cf6d54b800a075d871b140, type: 3}
@@ -202,7 +202,7 @@ MonoBehaviour:
   col: {fileID: 0}
   flashDuration: 0.1
   isStunned: 0
-  stunDuration: 0
+  stunDuration: 0.25
   _waveID: 1
   roomID: 5
   isActive: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   invulnerabilityTime: 0.01
   canHeal: 0
   lifeOrbPrefab: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}
-  lifeOrbDropChance: 0.065
+  lifeOrbDropChance: 0.355
 --- !u!114 &7196878084112974873
 MonoBehaviour:
   m_ObjectHideFlags: 0

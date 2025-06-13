@@ -4908,6 +4908,7 @@ GameObject:
   - component: {fileID: 6569018518148195844}
   - component: {fileID: 6820856275067646481}
   - component: {fileID: 250817280796516702}
+  - component: {fileID: 967781564194278979}
   m_Layer: 0
   m_Name: GaseosaExplosion
   m_TagString: Untagged
@@ -9795,3 +9796,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &967781564194278979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8639795028413706176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fe9451ca281144797397d4611a91a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
