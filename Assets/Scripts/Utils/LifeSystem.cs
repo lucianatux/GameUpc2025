@@ -88,6 +88,10 @@ public class LifeSystem : MonoBehaviour
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
     }
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+    }
 
     /// <summary>
     /// Corrutina opcional para destruir el objeto luego de un delay.

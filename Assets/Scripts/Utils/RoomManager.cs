@@ -14,6 +14,7 @@ public class RoomManager : MonoBehaviour
     public int CurrentRoomID => _currentRoomID;
 
     public Room currentRoom;
+    public Room LastCheckpointRoom { get; private set; }
 
     // Events triggered when player enters, exits, or advances a wave in a room
     public event Action<int> OnRoomEntered;
@@ -64,6 +65,17 @@ public class RoomManager : MonoBehaviour
 
         OnRoomEntered?.Invoke(newRoom.roomID); // Notify listeners
         currentEnemies = enemyCount;
+        
+        // Si esta sala es checkpoint, se guarda
+        if (newRoom.isCheckpointRoom)
+        {
+            SetCheckpoint(newRoom);
+        }
+    }
+    public void SetCheckpoint(Room checkpointRoom)
+    {
+        LastCheckpointRoom = checkpointRoom;
+        Debug.Log("Checkpoint actualizado: Room " + checkpointRoom.roomID);
     }
 
     /// <summary>

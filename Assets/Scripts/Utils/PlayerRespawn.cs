@@ -3,21 +3,34 @@ using UnityEngine;
 public class PlayerRespawn : MonoBehaviour
 {
     private Vector3 currentCheckpoint;
+    private Vector3 initialSpawn;
 
     private void Start()
     {
-        // Asignar el spawn inicial
-        currentCheckpoint = GameObject.FindWithTag("SpawnPoint").transform.position;
-        transform.position = currentCheckpoint;
+        // Guardamos el primer spawn (inicio del nivel)
+        initialSpawn = GameObject.FindWithTag("SpawnPoint").transform.position;
+        transform.position = initialSpawn;
     }
-
     public void Respawn()
     {
-        transform.position = currentCheckpoint;
-    }
+        Vector3 respawnPoint;
 
-    public void SetCheckpoint(Vector3 newCheckpoint)
-    {
-        currentCheckpoint = newCheckpoint;
-    }
+        if (RoomManager.Instance != null && RoomManager.Instance.LastCheckpointRoom != null)
+        {
+            respawnPoint = RoomManager.Instance.LastCheckpointRoom.transform.position;
+        }
+        else
+        {
+            respawnPoint = initialSpawn;
+        }
+
+        transform.position = respawnPoint;
+
+        // Restauramos la vida al respawnear (opcional)
+        LifeSystem life = GetComponent<LifeSystem>();
+        if (life != null)
+        {
+            life.ResetHealth();
+        }
+    } 
 }

@@ -16,6 +16,8 @@ public class Room : MonoBehaviour
     [Tooltip("Total waves for this room.")]
     public int maxWaves = 1;
     
+    [Header("Checkpoint Settings")]
+    public bool isCheckpointRoom = false;
     private void Awake()
     {
         if (maxWaves <= 0)
