@@ -288,8 +288,10 @@ namespace StatePattern
         public void Chase(Transform toChase)
         {
             //animator.SetTrigger("walk");
-            if (isStunned)
+            if (isStunned) 
             {
+                agent.ResetPath();
+
                 Debug.Log("esta stunned");
                 return;
             }
