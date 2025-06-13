@@ -1,18 +1,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IDoor
 {
     [SerializeField] private List<Key> requiredKeys;
     [SerializeField] private GameObject doorVisual;
-    [SerializeField] private int roomID;
     private Collider2D physicalCollider;
+    private Animator animator;
     private bool isOpen = false;
+    [Header("Room assignment")]
+    public int roomID;
 
     private void Awake()
     {
         physicalCollider = GetComponent<Collider2D>();
+        
+        if (animator == null)
+        {
+            Debug.LogError("No Animator found on Door: " + gameObject.name);
+        }
     }
      
     private void OnEnable()
@@ -75,8 +83,10 @@ public class Door : MonoBehaviour
         Debug.Log("Door open with keys:" + string.Join(", ", requiredKeys.Select(k => k.displayName)));
         isOpen = true;   // Mark the door as open.
 
-        if (doorVisual != null)
-            doorVisual.SetActive(false);
+        if (animator != null)
+        {
+            animator.SetTrigger("Open");
+        }
 
         if (physicalCollider != null)  // Disable the physical collider so the player can walk through.
             physicalCollider.enabled = false;
@@ -88,9 +98,14 @@ public class Door : MonoBehaviour
     private void CloseDoor()
     {
         isOpen = false;
-        if (doorVisual != null) doorVisual.SetActive(true);
+        if (animator != null)
+        {
+            animator.SetTrigger("Close");
+        }
         if (physicalCollider != null) physicalCollider.enabled = true;
     }
+    public void Open() { OpenDoor(); }
+    public void Close() { CloseDoor(); }
 }
    
 

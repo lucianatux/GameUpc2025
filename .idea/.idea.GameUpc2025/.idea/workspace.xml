@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f0910e2b-b0ab-4046-a363-b1dacb1fc7e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Checkpoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Checkpoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/LifeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LifeSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/PlayerRespawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/PlayerRespawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/prefabsEnvironment/Room.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/prefabsEnvironment/Room.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Door.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/RoomManager.cs" afterDir="false" />
     </list>
@@ -22,7 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilitySwitcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorsScripts/IDoor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -104,6 +102,7 @@
       <workItem from="1748486161227" duration="8859000" />
       <workItem from="1749576134642" duration="2112000" />
       <workItem from="1749821845539" duration="1778000" />
+      <workItem from="1749824554958" duration="3083000" />
     </task>
     <servers />
   </component>

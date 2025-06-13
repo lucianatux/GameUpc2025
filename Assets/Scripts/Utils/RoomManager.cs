@@ -71,6 +71,8 @@ public class RoomManager : MonoBehaviour
         {
             SetCheckpoint(newRoom);
         }
+        
+        currentRoom.CloseAllDoors();
     }
     public void SetCheckpoint(Room checkpointRoom)
     {
@@ -108,6 +110,8 @@ public class RoomManager : MonoBehaviour
         {
             Debug.Log("All waves completed for room " + currentRoom.roomID);
             OnRoomCleared?.Invoke(currentRoom.roomID);
+            
+            currentRoom.OpenAllDoors();
         }
     }
 
