@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
@@ -32,5 +34,22 @@ public class PlayerRespawn : MonoBehaviour
         {
             life.ResetHealth();
         }
-    } 
+        // Reactivar movimiento y físicas
+        PlayerMovement move = GetComponent<PlayerMovement>();
+        if (move != null)
+            move.canMove = true;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.bodyType = RigidbodyType2D.Dynamic;
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = true;
+
+        Debug.Log("Jugador respawneado.");
+
+        PlayerEventsManager.Instance?.PlayerHeal(); // ← Esto fuerza el update de la barra de vida
+        } 
+        
 }

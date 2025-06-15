@@ -60795,6 +60795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: thoughtPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8649610001893507626, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61086,6 +61090,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
   m_PrefabInstance: {fileID: 1067020019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1730096664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 877613240629887599, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+  m_PrefabInstance: {fileID: 8987828420104500112}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1740835102
 PrefabInstance:
@@ -110177,6 +110186,10 @@ PrefabInstance:
       propertyPath: roomID
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.932476
@@ -110242,10 +110255,22 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -487413458064216045, guid: 75468336585ee1f46b968d9358de8514, type: 3}
   m_PrefabInstance: {fileID: 8987828420104500112}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1730096664}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 025d8d3c84828fc459ac48777d0376b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1777845607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730096664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec7a4f9e82df2f45b928a07ddb5ee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1792422090
@@ -124003,6 +124028,10 @@ PrefabInstance:
       propertyPath: roomID
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.5
@@ -124765,6 +124794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gaseosaEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3941172525695791224, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: roomID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8687973880419991598, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -125032,6 +125065,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -487413458064216045, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: canHeal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -487413458064216045, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 331197153042150152, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -125135,7 +125176,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1336694057}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 877613240629887599, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1777845607}
   m_SourcePrefab: {fileID: 100100000, guid: 75468336585ee1f46b968d9358de8514, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
