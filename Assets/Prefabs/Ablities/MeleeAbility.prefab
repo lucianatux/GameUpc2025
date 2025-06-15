@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3277797302407512843}
-  - component: {fileID: 2584672294540144655}
   - component: {fileID: 4429610710232403015}
   - component: {fileID: 1976117623583163496}
+  - component: {fileID: 4413309930856299110}
   m_Layer: 7
   m_Name: MeleeAbility
   m_TagString: Untagged
@@ -34,41 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6679640885761934676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2584672294540144655
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7430234168438981382}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.47, y: -0.03}
-  serializedVersion: 2
-  m_Radius: 1.8542833
 --- !u!50 &4429610710232403015
 Rigidbody2D:
   serializedVersion: 4
@@ -112,6 +77,41 @@ MonoBehaviour:
   impactEffect: {fileID: 4759426950666235972, guid: 2614937cc480c8b4cbdcab89221a5635, type: 3}
   projectileSpeed: 0
   _canHitWalls: 0
+--- !u!70 &4413309930856299110
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430234168438981382}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.51, y: 0}
+  m_Size: {x: 2.17, y: 3.38}
+  m_Direction: 0
 --- !u!1 &8187465798281724320
 GameObject:
   m_ObjectHideFlags: 0

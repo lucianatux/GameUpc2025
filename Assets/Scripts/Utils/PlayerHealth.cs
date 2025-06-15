@@ -37,6 +37,7 @@ public class PlayerHealth : LifeSystem
         base.TakeDamage(damage);
         StartCoroutine(_playerMovement.StunPlayer(.15f));
 
+
         if (_playerAnimator != null)
         {
             _playerAnimator.TriggerAnim("damage");
