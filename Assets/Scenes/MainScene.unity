@@ -15465,7 +15465,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1999998, y: -2.5, z: -10}
+  m_LocalPosition: {x: -63.5, y: 38.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58573,7 +58573,7 @@ Transform:
   m_GameObject: {fileID: 1097376168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1999998, y: -2.5, z: -10}
+  m_LocalPosition: {x: -63.5, y: 38.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59666,7 +59666,7 @@ MonoBehaviour:
   keyCollectedClip: {fileID: 8300000, guid: 1c4b521824d05c7449067275cf0017ae, type: 3}
   keyUsedClip: {fileID: 8300000, guid: 87688422734ddc14884fdb2715940d04, type: 3}
   pepperCollectedClip: {fileID: 8300000, guid: f502388b03f475f43b4828e52383430c, type: 3}
-  teratomaInteractClip: {fileID: 8300000, guid: 98429ae7025e0c241ba08e64b9d10067, type: 3}
+  teratomaInteractClip: {fileID: 8300000, guid: 0779540162df69a479346d2823a9066d, type: 3}
   doorCloseClip: {fileID: 8300000, guid: 48bf50168a712c74296c0978afa04dad, type: 3}
   doorOpenClip: {fileID: 8300000, guid: c195e9c1af0ac6f42a343263208647cb, type: 3}
   levelCompleteClip: {fileID: 8300000, guid: 7ab3bcd917c7c4f489a39c1d92ff0c3d, type: 3}
@@ -123937,7 +123937,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4846670854266395956, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1252116467}
+    - targetCorrespondingSourceObject: {fileID: 4846670854266395956, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 954415479503173651}
   m_SourcePrefab: {fileID: 100100000, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
+--- !u!95 &954415479503173650 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2831499840705445902, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
+  m_PrefabInstance: {fileID: 954415479503173649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &954415479503173651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252116464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e063531ea3dd624b9cbd746dc92e241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 954415479503173650}
+  minIdleTime: 2
+  maxIdleTime: 5
 --- !u!1001 &966066561826599967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125091,11 +125114,11 @@ PrefabInstance:
       objectReference: {fileID: 1567509417965010841, guid: 4941fb5057fb10046970fa714f90acfb, type: 3}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2
+      value: -63.5
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: 38.6
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.z
