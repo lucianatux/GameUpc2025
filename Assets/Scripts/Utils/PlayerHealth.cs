@@ -1,4 +1,5 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// Handles the player's health, damage response, and death behavior.
@@ -111,5 +112,15 @@ public class PlayerHealth : LifeSystem
         }
 
         PlayerEventsManager.Instance?.PlayerDeath();
+        // Iniciar respawn después de una pequeña espera
+        StartCoroutine(RespawnDelay());
+    }
+    private IEnumerator RespawnDelay()
+    {
+        yield return new WaitForSeconds(2f); // Tiempo para la animación de muerte
+
+        PlayerRespawn respawn = GetComponent<PlayerRespawn>();
+        if (respawn != null)
+            respawn.Respawn();
     }
 }
