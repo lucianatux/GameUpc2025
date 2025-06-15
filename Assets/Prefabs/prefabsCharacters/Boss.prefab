@@ -201,6 +201,8 @@ MonoBehaviour:
   warningPrefab: {fileID: 3174422643364958423, guid: dd785d8c21cf6d54b800a075d871b140, type: 3}
   attentionPrefab: {fileID: 350649175611734291, guid: 6c6b479d49c7e28478290cf89bfec583, type: 3}
   rb: {fileID: 0}
+  animator: {fileID: 0}
+  enemyAnimator: {fileID: 0}
   col: {fileID: 0}
   flashDuration: 0.1
   isStunned: 0
@@ -251,13 +253,15 @@ GameObject:
   - component: {fileID: 2060927597271992727}
   - component: {fileID: 4338062964822296250}
   - component: {fileID: 890916313640456461}
+  - component: {fileID: 3962355795286533897}
+  - component: {fileID: 7442517668074257224}
   m_Layer: 0
   m_Name: Bomb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7411979160933077011
 Transform:
   m_ObjectHideFlags: 0
@@ -385,6 +389,79 @@ CapsuleCollider2D:
   m_Offset: {x: 0.31173015, y: -0.25447303}
   m_Size: {x: 2.5739527, y: 1.3397663}
   m_Direction: 1
+--- !u!95 &3962355795286533897
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257032642361103880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111b93f1cb9d344419b445dde1916182, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &7442517668074257224
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257032642361103880}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 422883666, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.64, y: 3.66}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &3904321289957592817
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +475,7 @@ GameObject:
   - component: {fileID: 3906009342840174089}
   - component: {fileID: 7726485372018791957}
   - component: {fileID: 5241443893446153811}
+  - component: {fileID: 401247357889230659}
   m_Layer: 0
   m_Name: Bomb2
   m_TagString: Untagged
@@ -532,6 +610,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.31173015, y: -0.25447303}
   m_Size: {x: 2.5739527, y: 1.3397663}
   m_Direction: 1
+--- !u!95 &401247357889230659
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904321289957592817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111b93f1cb9d344419b445dde1916182, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4091239498378411447
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +644,7 @@ GameObject:
   - component: {fileID: 4761355016900779987}
   - component: {fileID: 6147848477283111925}
   - component: {fileID: 5942477184525102489}
+  - component: {fileID: 4844264014766230020}
   m_Layer: 0
   m_Name: Bomb5
   m_TagString: Untagged
@@ -679,6 +779,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.31173015, y: -0.25447303}
   m_Size: {x: 2.5739527, y: 1.3397663}
   m_Direction: 1
+--- !u!95 &4844264014766230020
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091239498378411447}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111b93f1cb9d344419b445dde1916182, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4619318544585368629
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +813,7 @@ GameObject:
   - component: {fileID: 3698177333731495769}
   - component: {fileID: 6568962940057198680}
   - component: {fileID: 6854593953105455384}
+  - component: {fileID: 7146401671842208380}
   m_Layer: 0
   m_Name: Bomb4
   m_TagString: Untagged
@@ -826,6 +948,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.31173015, y: -0.25447303}
   m_Size: {x: 2.5739527, y: 1.3397663}
   m_Direction: 1
+--- !u!95 &7146401671842208380
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619318544585368629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111b93f1cb9d344419b445dde1916182, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5706833382698284394
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +982,7 @@ GameObject:
   - component: {fileID: 7778344835109005157}
   - component: {fileID: 6654187124665968248}
   - component: {fileID: 4675338050352690649}
+  - component: {fileID: 4918766790933738555}
   m_Layer: 0
   m_Name: Bomb3
   m_TagString: Untagged
@@ -973,3 +1117,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.31173015, y: -0.25447303}
   m_Size: {x: 2.5739527, y: 1.3397663}
   m_Direction: 1
+--- !u!95 &4918766790933738555
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706833382698284394}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111b93f1cb9d344419b445dde1916182, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
