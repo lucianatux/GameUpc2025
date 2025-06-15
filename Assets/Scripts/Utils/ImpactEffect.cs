@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpactEffect : MonoBehaviour
+public class DestroyAfter : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float seconds;
     void Start()
     {
-        
-        Invoke(nameof(DestroyImpactEffect), 2f);
+        Invoke(nameof(DestroyImpactEffect), seconds);
     }
 
     private void DestroyImpactEffect()

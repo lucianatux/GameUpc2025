@@ -11,11 +11,12 @@ public class FireballAbility : ProjectileAbility
         
         Collider2D projectileCollider = projectile.GetComponent<Collider2D>();
         Collider2D playerCollider = origin.GetComponent<Collider2D>();
-        
+        /*
         if (projectileCollider != null && playerCollider != null)  // If both colliders exist, prevent the projectile from colliding with the player.
         {
             Physics2D.IgnoreCollision(projectileCollider, playerCollider);
         }
+        */
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();       // Give the projectile a velocity so it moves in the intended direction.
         rb.velocity = direction.normalized * projectileSpeed;
     }

@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     public GameObject impactEffect;
     public float projectileSpeed = 5f;
     private Rigidbody2D _rb;
+    [SerializeField] bool _canHitWalls;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
         if (collision.CompareTag("Room")) return;
+            Vector2 hitPoint = collision.ClosestPoint(transform.position);
 
         if (collision.CompareTag("Enemy"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
         {
@@ -31,11 +33,17 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
             if (enemyHealth != null) enemyHealth.TakeDamage(5);
             else Debug.LogError("enemy health not found");
 
+                // Instancia el efecto en ese punto            
+            if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
+            {
+                Instantiate(impactEffect, hitPoint, Quaternion.identity);
+            }
+
         }
 
-        if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
+        if (impactEffect != null && _canHitWalls)   // If there's an impact effect assigned, spawn it at the projectile's current position.
         {
-            Instantiate(impactEffect, transform.position, Quaternion.identity);
+            Instantiate(impactEffect, hitPoint, Quaternion.identity);
         }
 
         Destroy(gameObject);   // Destroy the projectile after triggering the effect or hitting something.

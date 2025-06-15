@@ -6,15 +6,19 @@ using UnityEngine;
 /// </summary>
 public class PlayerHealth : LifeSystem
 {
-    private PlayerMovement playerMovement;
+    PlayerAnimatorController _playerAnimator;
+    private PlayerMovement _playerMovement;
 
     /// <summary>
     /// Initializes necessary components.
     /// </summary>
     protected override void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        if (playerMovement == null) Debug.LogError("PlayerMovement component not found on Player.");
+        _playerMovement = GetComponent<PlayerMovement>();
+        if (_playerMovement == null) Debug.LogError("PlayerMovement component not found on Player.");
+
+        _playerAnimator = GetComponent<PlayerAnimatorController>();
+        if (_playerAnimator == null) Debug.Log("Player Animator Not found");
 
         animator = GetComponent<Animator>();
         if (animator == null) Debug.LogError("Animator component not found on Player.");
@@ -30,10 +34,11 @@ public class PlayerHealth : LifeSystem
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
+        StartCoroutine(_playerMovement.StunPlayer(.15f));
 
-        if (animator != null)
+        if (_playerAnimator != null)
         {
-            animator.SetTrigger("damage");
+            _playerAnimator.TriggerAnim("damage");
         }
 
         PlayerEventsManager.Instance?.PlayerDamaged(); //Notify Player Events Manager
@@ -46,11 +51,12 @@ public class PlayerHealth : LifeSystem
     protected override void Die()
     {
         base.Die();
-        
- 
-        if (playerMovement != null)
+
+        animator.SetBool("isDead", true);
+
+        if (_playerMovement != null)
         {
-            playerMovement.canMove = false;
+            _playerMovement.canMove = false;
         }
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -75,9 +81,33 @@ public class PlayerHealth : LifeSystem
             Debug.LogError("Collider2D not found on Player.");
         }
 
+        _playerAnimator.enabled = false;
+
+        AbilityController abilityController = GetComponent<AbilityController>();
+
+        if (abilityController != null)
+        {
+            abilityController.enabled = false;
+        }
+        else
+        {
+            Debug.LogError("Ability Controller not found on Player.");
+        }
+
         if (animator != null)
         {
             animator.SetTrigger("die");
+        }
+
+        PlayerInputHandler playerInputHandler = GetComponent<PlayerInputHandler>();
+        
+        if (playerInputHandler != null)
+        {
+            playerInputHandler.enabled = false;
+        }
+        else
+        {
+            Debug.LogError("playerInputHandler not found on Player.");
         }
 
         PlayerEventsManager.Instance?.PlayerDeath();

@@ -286,12 +286,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e446e057bab30334eaff6bedb9c5a26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 1
-  damage: 1
+  attackRadius: 0
+  damage: 0
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
-  attackPoint: {fileID: 183842796839475099}
+    m_Bits: 256
+  attackPoint: {fileID: 1477413262731674427}
+  meleePrefab: {fileID: 8187465798281724320, guid: 2e7cc77ff5abf344a935ebb988ea145c, type: 3}
 --- !u!114 &5211302654773119486
 MonoBehaviour:
   m_ObjectHideFlags: 0

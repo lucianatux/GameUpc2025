@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         inputHandler = GetComponent<PlayerInputHandler>();
 
-         // Se intenta obtener el SpriteRenderer si no fue asignado manualmente.
+        // Se intenta obtener el SpriteRenderer si no fue asignado manualmente.
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (inputHandler == null) Debug.LogWarning("PlayerInputHandler component not found.");
@@ -48,6 +48,15 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(CurrentInput.x) > 0.1f)
             spriteRenderer.flipX = (CurrentInput.x < 0);
     }
+
+    public IEnumerator StunPlayer(float seconds)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(seconds);
+        canMove = true;
+    }
+
+
 }
 
 

@@ -40,16 +40,23 @@ public class PlayerAnimatorController : MonoBehaviour
         
     }
 
-     /// <summary>
+    /// <summary>
     /// Triggers an animation using a trigger parameter name.
     /// Ensures the trigger is reset to avoid animation lock.
     /// </summary>
     /// <param name="triggerName">The name of the trigger parameter in the Animator.</param>
-    
+    private bool isDeadAnimated = false;
     public virtual void TriggerAnim(string triggerName)
     {
-        // Se asegura de reiniciar el trigger antes de activarlo (evita animaciones bloqueadas).
+        if (triggerName == "die")
+        {
+            animator.SetTrigger("die");
+            isDeadAnimated = true;
+            return;
+        }
+        if (isDeadAnimated == true) return;
         animator.ResetTrigger(triggerName);
         animator.SetTrigger(triggerName);
+
     }
 }

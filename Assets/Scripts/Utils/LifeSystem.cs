@@ -60,7 +60,7 @@ public class LifeSystem : MonoBehaviour
         }
         else
         {
-            if (animator != null) animator.SetTrigger("damage"); // Activa animación de daño
+            //if (animator != null) animator.SetTrigger("damage"); // Activa animación de daño
         }
     }
 
@@ -70,7 +70,7 @@ public class LifeSystem : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log(this + " se muere");
-        if (animator != null) animator.SetTrigger("die"); // Activa animación de muerte
+        //if (animator != null) animator.SetTrigger("die"); // Activa animación de muerte
         // No se destruye el objeto automáticamente. Las clases hijas pueden decidir cuándo destruirlo.
     }
 
