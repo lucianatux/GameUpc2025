@@ -317,9 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025d8d3c84828fc459ac48777d0376b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  invulnerabilityTime: 0
-  canHeal: 0
+  maxHealth: 20
+  invulnerabilityTime: 0.1
+  canHeal: 1
 --- !u!114 &729281695898342559
 MonoBehaviour:
   m_ObjectHideFlags: 0

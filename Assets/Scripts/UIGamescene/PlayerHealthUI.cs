@@ -57,8 +57,7 @@ public class PlayerHealthUI : MonoBehaviour
 
     private void OnPlayerDeath()
     {
-        // cuando muere: ocultar barra, etc.
-        Debug.Log("El jugador murió. Ocultando barra de vida...");
-        gameObject.SetActive(false);
+        Debug.Log("El jugador murió");
+        
     }
 }
