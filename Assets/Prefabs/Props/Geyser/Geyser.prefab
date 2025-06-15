@@ -19344,6 +19344,7 @@ GameObject:
   - component: {fileID: 38401341872486624}
   - component: {fileID: 7479894834623336509}
   - component: {fileID: 5614614640040074215}
+  - component: {fileID: 2252581341975029084}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -19406,13 +19407,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1157635838, guid: 518f67bdb4174334b9ceb75846b66191, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.7600002, y: 1.685918}
+  m_Size: {x: 2.875, y: 1.7561646}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19439,6 +19440,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2252581341975029084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814208674797985065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24dd1a8638a5da84dbd668fd549de234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  yOffset: 100
 --- !u!1 &6547508865971558960
 GameObject:
   m_ObjectHideFlags: 0
@@ -19450,6 +19465,7 @@ GameObject:
   - component: {fileID: 3590602586126977638}
   - component: {fileID: 773106326987116134}
   - component: {fileID: 1317604056288968993}
+  - component: {fileID: 7777109239001491209}
   m_Layer: 0
   m_Name: Geyser
   m_TagString: Untagged
@@ -19489,13 +19505,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37595872f1fe5240a520c3d7deb9ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHits: 0
+  chargingCooldownMin: 5
+  chargingCooldownMax: 10
   eruptionDuration: 3
-  geyserzeroHits: {fileID: 3311103684788576948}
-  geyseroneHit: {fileID: 3443685124180644462}
-  geysertwoHits: {fileID: 184210216937575682}
+  currentHits: 0
+  geyserNotCharged: {fileID: 1317779840886719578}
+  geyserZeroHits: {fileID: 3311103684788576948}
+  geyserOneHit: {fileID: 3443685124180644462}
+  geyserTwoHits: {fileID: 184210216937575682}
   animator: {fileID: 5614614640040074215}
-  chargingRange: 6
 --- !u!212 &1317604056288968993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19537,17 +19555,62 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1314746040, guid: 518f67bdb4174334b9ceb75846b66191, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.7600002, y: 1.685918}
+  m_Size: {x: 24.84, y: 1.685918}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7777109239001491209
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547508865971558960}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.035106897, y: 1.0477115}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9729667, y: 1.8230097}
+  m_EdgeRadius: 0
 --- !u!1001 &696342576592453638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20282,6 +20345,11 @@ PrefabInstance:
       addedObject: {fileID: 648489749222525599}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465d039108aae9f4eb235f20d0afc43a, type: 3}
+--- !u!1 &1317779840886719578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9041305594025106858, guid: 465d039108aae9f4eb235f20d0afc43a, type: 3}
+  m_PrefabInstance: {fileID: 8012073338399037936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6758180699406292232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3673103079913573624, guid: 465d039108aae9f4eb235f20d0afc43a, type: 3}
