@@ -33,7 +33,11 @@ public class PlayerAnimatorController : MonoBehaviour
 
         animator.SetBool("isBack", isBack);
         animator.SetFloat("Speed", movement.CurrentVelocity.magnitude);
-        animator.SetBool("isWalkingDown", input.y < -0.1f);
+        // Se activa isWalkingDown solo si la única tecla presionada es hacia abajo
+        bool isOnlyPressingDown = input.y < -0.1f && Mathf.Abs(input.x) < 0.1f && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D);
+        animator.SetBool("isWalkingDown", isOnlyPressingDown);
+        //animator.SetBool("isWalkingDown", isOnlyWalkingDown);
+        
     }
 
      /// <summary>
