@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 2294512579693429740}
   - component: {fileID: 8439556727943715146}
   - component: {fileID: 4348799828341615523}
+  - component: {fileID: -369920518382542625}
   m_Layer: 8
   m_Name: gaseosaEnemy
   m_TagString: Enemy
@@ -291,3 +292,17 @@ NavMeshAgent:
   m_BaseOffset: 1.81
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-369920518382542625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3021714686918389162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24dd1a8638a5da84dbd668fd549de234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  yOffset: 0

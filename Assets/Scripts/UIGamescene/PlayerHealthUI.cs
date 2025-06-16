@@ -14,6 +14,7 @@ public class PlayerHealthUI : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"[PlayerHealthUI] Se inicia en {gameObject.name}");
         if (PlayerEventsManager.Instance != null)
         {
             var p = PlayerEventsManager.Instance;

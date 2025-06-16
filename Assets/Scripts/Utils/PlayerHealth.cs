@@ -123,4 +123,12 @@ public class PlayerHealth : LifeSystem
         if (respawn != null)
             respawn.Respawn();
     }
+    public override void Heal(int healAmount)
+    {
+        canHeal = true;
+        base.Heal(healAmount); // Aplica la curación
+
+        PlayerEventsManager.Instance?.PlayerHeal(); // Lanza el evento para actualizar UI y efectos
+    }
+
 }

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7313290718630489306}
   - component: {fileID: 3315697037466381005}
   - component: {fileID: 7196878084112974873}
+  - component: {fileID: 2245496004380915987}
   m_Layer: 0
   m_Name: chizitoEnemy
   m_TagString: Enemy
@@ -259,3 +260,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 0}
+--- !u!114 &2245496004380915987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378838936790032193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24dd1a8638a5da84dbd668fd549de234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  yOffset: 0
