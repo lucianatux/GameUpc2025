@@ -15653,7 +15653,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3999999, y: -1.1, z: -10}
+  m_LocalPosition: {x: 31.3, y: 38.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59174,7 +59174,7 @@ Transform:
   m_GameObject: {fileID: 1097376168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3999999, y: -1.1, z: -10}
+  m_LocalPosition: {x: 31.3, y: 38.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60085,7 +60085,7 @@ MonoBehaviour:
   playerFireballClip: {fileID: 8300000, guid: 3e82106e3db935248af5a93b47496642, type: 3}
   playerHealClip: {fileID: 8300000, guid: eb17c0cb23a852f4dac19535564fa341, type: 3}
   enemyDefeatedClip: {fileID: 8300000, guid: 134f2ce016c65b2499a92dd75b091c78, type: 3}
-  enemyDamagedClip: {fileID: 8300000, guid: afb6c9bdd8762c04aa3436fed00eeb7d, type: 3}
+  enemyDamagedClip: {fileID: 8300000, guid: 2f54f39e561490b4194557c808636f7c, type: 3}
   enemySwordAttackClip: {fileID: 8300000, guid: e0821ee3876beaf4887475a97a111128, type: 3}
   enemySodaAttackClip: {fileID: 8300000, guid: 2e662446d8190674ebbd6a28766810f8, type: 3}
   bossCherryBombsClip: {fileID: 8300000, guid: 833a097cddcce024bb7c92cd47bfed91, type: 3}
@@ -61300,7 +61300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606451150099471823, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 12.6
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6606451150099471823, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -61381,7 +61381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6547508865971558960, guid: e770f4b9bbd41a143aedafa79cc2c63b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -126032,11 +126032,11 @@ PrefabInstance:
       objectReference: {fileID: 1567509417965010841, guid: 4941fb5057fb10046970fa714f90acfb, type: 3}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4
+      value: 31.3
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: 38.4
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.z
