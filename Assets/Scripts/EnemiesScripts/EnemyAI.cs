@@ -322,8 +322,10 @@ namespace StatePattern
             isActive = false;
 
         }
+            [SerializeField] bool isDistance;
+            [SerializeField] float projectileSpeed;
 
-          public void Shoot()
+        public void Shoot()
         {
             if (weaponTransform == null)
             {
@@ -338,9 +340,25 @@ namespace StatePattern
             }
             float angle = GetAngleToPlayer();
 
-            GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, angle));
-            Destroy(newBullet, 0.2f);
+            if (isDistance)
+            {
+                Vector2 direction = (playerTransform.position - weaponTransform.position).normalized;
+                float angleB = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.Euler(0, 0, angleB - 90f);           // Create a rotation quaternion for the fireball to face the direction of travel. 
+
+                GameObject projectile = Instantiate(bullet, weaponTransform.position, rotation);  // Instantiate the fireball projectile prefab at the origin position with the calculated rotation.
+
+                Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();       // Give the projectile a velocity so it moves in the intended direction.
+                rb.velocity = direction.normalized * projectileSpeed;
+            }
+            else
+            {
+                GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, angle));
+
+            }
+            //Destroy(newBullet, 0.2f);
             Debug.Log("Shot fired with angle: " + angle);
+
         }
         /*Testing
         private void Deactivate(int _roomID)

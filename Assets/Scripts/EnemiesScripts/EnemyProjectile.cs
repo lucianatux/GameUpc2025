@@ -9,16 +9,26 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
     public float projectileSpeed = 5f;
     private Rigidbody2D _rb;
     public int damage;
+    [SerializeField] bool _canHitWalls;
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         if (_rb == null) Debug.LogError("Projectile attached to " + gameObject.name + " has no Rigidbody");
-        Debug.Log("se dispara el proyectil");
+
         _rb.velocity = _rb.velocity * projectileSpeed;
+
+        Destroy(gameObject, lifetime);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
+        Debug.Log("Choca con " + collision.gameObject.name);
+        Vector2 hitPoint = collision.ClosestPoint(transform.position);
+        
+        if (impactEffect != null && _canHitWalls)   // If there's an impact effect assigned, spawn it at the projectile's current position.
+        {
+            Instantiate(impactEffect, hitPoint, Quaternion.identity);
+        }
         if (collision.CompareTag("Room"))
         {
             Debug.Log("gaseoso choca con room");
@@ -41,6 +51,11 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
 
             if (playerHealth != null) playerHealth.TakeDamage(damage);
             else Debug.LogError("player health not found");
+
+            if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
+            {
+                Instantiate(impactEffect, hitPoint, Quaternion.identity);
+            }
 
         }
 

@@ -240,6 +240,8 @@ MonoBehaviour:
   roomID: 5
   isActive: 0
   attentionTimer: 0
+  isDistance: 1
+  projectileSpeed: 3
 --- !u!114 &2294512579693429740
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1755735691969701764}
   - component: {fileID: 6461991757737479921}
   - component: {fileID: 5213847618113579072}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: MiniBullets (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4088094795704026870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -0.04, z: 0}
+  m_LocalPosition: {x: -0.01, y: -0.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -671,7 +671,7 @@ ParticleSystem:
     radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: -0, y: 0, z: 0}
+    m_Rotation: {x: -0, y: 0, z: -90}
     m_Scale: {x: 1, y: 0.001, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -4850,7 +4850,7 @@ GameObject:
   - component: {fileID: 3563489727122284813}
   - component: {fileID: 1677594107800327257}
   - component: {fileID: 8766039483240612999}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: MainBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9741,7 +9741,7 @@ GameObject:
   - component: {fileID: 4784383483666842697}
   - component: {fileID: 7040649229710067871}
   - component: {fileID: 770055676749661086}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14630,7 +14630,7 @@ GameObject:
   - component: {fileID: 2046081383058782580}
   - component: {fileID: 256851132984117718}
   - component: {fileID: 1738897273083203149}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: GaseosaAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14668,7 +14668,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 430
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -14707,13 +14707,13 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 430
+    m_Bits: 447
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1738897273083203149
 MonoBehaviour:
@@ -14731,6 +14731,7 @@ MonoBehaviour:
   impactEffect: {fileID: 8639795028413706176, guid: bea40d4dbad5e304d8531db932dc7084, type: 3}
   projectileSpeed: 5
   damage: 3
+  _canHitWalls: 1
 --- !u!1 &8796590404153843610
 GameObject:
   m_ObjectHideFlags: 0
@@ -14742,7 +14743,7 @@ GameObject:
   - component: {fileID: 182379472485184194}
   - component: {fileID: 1412003049195266924}
   - component: {fileID: 8376358707788376826}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: MiniBullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14758,7 +14759,7 @@ Transform:
   m_GameObject: {fileID: 8796590404153843610}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24, y: -0.06, z: 0}
+  m_LocalPosition: {x: 0, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14899,9 +14900,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
-      minScalar: 5
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15401,9 +15402,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0.1
     donutRadius: 0.2
-    m_Position: {x: -0.06, y: 0, z: 0}
-    m_Rotation: {x: -0, y: 180, z: 0}
-    m_Scale: {x: 1, y: 0.37, z: 1}
+    m_Position: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: -0, y: 0, z: -90}
+    m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -15470,7 +15471,7 @@ ParticleSystem:
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 1
+    alignToDirection: 0
     m_Texture: {fileID: 0}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
