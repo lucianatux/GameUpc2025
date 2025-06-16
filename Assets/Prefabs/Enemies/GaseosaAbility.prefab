@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1755735691969701764}
   - component: {fileID: 6461991757737479921}
   - component: {fileID: 5213847618113579072}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MiniBullets (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4850,7 +4850,7 @@ GameObject:
   - component: {fileID: 3563489727122284813}
   - component: {fileID: 1677594107800327257}
   - component: {fileID: 8766039483240612999}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MainBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9741,7 +9741,7 @@ GameObject:
   - component: {fileID: 4784383483666842697}
   - component: {fileID: 7040649229710067871}
   - component: {fileID: 770055676749661086}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14565,7 +14565,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14630,7 +14630,7 @@ GameObject:
   - component: {fileID: 2046081383058782580}
   - component: {fileID: 256851132984117718}
   - component: {fileID: 1738897273083203149}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: GaseosaAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14665,7 +14665,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -14727,7 +14727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b844d7cd23dc5b479c147cac8ec93e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 8
+  lifetime: 3
   impactEffect: {fileID: 8639795028413706176, guid: bea40d4dbad5e304d8531db932dc7084, type: 3}
   projectileSpeed: 5
   damage: 3
@@ -14743,7 +14743,7 @@ GameObject:
   - component: {fileID: 182379472485184194}
   - component: {fileID: 1412003049195266924}
   - component: {fileID: 8376358707788376826}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MiniBullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}

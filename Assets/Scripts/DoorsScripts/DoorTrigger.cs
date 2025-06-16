@@ -4,13 +4,20 @@ public class DoorTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.TryGetComponent<PlayerInventory>(out var inventory)) // Checks if player is colliding 
+        if (!other.TryGetComponent<PlayerInventory>(out var inventory))
             return;
 
-        Door parentDoor = GetComponentInParent<Door>(); // Verify if there is a Door parent
+        Door parentDoor = GetComponentInParent<Door>();
         if (parentDoor != null)
         {
-            parentDoor.TryOpen(inventory);   // Use Method "TryOpen" to open the Door
+            if (parentDoor.RequiresKeys())
+                parentDoor.TryOpen(inventory);
+            else
+                Debug.Log("This door doesn't require keys. RoomManager controls this door.");
+        }
+        else
+        {
+            Debug.LogError("No parent Door found for DoorTrigger attached to: " + gameObject.name);
         }
     }
 }

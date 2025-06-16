@@ -52,7 +52,7 @@ public class BossAttackState : IEnemyState
         if (!isAttacking && bossAI.attackTimer < 0 && bossAI.GetPlayerInSight() == true)
         {
             //  PickRandomAttack();
-            
+                
                 bossAI.StartCoroutine(BombAttack(1f));
                 Debug.Log("Se llama al ataque Bomba");
          
@@ -70,10 +70,13 @@ public class BossAttackState : IEnemyState
 
     private IEnumerator BombAttack(float seconds)
     {
-        // animacion 
+        bossAI.enemyAnimator.TriggerAnim("cherryattack");
         isAttacking = true;
+        
+        yield return new WaitForSeconds(.8f);  
+
         ActivateBombs();
-        bossAI.attackTimer = 3f;
+        bossAI.attackTimer = 9f;
 
         yield return new WaitForSeconds(seconds);
         isAttacking = false;

@@ -257,7 +257,7 @@ MonoBehaviour:
   maxHealth: 15
   invulnerabilityTime: 0.1
   canHeal: 0
-  lifeOrbPrefab: {fileID: 0}
+  lifeOrbPrefab: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}
   lifeOrbDropChance: 1
 --- !u!114 &8439556727943715146
 MonoBehaviour:
