@@ -11,8 +11,6 @@ public class TeratomaAnimationController : MonoBehaviour
     [SerializeField] private float minIdleTime = 2f;
     [SerializeField] private float maxIdleTime = 5f;
 
-    private bool isPlaying = false;
-
     private void Start()
     {
         StartCoroutine(StateRoutine());
