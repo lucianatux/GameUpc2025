@@ -22,9 +22,25 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
     }
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
-        Debug.Log("Choca con " + collision.gameObject.name);
+        Debug.Log(this + "Choca con " + collision.gameObject.name);
         Vector2 hitPoint = collision.ClosestPoint(transform.position);
-        
+                if (collision.CompareTag("Player"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
+        {
+
+            Debug.Log("gaseoso choca con player");
+
+            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null) playerHealth.TakeDamage(damage);
+            else Debug.LogError("player health not found");
+
+            if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
+            {
+                Instantiate(impactEffect, hitPoint, Quaternion.identity);
+            }
+            Destroy(gameObject);
+
+        }
         if (impactEffect != null && _canHitWalls)   // If there's an impact effect assigned, spawn it at the projectile's current position.
         {
             Instantiate(impactEffect, hitPoint, Quaternion.identity);
@@ -39,24 +55,6 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
         {
             Debug.Log("gaseoso choca con enemy");
             return;
-        }
-
-        if (collision.CompareTag("Player"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
-        {
-            Destroy(gameObject);
-
-            Debug.Log("gaseoso choca con player");
-
-            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
-
-            if (playerHealth != null) playerHealth.TakeDamage(damage);
-            else Debug.LogError("player health not found");
-
-            if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
-            {
-                Instantiate(impactEffect, hitPoint, Quaternion.identity);
-            }
-
         }
 
         if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
