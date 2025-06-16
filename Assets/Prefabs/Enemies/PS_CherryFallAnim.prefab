@@ -12,8 +12,11 @@ GameObject:
   - component: {fileID: 2584923241433517248}
   - component: {fileID: 961888327720990176}
   - component: {fileID: 3364391547381963253}
-  m_Layer: 0
-  m_Name: PS_Fall (1)
+  - component: {fileID: 8525366092301467588}
+  - component: {fileID: 5838402455774958539}
+  - component: {fileID: 7638144592407518685}
+  m_Layer: 7
+  m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1116145055215971166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4910,10 +4913,10 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 447
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -4927,12 +4930,68 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000000033652157, y: 0.028229479}
   m_Size: {x: 2.1350944, y: 1.3479152}
   m_Direction: 1
+--- !u!114 &8525366092301467588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116145055215971166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fe9451ca281144797397d4611a91a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 0.1
+--- !u!114 &5838402455774958539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116145055215971166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b844d7cd23dc5b479c147cac8ec93e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 2
+  impactEffect: {fileID: 0}
+  projectileSpeed: 0
+  damage: 1
+--- !u!50 &7638144592407518685
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116145055215971166}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3864298482386872756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,7 +5003,8 @@ GameObject:
   - component: {fileID: 3420660798946150116}
   - component: {fileID: 7874647755475323818}
   - component: {fileID: 5268775972332531042}
-  m_Layer: 0
+  - component: {fileID: 2275107425929624777}
+  m_Layer: 7
   m_Name: PS_CherryFallAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9824,6 +9884,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2275107425929624777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864298482386872756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fe9451ca281144797397d4611a91a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 0.4
 --- !u!1 &5459978068114892564
 GameObject:
   m_ObjectHideFlags: 0
@@ -9835,7 +9908,7 @@ GameObject:
   - component: {fileID: 7241449332652133807}
   - component: {fileID: 9039611218352320511}
   - component: {fileID: 5418999824382484061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PS_Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9851,7 +9924,7 @@ Transform:
   m_GameObject: {fileID: 5459978068114892564}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14688,7 +14761,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -14732,7 +14805,7 @@ GameObject:
   - component: {fileID: 8137204196630059628}
   - component: {fileID: 1093923365928083844}
   - component: {fileID: 8939918842332343686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PS_Poof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14748,7 +14821,7 @@ Transform:
   m_GameObject: {fileID: 8510586884128116165}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -15,7 +15,7 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
         if (_rb == null) Debug.LogError("Projectile attached to " + gameObject.name + " has no Rigidbody");
         Debug.Log("se dispara el proyectil");
         _rb.velocity = _rb.velocity * projectileSpeed;
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)   // Called when the projectile enters a trigger collider.
     {
@@ -30,7 +30,7 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
             Debug.Log("gaseoso choca con enemy");
             return;
         }
-            
+
         if (collision.CompareTag("Player"))   // If the projectile hits an object tagged "Enemy", destroy the projectile.
         {
             Destroy(gameObject);
@@ -51,7 +51,12 @@ public class EnemyProjectile : MonoBehaviour   // This script handles the behavi
         }
 
         Destroy(gameObject);   // Destroy the projectile after triggering the effect or hitting something.
-        
-        Debug.Log ("Choca con " + collision.gameObject.name);
+
+        Debug.Log("Choca con " + collision.gameObject.name);
     }
+
+
+    
 }
+
+    
