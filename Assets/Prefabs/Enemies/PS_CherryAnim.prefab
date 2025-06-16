@@ -56,7 +56,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.35
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -5754,7 +5754,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
   EmissionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
@@ -9837,7 +9837,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.35
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -14725,7 +14725,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.35
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -19613,7 +19613,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.35
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -24510,7 +24510,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.35
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2

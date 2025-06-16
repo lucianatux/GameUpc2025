@@ -47,7 +47,7 @@ public class BombScript : MonoBehaviour
 
         // Reset position and start the fall animation
         transform.position = originalPosition;
-        StartCoroutine(BombFall(1f));
+        //StartCoroutine(BombFall(1f));
     }
 
     //Bomb Falling CoRoutine
@@ -71,6 +71,22 @@ public class BombScript : MonoBehaviour
         // Start explosion after fall
         StartCoroutine(BombExplosion(1f));
     }
+
+    //methods called in animator
+    private void FallingDamage()
+    {
+
+        Instantiate(fallPrefab, originalPosition, Quaternion.identity);
+
+    }
+
+    private void ExplosionDamage()
+    {
+        Instantiate(explosionPrefab, originalPosition, Quaternion.identity);
+
+    }
+
+
 
     //Bomb Explosion CoRoutine
     private IEnumerator BombExplosion(float delay)
