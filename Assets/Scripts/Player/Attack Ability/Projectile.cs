@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     public float lifetime = 3f;
     public GameObject impactEffect;
     public float projectileSpeed = 5f;
+    public int damage = 5;
+
     private Rigidbody2D _rb;
     [SerializeField] bool _canHitWalls;
 
@@ -30,7 +32,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
             Destroy(gameObject);
 
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
-            if (enemyHealth != null) enemyHealth.TakeDamage(5);
+            if (enemyHealth != null) enemyHealth.TakeDamage(damage);
             else Debug.LogError("enemy health not found");
 
                 // Instancia el efecto en ese punto            
