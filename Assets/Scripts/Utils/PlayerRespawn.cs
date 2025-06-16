@@ -6,7 +6,7 @@ public class PlayerRespawn : MonoBehaviour
 {
     private Vector3 currentCheckpoint;
     private Vector3 initialSpawn;
-
+    AbilityController abilityController;
     private void Start()
     {
         // Guardamos el primer spawn (inicio del nivel)
@@ -41,13 +41,29 @@ public class PlayerRespawn : MonoBehaviour
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
-            rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.bodyType = RigidbodyType2D.Dynamic;
 
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
-            col.enabled = true;
+        col.enabled = true;
+
+        PlayerInputHandler playerInputHandler = GetComponent<PlayerInputHandler>();
+        if (playerInputHandler != null) playerInputHandler.enabled = true;
+
+        AbilityController abilityController = GetComponent<AbilityController>();
+        if (abilityController != null)
+        {
+            abilityController.enabled = true;
+        }
+
+        PlayerAnimatorController playerAnimatorController = GetComponent<PlayerAnimatorController>();
+        if (playerAnimatorController != null) playerAnimatorController.enabled = true;
 
         Debug.Log("Jugador respawneado.");
+
+
+        Animator animator = GetComponent<Animator>();
+        if (animator != null) animator.SetBool("isDead", false);
 
         PlayerEventsManager.Instance?.PlayerHeal(); // ← Esto fuerza el update de la barra de vida
         } 

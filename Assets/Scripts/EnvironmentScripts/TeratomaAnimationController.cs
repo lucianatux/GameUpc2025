@@ -48,7 +48,7 @@ public class TeratomaAnimationController : MonoBehaviour
         animator.SetTrigger("talk");
         yield return new WaitForSeconds(3f);
         // Cortamos el loop manualmente volviendo a Idle
-        animator.Play("Idle", 0);
+        //animator.Play("Idle", 0);
        
     }
 }
