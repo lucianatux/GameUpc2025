@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f0910e2b-b0ab-4046-a363-b1dacb1fc7e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/doors_animations/sideBonesDoor/sideDoor.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/doors_animations/sideBonesDoor/sideDoor.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/lifeOrb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/lifeOrb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,7 @@
       <workItem from="1749821845539" duration="1778000" />
       <workItem from="1749824554958" duration="3083000" />
       <workItem from="1750004781891" duration="3813000" />
-      <workItem from="1750100678523" duration="10996000" />
+      <workItem from="1750100678523" duration="11890000" />
     </task>
     <servers />
   </component>
