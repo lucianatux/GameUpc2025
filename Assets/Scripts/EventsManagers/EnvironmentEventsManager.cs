@@ -23,6 +23,8 @@ public class EnvironmentEventsManager : MonoBehaviour
     public event Action OnGeyserErupt;    
     public event Action OnAcidRiverFlow;
     public event Action OnAcidRiverSplash;
+    public event Action OnEndPlayground;
+    public event Action OnEndMiddlePart;
 
     private void Awake()
     {
@@ -46,4 +48,6 @@ public class EnvironmentEventsManager : MonoBehaviour
     public void DoorClose() => OnDoorClose?.Invoke();
     public void DoorOpen() => OnDoorOpen?.Invoke();
     public void LevelComplete() => OnLevelComplete?.Invoke();
+    public void EndPlayground() => OnEndPlayground?.Invoke();
+    public void EndMiddlePart() => OnEndMiddlePart?.Invoke();
 }

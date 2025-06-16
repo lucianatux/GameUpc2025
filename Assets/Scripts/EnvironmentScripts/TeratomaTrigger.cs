@@ -7,9 +7,6 @@ using UnityEngine;
 /// </summary>
 public class TeratomaTrigger : MonoBehaviour
 {
-    [Tooltip("Tag que debe tener el jugador")]
-    [SerializeField] private string playerTag = "Player";
-
     void OnTriggerEnter2D(Collider2D other)
 {
     if (other.CompareTag("Player"))
