@@ -1,111 +1,96 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class Door : MonoBehaviour, IDoor
+public class Door : MonoBehaviour
 {
+    [Header("Keys")]
     [SerializeField] private List<Key> requiredKeys;
-    [SerializeField] private GameObject doorVisual;
-    private Collider2D physicalCollider;
-    private Animator animator;
-    private bool isOpen = false;
+
+    [Header("Components")]
+    [SerializeField] private Collider2D blockingCollider;
+    [SerializeField] private Animator animator;
+
     [Header("Room assignment")]
     public int roomID;
 
+    private bool _isOpen = false;
+    private bool _isLocked = false;
+    private bool _openedByDefault = false;
+
     private void Awake()
     {
-        physicalCollider = GetComponent<Collider2D>();
-        
+        if (blockingCollider == null)
+            blockingCollider = GetComponent<Collider2D>();
+
         if (animator == null)
-        {
-            Debug.LogError("No Animator found on Door: " + gameObject.name);
-        }
-    }
-     
-    private void OnEnable()
-    {
-        if (RoomManager.Instance != null)
-        {
-            RoomManager.Instance.OnRoomEntered += HandleRoomEntered;
-            RoomManager.Instance.OnRoomCleared += HandleRoomCleared; 
-        }
+            animator = GetComponent<Animator>();
     }
 
-    private void OnDisable()
+    private void Start()
     {
-        if (RoomManager.Instance != null)
+        if (!RequiresKeys())
         {
-            RoomManager.Instance.OnRoomEntered -= HandleRoomEntered;
-            RoomManager.Instance.OnRoomCleared -= HandleRoomCleared; 
-        }
-    }
-    private void HandleRoomEntered(int enteredRoomID)
-    {
-        if (enteredRoomID == roomID && !isOpen)
-            CloseDoor();
-    }
-    private void HandleRoomCleared(int clearedRoomID)
-    {
-        if (clearedRoomID == roomID && !isOpen)
-        {
-            Debug.Log("Room cleared. Opening door for room " + roomID);
-            OpenDoor();
+            _openedByDefault = true;
+            Open();
         }
     }
 
-    public void TryOpen(PlayerInventory inventory) // Called when an attempt is made to open the door using the player's inventory.
+    public void SetLocked(bool locked)
     {
-         if (isOpen)
-         {
-             Debug.Log("Door is already open");  // If the door is already open, exit early.
-             return;
-         }
-
-         if (requiredKeys == null || requiredKeys.Count == 0)
-         {
-             Debug.LogWarning("No keys are required to be set to the door."); // If no keys are configured, warn and exit.
-             return;
-         }
-               
-         if (requiredKeys.Any(key => !inventory.HasKey(key.id)))   // Check if the inventory is missing any required key.
-         {
-             Debug.Log("You're missing keys to open this door!");
-             return;
-         }
-
-         Debug.Log("All keys present. Unlocking door.");
-         OpenDoor();
+        _isLocked = locked;
     }
 
-    private void OpenDoor()  //Opens door once all keys are collected
+    public void Open()
     {
-        Debug.Log("Door open with keys:" + string.Join(", ", requiredKeys.Select(k => k.displayName)));
-        isOpen = true;   // Mark the door as open.
+        if (_isOpen) return;
 
-        if (animator != null)
+        _isOpen = true;
+        animator?.SetTrigger("Open");
+        if (blockingCollider != null)
+            blockingCollider.enabled = false;
+    }
+
+    public void Close()
+    {
+        if (!_isOpen) return;
+
+        _isOpen = false;
+        animator?.SetTrigger("Close");
+        if (blockingCollider != null)
+            blockingCollider.enabled = true;
+    }
+
+    public void TryOpen(PlayerInventory inventory)
+    {
+        if (_isOpen)
         {
-            animator.SetTrigger("Open");
+            Debug.Log("Door is already open.");
+            return;
         }
 
-        if (physicalCollider != null)  // Disable the physical collider so the player can walk through.
-            physicalCollider.enabled = false;
-
-        // Door Open event
-        EnvironmentEventsManager.Instance?.DoorOpen();
-    }
-    
-    private void CloseDoor()
-    {
-        isOpen = false;
-        if (animator != null)
+        if (_isLocked)
         {
-            animator.SetTrigger("Close");
+            Debug.Log("Door is locked by RoomManager until waves are completed.");
+            return;
         }
-        if (physicalCollider != null) physicalCollider.enabled = true;
+
+        if (!RequiresKeys())
+        {
+            Debug.Log("No keys required, opening directly.");
+            Open();
+            return;
+        }
+
+        if (requiredKeys.Any(key => !inventory.HasKey(key.id)))
+        {
+            Debug.Log("You're missing keys to open this door!");
+            return;
+        }
+
+        Debug.Log("All keys present. Unlocking door.");
+        Open();
     }
-    public void Open() { OpenDoor(); }
-    public void Close() { CloseDoor(); }
+
+    public bool RequiresKeys() => requiredKeys != null && requiredKeys.Count > 0;
 }
-   
-

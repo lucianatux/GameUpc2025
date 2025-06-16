@@ -19,16 +19,11 @@ public class Room : MonoBehaviour
     [Header("Checkpoint Settings")]
     public bool isCheckpointRoom = false;
     
-    [Header("Doors")]
-    private Door[] doors;
 
     private void Awake()
     {
         if (maxWaves <= 0)
             maxWaves = 1;
-        
-        Door[] allDoors = FindObjectsOfType<Door>(true);
-        doors = System.Array.FindAll(allDoors, d => d.roomID == roomID);
     }
     private void OnTriggerEnter2D(Collider2D other) //Detects Collision When entering the room
     {
@@ -49,21 +44,7 @@ public class Room : MonoBehaviour
             RoomManager.Instance.OnPlayerLeftRoom(this); //Calls Function in Room Manager
         }
     }
-    public void CloseAllDoors()
-    {
-        foreach (Door door in doors)
-        {
-            door.Close();
-        }
-    }
-    public void OpenAllDoors()
-    {
-        foreach (Door door in doors)
-        {
-            door.Open();
-        }
-    }
-
+    
 }
 
 
