@@ -72,7 +72,7 @@ public class BossAttackState : IEnemyState
     {
         bossAI.enemyAnimator.TriggerAnim("cherryattack");
         isAttacking = true;
-
+        
         yield return new WaitForSeconds(.8f);  
 
         ActivateBombs();
