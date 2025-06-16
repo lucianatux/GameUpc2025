@@ -7,6 +7,7 @@ public class RoomManager : MonoBehaviour
 {
     // Singleton pattern for global access
     public static RoomManager Instance => _instance;
+    public delegate void RoomEvent(int roomID);
     private static RoomManager _instance;
 
     // Current active room data
@@ -39,7 +40,7 @@ public class RoomManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     /// <summary>
     /// Assigns the current room and triggers the OnRoomEntered event.
     /// </summary>
@@ -72,7 +73,6 @@ public class RoomManager : MonoBehaviour
             SetCheckpoint(newRoom);
         }
         
-        currentRoom.CloseAllDoors();
     }
     public void SetCheckpoint(Room checkpointRoom)
     {
@@ -111,7 +111,6 @@ public class RoomManager : MonoBehaviour
             Debug.Log("All waves completed for room " + currentRoom.roomID);
             OnRoomCleared?.Invoke(currentRoom.roomID);
             
-            currentRoom.OpenAllDoors();
         }
     }
 
@@ -124,4 +123,16 @@ public class RoomManager : MonoBehaviour
         currentEnemies--;
         UpdateWave();
     }
+    public bool IsRoomActive(int roomID)
+    {
+        // Si la sala actual coincide y tiene waves pendientes, está activa
+        if (currentRoom != null && currentRoom.roomID == roomID)
+        {
+            return currentRoom.currentWave <= currentRoom.maxWaves;
+        }
+
+        // En caso contrario, la sala no está activa
+        return false;
+    }
+
 }
