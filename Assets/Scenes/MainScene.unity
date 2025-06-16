@@ -15653,7 +15653,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.3, y: 38.4, z: -10}
+  m_LocalPosition: {x: 4.5, y: -0.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59174,7 +59174,7 @@ Transform:
   m_GameObject: {fileID: 1097376168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.3, y: 38.4, z: -10}
+  m_LocalPosition: {x: 4.5, y: -0.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60080,7 +60080,7 @@ MonoBehaviour:
   musicSource: {fileID: 1320272657}
   backgroundMusic: {fileID: 8300000, guid: e7a7e86d4f9a0394089b5affc3817a10, type: 3}
   playerCroakClip: {fileID: 8300000, guid: 6bf36fcb1b1cba24ab360918686442d4, type: 3}
-  playerDamageClip: {fileID: 8300000, guid: dec719f9959fb204eb9a89d3d6093f41, type: 3}
+  playerDamageClip: {fileID: 8300000, guid: 91dc6b60647bee54c90f18aa240e4bc4, type: 3}
   playerKickClip: {fileID: 8300000, guid: c3c16969e022a4346bcaddb6899ea971, type: 3}
   playerFireballClip: {fileID: 8300000, guid: 3e82106e3db935248af5a93b47496642, type: 3}
   playerHealClip: {fileID: 8300000, guid: eb17c0cb23a852f4dac19535564fa341, type: 3}
@@ -126032,11 +126032,11 @@ PrefabInstance:
       objectReference: {fileID: 1567509417965010841, guid: 4941fb5057fb10046970fa714f90acfb, type: 3}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.3
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.4
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.z
