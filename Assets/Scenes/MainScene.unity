@@ -20930,7 +20930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &816777693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61993,6 +61993,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 0}
   animator: {fileID: 0}
   roomID: 0
+  neverAutoOpen: 1
 --- !u!4 &954145791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3590602586126977638, guid: e770f4b9bbd41a143aedafa79cc2c63b, type: 3}
@@ -64122,6 +64123,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 0}
   animator: {fileID: 0}
   roomID: 0
+  neverAutoOpen: 1
 --- !u!61 &1251763403
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,6 +14,11 @@ public class Door : MonoBehaviour
     [Header("Room assignment")]
     public int roomID;
 
+    [Header("Comportamiento especial")]
+    [SerializeField] private bool neverAutoOpen = false;
+    public bool NeverAutoOpen => neverAutoOpen;
+
+
     private bool _isOpen = false;
     private bool _isLocked = false;
     private bool _openedByDefault = false;
@@ -29,10 +34,14 @@ public class Door : MonoBehaviour
 
     private void Start()
     {
-        if (!RequiresKeys())
+        if (!RequiresKeys() && !neverAutoOpen)
         {
             _openedByDefault = true;
             Open();
+        }
+        else
+        {
+            Close(); // Opcional si querés asegurarte
         }
     }
 
