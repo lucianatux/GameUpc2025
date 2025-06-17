@@ -16,6 +16,7 @@ public class BossAI : EnemyAI
     [Header("Attack Settings")]
     [Tooltip("Charge speed for special attack.")]
     [SerializeField] private float chargeVelocity;
+    private bool bombsActivated = false;
 
     [Tooltip("List of cherry bombs (special projectiles).")]
     public List<GameObject> cherryBombs = new List<GameObject>();
@@ -43,7 +44,7 @@ public class BossAI : EnemyAI
 
         bossWaitingState = new BossWaitingState(roomID, _waveID);
         bossChaseState = new BossChaseState(playerTransform);
-        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange, chargeVelocity, rb);
+        bossAttackState = new BossAttackState(attackTimer, bulletPrefab, attackRange, chargeVelocity, rb, attackCooldown);
 
         SetState(bossWaitingState);
     }
@@ -53,8 +54,13 @@ public class BossAI : EnemyAI
     /// </summary>
     public void ChaseHorizontally(Transform toChase)
     {
-        if (isStunned) return;
+            if (isStunned) 
+            {
+                agent.ResetPath();
 
+                Debug.Log("esta stunned");
+                return;
+            }
         Vector3 targetPosition = new Vector3(toChase.position.x, originalPosition.y, 0);
         Debug.DrawLine(transform.position, targetPosition, Color.red);
         agent.SetDestination(targetPosition);
@@ -72,20 +78,62 @@ public class BossAI : EnemyAI
     /// <summary>
     /// Casts a vertical ray to detect the player directly below.
     /// </summary>
+    // <summary>
+    /// Devuelve true si el jugador está dentro del rango de visión circular.
+    /// </summary>
     public bool GetPlayerInSight()
     {
-        float rayDistance = 15f;
+        float detectionRadius = 8f; // Radio del círculo de detección
+        Vector2 detectionCenter = transform.position + Vector3.down * 1f; // Opcional: ajustar altura
         int playerLayer = 1 << LayerMask.NameToLayer("Player");
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, playerLayer);
-        Debug.DrawRay(transform.position, Vector2.down * rayDistance, Color.red);
+        Collider2D hit = Physics2D.OverlapCircle(detectionCenter, detectionRadius, playerLayer);
 
-        if (hit.collider != null && hit.collider.CompareTag("Player"))
+        // Visualización en el editor
+        Debug.DrawLine(transform.position, detectionCenter, Color.yellow);
+        DebugExtension.DrawCircle(detectionCenter, Color.red, detectionRadius); // Necesita método extra
+
+        if (hit != null && hit.CompareTag("Player"))
         {
-            Debug.Log("Boss raycast meets player.");
+            Debug.Log("Boss detects player in circle.");
             return true;
         }
 
         return false;
+    }
+    public static class DebugExtension
+    {
+        public static void DrawCircle(Vector2 center, Color color, float radius = 1f, int segments = 32)
+        {
+            float angle = 0f;
+            Vector2 prevPoint = center + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+
+            for (int i = 1; i <= segments; i++)
+            {
+                angle += 2 * Mathf.PI / segments;
+                Vector2 newPoint = center + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * radius;
+                Debug.DrawLine(prevPoint, newPoint, color);
+                prevPoint = newPoint;
+            }
+        }
+    }
+        private void ActivateBombs()
+    {
+        for (int i = 0; i <= 4; i++)
+        {
+            if (cherryBombs.Count >= i)
+            {
+                cherryBombs[i].SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("Index not reachable");
+            }
+            if (i == 4)
+            {
+                bombsActivated = true;
+                Debug.Log("All bombs activated");
+            }
+        }
     }
 }

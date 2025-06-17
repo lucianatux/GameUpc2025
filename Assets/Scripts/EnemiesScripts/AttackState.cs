@@ -113,11 +113,12 @@ namespace StatePattern
             enemyAI.animator.ResetTrigger("idle");
             enemyAI.animator.SetTrigger("attack"); 
 
-            yield return new WaitForSeconds(.9f); // Delay before shooting
-            enemyAI.isStunned = false;
+            yield return new WaitForSeconds(.1f); // Delay before shooting
+            //enemyAI.isStunned = false;
 
             enemyAI.animator.ResetTrigger("attack");
             enemyAI.enemyAnimator.TriggerAnim("idle");
+            yield return new WaitForSeconds(.6f); // Delay before shooting
 
             isAttacking = false;
 

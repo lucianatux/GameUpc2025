@@ -24488,7 +24488,8 @@ MonoBehaviour:
   lifetime: 2
   impactEffect: {fileID: 0}
   projectileSpeed: 0
-  damage: 4
+  damage: 7
+  _canHitWalls: 0
 --- !u!114 &1160461754036955536
 MonoBehaviour:
   m_ObjectHideFlags: 0

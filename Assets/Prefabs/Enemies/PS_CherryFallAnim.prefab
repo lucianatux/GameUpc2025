@@ -4961,10 +4961,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b844d7cd23dc5b479c147cac8ec93e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 2
+  lifetime: 3
   impactEffect: {fileID: 0}
   projectileSpeed: 0
   damage: 1
+  _canHitWalls: 0
 --- !u!50 &7638144592407518685
 Rigidbody2D:
   serializedVersion: 4

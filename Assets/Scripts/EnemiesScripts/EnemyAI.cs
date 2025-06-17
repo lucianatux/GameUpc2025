@@ -217,7 +217,7 @@ namespace StatePattern
         public void EnemyTakeDamage()
         {
             Debug.Log("Enemy recibió daño");
-            attackTimer = attackCooldown / 2;
+            //attackTimer = attackCooldown / 2;
             isStunned = true;
 
             if (spriteRenderer != null)

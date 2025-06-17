@@ -14,15 +14,17 @@ public class BossAttackState : IEnemyState
     private bool isAttacking;
     private float attackRange;
     private float chargeVelocity;
+    private float attackCooldown;
     private Rigidbody2D rb;
     //[SerializeField] private List<GameObject> cherryBombs;
-    public BossAttackState(float _attackTimer, GameObject _bulletPrefab, float _attackRange, float _chargeVelocity, Rigidbody2D _rb)
+    public BossAttackState(float _attackTimer, GameObject _bulletPrefab, float _attackRange, float _chargeVelocity, Rigidbody2D _rb, float _attackCooldown)
     {
         attackTimer = _attackTimer;
         attackRange = _attackRange;
         bulletPrefab = _bulletPrefab;
         chargeVelocity = _chargeVelocity;
         rb = _rb;
+        attackCooldown = _attackCooldown;
     }
 
 
@@ -72,13 +74,17 @@ public class BossAttackState : IEnemyState
     {
         bossAI.enemyAnimator.TriggerAnim("cherryattack");
         isAttacking = true;
-        
-        yield return new WaitForSeconds(.8f);  
+        bossAI.isStunned = true;
 
-        ActivateBombs();
-        bossAI.attackTimer = 9f;
+        yield return new WaitForSeconds(1f);  
+
+        bossAI.enemyAnimator.TriggerAnim("idle");
+
+        bossAI.attackTimer = attackCooldown;
 
         yield return new WaitForSeconds(seconds);
+            bossAI.isStunned = false;
+
         isAttacking = false;
     }
 

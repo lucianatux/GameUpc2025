@@ -68,7 +68,7 @@ public class BombScript : MonoBehaviour
 
     private void ExplosionDamage()
     {
-        Instantiate(explosionPrefab, originalPosition, Quaternion.identity);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         StartCoroutine((BombExplosion(0f)));
     }
 
@@ -84,7 +84,7 @@ public class BombScript : MonoBehaviour
 
         Debug.Log("Disable bomb: " + this);
 
-        transform.position = originalPosition;
+        //transform.position = originalPosition;
         gameObject.SetActive(false); //Disable to enable again if needed
     }
 
