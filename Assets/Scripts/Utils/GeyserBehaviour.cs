@@ -3,10 +3,14 @@ using UnityEngine;
 
 /// <summary>
 /// Controls the visual and functional behavior of a geyser that can be charged and triggered.
-/// Still In Testing
+/// Still in testing.
 /// </summary>
 public class GeyserBehaviour : MonoBehaviour
 {
+    // =========================
+    //        VARIABLES
+    // =========================
+
     [Header("Charge Settings")]
     [SerializeField] private float chargingCooldownMin = 5f;
     [SerializeField] private float chargingCooldownMax = 10f;
@@ -26,35 +30,56 @@ public class GeyserBehaviour : MonoBehaviour
     public GameObject geyserOneHit;
     public GameObject geyserTwoHits;
 
-    [Header("Animation")]
+    [Header("References")]
     [SerializeField] private Animator animator;
+    private Collider2D col;
+
+    // Detector de impacto por proyectil (se reinicia cada frame)
+    private bool gotHitThisFrame = false;
+
+    // =========================
+    //         MÉTODOS
+    // =========================
 
     void Start()
     {
+        // Inicializa estados
         currentHits = 0;
         eruptionEnded = false;
         isCharged = false;
 
+        // Obtiene el collider del geyser
+        col = GetComponent<Collider2D>();
+        if (col == null) Debug.LogError("Collider2D not assigned on GeyserBehaviour.");
+
+        // Verifica referencia al animator
         if (animator == null) Debug.LogError("Animator not assigned on GeyserBehaviour.");
 
-        // Start initial charge countdown
+        // Comienza la cuenta regresiva aleatoria para cargarse
         chargingTimer = Random.Range(chargingCooldownMin, chargingCooldownMax);
     }
 
     void Update()
     {
-        HandleCharging();
-        UpdateVisuals();
+        HandleCharging();      // Maneja la carga del géiser
+        UpdateVisuals();       // Actualiza visuales según estado
 
-        if (isCharged && Input.GetKeyDown(KeyCode.K))
+        // Si está cargado y recibió un impacto, suma un hit
+        if (isCharged && GetHit())
         {
             currentHits++;
             animator.SetInteger("currentHits", currentHits);
         }
     }
 
+    void LateUpdate()
+    {
+        // Reinicia el detector de impacto para el próximo frame
+        gotHitThisFrame = false;
+    }
+
     /// <summary>
-    /// Handles the charging logic with a countdown.
+    /// Maneja la lógica de carga del géiser con un temporizador.
     /// </summary>
     private void HandleCharging()
     {
@@ -75,11 +100,11 @@ public class GeyserBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates the VFX depending on the current hits and charge state.
+    /// Actualiza el estado visual según la cantidad de impactos y si está cargado.
     /// </summary>
     private void UpdateVisuals()
     {
-        // Not charged state
+        // No cargado y sin golpes
         if (currentHits == 0 && !isCharged)
         {
             geyserNotCharged?.SetActive(true);
@@ -88,21 +113,21 @@ public class GeyserBehaviour : MonoBehaviour
             geyserTwoHits?.SetActive(false);
         }
 
-        // Charged but not hit
+        // Cargado pero sin golpes
         if (currentHits == 0 && isCharged)
         {
             geyserNotCharged?.SetActive(false);
             geyserZeroHits?.SetActive(true);
         }
 
-        // First hit
+        // Primer golpe recibido
         if (currentHits == 1)
         {
             geyserZeroHits?.SetActive(false);
             geyserOneHit?.SetActive(true);
         }
 
-        // Second hit triggers eruption
+        // Segundo golpe recibido: comienza erupción
         if (currentHits == 2)
         {
             geyserOneHit?.SetActive(false);
@@ -111,7 +136,7 @@ public class GeyserBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// Handles the eruption sequence after two hits.
+    /// Maneja la secuencia de erupción tras recibir dos golpes.
     /// </summary>
     private IEnumerator Eruption()
     {
@@ -124,12 +149,34 @@ public class GeyserBehaviour : MonoBehaviour
         eruptionEnded = true;
         animator.SetBool("eruptionEnded", eruptionEnded);
 
-        // Reset geyser state
+        // Reinicia el estado del géiser
         currentHits = 0;
         isCharged = false;
         animator.SetBool("isCharged", false);
         chargingTimer = Random.Range(chargingCooldownMin, chargingCooldownMax);
 
         Debug.Log("Eruption ends. Geyser resets.");
+    }
+
+    /// <summary>
+    /// Detecta colisiones con objetos de la capa "Projectile".
+    /// </summary>
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
+        {
+            gotHitThisFrame = true;
+
+            // Opcional: destruir el proyectil al impactar
+            // Destroy(other.gameObject);
+        }
+    }
+
+    /// <summary>
+    /// Devuelve true si el géiser fue golpeado en este frame.
+    /// </summary>
+    public bool GetHit()
+    {
+        return gotHitThisFrame;
     }
 }
