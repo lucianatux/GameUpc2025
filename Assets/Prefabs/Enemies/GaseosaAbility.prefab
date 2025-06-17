@@ -14730,7 +14730,7 @@ MonoBehaviour:
   lifetime: 3
   impactEffect: {fileID: 8639795028413706176, guid: bea40d4dbad5e304d8531db932dc7084, type: 3}
   projectileSpeed: 5
-  damage: 3
+  damage: 6
   _canHitWalls: 1
 --- !u!1 &8796590404153843610
 GameObject:
