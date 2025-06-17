@@ -25,6 +25,16 @@ public class AutoOpenDoor : MonoBehaviour
             }
         }
     }
+     private void OnEnable()
+    {
+        PlayerHealth.OnPlayerDeath += ResetDoor;
+    }
+
+    private void OnDisable()
+    {
+        PlayerHealth.OnPlayerDeath -= ResetDoor;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -56,5 +66,20 @@ public class AutoOpenDoor : MonoBehaviour
         }
 
         alreadyOpened = true;
+    }
+     private void ResetDoor()
+    {
+        Debug.Log("[Puerta] Reiniciando estado (por muerte del jugador)");
+
+        if (doorAnimator != null)
+        {
+            doorAnimator.ResetTrigger("Open");
+            doorAnimator.Play("frontDoorClosed", 0); 
+        }
+
+        if (solidCollider != null)
+            solidCollider.enabled = true;
+
+        alreadyOpened = false;
     }
 }
