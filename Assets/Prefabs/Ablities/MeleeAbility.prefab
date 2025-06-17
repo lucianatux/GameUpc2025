@@ -76,6 +76,7 @@ MonoBehaviour:
   lifetime: 3
   impactEffect: {fileID: 4759426950666235972, guid: 2614937cc480c8b4cbdcab89221a5635, type: 3}
   projectileSpeed: 0
+  damage: 5
   _canHitWalls: 0
 --- !u!70 &4413309930856299110
 CapsuleCollider2D:
@@ -106,11 +107,11 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.51, y: 0}
-  m_Size: {x: 2.17, y: 3.38}
+  m_Offset: {x: -0.67, y: 0}
+  m_Size: {x: 3.17, y: 4.02}
   m_Direction: 0
 --- !u!1 &8187465798281724320
 GameObject:
@@ -157,4 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fe9451ca281144797397d4611a91a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 0.1
+  seconds: 1
