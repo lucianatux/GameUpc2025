@@ -16,30 +16,42 @@ public class DoorManager : MonoBehaviour
         {
             RoomManager.Instance.OnRoomEntered += HandleRoomEntered;
             RoomManager.Instance.OnRoomCleared += HandleRoomCleared;
+
+            PlayerHealth.OnPlayerDeath += HandlePlayerDeath;
+
             subscribed = true;
-            Debug.Log("DoorManager subscribed to RoomManager events.");
+            Debug.Log("DoorManager subscribed to RoomManager and PlayerHealth events.");
         }
         else
         {
             Debug.LogWarning("RoomManager not initialized yet. Retrying in 0.5 seconds...");
-            Invoke(nameof(TrySubscribe), 0.5f); // reintenta después de 0.5 segundos
+            Invoke(nameof(TrySubscribe), 0.5f);
         }
     }
 
     private void OnDisable()
     {
-        if (subscribed && RoomManager.Instance != null)
+        if (subscribed)
         {
-            RoomManager.Instance.OnRoomEntered -= HandleRoomEntered;
-            RoomManager.Instance.OnRoomCleared -= HandleRoomCleared;
+            if (RoomManager.Instance != null)
+            {
+                RoomManager.Instance.OnRoomEntered -= HandleRoomEntered;
+                RoomManager.Instance.OnRoomCleared -= HandleRoomCleared;
+            }
+
+            PlayerHealth.OnPlayerDeath -= HandlePlayerDeath;
+
             subscribed = false;
         }
     }
 
     private void HandleRoomEntered(int roomID)
     {
+        Debug.Log($"[DoorManager] Entered room {roomID}");
+
         if (RoomManager.Instance.IsRoomActive(roomID))
         {
+            Debug.Log($"[DoorManager] Room {roomID} is active, closing and locking doors.");
             foreach (var door in GetDoorsForRoom(roomID))
             {
                 door.Close();
@@ -48,6 +60,7 @@ public class DoorManager : MonoBehaviour
         }
         else
         {
+            Debug.Log($"[DoorManager] Room {roomID} is NOT active, opening doors.");
             foreach (var door in GetDoorsForRoom(roomID))
             {
                 door.SetLocked(false);
@@ -56,14 +69,25 @@ public class DoorManager : MonoBehaviour
         }
     }
 
-
     private void HandleRoomCleared(int roomID)
     {
+        Debug.Log($"[DoorManager] Room {roomID} cleared. Unlocking and opening doors.");
         foreach (var door in GetDoorsForRoom(roomID))
         {
             door.SetLocked(false);
             door.Open();
         }
+    }
+
+    private void HandlePlayerDeath()
+    {
+        Debug.Log("[DoorManager] Player died. Unlocking and opening all doors.");
+        foreach (var door in FindObjectsOfType<Door>())
+        {
+            door.SetLocked(false);
+            door.Open();
+        }
+        
     }
 
     private List<Door> GetDoorsForRoom(int roomID)

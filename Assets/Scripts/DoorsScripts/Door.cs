@@ -91,6 +91,8 @@ public class Door : MonoBehaviour
         Debug.Log("All keys present. Unlocking door.");
         Open();
     }
+    
+    
 
     public bool RequiresKeys() => requiredKeys != null && requiredKeys.Count > 0;
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerHealth : LifeSystem
 {
+    public static event Action OnPlayerDeath;
     PlayerAnimatorController _playerAnimator;
     private PlayerMovement _playerMovement;
 
@@ -113,6 +115,9 @@ public class PlayerHealth : LifeSystem
         }
 
         PlayerEventsManager.Instance?.PlayerDeath();
+        
+        OnPlayerDeath?.Invoke();
+        
         // Iniciar respawn después de una pequeña espera
         StartCoroutine(RespawnDelay());
     }
