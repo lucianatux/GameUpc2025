@@ -38,7 +38,9 @@ public class BossAttackState : IEnemyState
         {
             Debug.LogError(this + "Error de casteo fallido");
         }
+        bossAI.animator.SetBool("isWalking", false);
 
+        bossAI.animator.SetTrigger("idle");
         /* foreach (Transform child in bossAI.transform)
           {
               if (child.name.Contains("Bomb")) // o directamente todos
@@ -54,9 +56,9 @@ public class BossAttackState : IEnemyState
         if (!isAttacking && bossAI.attackTimer < 0 && bossAI.GetPlayerInSight() == true)
         {
             //  PickRandomAttack();
-                
-                bossAI.StartCoroutine(BombAttack(1f));
-                Debug.Log("Se llama al ataque Bomba");
+            
+            bossAI.StartCoroutine(BombAttack(1f));
+            Debug.Log("Se llama al ataque Bomba");
          
         }
         Debug.Log("attack state update ");
@@ -72,18 +74,26 @@ public class BossAttackState : IEnemyState
 
     private IEnumerator BombAttack(float seconds)
     {
-        bossAI.enemyAnimator.TriggerAnim("cherryattack");
+        bossAI.animator.ResetTrigger("idle");
+
+        bossAI.animator.SetTrigger("cherryattack");
+
         isAttacking = true;
         bossAI.isStunned = true;
 
-        yield return new WaitForSeconds(1f);  
+        //yield return new WaitForSeconds(.1f);  
 
-        bossAI.enemyAnimator.TriggerAnim("idle");
+        //bossAI.animator.ResetTrigger("cherryattack");
+        //bossAI.animator.SetTrigger("idle");
+
+        yield return new WaitForSeconds(1.2f);  
+        bossAI.animator.SetTrigger("idle");
+
 
         bossAI.attackTimer = attackCooldown;
 
-        yield return new WaitForSeconds(seconds);
-            bossAI.isStunned = false;
+        //yield return new WaitForSeconds(seconds);
+        bossAI.isStunned = false;
 
         isAttacking = false;
     }
