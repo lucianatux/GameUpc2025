@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StatePattern;
 
 public class RoomManager : MonoBehaviour
 {
@@ -65,6 +66,19 @@ public class RoomManager : MonoBehaviour
         Debug.Log($"Current wave: {newRoom.currentWave}");
 
         OnRoomEntered?.Invoke(newRoom.roomID); // Notify listeners
+        
+        EnemyAI[] allEnemies = FindObjectsOfType<EnemyAI>();
+        enemyCount = 0;
+
+        foreach (var enemy in allEnemies)
+        {
+            if (enemy.RoomID == newRoom.roomID)
+            {
+                enemyCount++;
+            }
+        }
+        Debug.Log($"Se encontraron {enemyCount} enemigos en la sala {newRoom.roomID}");
+
         currentEnemies = enemyCount;
         
         // Si esta sala es checkpoint, se guarda
@@ -117,11 +131,17 @@ public class RoomManager : MonoBehaviour
     /// <summary>
     /// Should be called by enemies when they die.
     /// </summary>
-    public void NotifyEnemyDeath()
+    public void NotifyEnemyDeath(int enemyRoomID)
     {
         //Deletes a counter on current enemies and Checks in Update Waves
         currentEnemies--;
-        UpdateWave();
+        Debug.Log($"NotifyEnemyDeath called. currentEnemies ahora es {currentEnemies}");
+        
+        if (currentRoom != null && enemyRoomID == currentRoom.roomID)
+        {
+            currentEnemies--;
+            UpdateWave();
+        }
     }
     public bool IsRoomActive(int roomID)
     {

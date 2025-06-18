@@ -14,13 +14,15 @@ public class KeysUI : MonoBehaviour
 
     private void Start()
     {
-        ResetUIToStartState();
-
         if (EnvironmentEventsManager.Instance != null)
         {
             EnvironmentEventsManager.Instance.OnKeyCollected += OnKeyCollected;
             EnvironmentEventsManager.Instance.OnEndPlayground += OnEndPlaygroundReached;
             EnvironmentEventsManager.Instance.OnEndMiddlePart += OnEndMiddlePartReached;
+        }
+        if (!reachedEndPlayground)
+        {
+            ResetUIToStartState();
         }
     }
 

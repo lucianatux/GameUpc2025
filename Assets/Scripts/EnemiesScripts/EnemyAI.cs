@@ -307,21 +307,28 @@ namespace StatePattern
 
             agent.SetDestination(toChase.position);
         }
-
+        
+        bool isDead = false;
+        public bool IsDead => isDead;
+        
         public void Die()
         {
+            if (isDead) return;
+            isDead = true;
+
             animator.ResetTrigger("idle");
             animator.ResetTrigger("attack");
             animator.SetBool("isWalking", false);
             animator.ResetTrigger("damage");
-            
+
             animator.SetTrigger("die");
 
             agent.ResetPath();
             agent.enabled = false;
             isActive = false;
-
         }
+            public int RoomID => roomID;
+
             [SerializeField] bool isDistance;
             [SerializeField] float projectileSpeed;
 

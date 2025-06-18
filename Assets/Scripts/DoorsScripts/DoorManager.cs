@@ -85,7 +85,10 @@ public class DoorManager : MonoBehaviour
         foreach (var door in FindObjectsOfType<Door>())
         {
             door.SetLocked(false);
-            door.Open();
+            if (!door.NeverAutoOpen)
+                door.Open();
+            else
+                door.Close(); // por si se había quedado abierta por algún bug previo
         }
         
     }
