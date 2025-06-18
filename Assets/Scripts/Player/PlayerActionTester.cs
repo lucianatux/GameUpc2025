@@ -26,31 +26,6 @@ public class PlayerActionTester : MonoBehaviour
             animatorController.TriggerAnim("croak");
             PlayerEventsManager.Instance.PlayerCroak(); 
         }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            animatorController.TriggerAnim("damage");
-            PlayerEventsManager.Instance.PlayerDamaged();
-
-            // prueba///Aplica daño real (y automáticamente dispara evento)
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(1);
-            }
-            else
-            {
-                Debug.LogWarning("PlayerHealth no asignado en PlayerActionTester.");
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            animatorController.TriggerAnim("die");
-            PlayerEventsManager.Instance.PlayerDamaged(); // o PlayerDied(); según implementación
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            animatorController.TriggerAnim("heal");
-            PlayerEventsManager.Instance.PlayerHeal();
-        }
     }
 }
 
