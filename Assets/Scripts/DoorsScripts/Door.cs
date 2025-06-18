@@ -18,7 +18,6 @@ public class Door : MonoBehaviour
     [SerializeField] private bool neverAutoOpen = false;
     public bool NeverAutoOpen => neverAutoOpen;
 
-
     private bool _isOpen = false;
     private bool _isLocked = false;
     private bool _openedByDefault = false;
@@ -100,8 +99,21 @@ public class Door : MonoBehaviour
         Debug.Log("All keys present. Unlocking door.");
         Open();
     }
-    
-    
+
+    public void TryAutoOpen()
+    {
+        if (_isOpen) return;
+
+        if (!RequiresKeys() && !neverAutoOpen)
+        {
+            Debug.Log($"[AutoOpen] Door in Room {roomID} auto-opening.");
+            Open();
+        }
+        else
+        {
+            Debug.Log($"[AutoOpen] Door in Room {roomID} did not auto-open. RequiresKeys: {RequiresKeys()}, NeverAutoOpen: {neverAutoOpen}");
+        }
+    }
 
     public bool RequiresKeys() => requiredKeys != null && requiredKeys.Count > 0;
 }

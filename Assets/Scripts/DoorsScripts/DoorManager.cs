@@ -75,7 +75,7 @@ public class DoorManager : MonoBehaviour
         foreach (var door in GetDoorsForRoom(roomID))
         {
             door.SetLocked(false);
-            door.Open();
+            door.TryAutoOpen();
         }
     }
 
