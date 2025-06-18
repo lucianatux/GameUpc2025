@@ -54,16 +54,27 @@ public class BossAI : EnemyAI
     /// </summary>
     public void ChaseHorizontally(Transform toChase)
     {
-            if (isStunned) 
-            {
-                agent.ResetPath();
+        if (isStunned)
+        {
+            agent.ResetPath();
 
-                Debug.Log("esta stunned");
-                return;
-            }
+            Debug.Log("esta stunned");
+            return;
+        }
         Vector3 targetPosition = new Vector3(toChase.position.x, originalPosition.y, 0);
         Debug.DrawLine(transform.position, targetPosition, Color.red);
         agent.SetDestination(targetPosition);
+
+        if (transform.position != targetPosition)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+
+
+        }
     }
 
     /// <summary>
@@ -117,7 +128,7 @@ public class BossAI : EnemyAI
             }
         }
     }
-        private void ActivateBombs()
+    private void ActivateBombs()
     {
         for (int i = 0; i <= 4; i++)
         {
@@ -136,4 +147,11 @@ public class BossAI : EnemyAI
             }
         }
     }
+
+    public override void EnemyTakeDamage()
+    {
+        base.EnemyTakeDamage();
+        animator.SetTrigger("damage");
+    }
+
 }
