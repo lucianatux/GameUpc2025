@@ -53,7 +53,7 @@ namespace StatePattern
 
             enemyAI.animator.SetTrigger("idle");
 
-            //Debug.Log("Switched to Attack state");
+            Debug.Log("Switched to Attack state");
         }
 
         /// <summary>
@@ -107,18 +107,17 @@ namespace StatePattern
         private IEnumerator CheckAttacking()
         {
             enemyAI.isStunned = true;
-            enemyAI.animator.ResetTrigger("idle");
-
-            yield return new WaitForSeconds(.05f); // Delay before shooting
 
             enemyAI.ShowAlert("Warning");
             yield return new WaitForSeconds(0.2f);
+            enemyAI.animator.ResetTrigger("idle");
             enemyAI.animator.SetTrigger("attack"); 
 
             yield return new WaitForSeconds(.1f); // Delay before shooting
             //enemyAI.isStunned = false;
 
-            enemyAI.animator.SetTrigger("idle");
+            enemyAI.animator.ResetTrigger("attack");
+            enemyAI.enemyAnimator.TriggerAnim("idle");
             yield return new WaitForSeconds(.6f); // Delay before shooting
 
             isAttacking = false;

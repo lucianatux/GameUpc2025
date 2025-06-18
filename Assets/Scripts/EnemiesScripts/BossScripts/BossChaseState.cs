@@ -24,7 +24,7 @@ public class BossChaseState : IEnemyState
     /// </summary>
     public void EnterState(EnemyAI _enemyAI)
     {
-        //Debug.Log("Entered Chase State");
+        Debug.Log("Entered Chase State");
 
         if (_enemyAI is BossAI enemy)
         {
@@ -34,8 +34,6 @@ public class BossChaseState : IEnemyState
         {
             Debug.LogError(this + " Cast to BossAI failed.");
         }
-                    bossAI.animator.SetBool("isWalking", true);
-
     }
 
     /// <summary>
@@ -51,9 +49,8 @@ public class BossChaseState : IEnemyState
 
         // If player is in sight and the attack cooldown is over, transition to attack state
         if (isInAttackSight && bossAI.attackTimer < 0f)
-        {           
-            bossAI.animator.ResetTrigger("walk");
-            bossAI.animator.SetBool("walk", false);
+        {
+            Debug.Log("Switching to Attack State");
             bossAI.SetState(bossAI.bossAttackState);
         }
     }

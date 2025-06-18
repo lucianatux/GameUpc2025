@@ -185,15 +185,14 @@ namespace StatePattern
         /// <summary>
         public float GetAngleToPlayer()
         {
-            if (playerTransform == null)
-            {
-                Debug.LogError("player transform not found"); return 0f;
-            }
+            if (playerTransform == null) return 0f;
+
             Vector2 direction = (playerTransform.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             if (angle < 0)
                 angle += 360f;
+
             return angle;
         }
         /// <summary>
@@ -215,7 +214,7 @@ namespace StatePattern
         /// <summary>
         //In charge of displaying enemy in red
         /// <summary>
-        public virtual void EnemyTakeDamage()
+        public void EnemyTakeDamage()
         {
             Debug.Log("Enemy recibió daño");
             //attackTimer = attackCooldown / 2;
