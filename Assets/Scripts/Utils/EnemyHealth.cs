@@ -78,20 +78,30 @@ public class EnemyHealth : LifeSystem
 
         Debug.Log("Enemy Dies");
 
-        if (enemyAI != null) enemyAI.enabled = false;
-
-        if (col != null) col.enabled = false;
-        else Debug.LogError("Collider2D not found on Enemy.");
-        enemyAI.Die();
-        if (animator != null)
+        if (enemyAI != null)
         {
-            Debug.Log("se usa animacion de muerte");
-            animator.SetTrigger("die");
+            if (enemyAI.IsDead) return;  // Evitar doble llamada
+            enemyAI.Die();
+
+            enemyAI.enabled = false;
+            if (col != null) col.enabled = false;
+            else Debug.LogError("Collider2D not found on Enemy.");
+
+            if (animator != null)
+            {
+                Debug.Log("Se usa animacion de muerte");
+                animator.SetTrigger("die");
+            }
+
+            RoomManager.Instance.NotifyEnemyDeath(enemyAI.RoomID);  // Aquí notificamos solo UNA vez
+        }
+        else
+        {
+            Debug.LogError("EnemyAI component missing on Enemy.");
         }
 
-        RoomManager.Instance.NotifyEnemyDeath(); // Inform Room Manager
-        TrySpawnLifeOrb();                        // Possibly drop a health orb // in testing
-        EnemiesEventsManager.Instance?.EnemyDefeated(); // Notify Enemies events Manager
+        TrySpawnLifeOrb(); // possibly drops a Life Orb
+        EnemiesEventsManager.Instance?.EnemyDefeated();; // Notify Enemies events Manager
     }
 
     /// <summary>

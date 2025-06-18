@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f0910e2b-b0ab-4046-a363-b1dacb1fc7e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/DoorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorsScripts/DoorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesScripts/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesScripts/EnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/EnemyHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/RoomManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +107,7 @@
       <workItem from="1750004781891" duration="3813000" />
       <workItem from="1750100678523" duration="11890000" />
       <workItem from="1750180220658" duration="4030000" />
+      <workItem from="1750205720835" duration="6586000" />
     </task>
     <servers />
   </component>
