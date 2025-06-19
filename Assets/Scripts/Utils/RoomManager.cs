@@ -72,7 +72,7 @@ public class RoomManager : MonoBehaviour
 
         foreach (var enemy in allEnemies)
         {
-            if (enemy.RoomID == newRoom.roomID)
+            if (enemy.RoomID == newRoom.roomID && enemy.isDead == false)
             {
                 enemyCount++;
             }
@@ -139,7 +139,7 @@ public class RoomManager : MonoBehaviour
         
         if (currentRoom != null && enemyRoomID == currentRoom.roomID)
         {
-            currentEnemies--;
+            //currentEnemies--;
             UpdateWave();
         }
     }

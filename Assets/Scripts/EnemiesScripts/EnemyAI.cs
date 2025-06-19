@@ -309,7 +309,7 @@ namespace StatePattern
             agent.SetDestination(toChase.position);
         }
         
-        bool isDead = false;
+        public bool isDead = false;
         public bool IsDead => isDead;
         
         public void Die()
