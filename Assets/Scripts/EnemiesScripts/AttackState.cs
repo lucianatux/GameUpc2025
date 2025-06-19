@@ -74,7 +74,7 @@ namespace StatePattern
                 Attack();
             }
 
-            else if (!isAttacking && distToPlayer > attackRange)
+            else
             {
                 enemyAI.animator.ResetTrigger("idle");
                 enemyAI.animator.SetBool("isWalking", true);
@@ -112,9 +112,9 @@ namespace StatePattern
             yield return new WaitForSeconds(0.2f);
             if (enemyAI.IsDead) yield break;
             enemyAI.animator.SetTrigger("attack"); 
-            //enemyAI.isStunned = false;
+            enemyAI.isStunned = false;
 
-            yield return new WaitForSeconds(.6f); // Delay before shooting
+            yield return new WaitForSeconds(.9f); // Delay before shooting
             enemyAI.animator.SetTrigger("idle");
 
             isAttacking = false;

@@ -223,7 +223,7 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 0
-  attackCooldown: 2
+  attackCooldown: 3
   bulletPrefab: {fileID: 7434420919169690429, guid: 74a3eb13d0462cb48ac3c346a0643c60, type: 3}
   weaponTransform: {fileID: 7277173428735742050}
   attackTimer: 0
@@ -286,7 +286,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 7
+  m_StoppingDistance: 6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
