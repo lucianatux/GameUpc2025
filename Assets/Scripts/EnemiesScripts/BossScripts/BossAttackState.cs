@@ -87,7 +87,10 @@ public class BossAttackState : IEnemyState
         //bossAI.animator.ResetTrigger("cherryattack");
         //bossAI.animator.SetTrigger("idle");
 
-        yield return new WaitForSeconds(1.2f);  
+        yield return new WaitForSeconds(1.2f);
+
+        if (bossAI.IsDead) yield break;
+
         bossAI.animator.SetTrigger("idle");
 
 

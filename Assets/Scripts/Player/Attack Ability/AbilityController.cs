@@ -16,8 +16,18 @@ public class AbilityController : MonoBehaviour // This class handles the player'
     private PlayerAnimatorController animatorController;
 
     private PlayerMovement _playerMovement;
+
+    public float cooldownDurationFireBall = 1f;
+    private float cooldownTimerFireBall = 0f;                                                                       
+    public bool IsReadyFireBall => cooldownTimerFireBall <= 0f;
+
+    public float cooldownDurationKick = 2f;
+    private float cooldownTimerKick = 0f;
+    public bool IsReadyKick => cooldownTimerKick <= 0f;
+
     void Start()
     {
+
         _mainCamera = Camera.main;
         _playerMovement = GetComponent<PlayerMovement>();
 
@@ -50,6 +60,11 @@ public class AbilityController : MonoBehaviour // This class handles the player'
 
     }
 
+    //gets called on animator
+    public void ResetCooldown()
+    {
+        cooldownTimerKick = 0;
+    }
     void Awake()
     {
         animatorController = GetComponent<PlayerAnimatorController>();
@@ -63,6 +78,14 @@ public class AbilityController : MonoBehaviour // This class handles the player'
         _mainCamera.nearClipPlane
         ));
         
+        
+        if (cooldownTimerFireBall > 0f)
+        cooldownTimerFireBall -= Time.deltaTime;   
+           
+        if (cooldownTimerKick > 0f)
+        cooldownTimerKick -= Time.deltaTime;  
+      
+        
         mousePos.z = 0f;
 
         Vector2 direction = (mousePos - firePoint.position).normalized; // Calculate the direction from the firePoint to the mouse position.
@@ -70,17 +93,26 @@ public class AbilityController : MonoBehaviour // This class handles the player'
         // RMB: ataque melee
         if (Input.GetMouseButtonDown(0))
         {
+            if (!IsReadyKick) return; // no disparar si está en cooldown
+
+            cooldownTimerKick = cooldownDurationKick;
+
+
             _meleeAbility.UseAbility(firePoint, direction);
 
             StartCoroutine(_playerMovement.StunPlayer(.1f));
 
             animatorController.TriggerAnim("kick");
-            
+
             PlayerEventsManager.Instance.PlayerKick();
         }
         // LMB: bola de fuego
         if (Input.GetMouseButtonDown(1))
         {
+            if (!IsReadyFireBall) return; // no disparar si está en cooldown
+
+            cooldownTimerFireBall = cooldownDurationFireBall;
+
             StartCoroutine(_playerMovement.StunPlayer(.2f));
 
             _fireballAbility.UseAbility(firePoint, direction);

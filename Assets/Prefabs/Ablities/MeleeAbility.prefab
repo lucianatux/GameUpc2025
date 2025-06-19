@@ -76,7 +76,7 @@ MonoBehaviour:
   lifetime: 3
   impactEffect: {fileID: 4759426950666235972, guid: 2614937cc480c8b4cbdcab89221a5635, type: 3}
   projectileSpeed: 0
-  damage: 5
+  damage: 4
   _canHitWalls: 0
 --- !u!70 &4413309930856299110
 CapsuleCollider2D:

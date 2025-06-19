@@ -10,13 +10,11 @@ public class FireballAbility : ProjectileAbility
 
     void Update()
     {
-        if (cooldownTimer > 0f)
-            cooldownTimer -= Time.deltaTime;
+
     }
 
     public override void UseAbility(Transform origin, Vector2 direction)
     {
-        if (!IsReady) return; // no disparar si está en cooldown
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle - 90f);
