@@ -17998,10 +17998,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7970957244704656834, guid: 8471811e03256cf49836477a47ab0332, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67586,6 +67582,10 @@ PrefabInstance:
     - target: {fileID: 3441991111698625846, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_Name
       value: Room1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441991111698625846, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: m_TagString
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: 3603909498865751026, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_Size.x
@@ -132624,7 +132624,7 @@ PrefabInstance:
     - target: {fileID: 2294512579693429740, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: lifeOrbPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.1
