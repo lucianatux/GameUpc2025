@@ -72,9 +72,10 @@ public class AbilityController : MonoBehaviour // This class handles the player'
         {
             _meleeAbility.UseAbility(firePoint, direction);
 
-            StartCoroutine(_playerMovement.StunPlayer(.5f));
+            StartCoroutine(_playerMovement.StunPlayer(.1f));
 
             animatorController.TriggerAnim("kick");
+            
             PlayerEventsManager.Instance.PlayerKick();
         }
         // LMB: bola de fuego

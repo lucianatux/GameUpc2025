@@ -75,6 +75,7 @@ public class BossAttackState : IEnemyState
     private IEnumerator BombAttack(float seconds)
     {
         bossAI.animator.ResetTrigger("idle");
+        EnemiesEventsManager.Instance.BossCherryBombs();
 
         bossAI.animator.SetTrigger("cherryattack");
 

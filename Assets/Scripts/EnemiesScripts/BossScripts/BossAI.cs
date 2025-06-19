@@ -151,6 +151,10 @@ public class BossAI : EnemyAI
     public override void EnemyTakeDamage()
     {
         base.EnemyTakeDamage();
+
+        EnemiesEventsManager.Instance.BossDamaged();
+
+
         animator.SetTrigger("damage");
     }
 

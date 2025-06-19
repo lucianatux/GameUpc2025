@@ -317,6 +317,9 @@ namespace StatePattern
             if (isDead) return;
             isDead = true;
 
+            EnemiesEventsManager.Instance.EnemyDefeated();
+
+
             animator.ResetTrigger("idle");
             animator.ResetTrigger("attack");
             animator.SetBool("isWalking", false);
@@ -358,10 +361,12 @@ namespace StatePattern
 
                 Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();       // Give the projectile a velocity so it moves in the intended direction.
                 rb.velocity = direction.normalized * projectileSpeed;
+                EnemiesEventsManager.Instance.EnemySodaAttack();
             }
             else
             {
                 GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, angle));
+                EnemiesEventsManager.Instance.EnemySwordAttack();
 
             }
             //Destroy(newBullet, 0.2f);
