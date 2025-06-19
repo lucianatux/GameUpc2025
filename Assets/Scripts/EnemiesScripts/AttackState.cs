@@ -94,7 +94,6 @@ namespace StatePattern
 
             if (enemyAI.attackTimer <= 0)
             {
-                enemyAI.attackTimer = attackCooldown;
                 enemyAI.StartCoroutine(CheckAttacking());
                 isAttacking = true;
                 Debug.Log("Enemy prepares attack");
@@ -108,20 +107,18 @@ namespace StatePattern
         {
             enemyAI.isStunned = true;
             enemyAI.animator.ResetTrigger("idle");
-
-            yield return new WaitForSeconds(.05f); // Delay before shooting
-
             enemyAI.ShowAlert("Warning");
-            yield return new WaitForSeconds(0.2f);
-            enemyAI.animator.SetTrigger("attack"); 
 
-            yield return new WaitForSeconds(.1f); // Delay before shooting
+            yield return new WaitForSeconds(0.2f);
+            if (enemyAI.IsDead) yield break;
+            enemyAI.animator.SetTrigger("attack"); 
             //enemyAI.isStunned = false;
 
-            enemyAI.animator.SetTrigger("idle");
             yield return new WaitForSeconds(.6f); // Delay before shooting
+            enemyAI.animator.SetTrigger("idle");
 
             isAttacking = false;
+            enemyAI.attackTimer = attackCooldown;
 
             Debug.Log("Enemy finishes attack");
         }
