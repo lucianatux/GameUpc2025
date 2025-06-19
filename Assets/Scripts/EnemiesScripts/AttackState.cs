@@ -111,10 +111,14 @@ namespace StatePattern
 
             yield return new WaitForSeconds(0.2f);
             if (enemyAI.IsDead) yield break;
-            enemyAI.animator.SetTrigger("attack"); 
+            enemyAI.animator.SetTrigger("attack");
+            if (enemyAI.IsDead) yield break;
+ 
             enemyAI.isStunned = false;
 
             yield return new WaitForSeconds(.9f); // Delay before shooting
+            if (enemyAI.IsDead) yield break;
+
             enemyAI.animator.SetTrigger("idle");
 
             isAttacking = false;
