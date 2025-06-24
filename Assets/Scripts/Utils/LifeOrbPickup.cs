@@ -30,7 +30,10 @@ public class LifeOrbPickup : MonoBehaviour
                 // Instancia efecto si existe
                 if (healEffect != null)
                 {
-                    Instantiate(healEffect, transform.position, Quaternion.identity);
+                    
+                    Vector3 spawnPos = other.transform.position + new Vector3(0, -0.6f, 0);
+                    Instantiate(healEffect, spawnPos, Quaternion.identity);
+
                 }
 
                 Destroy(gameObject); // Solo se destruye si curó algo

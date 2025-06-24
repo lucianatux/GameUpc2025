@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 25
-  healEffect: {fileID: 0}
+  healEffect: {fileID: 8649100759381485802, guid: 1d14ea59ce54d884b83572fce484b8b3, type: 3}
 --- !u!58 &4486355982118966690
 CircleCollider2D:
   m_ObjectHideFlags: 0
