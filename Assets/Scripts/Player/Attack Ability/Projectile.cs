@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     public int damage = 5;
 
     private Rigidbody2D _rb;
-    [SerializeField] bool _canHitWalls;
+    [SerializeField] bool canHitWalls;
 
     private void Start()
     {
@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
 
         }
 
-        if (impactEffect != null && _canHitWalls)   // If there's an impact effect assigned, spawn it at the projectile's current position.
+        if (impactEffect != null && canHitWalls)   // If there's an impact effect assigned, spawn it at the projectile's current position.
         {
             Instantiate(impactEffect, hitPoint, Quaternion.identity);
         }

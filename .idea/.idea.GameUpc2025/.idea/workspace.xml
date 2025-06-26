@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f0910e2b-b0ab-4046-a363-b1dacb1fc7e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameUpc2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MM_Pixel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MM_Pixel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/vfx_heal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ablities/vfx_heal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/lifeOrb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/lifeOrb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/LifeOrbPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LifeOrbPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/AbilityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attack Ability/Projectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +109,8 @@
       <workItem from="1750205720835" duration="6586000" />
       <workItem from="1750277117637" duration="352000" />
       <workItem from="1750361330060" duration="530000" />
-      <workItem from="1750782844264" duration="4770000" />
+      <workItem from="1750782844264" duration="5782000" />
+      <workItem from="1750790400899" duration="267000" />
     </task>
     <servers />
   </component>

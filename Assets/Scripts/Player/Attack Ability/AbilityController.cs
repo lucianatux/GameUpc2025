@@ -80,10 +80,10 @@ public class AbilityController : MonoBehaviour // This class handles the player'
         
         
         if (cooldownTimerFireBall > 0f)
-        cooldownTimerFireBall -= Time.deltaTime;   
+         cooldownTimerFireBall -= Time.deltaTime;   
            
         if (cooldownTimerKick > 0f)
-        cooldownTimerKick -= Time.deltaTime;  
+         cooldownTimerKick -= Time.deltaTime;  
       
         
         mousePos.z = 0f;
