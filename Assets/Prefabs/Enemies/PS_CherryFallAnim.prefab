@@ -4964,7 +4964,7 @@ MonoBehaviour:
   lifetime: 3
   impactEffect: {fileID: 0}
   projectileSpeed: 0
-  damage: 1
+  damage: 4
   _canHitWalls: 0
 --- !u!50 &7638144592407518685
 Rigidbody2D:

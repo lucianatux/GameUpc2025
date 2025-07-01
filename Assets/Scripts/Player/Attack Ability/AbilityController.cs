@@ -20,6 +20,7 @@ public class AbilityController : MonoBehaviour // This class handles the player'
     public float cooldownDurationFireBall = 1f;
     private float cooldownTimerFireBall = 0f;
     public bool IsReadyFireBall => cooldownTimerFireBall <= 0f;
+    private bool _isUnlockedFireBall = false;
 
     public float cooldownDurationKick = 2f;
     private float cooldownTimerKick = 0f;
@@ -117,17 +118,24 @@ public class AbilityController : MonoBehaviour // This class handles the player'
 
     private void ShootFireBall()
     {
-            if (!IsReadyFireBall) return; // no disparar si está en cooldown
+        if (!IsReadyFireBall || !_isUnlockedFireBall) return; // no disparar si está en cooldown
 
-            cooldownTimerFireBall = cooldownDurationFireBall;
+        cooldownTimerFireBall = cooldownDurationFireBall;
 
-            StartCoroutine(_playerMovement.StunPlayer(.2f));
+        StartCoroutine(_playerMovement.StunPlayer(.2f));
 
-            _fireballAbility.UseAbility(firePoint, direction);
-            animatorController.TriggerAnim("fireball");
-            PlayerEventsManager.Instance.PlayerFireball();
+        _fireballAbility.UseAbility(firePoint, direction);
+        animatorController.TriggerAnim("fireball");
+        PlayerEventsManager.Instance.PlayerFireball();
     }
 
+    //Gets called in Aji script
+    public void UnlockFireBall()
+    {
+        if (_isUnlockedFireBall == true) return;
+        Debug.Log("Unlñocks FireBall");
+        _isUnlockedFireBall = true;
+    }
 
 
 }
