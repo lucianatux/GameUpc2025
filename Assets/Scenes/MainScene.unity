@@ -2363,6 +2363,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3111459621580043759, guid: bc0910678a673aa4098af21b343d4048, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111459621580043759, guid: bc0910678a673aa4098af21b343d4048, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111459621580043759, guid: bc0910678a673aa4098af21b343d4048, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.56463695
+      objectReference: {fileID: 0}
+    - target: {fileID: 3111459621580043759, guid: bc0910678a673aa4098af21b343d4048, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.13
@@ -117539,6 +117555,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5278553956315549923, guid: 2a376dcb0ef804f40b11bc68fa7cf63b, type: 3}
   m_PrefabInstance: {fileID: 512738779}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1822917034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822917035}
+  m_Layer: 6
+  m_Name: FireBallPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1822917035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822917034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.31, y: 0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1777845583}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1830597548 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5429732470908254639, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
@@ -133363,6 +133410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 1375352090482533055, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1822917035}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.45
@@ -133441,7 +133492,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1822917035}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75468336585ee1f46b968d9358de8514, type: 3}
 --- !u!1660057539 &9223372036854775807
