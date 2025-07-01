@@ -14,6 +14,9 @@ public class Door : MonoBehaviour
     [Header("Room assignment")]
     public int roomID;
 
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject openEffect;
+
     [Header("Comportamiento especial")]
     [SerializeField] private bool neverAutoOpen = false;
     public bool NeverAutoOpen => neverAutoOpen;
@@ -57,6 +60,13 @@ public class Door : MonoBehaviour
         animator?.SetTrigger("Open");
         if (blockingCollider != null)
             blockingCollider.enabled = false;
+        
+          if (neverAutoOpen && openEffect != null)
+        {
+            Vector3 spawnPos = transform.position + new Vector3(0, 0, 0); 
+            Instantiate(openEffect, spawnPos, Quaternion.identity);
+            EnvironmentEventsManager.Instance?.LevelComplete(); 
+        }
     }
 
     public void Close()

@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7673564019531039144, guid: 55577a292bab3e34bbc7e51ca2c6df45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.487
+      value: 27.86
       objectReference: {fileID: 0}
     - target: {fileID: 7673564019531039144, guid: 55577a292bab3e34bbc7e51ca2c6df45, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62338,6 +62338,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 0}
   animator: {fileID: 0}
   roomID: 0
+  openEffect: {fileID: 3904060325429060418, guid: 94c1bfcfd41076a4f8584f634e366e75, type: 3}
   neverAutoOpen: 1
 --- !u!114 &952771945
 MonoBehaviour:
@@ -64613,6 +64614,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 0}
   animator: {fileID: 0}
   roomID: 0
+  openEffect: {fileID: 3904060325429060418, guid: 94c1bfcfd41076a4f8584f634e366e75, type: 3}
   neverAutoOpen: 1
 --- !u!61 &1251763403
 BoxCollider2D:
