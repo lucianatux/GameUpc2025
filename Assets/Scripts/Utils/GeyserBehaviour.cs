@@ -95,7 +95,7 @@ public class GeyserBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log("Charging... time left: " + chargingTimer.ToString("F2"));
+            //Debug.Log("Charging... time left: " + chargingTimer.ToString("F2"));
         }
     }
 

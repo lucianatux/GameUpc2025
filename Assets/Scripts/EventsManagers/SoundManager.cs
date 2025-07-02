@@ -181,4 +181,21 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("SoundManager: AudioClip is missing for one of the sounds!");
         }
     }
+
+    public void PauseMusic()
+    {
+        if (musicSource != null && musicSource.isPlaying)
+        {
+            musicSource.Pause();
+        }
+    }
+
+    public void ResumeMusic()
+    {
+        if (musicSource != null && !musicSource.isPlaying)
+        {
+            musicSource.UnPause();
+        }
+    }
+
 }

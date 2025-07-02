@@ -18,12 +18,15 @@ public class AbilityController : MonoBehaviour // This class handles the player'
     private PlayerMovement _playerMovement;
 
     public float cooldownDurationFireBall = 1f;
-    private float cooldownTimerFireBall = 0f;                                                                       
+    private float cooldownTimerFireBall = 0f;
     public bool IsReadyFireBall => cooldownTimerFireBall <= 0f;
+    private bool _isUnlockedFireBall = false;
 
     public float cooldownDurationKick = 2f;
     private float cooldownTimerKick = 0f;
     public bool IsReadyKick => cooldownTimerKick <= 0f;
+
+    private Vector2 direction;
 
     void Start()
     {
@@ -77,19 +80,19 @@ public class AbilityController : MonoBehaviour // This class handles the player'
         Input.mousePosition.y,
         _mainCamera.nearClipPlane
         ));
-        
-        
+
+
         if (cooldownTimerFireBall > 0f)
-         cooldownTimerFireBall -= Time.deltaTime;   
-           
+            cooldownTimerFireBall -= Time.deltaTime;
+
         if (cooldownTimerKick > 0f)
-         cooldownTimerKick -= Time.deltaTime;  
-      
-        
+            cooldownTimerKick -= Time.deltaTime;
+
+
         mousePos.z = 0f;
 
-        Vector2 direction = (mousePos - firePoint.position).normalized; // Calculate the direction from the firePoint to the mouse position.
-        
+        direction = (mousePos - firePoint.position).normalized; // Calculate the direction from the firePoint to the mouse position.
+
         // RMB: ataque melee
         if (Input.GetMouseButtonDown(0))
         {
@@ -109,15 +112,30 @@ public class AbilityController : MonoBehaviour // This class handles the player'
         // LMB: bola de fuego
         if (Input.GetMouseButtonDown(1))
         {
-            if (!IsReadyFireBall) return; // no disparar si está en cooldown
-
-            cooldownTimerFireBall = cooldownDurationFireBall;
-
-            StartCoroutine(_playerMovement.StunPlayer(.2f));
-
-            _fireballAbility.UseAbility(firePoint, direction);
-            animatorController.TriggerAnim("fireball");
-            PlayerEventsManager.Instance.PlayerFireball();
+            ShootFireBall();
         }
     }
+
+    private void ShootFireBall()
+    {
+        if (!IsReadyFireBall || !_isUnlockedFireBall) return; // no disparar si está en cooldown
+
+        cooldownTimerFireBall = cooldownDurationFireBall;
+
+        StartCoroutine(_playerMovement.StunPlayer(.2f));
+
+        _fireballAbility.UseAbility(firePoint, direction);
+        animatorController.TriggerAnim("fireball");
+        PlayerEventsManager.Instance.PlayerFireball();
+    }
+
+    //Gets called in Aji script
+    public void UnlockFireBall()
+    {
+        if (_isUnlockedFireBall == true) return;
+        Debug.Log("Unlñocks FireBall");
+        _isUnlockedFireBall = true;
+    }
+
+
 }

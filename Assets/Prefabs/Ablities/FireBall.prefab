@@ -4936,7 +4936,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.21117097
 --- !u!212 &5580648700105518522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5005,7 +5005,7 @@ MonoBehaviour:
   impactEffect: {fileID: 4495560292718922252, guid: 380dd6544f0485a439b44b3ec5963a21, type: 3}
   projectileSpeed: 3
   damage: 10
-  _canHitWalls: 1
+  canHitWalls: 0
 --- !u!1 &1884488061844918771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,7 +5123,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.3
-      minScalar: 0.5
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
