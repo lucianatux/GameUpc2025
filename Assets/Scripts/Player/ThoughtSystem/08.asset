@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf8a53350bc5b347a7525dfa318ad6f, type: 3}
   m_Name: 08
   m_EditorClassIdentifier: 
-  text: "Ricardo\u2026 te ca\xEDste antes del postre.\r\nNo es tu final, todav\xEDa
-    no.\r\n Quedaron bocados por repartir.\r\nAs\xED que abr\xED los ojos.\r\nTe
-    devuelvo la vida.\r\nUsala bien\u2026 o al menos, usala mejor.\r\n"
+  text: "Ricardo\u2026 te ca\xEDste antes del postre!\r\nNo es tu final, todav\xEDa
+    no.\r\r\r\nTe devuelvo la vida.\r\r\n"
   duration: 7
   destroyAfterShown: 1

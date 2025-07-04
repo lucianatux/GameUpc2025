@@ -7424,7 +7424,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.9926739, y: 4.251129}
@@ -8033,7 +8033,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.32828403, y: 0.38621902}
@@ -141060,6 +141060,22 @@ PrefabInstance:
       value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5429732470908254639, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
+      propertyPath: m_margin.w
+      value: -6.7436523
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429732470908254639, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
+      propertyPath: m_margin.x
+      value: -8.960449
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429732470908254639, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
+      propertyPath: m_margin.y
+      value: -10.115524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429732470908254639, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
+      propertyPath: m_margin.z
+      value: -6.5219727
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429732470908254639, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: a6ebdce74362b0e4b9ab46b431b58d6b, type: 2}
@@ -141117,19 +141133,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6089199492777436133, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1184.0464
+      value: 2300.3677
       objectReference: {fileID: 0}
     - target: {fileID: 6089199492777436133, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 163.2556
+      value: 355.6418
       objectReference: {fileID: 0}
     - target: {fileID: 6089199492777436133, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000019073
+      value: 5.0527954
       objectReference: {fileID: 0}
     - target: {fileID: 6089199492777436133, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 65.129395
+      value: 61.75757
       objectReference: {fileID: 0}
     - target: {fileID: 6606451150099471823, guid: e7fa5e6bc023cc54ba8176428b06f900, type: 3}
       propertyPath: m_Pivot.x
