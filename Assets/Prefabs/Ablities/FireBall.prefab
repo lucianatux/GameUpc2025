@@ -5005,7 +5005,7 @@ MonoBehaviour:
   impactEffect: {fileID: 4495560292718922252, guid: 380dd6544f0485a439b44b3ec5963a21, type: 3}
   projectileSpeed: 3
   damage: 10
-  canHitWalls: 0
+  canHitWalls: 1
 --- !u!1 &1884488061844918771
 GameObject:
   m_ObjectHideFlags: 0
