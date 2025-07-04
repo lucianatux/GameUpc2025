@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1147366841270434261}
   - component: {fileID: 1061020180277319324}
   - component: {fileID: 1451307465351408499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4901,7 +4901,7 @@ GameObject:
   - component: {fileID: 509617613400283321}
   - component: {fileID: 5410395658809812052}
   - component: {fileID: 4186431495740826345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9792,7 +9792,7 @@ GameObject:
   - component: {fileID: 8852560673597930553}
   - component: {fileID: 3699951574011841794}
   - component: {fileID: -1468813140520033626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: aji
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9974,7 +9974,7 @@ GameObject:
   - component: {fileID: 7804378902243165347}
   - component: {fileID: 5671026135401592174}
   - component: {fileID: 3111459621580043759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10260,7 +10260,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.9159052, b: 0.23113209, a: 0.1764706}
+      maxColor: {r: 0.8490566, g: 0.6463428, b: 0.28435388, a: 0.7882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10324,7 +10324,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 2.78
       minScalar: 1
       maxCurve:
         serializedVersion: 2
