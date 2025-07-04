@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf8a53350bc5b347a7525dfa318ad6f, type: 3}
-  m_Name: 02
+  m_Name: 06
   m_EditorClassIdentifier: 
-  text: "Est\xE1 cerrada! Necesito conseguir la llave..."
+  text: "PISTA: Un g\xE9iser no distingue aliados, \xFAsalo o s\xFAfrelo!"
   duration: 3
-  destroyAfterShown: 1
+  destroyAfterShown: 0

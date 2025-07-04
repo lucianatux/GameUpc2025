@@ -21,6 +21,18 @@ public class ThoughtManager : MonoBehaviour
 
     public void ShowThought(ThoughtSO thought)
     {
+         if (thought == null)
+        {
+            Debug.LogWarning("❌ ThoughtManager recibió un pensamiento nulo.");
+            return;
+        }
+
+        if (thoughtText == null || thoughtBubbleUI == null)
+        {
+            Debug.LogError("❌ ThoughtManager no tiene asignadas las referencias de UI.");
+            return;
+        }
+        
         Debug.Log("🧠 Mostrando pensamiento: " + thought.text);
         StopAllCoroutines(); // Por si ya se estaba mostrando uno
         StartCoroutine(DisplayThought(thought));

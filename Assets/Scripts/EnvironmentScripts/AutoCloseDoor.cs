@@ -77,7 +77,7 @@ public class AutoCloseDoor : MonoBehaviour
         if (doorAnimator != null)
         {
             doorAnimator.ResetTrigger("Close");
-            doorAnimator.Play("frontDoorOpen", 0); 
+            doorAnimator.Play("sideDoorOpen", 0); 
         }
 
         if (solidCollider != null)
