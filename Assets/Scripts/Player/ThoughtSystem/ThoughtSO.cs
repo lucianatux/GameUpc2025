@@ -8,4 +8,6 @@ public class ThoughtSO : ScriptableObject
     [TextArea]
     public string text;
     public float duration = 3f;
+    public bool destroyAfterShown = true; 
+
 }

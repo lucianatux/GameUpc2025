@@ -7,25 +7,31 @@ public class AutoOpenDoor : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private Animator doorAnimator;
 
-    private BoxCollider2D solidCollider;
+    [Header("Colliders hijos")]
+    [SerializeField] private Collider2D triggerCollider;     // Asignar el CapsuleCollider2D (isTrigger = true)
+    [SerializeField] private Collider2D solidCollider;       // Asignar el BoxCollider2D (isTrigger = false)
+
     private bool alreadyOpened = false;
 
     private void Awake()
     {
-        // Busca el BoxCollider2D no trigger en este GameObject
-        BoxCollider2D[] colliders = GetComponents<BoxCollider2D>();
-        foreach (var col in colliders)
+        if (solidCollider != null)
         {
-            if (!col.isTrigger)
-            {
-                solidCollider = col;
-                solidCollider.enabled = true; // Asegura que esté activado al inicio
-                Debug.Log("[Puerta] Collider sólido encontrado y ACTIVADO al inicio.");
-                break;
-            }
+            solidCollider.enabled = true;
+            Debug.Log("[Puerta] Collider sólido ACTIVADO al inicio.");
+        }
+        else
+        {
+            Debug.LogError("[Puerta] No se asignó el collider sólido.");
+        }
+
+        if (triggerCollider != null && !triggerCollider.isTrigger)
+        {
+            Debug.LogWarning("[Puerta] El collider de trigger no está marcado como isTrigger.");
         }
     }
-     private void OnEnable()
+
+    private void OnEnable()
     {
         PlayerHealth.OnPlayerDeath += ResetDoor;
     }
@@ -35,14 +41,14 @@ public class AutoOpenDoor : MonoBehaviour
         PlayerHealth.OnPlayerDeath -= ResetDoor;
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (alreadyOpened) return;
 
-        if (other.CompareTag(playerTag))
+        // Solo reaccionamos si este trigger es el que asignamos
+        if (triggerCollider != null && other.CompareTag(playerTag))
         {
-            Debug.Log("[Puerta] Jugador detectado. Abriendo puerta...");
+            Debug.Log("[Puerta] Jugador entró en trigger. Abriendo puerta...");
             OpenDoor();
         }
     }
@@ -54,10 +60,6 @@ public class AutoOpenDoor : MonoBehaviour
             doorAnimator.SetTrigger("Open");
             Debug.Log("[Puerta] Trigger 'Open' enviado al Animator.");
         }
-        else
-        {
-            Debug.LogWarning("[Puerta] Animator no asignado.");
-        }
 
         if (solidCollider != null)
         {
@@ -67,7 +69,8 @@ public class AutoOpenDoor : MonoBehaviour
 
         alreadyOpened = true;
     }
-     private void ResetDoor()
+
+    private void ResetDoor()
     {
         Debug.Log("[Puerta] Reiniciando estado (por muerte del jugador)");
 

@@ -5,19 +5,28 @@ using UnityEngine;
 public class ThoughtTrigger : MonoBehaviour
 {
     public ThoughtSO thought;
-    public bool triggerOnce = true;
-
-    private bool hasTriggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!hasTriggered && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
+            if (thought == null)
+            {
+                Debug.LogWarning($"❌ ThoughtTrigger en {gameObject.name} no tiene asignado un ThoughtSO.");
+                return;
+            }
+
+            if (ThoughtManager.Instance == null)
+            {
+                Debug.LogWarning("❌ No hay ThoughtManager activo en la escena.");
+                return;
+            }
+
             Debug.Log("🧠 Trigger activado por el jugador. Pensamiento: " + thought.text);
             ThoughtManager.Instance.ShowThought(thought);
 
-            if (triggerOnce)
-                hasTriggered = true;
+            if (thought.destroyAfterShown)
+                Destroy(gameObject);
         }
     }
 }

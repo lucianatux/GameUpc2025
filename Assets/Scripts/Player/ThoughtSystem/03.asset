@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf8a53350bc5b347a7525dfa318ad6f, type: 3}
-  m_Name: 02
+  m_Name: 03
   m_EditorClassIdentifier: 
-  text: "Est\xE1 cerrada! Necesito conseguir la llave..."
-  duration: 3
-  destroyAfterShown: 1
+  text: "C: Croar\nClick izq: Patada\nClick der: Pronto ver\xE1s!"
+  duration: 4
+  destroyAfterShown: 0
