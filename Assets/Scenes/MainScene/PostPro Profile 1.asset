@@ -15,13 +15,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.94026613, y: 0.9091783, z: 1, w: -0.068434566}
+    m_Value: {x: 0.94026613, y: 0.9091783, z: 1, w: -0.051325925}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9686121, z: 0.9148802, w: 0.47904187}
+    m_Value: {x: 1, y: 0.9686121, z: 0.9148802, w: 0.40205285}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.10265183}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.23952089}
 --- !u!114 &-6257266380006839084
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -37,7 +37,7 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0.248
+    m_Value: 0.122
   cropToFit:
     m_OverrideState: 1
     m_Value: 1
@@ -285,8 +285,8 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {x: 0.9933668, y: 1, z: 0.94148403, w: 0.035304505}
   highlights:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: -0.017652253}
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.035304505}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0.06
