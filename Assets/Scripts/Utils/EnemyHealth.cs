@@ -8,7 +8,7 @@ public class EnemyHealth : LifeSystem
 {
     // === Drop Settings ===
     [SerializeField] private GameObject lifeOrbPrefab;                      // Prefab to instantiate on death
-    [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.3f; // Chance to drop the orb
+    [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.2f; // Chance to drop the orb
 
     // === Components ===
     private Rigidbody2D rb;

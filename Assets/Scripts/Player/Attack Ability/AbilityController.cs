@@ -17,12 +17,12 @@ public class AbilityController : MonoBehaviour // This class handles the player'
 
     private PlayerMovement _playerMovement;
 
-    public float cooldownDurationFireBall = 1f;
+    public float cooldownDurationFireBall = 0.5f;
     private float cooldownTimerFireBall = 0f;
     public bool IsReadyFireBall => cooldownTimerFireBall <= 0f;
     private bool _isUnlockedFireBall = false;
 
-    public float cooldownDurationKick = 2f;
+    public float cooldownDurationKick = 1f;
     private float cooldownTimerKick = 0f;
     public bool IsReadyKick => cooldownTimerKick <= 0f;
 
@@ -43,7 +43,7 @@ public class AbilityController : MonoBehaviour // This class handles the player'
 
         if (fireballAbilityObject == null)
         {
-            Debug.LogError("Fireball ability prefan not found");
+            Debug.LogError("Fireball ability prefab not found");
         }
 
         _fireballAbility = GetComponent<FireballAbility>();
@@ -122,7 +122,7 @@ public class AbilityController : MonoBehaviour // This class handles the player'
 
         cooldownTimerFireBall = cooldownDurationFireBall;
 
-        StartCoroutine(_playerMovement.StunPlayer(.2f));
+        StartCoroutine(_playerMovement.StunPlayer(.1f));
 
         _fireballAbility.UseAbility(firePoint, direction);
         animatorController.TriggerAnim("fireball");
@@ -133,7 +133,7 @@ public class AbilityController : MonoBehaviour // This class handles the player'
     public void UnlockFireBall()
     {
         if (_isUnlockedFireBall == true) return;
-        Debug.Log("Unlñocks FireBall");
+        Debug.Log("Unlocks FireBall");
         _isUnlockedFireBall = true;
     }
 

@@ -37,7 +37,7 @@ public class PlayerHealth : LifeSystem
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
-        StartCoroutine(_playerMovement.StunPlayer(.15f));
+        StartCoroutine(_playerMovement.StunPlayer(.1f));
 
 
         if (_playerAnimator != null)
