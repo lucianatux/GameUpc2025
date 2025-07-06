@@ -325,6 +325,10 @@ PrefabInstance:
       propertyPath: roomID
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.630814
@@ -1490,6 +1494,10 @@ PrefabInstance:
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24501,6 +24509,10 @@ PrefabInstance:
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
@@ -68268,6 +68280,10 @@ PrefabInstance:
       propertyPath: roomID
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.652336
@@ -69176,6 +69192,10 @@ PrefabInstance:
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
@@ -73035,7 +73055,7 @@ MonoBehaviour:
   roomID: 13
   currentWave: 0
   maxWaves: 1
-  isCheckpointRoom: 0
+  isCheckpointRoom: 1
 --- !u!4 &1408794163
 Transform:
   m_ObjectHideFlags: 0
@@ -73105,6 +73125,10 @@ PrefabInstance:
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
@@ -73616,6 +73640,10 @@ PrefabInstance:
       propertyPath: roomID
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.235287
@@ -74053,6 +74081,10 @@ PrefabInstance:
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
@@ -74917,6 +74949,10 @@ PrefabInstance:
       propertyPath: roomID
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.610703
@@ -75138,6 +75174,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
+      propertyPath: isCheckpointRoom
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7995993442501319280, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
