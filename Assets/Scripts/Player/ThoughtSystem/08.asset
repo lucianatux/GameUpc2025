@@ -15,4 +15,4 @@ MonoBehaviour:
   text: "Ricardo\u2026 te ca\xEDste antes del postre!\r\nNo es tu final, todav\xEDa
     no.\r\r\r\nTe devuelvo la vida.\r\r\n"
   duration: 7
-  destroyAfterShown: 1
+  destroyAfterShown: 0

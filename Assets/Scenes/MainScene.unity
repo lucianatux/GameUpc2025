@@ -27153,6 +27153,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7535363083179653887, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
   m_PrefabInstance: {fileID: 954415479503173649}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &809694978 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 558284437154984258, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
+  m_PrefabInstance: {fileID: 954415479503173649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &813869192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6459507837004757928, guid: 9dae700b103da5b429906e991ec89794, type: 3}
@@ -140665,17 +140670,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3160572157180406783, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 809694978}
     - target: {fileID: 4846670854266395956, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
       propertyPath: m_Name
       value: teratoma
       objectReference: {fileID: 0}
     - target: {fileID: 7535363083179653887, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -102.24
+      value: -102
       objectReference: {fileID: 0}
     - target: {fileID: 7535363083179653887, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.38
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7535363083179653887, guid: 4f8eeaa2017d52c4492abe523c2a50c6, type: 3}
       propertyPath: m_LocalPosition.z

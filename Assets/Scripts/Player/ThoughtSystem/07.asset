@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 07
   m_EditorClassIdentifier: 
   text: OMG! Necesito tres llaves para abrir esta puerta!
-  duration: 5
-  destroyAfterShown: 1
+  duration: 3
+  destroyAfterShown: 0
