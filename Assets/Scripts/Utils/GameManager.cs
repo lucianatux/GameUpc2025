@@ -1,22 +1,19 @@
+using System.Collections; // ✅ NECESARIO para IEnumerator
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Singleton que gestiona el estado general del juego, incluyendo muertes del jugador.
-/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [Header("Configuración de juego")]
-    [SerializeField] private string mainMenuSceneName = "Menu"; 
+    [SerializeField] private string mainMenuSceneName = "Menu";
     [SerializeField] private int maxDeathsBeforeReset = 4;
 
     private int _currentDeathCount = 0;
 
     private void Awake()
     {
-        // Asegurar que solo haya un GameManager
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -24,16 +21,13 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // Mantener el GameManager entre escenas
+        DontDestroyOnLoad(gameObject);
     }
 
-    /// <summary>
-    /// Llama esto cuando el jugador muere.
-    /// </summary>
     public void RegisterDeath()
     {
         _currentDeathCount++;
-        Debug.Log($"Muertes acumuladas: {_currentDeathCount}");
+        Debug.Log($"[GameManager] Muertes acumuladas: {_currentDeathCount}");
 
         if (_currentDeathCount >= maxDeathsBeforeReset)
         {
@@ -41,19 +35,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Reinicia el juego cargando el menú principal y reseteando muertes.
-    /// </summary>
     private void ResetToMainMenu()
     {
-        _currentDeathCount = 0;
-        Debug.Log("Límite de muertes alcanzado. Volviendo al menú principal.");
+        StartCoroutine(LoadMenuWithDelay());
+    }
+
+    private IEnumerator LoadMenuWithDelay()
+    {
+        Debug.Log("[GameManager] Esperando antes de cargar el menú...");
+        yield return new WaitForSeconds(1.6f);
         SceneManager.LoadScene(mainMenuSceneName);
     }
 
-    /// <summary>
-    /// por las dudas haya que cambiar algo
-    /// </summary>
     public void ResetDeathCount()
     {
         _currentDeathCount = 0;

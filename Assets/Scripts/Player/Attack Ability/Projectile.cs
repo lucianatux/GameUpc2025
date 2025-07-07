@@ -57,7 +57,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
             if (enemyHealth != null) enemyHealth.TakeDamage(damage);
             else Debug.LogError("enemy health not found");
 
-            // Instancia el efecto en ese punto            
+            // Instancia el efecto en ese punto
             if (impactEffect != null)   // If there's an impact effect assigned, spawn it at the projectile's current position.
             {
                 Instantiate(impactEffect, hitPoint, Quaternion.identity);
