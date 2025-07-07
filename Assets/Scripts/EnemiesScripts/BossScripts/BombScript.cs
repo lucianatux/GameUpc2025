@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// Controls the behavior of a bomb: falling animation, enabling collision, fall damage,
@@ -11,59 +12,81 @@ public class BombScript : MonoBehaviour
     private Collider2D col;
     private Rigidbody2D rb;
 
+    [SerializeField] Transform playerTransform;
+    private NavMeshAgent agent;
+
+    [SerializeField] private float closeSpeed = 5;
+    [SerializeField] private float mediumSpeed = 7;
+    [SerializeField] private float farSpeed = 10;
+
+
+    private bool canChase;
     [SerializeField] private int damage;
     private Vector3 originalPosition;
     private PlayerHealth PlayerHealth;
+
     [Tooltip("Prefab instantiated when the bomb hits the ground.")]
     [SerializeField] private GameObject fallPrefab;
 
     [Tooltip("Prefab instantiated when the bomb explodes.")]
     [SerializeField] private GameObject explosionPrefab;
+    
+
 
     //Set references and components
     private void Awake()
     {
-        //get original position
-        //originalPosition = transform.position;
-        /*
-        rb = GetComponent<Rigidbody2D>();
 
-        if (rb == null) Debug.LogError(this + " : Rigidbody2D not found");
+        agent = GetComponent<NavMeshAgent>();
 
-        col = GetComponent<Collider2D>();
-
-        if (col == null)
+        if (agent == null)
         {
-            Debug.LogError(this + " : Collider2D not found");
+            Debug.LogError("agent component not found");
         }
-        else
-        {
-            col.enabled = false;
-        }
-        */
+
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
     }
 
     //Called when BossAI enables it
     private void OnEnable()
     {
+
+
         originalPosition = transform.position;
         // Reset position and start the fall animation
-        //transform.position = originalPosition;
+        transform.position = originalPosition;
+        canChase = true;
         //StartCoroutine(BombFall(1f));
     }
 
     void Update()
     {
-        transform.position = originalPosition;
+        if (GetDistanceToPlayer() >= 0 && GetDistanceToPlayer() < 4)
+        {
+            agent.speed = closeSpeed;
+        }
+        else if (GetDistanceToPlayer() >= 4 && GetDistanceToPlayer() < 13)
+        {
+            agent.speed = mediumSpeed;
+        }
+        else if (GetDistanceToPlayer() >= 13)
+        {
+            agent.speed = farSpeed;
+        }
+        if (!canChase) return;
+            
+        agent.SetDestination(playerTransform.position);
+
+        // transform.position = originalPosition;
     }
     //Bomb Falling CoRoutine
 
     //methods called in animator
     private void FallingDamage()
     {
-
-        Instantiate(fallPrefab, originalPosition, Quaternion.identity);
-
+        Instantiate(fallPrefab, transform.position, Quaternion.identity);
     }
 
     private void ExplosionDamage()
@@ -72,7 +95,11 @@ public class BombScript : MonoBehaviour
         StartCoroutine((BombExplosion(0f)));
     }
 
-
+    private void StopChase()
+    {
+        agent.ResetPath();
+        canChase = false;
+    }
 
     //Bomb Explosion CoRoutine
     private IEnumerator BombExplosion(float delay)
@@ -84,7 +111,16 @@ public class BombScript : MonoBehaviour
 
         Debug.Log("Disable bomb: " + this);
 
-        //transform.position = originalPosition;
+    }
+    public float GetDistanceToPlayer()
+    {
+        //if (playerTransform == null) return 0f;
+        return Vector2.Distance(transform.position, playerTransform.position);
+    }
+    private void DisableBomb()
+    {
+
+        transform.position = originalPosition;
         gameObject.SetActive(false); //Disable to enable again if needed
     }
 

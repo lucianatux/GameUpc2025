@@ -91,7 +91,7 @@ public class GeyserBehaviour : MonoBehaviour
         {
             isCharged = true;
             animator.SetBool("isCharged", true);
-            Debug.Log("Geyser is now charged.");
+//            Debug.Log("Geyser is now charged.");
         }
         else
         {

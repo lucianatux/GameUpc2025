@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5662b5ce73dec944b5f10ada163ad8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 4
+  attackRange: 7
   walkableLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -215,6 +215,7 @@ MonoBehaviour:
   roomID: 13
   isActive: 0
   attentionTimer: 0
+  isDead: 0
   isDistance: 0
   projectileSpeed: 0
   chargeVelocity: 0
@@ -306,6 +307,7 @@ GameObject:
   - component: {fileID: 905100713211294099}
   - component: {fileID: 8828601714424467108}
   - component: {fileID: 4409007337978274218}
+  - component: {fileID: 2380495176023331856}
   m_Layer: 7
   m_Name: Bomb1
   m_TagString: Untagged
@@ -322,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 2257032642361103880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.14, y: -1.29, z: 0}
+  m_LocalPosition: {x: 5.14, y: 0.14000034, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -367,6 +369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  closeSpeed: 5
+  mediumSpeed: 7
+  farSpeed: 10
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -450,7 +456,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2257032642361103880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -485,7 +491,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2257032642361103880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -520,7 +526,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2257032642361103880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -548,6 +554,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0000000050484914, y: 0.04234982}
   m_Size: {x: 2.274231, y: 1.4117076}
   m_Direction: 1
+--- !u!195 &2380495176023331856
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257032642361103880}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.51
+  m_Speed: 7
+  m_Acceleration: 10
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.84
+  m_BaseOffset: 0.92
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3904321289957592817
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +589,7 @@ GameObject:
   - component: {fileID: 7726485372018791957}
   - component: {fileID: 401247357889230659}
   - component: {fileID: 8106746017295559618}
+  - component: {fileID: 7407773358844254573}
   m_Layer: 7
   m_Name: Bomb2
   m_TagString: Untagged
@@ -577,7 +606,7 @@ Transform:
   m_GameObject: {fileID: 3904321289957592817}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.21, y: -4.18, z: 0}
+  m_LocalPosition: {x: 4.21, y: -3.03, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -622,6 +651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  closeSpeed: 5
+  mediumSpeed: 7
+  farSpeed: 10
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -698,6 +731,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!195 &7407773358844254573
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904321289957592817}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.51
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.84
+  m_BaseOffset: 0.92
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4091239498378411447
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +766,7 @@ GameObject:
   - component: {fileID: 6147848477283111925}
   - component: {fileID: 4844264014766230020}
   - component: {fileID: 1397470852645390321}
+  - component: {fileID: 7138442152744248152}
   m_Layer: 7
   m_Name: Bomb5
   m_TagString: Untagged
@@ -727,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 4091239498378411447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.37, y: -1.5, z: 0}
+  m_LocalPosition: {x: -6.37, y: -0.07, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -772,6 +828,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  closeSpeed: 5
+  mediumSpeed: 7
+  farSpeed: 10
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -848,6 +908,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!195 &7138442152744248152
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091239498378411447}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.51
+  m_Speed: 7
+  m_Acceleration: 10
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.84
+  m_BaseOffset: 0.92
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4619318544585368629
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +943,7 @@ GameObject:
   - component: {fileID: 6568962940057198680}
   - component: {fileID: 7146401671842208380}
   - component: {fileID: 6343151288489733700}
+  - component: {fileID: 8607111732890451446}
   m_Layer: 7
   m_Name: Bomb4
   m_TagString: Untagged
@@ -877,7 +960,7 @@ Transform:
   m_GameObject: {fileID: 4619318544585368629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.11, y: -4.22, z: 0}
+  m_LocalPosition: {x: -5.11, y: -3.0699983, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -922,6 +1005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  closeSpeed: 5
+  mediumSpeed: 7
+  farSpeed: 10
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -998,6 +1085,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!195 &8607111732890451446
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619318544585368629}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.51
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.84
+  m_BaseOffset: 0.92
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5706833382698284394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1120,7 @@ GameObject:
   - component: {fileID: 6654187124665968248}
   - component: {fileID: 4918766790933738555}
   - component: {fileID: 3530021363549269398}
+  - component: {fileID: 5069958386756388549}
   m_Layer: 7
   m_Name: Bomb3
   m_TagString: Untagged
@@ -1072,6 +1182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d712b6327a120419fe5d4065950833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  closeSpeed: 5
+  mediumSpeed: 7
+  farSpeed: 10
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -1148,6 +1262,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!195 &5069958386756388549
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706833382698284394}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.51
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.84
+  m_BaseOffset: 0.92
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &9095423028383682045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,9 +1349,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2090589, y: -0.89761907}
-  m_Size: {x: 4.6562767, y: 3.8917346}
-  m_Direction: 1
+  m_Offset: {x: -0.2090589, y: 0.15}
+  m_Size: {x: 4.97, y: 6.51}
+  m_Direction: 0
 --- !u!50 &7495816930195022916
 Rigidbody2D:
   serializedVersion: 4

@@ -23238,8 +23238,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: -0.375
+    y: -0.33333334
     width: 1
     height: 1
   near clip plane: 0.3
@@ -24012,6 +24012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4338062964822296250, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
     - target: {fileID: 4710747942099703744, guid: 8471811e03256cf49836477a47ab0332, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.082158
@@ -24052,6 +24056,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6147848477283111925, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
+    - target: {fileID: 6568962940057198680, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
+    - target: {fileID: 6654187124665968248, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
+    - target: {fileID: 7726485372018791957, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72110,7 +72130,7 @@ MonoBehaviour:
   geyserEruptClip: {fileID: 8300000, guid: f530350c77105554187ef3449a70338d, type: 3}
   acidRiverSplashClip: {fileID: 8300000, guid: b81827f476b69c947976461626db24c2, type: 3}
   acidRiverFlowClip: {fileID: 8300000, guid: 5ddebfafc773b064b9ec6bf54747be82, type: 3}
-  keyCollectedClip: {fileID: 8300000, guid: 1c4b521824d05c7449067275cf0017ae, type: 3}
+  keyCollectedClip: {fileID: 8300000, guid: d6ae63fa85d711b4188c56a9095c76aa, type: 3}
   keyUsedClip: {fileID: 8300000, guid: 87688422734ddc14884fdb2715940d04, type: 3}
   pepperCollectedClip: {fileID: 8300000, guid: f502388b03f475f43b4828e52383430c, type: 3}
   teratomaInteractClip: {fileID: 8300000, guid: 0779540162df69a479346d2823a9066d, type: 3}
