@@ -32,10 +32,9 @@ public class Aji : MonoBehaviour
         {
             abilityController = collision.GetComponent<AbilityController>();
             Debug.Log("aji touchesPlayer");
+            EnvironmentEventsManager.Instance.PepperCollected();
             abilityController.UnlockFireBall();
             Destroy(gameObject);
-            
             }
     }
-
 }

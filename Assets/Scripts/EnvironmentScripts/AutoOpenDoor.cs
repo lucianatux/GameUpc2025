@@ -36,6 +36,7 @@ public class AutoOpenDoor : MonoBehaviour
         if (doorAnimator != null)
         {
             doorAnimator.SetTrigger("Open");
+            EnvironmentEventsManager.Instance?.DoorOpen(); 
             Debug.Log("[AutoOpenDoor] Animación 'Open' disparada.");
         }
 
