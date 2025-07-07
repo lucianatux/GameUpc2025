@@ -113,7 +113,9 @@ public class PlayerHealth : LifeSystem
         {
             Debug.LogError("playerInputHandler not found on Player.");
         }
-
+        
+        GameManager.Instance?.RegisterDeath();
+        
         PlayerEventsManager.Instance?.PlayerDeath();
         
         OnPlayerDeath?.Invoke();

@@ -12,7 +12,8 @@ public class MenuSystem : MonoBehaviour
     public void Play()
     
     {
-       
+        GameManager.Instance?.ResetDeathCount();
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Debug.Log("Jugando");
     }
