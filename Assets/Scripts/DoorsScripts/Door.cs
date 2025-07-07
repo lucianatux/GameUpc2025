@@ -58,6 +58,7 @@ public class Door : MonoBehaviour
 
         _isOpen = true;
         animator?.SetTrigger("Open");
+        EnvironmentEventsManager.Instance?.DoorOpen(); 
         if (blockingCollider != null)
             blockingCollider.enabled = false;
         
@@ -75,6 +76,7 @@ public class Door : MonoBehaviour
 
         _isOpen = false;
         animator?.SetTrigger("Close");
+        EnvironmentEventsManager.Instance?.DoorClose(); 
         if (blockingCollider != null)
             blockingCollider.enabled = true;
     }

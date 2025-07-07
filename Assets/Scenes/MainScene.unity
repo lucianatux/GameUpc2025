@@ -72110,7 +72110,7 @@ MonoBehaviour:
   geyserEruptClip: {fileID: 8300000, guid: f530350c77105554187ef3449a70338d, type: 3}
   acidRiverSplashClip: {fileID: 8300000, guid: b81827f476b69c947976461626db24c2, type: 3}
   acidRiverFlowClip: {fileID: 8300000, guid: 5ddebfafc773b064b9ec6bf54747be82, type: 3}
-  keyCollectedClip: {fileID: 8300000, guid: 1c4b521824d05c7449067275cf0017ae, type: 3}
+  keyCollectedClip: {fileID: 8300000, guid: d6ae63fa85d711b4188c56a9095c76aa, type: 3}
   keyUsedClip: {fileID: 8300000, guid: 87688422734ddc14884fdb2715940d04, type: 3}
   pepperCollectedClip: {fileID: 8300000, guid: f502388b03f475f43b4828e52383430c, type: 3}
   teratomaInteractClip: {fileID: 8300000, guid: 0779540162df69a479346d2823a9066d, type: 3}

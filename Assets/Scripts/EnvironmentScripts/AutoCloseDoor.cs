@@ -54,6 +54,8 @@ public class AutoCloseDoor : MonoBehaviour
         {
             Debug.Log("[Puerta] Trigger de animación enviado.");
             doorAnimator.SetTrigger("Close");
+            EnvironmentEventsManager.Instance?.DoorClose(); 
+
         }
         else
         {
