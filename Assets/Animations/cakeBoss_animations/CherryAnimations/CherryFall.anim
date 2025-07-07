@@ -22,21 +22,21 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 422883666, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.11666667
+    - time: 0.13333334
       value: {fileID: 706508363, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.23333333
+    - time: 0.36666667
       value: {fileID: 1721120140, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.33333334
-      value: {fileID: 679769844, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.43333334
-      value: {fileID: 443655980, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
     - time: 0.53333336
-      value: {fileID: 1296263529, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.6166667
-      value: {fileID: 609357297, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+      value: {fileID: 679769844, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+    - time: 0.6333333
+      value: {fileID: 443655980, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
     - time: 0.73333335
+      value: {fileID: 1296263529, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+    - time: 0.8333333
+      value: {fileID: 609357297, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+    - time: 0.93333334
       value: {fileID: -552312534, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.85
+    - time: 1.05
       value: {fileID: 1716897880, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
     attribute: m_Sprite
     path: 
@@ -74,7 +74,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8666667
+    m_StopTime: 1.0666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -95,6 +95,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.53333336
+    functionName: StopChase
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
     functionName: FallingDamage
     data: 
     objectReferenceParameter: {fileID: 0}

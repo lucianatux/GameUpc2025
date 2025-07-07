@@ -94,7 +94,7 @@ public class BossAI : EnemyAI
     /// </summary>
     public bool GetPlayerInSight()
     {
-        float detectionRadius = 8f; // Radio del círculo de detección
+        float detectionRadius = attackRange; // Radio del círculo de detección
         Vector2 detectionCenter = transform.position + Vector3.down * 1f; // Opcional: ajustar altura
         int playerLayer = 1 << LayerMask.NameToLayer("Player");
 

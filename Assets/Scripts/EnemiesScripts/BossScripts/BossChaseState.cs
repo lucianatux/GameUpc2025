@@ -44,7 +44,7 @@ public class BossChaseState : IEnemyState
     public void UpdateState()
     {
         isInAttackSight = bossAI.GetPlayerInSight();
-        Debug.Log(isInAttackSight);
+       // Debug.Log(isInAttackSight);
 
         bossAI.ChaseHorizontally(playerTransform); // Follow the player horizontally
         Debug.Log("Chase update");
