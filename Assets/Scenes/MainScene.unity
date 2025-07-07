@@ -23238,8 +23238,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: -0.375
+    y: -0.33333334
     width: 1
     height: 1
   near clip plane: 0.3
@@ -24012,6 +24012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4338062964822296250, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
     - target: {fileID: 4710747942099703744, guid: 8471811e03256cf49836477a47ab0332, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.082158
@@ -24052,6 +24056,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6147848477283111925, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
+    - target: {fileID: 6568962940057198680, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
+    - target: {fileID: 6654187124665968248, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
+    - target: {fileID: 7726485372018791957, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1777845583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
