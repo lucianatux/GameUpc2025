@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 
 public class AbilityController : MonoBehaviour // This class handles the player's abilities, such as melee and ranged (e.g., fireball) attacks.
 {

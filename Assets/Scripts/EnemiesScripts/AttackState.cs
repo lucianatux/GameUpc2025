@@ -16,6 +16,7 @@ namespace StatePattern
         private Transform playerTransform;
         private Transform weaponTransform;
         private GameObject bulletPrefab;
+        private float distToPlayer;
 
         // State flag
         public bool isAttacking = false;
@@ -67,14 +68,14 @@ namespace StatePattern
                 return;
             }
 
-            float distToPlayer = enemyAI.GetDistanceToPlayer();
+            distToPlayer = enemyAI.GetDistanceToPlayer();
 
             if (distToPlayer <= attackRange)
             {
                 Attack();
             }
 
-            else
+            else if (distToPlayer > attackRange && !isAttacking)
             {
                 enemyAI.animator.ResetTrigger("idle");
                 enemyAI.animator.SetBool("isWalking", true);
@@ -109,22 +110,36 @@ namespace StatePattern
             enemyAI.animator.ResetTrigger("idle");
             enemyAI.ShowAlert("Warning");
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
             if (enemyAI.IsDead) yield break;
             enemyAI.animator.SetTrigger("attack");
             if (enemyAI.IsDead) yield break;
- 
-            enemyAI.isStunned = false;
+
+            yield return new WaitForSeconds(0.1f);
+
+
 
             yield return new WaitForSeconds(.9f); // Delay before shooting
             if (enemyAI.IsDead) yield break;
+            enemyAI.isStunned = false;
 
             enemyAI.animator.SetTrigger("idle");
 
             isAttacking = false;
             enemyAI.attackTimer = attackCooldown;
 
+
+
+
             Debug.Log("Enemy finishes attack");
+            
+               if (distToPlayer > attackRange && !isAttacking)
+            {
+                enemyAI.animator.ResetTrigger("idle");
+                enemyAI.animator.SetBool("isWalking", true);
+
+                enemyAI.SetState(enemyAI.enemyChaseState);
+            }
         }
 
         /// <summary>

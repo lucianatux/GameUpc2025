@@ -192,7 +192,7 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 0
-  attackCooldown: 4
+  attackCooldown: 1.5
   bulletPrefab: {fileID: 8045203721785702592, guid: 67a24f38a93d09746a9f323dd3ec1213, type: 3}
   weaponTransform: {fileID: 4679960022692193404}
   attackTimer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   col: {fileID: 0}
   flashDuration: 0.1
   isStunned: 0
-  stunDuration: 0.25
+  stunDuration: 0.1
   _waveID: 1
   roomID: 2
   isActive: 0
@@ -226,7 +226,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 2
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2411dcf0369fd6249be4f139d943804c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 30
   invulnerabilityTime: 0.1
   canHeal: 0
   lifeOrbPrefab: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}

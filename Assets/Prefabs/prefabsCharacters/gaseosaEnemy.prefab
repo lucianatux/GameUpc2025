@@ -236,7 +236,7 @@ MonoBehaviour:
   col: {fileID: 0}
   flashDuration: 0.1
   isStunned: 0
-  stunDuration: 0.25
+  stunDuration: 0.1
   _waveID: 1
   roomID: 3
   isActive: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2411dcf0369fd6249be4f139d943804c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 25
   invulnerabilityTime: 0.1
   canHeal: 0
   lifeOrbPrefab: {fileID: 8637423102636732171, guid: d7218e36bc404014da3693061c7138f3, type: 3}
