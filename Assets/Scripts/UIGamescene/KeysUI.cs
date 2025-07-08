@@ -16,6 +16,7 @@ public class KeysUI : MonoBehaviour
     {
         if (EnvironmentEventsManager.Instance != null)
         {
+            EnvironmentEventsManager.Instance.OnKeyCollected -= OnKeyCollected;
             EnvironmentEventsManager.Instance.OnKeyCollected += OnKeyCollected;
             EnvironmentEventsManager.Instance.OnEndPlayground += OnEndPlaygroundReached;
             EnvironmentEventsManager.Instance.OnEndMiddlePart += OnEndMiddlePartReached;

@@ -51,6 +51,7 @@ public class AutoOpenDoor : MonoBehaviour
 
     public void ResetDoor()
     {
+        return;
         Debug.Log("[AutoOpenDoor] Reiniciando estado de la puerta.");
 
         if (doorAnimator != null)

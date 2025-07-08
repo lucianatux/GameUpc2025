@@ -73,6 +73,7 @@ public class AutoCloseDoor : MonoBehaviour
 
     private void ResetDoor()
     {
+        return; //probando que no se reseteen las puertas
         Debug.Log("[Puerta] Reiniciando estado (por muerte del jugador)");
 
         // Volver al estado inicial (abierta)
