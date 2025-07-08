@@ -102,6 +102,13 @@ public class EnemyHealth : LifeSystem
 
         TrySpawnLifeOrb(); // possibly drops a Life Orb
         EnemiesEventsManager.Instance?.EnemyDefeated();; // Notify Enemies events Manager
+
+        BossDeathHandler bossHandler = GetComponent<BossDeathHandler>();//si es el boss llama a BossDeath Handler
+        if (bossHandler != null)
+        {
+            bossHandler.OnBossDefeated();
+        }
+
     }
 
     /// <summary>
