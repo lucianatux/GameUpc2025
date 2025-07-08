@@ -24079,6 +24079,10 @@ PrefabInstance:
       propertyPath: isBoss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8336032641109631583, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: maxHealth
+      value: 105
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74224,19 +74228,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3603909498865751026, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_Size.x
-      value: 16.3013
+      value: 17.191986
       objectReference: {fileID: 0}
     - target: {fileID: 3603909498865751026, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_Size.y
-      value: 8.745371
+      value: 8.932497
       objectReference: {fileID: 0}
     - target: {fileID: 3603909498865751026, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_Offset.x
-      value: -59.24935
+      value: -58.91945
       objectReference: {fileID: 0}
     - target: {fileID: 3603909498865751026, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: m_Offset.y
-      value: -6.4268236
+      value: -6.5203867
       objectReference: {fileID: 0}
     - target: {fileID: 5956362391316643823, guid: e52eefefb1739e1448acd4d64ccc7565, type: 3}
       propertyPath: roomID
@@ -141619,6 +141623,14 @@ PrefabInstance:
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 1822917035}
+    - target: {fileID: 1375352090482533055, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: cooldownDurationKick
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375352090482533055, guid: 75468336585ee1f46b968d9358de8514, type: 3}
+      propertyPath: cooldownDurationFireBall
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1477413262731674427, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.45
