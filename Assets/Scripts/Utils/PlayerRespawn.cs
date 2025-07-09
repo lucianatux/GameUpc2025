@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    private Vector3 currentCheckpoint;
-    private Vector3 initialSpawn;
+    private Vector3 _currentCheckpoint;
+    private Vector3 _initialSpawn;
     AbilityController abilityController;
     private void Start()
     {
         // Guardamos el primer spawn (inicio del nivel)
-        initialSpawn = GameObject.FindWithTag("SpawnPoint").transform.position;
-        transform.position = initialSpawn;
+        _initialSpawn = GameObject.FindWithTag("SpawnPoint").transform.position;
+        transform.position = _initialSpawn;
     }
     public void Respawn()
     {
@@ -23,7 +23,7 @@ public class PlayerRespawn : MonoBehaviour
         }
         else
         {
-            respawnPoint = initialSpawn;
+            respawnPoint = _initialSpawn;
         }
 
         transform.position = respawnPoint;
@@ -41,11 +41,11 @@ public class PlayerRespawn : MonoBehaviour
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
-        rb.bodyType = RigidbodyType2D.Dynamic;
+         rb.bodyType = RigidbodyType2D.Dynamic;
 
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
-        col.enabled = true;
+         col.enabled = true;
 
         PlayerInputHandler playerInputHandler = GetComponent<PlayerInputHandler>();
         if (playerInputHandler != null) playerInputHandler.enabled = true;

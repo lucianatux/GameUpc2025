@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 2665312949056603336}
   - component: {fileID: 3060389551156672729}
   - component: {fileID: 5472881973771020890}
-  - component: {fileID: 3997592975460815952}
   - component: {fileID: 818908108587131458}
   m_Layer: 6
   m_Name: player
@@ -393,18 +392,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorController: {fileID: 3060389551156672729}
   playerHealth: {fileID: -487413458064216045}
---- !u!114 &3997592975460815952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877613240629887599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec7a4f9e82df2f45b928a07ddb5ee94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &818908108587131458
 MonoBehaviour:
   m_ObjectHideFlags: 0
