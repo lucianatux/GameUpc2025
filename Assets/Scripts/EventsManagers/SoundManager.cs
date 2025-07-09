@@ -52,12 +52,8 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         // Play background music on loop at game start
-        if (musicSource != null && backgroundMusic != null)
-        {
-            musicSource.clip = backgroundMusic;
-            musicSource.loop = true;
-            musicSource.Play();
-        }
+        PlayBackgroundMusic();
+
         // Subscribe to player-related events (Observer Pattern)
         if (PlayerEventsManager.Instance != null)
         {
@@ -104,6 +100,7 @@ public class SoundManager : MonoBehaviour
         {
             RoomManager.Instance.OnRoomEntered += HandleRoomEnteredMusic;
             RoomManager.Instance.OnRoomExited += HandleRoomExitedMusic;
+            RoomManager.Instance.OnRoomCleared += HandleRoomClearedMusic; 
         }
 
     }
@@ -159,6 +156,8 @@ public class SoundManager : MonoBehaviour
         {
             RoomManager.Instance.OnRoomEntered -= HandleRoomEnteredMusic;
             RoomManager.Instance.OnRoomExited -= HandleRoomExitedMusic;
+            RoomManager.Instance.OnRoomCleared -= HandleRoomClearedMusic; 
+
         }
 
     }
@@ -312,4 +311,27 @@ public class SoundManager : MonoBehaviour
             musicSource.Play();
         }
     }
+
+    private void HandleRoomClearedMusic(int roomID)
+    {
+        Debug.Log("Room cleared, volviendo a música de pasillo");
+        PlayBackgroundMusic();
+    }
+
+    public void PlayBackgroundMusic()
+    {
+        if (musicSource != null && backgroundMusic != null)
+        {
+            musicSource.Stop();
+            musicSource.clip = backgroundMusic;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Background music clip or musicSource not assigned!");
+        }
+    }
+
+
 }
