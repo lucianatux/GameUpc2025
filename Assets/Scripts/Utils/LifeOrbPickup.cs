@@ -7,7 +7,7 @@ using UnityEngine;
 public class LifeOrbPickup : MonoBehaviour
 {
     [Tooltip("Amount of health to restore to the player.")]
-    public int healAmount = 25;
+    public int healAmount = 15;
 
     [Tooltip("Optional effect prefab to instantiate when healing.")]
     public GameObject healEffect;

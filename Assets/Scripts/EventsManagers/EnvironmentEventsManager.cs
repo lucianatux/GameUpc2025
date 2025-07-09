@@ -25,6 +25,12 @@ public class EnvironmentEventsManager : MonoBehaviour
     public event Action OnAcidRiverSplash;
     public event Action OnEndPlayground;
     public event Action OnEndMiddlePart;
+    public event Action OnVictoryMusic;
+    public event Action OnGameOverMusic;
+    public event Action OnBattleMusic;
+    public event Action OnBattleBossMusic;
+
+
 
     private void Awake()
     {
@@ -50,4 +56,8 @@ public class EnvironmentEventsManager : MonoBehaviour
     public void LevelComplete() => OnLevelComplete?.Invoke();
     public void EndPlayground() => OnEndPlayground?.Invoke();
     public void EndMiddlePart() => OnEndMiddlePart?.Invoke();
+    public void VictoryMusic() => OnVictoryMusic?.Invoke();
+    public void GameOverMusic() => OnGameOverMusic?.Invoke();
+    public void BattleMusic() => OnBattleMusic?.Invoke();
+    public void BattleBossMusic() => OnBattleBossMusic?.Invoke();
 }

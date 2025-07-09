@@ -18,6 +18,11 @@ public class BossDeathHandler : MonoBehaviour
         {
             winScreen.SetActive(true);
             Debug.Log("Pantalla de victoria activada.");
+
+            if (EnvironmentEventsManager.Instance != null)
+            {
+                EnvironmentEventsManager.Instance.VictoryMusic();
+            }
         }
         else
         {

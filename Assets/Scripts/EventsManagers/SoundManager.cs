@@ -11,7 +11,13 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;   // Efectos
     [SerializeField] private AudioSource musicSource;   // Música
-    [SerializeField] private AudioClip backgroundMusic;  // música
+    [SerializeField] private AudioClip backgroundMusic;  // música pasillos
+    [SerializeField] private AudioClip victoryMusicClip; 
+    [SerializeField] private AudioClip battleMusicClip; //música rooms
+    [SerializeField] private AudioClip battleBossMusicClip; //música battle boss
+    [SerializeField] private AudioClip gameoverMusicClip;
+
+
 
     // Player Clips
     public AudioClip playerCroakClip;
@@ -89,7 +95,17 @@ public class SoundManager : MonoBehaviour
         env.OnDoorClose += PlayDoorClose;
         env.OnDoorOpen += PlayDoorOpen;
         env.OnLevelComplete += PlayLevelComplete;
+        env.OnVictoryMusic += PlayVictoryMusic;
+        env.OnGameOverMusic += PlayGameOverMusic;
+        env.OnBattleMusic += PlayBattleMusic;
+        env.OnBattleBossMusic += PlayBattleBossMusic;
         }
+        if (RoomManager.Instance != null)
+        {
+            RoomManager.Instance.OnRoomEntered += HandleRoomEnteredMusic;
+            RoomManager.Instance.OnRoomExited += HandleRoomExitedMusic;
+        }
+
     }
 
     void OnDestroy()
@@ -134,7 +150,17 @@ public class SoundManager : MonoBehaviour
         env.OnDoorClose -= PlayDoorClose;
         env.OnDoorOpen -= PlayDoorOpen;
         env.OnLevelComplete -= PlayLevelComplete;
+        env.OnVictoryMusic -= PlayVictoryMusic;
+        env.OnGameOverMusic -= PlayGameOverMusic;
+        env.OnBattleMusic -= PlayBattleMusic;
+        env.OnBattleBossMusic -= PlayBattleBossMusic;
         }
+        if (RoomManager.Instance != null)
+        {
+            RoomManager.Instance.OnRoomEntered -= HandleRoomEnteredMusic;
+            RoomManager.Instance.OnRoomExited -= HandleRoomExitedMusic;
+        }
+
     }
 
     // Métodos por cada clip
@@ -198,4 +224,92 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlayVictoryMusic()
+    {
+        if (musicSource != null && victoryMusicClip != null)
+        {
+            musicSource.Stop();
+            musicSource.clip = victoryMusicClip;
+            musicSource.loop = true; 
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Victory music clip or musicSource not assigned!");
+        }
+    }
+
+    public void PlayGameOverMusic()
+    {
+        if (musicSource != null && gameoverMusicClip != null)
+        {
+            musicSource.Stop();
+            musicSource.clip = gameoverMusicClip;
+            musicSource.loop = true; 
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("GameOver music clip or musicSource not assigned!");
+        }
+    }
+
+    public void PlayBattleMusic()
+    {
+        if (musicSource != null && battleMusicClip != null)
+        {
+            musicSource.Stop();
+            musicSource.clip = battleMusicClip;
+            musicSource.loop = true; 
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Battle music clip or musicSource not assigned!");
+        }
+    }
+
+    public void PlayBattleBossMusic()
+    {
+        if (musicSource != null && battleBossMusicClip != null)
+        {
+            musicSource.Stop();
+            musicSource.clip = battleBossMusicClip;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Battle Boss music clip or musicSource not assigned!");
+        }
+    }
+
+    private void HandleRoomEnteredMusic(int roomID)
+    {
+        if (roomID == 13)
+        {
+            if (EnvironmentEventsManager.Instance != null)
+            {
+                EnvironmentEventsManager.Instance.BattleBossMusic();
+            }
+        }
+        else
+        {
+            if (EnvironmentEventsManager.Instance != null)
+            {
+                EnvironmentEventsManager.Instance.BattleMusic();
+            }
+        }
+    }
+
+    private void HandleRoomExitedMusic(int roomID)
+    {
+        if (musicSource != null && backgroundMusic != null)
+        {
+            musicSource.Stop();
+            musicSource.clip = backgroundMusic;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+    }
 }
