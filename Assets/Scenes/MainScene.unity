@@ -28107,15 +28107,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -2
-    y: -1.5000001
-    width: 4
-    height: 3.0000002
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -33844,6 +33844,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2080720568984633271, guid: 8471811e03256cf49836477a47ab0332, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1635814186}
+    - targetCorrespondingSourceObject: {fileID: 2080720568984633271, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1635814187}
   m_SourcePrefab: {fileID: 100100000, guid: 8471811e03256cf49836477a47ab0332, type: 3}
 --- !u!4 &632465618 stripped
 Transform:
@@ -104156,6 +104159,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 2063466309}
+--- !u!114 &1635814187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635814185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f858f8c46f2a545a8545bd4bd026c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactHit: {fileID: 4495560292718922252, guid: 380dd6544f0485a439b44b3ec5963a21, type: 3}
 --- !u!1 &1637215015
 GameObject:
   m_ObjectHideFlags: 0
