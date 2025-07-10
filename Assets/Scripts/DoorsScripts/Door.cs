@@ -6,6 +6,8 @@ public class Door : MonoBehaviour
 {
     [Header("Keys")]
     [SerializeField] private List<Key> requiredKeys;
+    public List<Key> RequiredKeys => requiredKeys;
+
 
     [Header("Components")]
     [SerializeField] private Collider2D blockingCollider;

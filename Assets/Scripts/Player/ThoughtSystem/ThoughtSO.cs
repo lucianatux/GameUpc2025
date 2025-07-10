@@ -9,5 +9,4 @@ public class ThoughtSO : ScriptableObject
     public string text;
     public float duration = 3f;
     public bool destroyAfterShown = true; 
-
 }

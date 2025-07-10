@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Est\xE1 cerrada! Necesito conseguir la llave..."
   duration: 3
-  destroyAfterShown: 1
+  destroyAfterShown: 0

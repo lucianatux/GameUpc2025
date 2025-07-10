@@ -131,6 +131,7 @@ public class PlayerHealth : LifeSystem
         if (respawn != null)
             respawn.Respawn();
     }
+
     public override void Heal(int healAmount)
     {
         canHeal = true;
@@ -138,5 +139,11 @@ public class PlayerHealth : LifeSystem
 
         PlayerEventsManager.Instance?.PlayerHeal(); // Lanza el evento para actualizar UI y efectos
     }
+
+    public bool HealthIsFull()
+    {
+        return currentHealth >= maxHealth; 
+    }
+
 
 }
