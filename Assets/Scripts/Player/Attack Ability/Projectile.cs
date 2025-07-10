@@ -36,7 +36,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
 
     private IEnumerator EnableCollision()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         _col.enabled = true;
     }
 
