@@ -33758,6 +33758,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1777845583}
+    - target: {fileID: 7942442399093269778, guid: 8471811e03256cf49836477a47ab0332, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 2063466309}
     - target: {fileID: 8336032641109631583, guid: 8471811e03256cf49836477a47ab0332, type: 3}
       propertyPath: isBoss
       value: 1
@@ -33769,10 +33773,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2080720568984633271, guid: 8471811e03256cf49836477a47ab0332, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1635814186}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8471811e03256cf49836477a47ab0332, type: 3}
 --- !u!4 &632465618 stripped
 Transform:
@@ -104080,24 +104081,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6459507837004757928, guid: 9dae700b103da5b429906e991ec89794, type: 3}
   m_PrefabInstance: {fileID: 1069766375}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1635814185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2080720568984633271, guid: 8471811e03256cf49836477a47ab0332, type: 3}
-  m_PrefabInstance: {fileID: 631421729}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1635814186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635814185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08cee6f4ced0ab341a7578b1dc68e26a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winScreen: {fileID: 2063466309}
 --- !u!1 &1637215015
 GameObject:
   m_ObjectHideFlags: 0
