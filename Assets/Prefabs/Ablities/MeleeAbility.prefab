@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4413309930856299110}
   m_Layer: 7
   m_Name: MeleeAbility
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
