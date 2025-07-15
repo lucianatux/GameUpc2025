@@ -18,29 +18,39 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    void TogglePause()
+    public void TogglePause()
     {
         isPaused = !isPaused;
 
         if (isPaused)
-        {
-            Time.timeScale = 0f;
-
-            if (pauseTextUI != null)
-                pauseTextUI.SetActive(true);
-
-            if (soundManager != null)
-                soundManager.PauseMusic();
-        }
+            Pause();
         else
-        {
-            Time.timeScale = 1f;
-
-            if (pauseTextUI != null)
-                pauseTextUI.SetActive(false);
-
-            if (soundManager != null)
-                soundManager.ResumeMusic();
-        }
+            Resume();
     }
+
+
+    public void Pause()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+
+        if (pauseTextUI != null)
+            pauseTextUI.SetActive(true);
+
+        if (soundManager != null)
+            soundManager.PauseMusic();
+    }
+
+    public void Resume()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+
+        if (pauseTextUI != null)
+            pauseTextUI.SetActive(false);
+
+        if (soundManager != null)
+            soundManager.ResumeMusic();
+    }
+
 }
