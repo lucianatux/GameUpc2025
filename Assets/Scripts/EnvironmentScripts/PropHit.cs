@@ -26,6 +26,7 @@ public class PropHit : MonoBehaviour
             if (hitImpact != null) Instantiate(hitImpact);
 
             anim.SetTrigger("hit");
+            EnvironmentEventsManager.Instance.BurguerHit(); 
         }
     }
 }

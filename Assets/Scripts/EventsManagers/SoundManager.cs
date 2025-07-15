@@ -47,6 +47,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip doorCloseClip;
     public AudioClip doorOpenClip;
     public AudioClip levelCompleteClip;
+    public AudioClip burguerHitClip;
 
   
     void Start()
@@ -90,6 +91,8 @@ public class SoundManager : MonoBehaviour
         env.OnTeratomaInteract += PlayTeratomaInteract;
         env.OnDoorClose += PlayDoorClose;
         env.OnDoorOpen += PlayDoorOpen;
+        env.OnBurguerHit += PlayBurguerHit;
+
         env.OnLevelComplete += PlayLevelComplete;
         env.OnVictoryMusic += PlayVictoryMusic;
         env.OnGameOverMusic += PlayGameOverMusic;
@@ -146,6 +149,8 @@ public class SoundManager : MonoBehaviour
         env.OnTeratomaInteract -= PlayTeratomaInteract;
         env.OnDoorClose -= PlayDoorClose;
         env.OnDoorOpen -= PlayDoorOpen;
+        env.OnBurguerHit -= PlayBurguerHit;
+
         env.OnLevelComplete -= PlayLevelComplete;
         env.OnVictoryMusic -= PlayVictoryMusic;
         env.OnGameOverMusic -= PlayGameOverMusic;
@@ -188,6 +193,7 @@ public class SoundManager : MonoBehaviour
     void PlayTeratomaInteract() => PlayClip(teratomaInteractClip);
     void PlayDoorClose() => PlayClip(doorCloseClip);
     void PlayDoorOpen() => PlayClip(doorOpenClip);
+    void PlayBurguerHit() => PlayClip(burguerHitClip);
     void PlayLevelComplete() => PlayClip(levelCompleteClip);
 
     /// Plays the given AudioClip once through the main audio source.

@@ -29,7 +29,7 @@ public class EnvironmentEventsManager : MonoBehaviour
     public event Action OnGameOverMusic;
     public event Action OnBattleMusic;
     public event Action OnBattleBossMusic;
-
+    public event Action OnBurguerHit;
 
 
     private void Awake()
@@ -53,6 +53,7 @@ public class EnvironmentEventsManager : MonoBehaviour
     public void TeratomaInteract() => OnTeratomaInteract?.Invoke();
     public void DoorClose() => OnDoorClose?.Invoke();
     public void DoorOpen() => OnDoorOpen?.Invoke();
+    public void BurguerHit() => OnBurguerHit?.Invoke();
     public void LevelComplete() => OnLevelComplete?.Invoke();
     public void EndPlayground() => OnEndPlayground?.Invoke();
     public void EndMiddlePart() => OnEndMiddlePart?.Invoke();
