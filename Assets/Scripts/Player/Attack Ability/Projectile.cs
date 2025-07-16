@@ -44,6 +44,7 @@ public class Projectile : MonoBehaviour   // This script handles the behavior of
     {
         if (collision.CompareTag("Room")) return;
         Vector2 hitPoint = collision.ClosestPoint(transform.position);
+        
         if (impactEffect != null && canHitWalls)   // If there's an impact effect assigned, spawn it at the projectile's current position.
         {
             Instantiate(impactEffect, hitPoint, Quaternion.identity);
