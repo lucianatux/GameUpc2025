@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 636a110dc2aa2084aa4be740e31f70be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6581f9d7d867ca6449b80c17a79d2119, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8167,7 +8167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.13
+      value: -8.130001
       objectReference: {fileID: 0}
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8183,15 +8183,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4227489567265178072, guid: bc0910678a673aa4098af21b343d4048, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -101928,30 +101928,30 @@ MonoBehaviour:
   battleMusicClip: {fileID: 8300000, guid: e95e31dec52cc6a4aaae8735ff6b8a98, type: 3}
   battleBossMusicClip: {fileID: 8300000, guid: f425c10896e1fa64085c3d42e196869d, type: 3}
   gameoverMusicClip: {fileID: 8300000, guid: cf8e3c3b214c5de409fb2643891434e7, type: 3}
-  playerCroakClip: {fileID: 8300000, guid: 6bf36fcb1b1cba24ab360918686442d4, type: 3}
-  playerDamageClip: {fileID: 8300000, guid: 91dc6b60647bee54c90f18aa240e4bc4, type: 3}
-  playerKickClip: {fileID: 8300000, guid: c3c16969e022a4346bcaddb6899ea971, type: 3}
-  playerFireballClip: {fileID: 8300000, guid: 3e82106e3db935248af5a93b47496642, type: 3}
-  playerHealClip: {fileID: 8300000, guid: eb17c0cb23a852f4dac19535564fa341, type: 3}
-  enemyDefeatedClip: {fileID: 8300000, guid: 134f2ce016c65b2499a92dd75b091c78, type: 3}
-  enemyDamagedClip: {fileID: 8300000, guid: 2f54f39e561490b4194557c808636f7c, type: 3}
-  enemySwordAttackClip: {fileID: 8300000, guid: e0821ee3876beaf4887475a97a111128, type: 3}
-  enemySodaAttackClip: {fileID: 8300000, guid: 2e662446d8190674ebbd6a28766810f8, type: 3}
-  bossCherryBombsClip: {fileID: 8300000, guid: 833a097cddcce024bb7c92cd47bfed91, type: 3}
-  bossChargeClip: {fileID: 8300000, guid: c52af519f8af87847b315551eff87af2, type: 3}
-  bossDamagedClip: {fileID: 8300000, guid: e32aab0eb4c58f04a82221b103eed5f3, type: 3}
-  bossDefeatedClip: {fileID: 8300000, guid: abb9483440d298d4bac3875159bb6a95, type: 3}
-  geyserEruptClip: {fileID: 8300000, guid: f530350c77105554187ef3449a70338d, type: 3}
-  acidRiverSplashClip: {fileID: 8300000, guid: b81827f476b69c947976461626db24c2, type: 3}
-  acidRiverFlowClip: {fileID: 8300000, guid: 5ddebfafc773b064b9ec6bf54747be82, type: 3}
-  keyCollectedClip: {fileID: 8300000, guid: d6ae63fa85d711b4188c56a9095c76aa, type: 3}
-  keyUsedClip: {fileID: 8300000, guid: 87688422734ddc14884fdb2715940d04, type: 3}
-  pepperCollectedClip: {fileID: 8300000, guid: f502388b03f475f43b4828e52383430c, type: 3}
-  teratomaInteractClip: {fileID: 8300000, guid: 0779540162df69a479346d2823a9066d, type: 3}
-  doorCloseClip: {fileID: 8300000, guid: 9806bf5c653082b47b319314cbb4bec5, type: 3}
-  doorOpenClip: {fileID: 8300000, guid: c195e9c1af0ac6f42a343263208647cb, type: 3}
-  levelCompleteClip: {fileID: 8300000, guid: 7ab3bcd917c7c4f489a39c1d92ff0c3d, type: 3}
-  burguerHitClip: {fileID: 8300000, guid: 117e9d410f41bb2459a9662f55ca947d, type: 3}
+  playerCroakSound: {fileID: 11400000, guid: b3bd19ea6e2b1a745bd31f1c315496bc, type: 2}
+  playerDamageSound: {fileID: 11400000, guid: b66b4b4b060e0ff478df72ebb11e8aaa, type: 2}
+  playerKickSound: {fileID: 11400000, guid: 5c96afd1381b88a4f987f598ebbf2200, type: 2}
+  playerFireballSound: {fileID: 11400000, guid: fb9d7fc778144004f9cd3f62d0976544, type: 2}
+  playerHealSound: {fileID: 11400000, guid: 8bdcb40d60b254242afe1833ee7eb75d, type: 2}
+  enemyDefeatedSound: {fileID: 11400000, guid: 9f06a1134d91ce041b5b4813d8a904c5, type: 2}
+  enemyDamagedSound: {fileID: 11400000, guid: 1c255366442aad1489e2614216f46182, type: 2}
+  enemySwordAttackSound: {fileID: 11400000, guid: a7b6d258fca85f3458b8b29fb2a6410d, type: 2}
+  enemySodaAttackSound: {fileID: 11400000, guid: d2adfb34224741f4bb944fb9885709ae, type: 2}
+  bossCherryBombsSound: {fileID: 11400000, guid: a48a46d34e7d312418de49f89fa7d118, type: 2}
+  bossChargeSound: {fileID: 11400000, guid: 319cb58e9775c1f4aabba76dee371b65, type: 2}
+  bossDamagedSound: {fileID: 11400000, guid: 73b04a2eafc8eda48805e2880c2f5a1a, type: 2}
+  bossDefeatedSound: {fileID: 11400000, guid: 796f49c9676e33049a9c512012757772, type: 2}
+  geyserEruptSound: {fileID: 11400000, guid: 72bb58cf6ca62354a8696d20fe3aacce, type: 2}
+  acidRiverSplashSound: {fileID: 11400000, guid: 14bec9ea8e82dfc4fadd945c49594709, type: 2}
+  acidRiverFlowSound: {fileID: 11400000, guid: b12cfc46f98e9194dbe7f7ce7378b8a7, type: 2}
+  keyCollectedSound: {fileID: 11400000, guid: c46075e4755e773489351660d3ead739, type: 2}
+  keyUsedSound: {fileID: 11400000, guid: 8155f839345796f4887b2743e98d210f, type: 2}
+  pepperCollectedSound: {fileID: 11400000, guid: 8c492c51d7711ef45afbe090df4fc220, type: 2}
+  teratomaInteractSound: {fileID: 11400000, guid: 932242ef78cdd4a43a0c3daa5993f18b, type: 2}
+  doorCloseSound: {fileID: 11400000, guid: 09d13b1c0c2e4054590b1aa744c9aab4, type: 2}
+  doorOpenSound: {fileID: 11400000, guid: dd373b963ee8f9442b288bbe94c77734, type: 2}
+  levelCompleteSound: {fileID: 11400000, guid: fa4ee1c5e8ff7df4c971d89f5874e0ae, type: 2}
+  burguerHitSound: {fileID: 11400000, guid: 5cf087aa598d593438a0618dac844f3c, type: 2}
 --- !u!82 &1320272657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180217,17 +180217,17 @@ SceneRoots:
   - {fileID: 1150211841}
   - {fileID: 1320272654}
   - {fileID: 23883988}
+  - {fileID: 394498928}
+  - {fileID: 847772390}
+  - {fileID: 1095539062}
+  - {fileID: 943861642}
   - {fileID: 1051563508}
   - {fileID: 816777695}
+  - {fileID: 306643080}
   - {fileID: 158114950}
   - {fileID: 912954048}
   - {fileID: 1429473107}
   - {fileID: 403442759}
   - {fileID: 1389966422}
   - {fileID: 2111573322}
-  - {fileID: 847772390}
-  - {fileID: 306643080}
   - {fileID: 748043771}
-  - {fileID: 1095539062}
-  - {fileID: 943861642}
-  - {fileID: 394498928}
