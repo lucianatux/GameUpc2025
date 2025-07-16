@@ -291,19 +291,29 @@ public class SoundManager : MonoBehaviour
 
     private void HandleRoomEnteredMusic(int roomID)
     {
-        if (roomID == 13)
+            // Verificamos si hay enemigos vivos en la sala actual
+        if (RoomManager.Instance != null && RoomManager.Instance.currentEnemies > 0)
         {
-            if (EnvironmentEventsManager.Instance != null)
+            // Si es la sala del boss
+            if (roomID == 13)
             {
-                EnvironmentEventsManager.Instance.BattleBossMusic();
+                if (EnvironmentEventsManager.Instance != null)
+                {
+                    EnvironmentEventsManager.Instance.BattleBossMusic();
+                }
+            }
+            else
+            {
+                if (EnvironmentEventsManager.Instance != null)
+                {
+                    EnvironmentEventsManager.Instance.BattleMusic();
+                }
             }
         }
         else
         {
-            if (EnvironmentEventsManager.Instance != null)
-            {
-                EnvironmentEventsManager.Instance.BattleMusic();
-            }
+            Debug.Log($"No hay enemigos vivos en la room {roomID}, no se reproduce música de batalla.");
+            // Simplemente seguimos con la música de fondo actual
         }
     }
 
