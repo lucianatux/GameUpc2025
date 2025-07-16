@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 366a05fac1fa32a41b4e41cb07d704ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 636a110dc2aa2084aa4be740e31f70be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -180087,7 +180087,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -487413458064216045, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: maxHealth
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 877613240629887599, guid: 75468336585ee1f46b968d9358de8514, type: 3}
       propertyPath: m_Name
