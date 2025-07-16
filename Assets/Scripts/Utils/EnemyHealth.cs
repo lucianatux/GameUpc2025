@@ -11,6 +11,8 @@ public class EnemyHealth : LifeSystem
     [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.2f; // Chance to drop the orb
 
     // === Components ===
+    [SerializeField] private HealthBarUI healthUI;
+
     private Rigidbody2D rb;
 
     private Collider2D col;
@@ -43,6 +45,10 @@ public class EnemyHealth : LifeSystem
 
         enemyAI = GetComponent<EnemyAI>();
         if (enemyAI == null) Debug.LogError("EnemyAI script not found on Enemy.");
+        
+        if (healthUI != null)
+            healthUI.Initialize(maxHealth);
+
     }
 
     /// <summary>
@@ -67,6 +73,10 @@ public class EnemyHealth : LifeSystem
         {
             //animator.SetTrigger("damage"); // Damage animation
         }
+        
+        if (healthUI != null)
+            healthUI.SetHealth(currentHealth);
+
         EnemiesEventsManager.Instance?.EnemyDamaged(); //Notify Enemies Events Manager
     }
 
