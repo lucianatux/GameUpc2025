@@ -22,18 +22,18 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1345562423, guid: 71565723271931c438b5701d70ab5013, type: 3}
-    - time: 0.125
+    - time: 0.1
       value: {fileID: -807326325, guid: 71565723271931c438b5701d70ab5013, type: 3}
-    - time: 0.25
+    - time: 0.2
       value: {fileID: 52513305, guid: 71565723271931c438b5701d70ab5013, type: 3}
-    - time: 0.375
+    - time: 0.3
       value: {fileID: -1283671101, guid: 71565723271931c438b5701d70ab5013, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 8
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,7 +79,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.375
+  - time: 0.3
     functionName: ResetCooldown
     data: 
     objectReferenceParameter: {fileID: 0}
