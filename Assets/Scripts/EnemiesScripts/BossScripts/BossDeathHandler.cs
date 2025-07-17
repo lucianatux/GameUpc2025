@@ -10,6 +10,7 @@ public class BossDeathHandler : MonoBehaviour
 
     [Header("Victoria")]
     [SerializeField] private GameObject winScreen;
+    [SerializeField] private float sendToMenuDelay = 5f;
 
     private bool bossActivated = false;
 
@@ -62,7 +63,7 @@ public class BossDeathHandler : MonoBehaviour
 
     private IEnumerator SendBackToMenu()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(sendToMenuDelay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 
     }
