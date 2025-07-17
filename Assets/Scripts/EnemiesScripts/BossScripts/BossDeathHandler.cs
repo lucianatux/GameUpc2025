@@ -30,6 +30,9 @@ public class BossDeathHandler : MonoBehaviour
     public void OnBossDefeated()
     {
         bossUI?.Hide();
+         // Reproduce música de victoria
+    if (EnvironmentEventsManager.Instance != null)
+        EnvironmentEventsManager.Instance.VictoryMusic();
         StartCoroutine(ActivateWinScreenWithDelay());
     }
 
