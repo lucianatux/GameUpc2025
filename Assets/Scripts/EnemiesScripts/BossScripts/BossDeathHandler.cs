@@ -30,16 +30,23 @@ public class BossDeathHandler : MonoBehaviour
     public void OnBossDefeated()
     {
         bossUI?.Hide();
-         // Reproduce música de victoria
-    if (EnvironmentEventsManager.Instance != null)
-        EnvironmentEventsManager.Instance.VictoryMusic();
         StartCoroutine(ActivateWinScreenWithDelay());
     }
 
     private IEnumerator ActivateWinScreenWithDelay()
     {
         yield return new WaitForSeconds(3f);
+        if (EnvironmentEventsManager.Instance != null)
+            EnvironmentEventsManager.Instance.VictoryMusic();
+
         if (winScreen != null)
+        {
             winScreen.SetActive(true);
+            Debug.Log("Pantalla de victoria activada.");
+        }
+        else
+        {
+            Debug.LogWarning("No se asignó winScreen en el inspector.");
+        }
     }
 }

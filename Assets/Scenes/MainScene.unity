@@ -6760,6 +6760,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -50.496166
@@ -7407,6 +7415,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.449511
@@ -7510,6 +7526,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
@@ -13245,6 +13269,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (4)
@@ -13872,6 +13904,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8926849
@@ -27834,6 +27874,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (1)
@@ -34463,6 +34511,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -69.627235
@@ -36610,8 +36666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.215515, y: 0}
-  m_SizeDelta: {x: -40.3854, y: 0}
+  m_AnchoredPosition: {x: 2.4885864, y: 0}
+  m_SizeDelta: {x: -4.9772, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &724980782
 MonoBehaviour:
@@ -41734,7 +41790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5568628, g: 0.13333334, b: 0.13333334, a: 1}
+  m_Color: {r: 0.09433961, g: 0.026254892, b: 0.026254892, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -47611,6 +47667,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.740803
@@ -88525,6 +88589,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (8)
@@ -88881,6 +88953,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
@@ -96379,6 +96459,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy
@@ -102310,6 +102398,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (3)
@@ -103387,6 +103483,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.9471836
@@ -103807,6 +103911,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
@@ -104475,6 +104587,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (5)
@@ -104544,6 +104664,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
@@ -105076,6 +105204,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy
@@ -105283,6 +105419,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679960022692193404, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
@@ -110662,6 +110806,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -64.790695
@@ -158787,6 +158939,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (7)
@@ -158804,6 +158964,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.6129646
@@ -159339,6 +159507,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.397007
@@ -178367,6 +178543,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy (6)
@@ -178384,6 +178568,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -85.63787
@@ -180145,6 +180337,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945841023724819967, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378838936790032193, guid: 86fa8151647a45142a2f7ca335afec93, type: 3}
       propertyPath: m_Name
       value: chizitoEnemy
@@ -180162,6 +180362,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285585493}
     m_Modifications:
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065666912138117375, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2841046637340863558, guid: 9b1b6031d0b4e9e48b2dc5d87bc9e18c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.1
