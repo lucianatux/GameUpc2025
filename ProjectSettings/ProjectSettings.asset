@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Cat Sofa Winter
   productName: Ricardo. El que come y no convida tiene un sapo en la barriga
-  defaultCursor: {fileID: 2800000, guid: 3687c3415c6d7be4fb0e4fd52c7058bf, type: 3}
+  defaultCursor: {fileID: 2800000, guid: e643588ecb2614747ad2cdf777e62a64, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
