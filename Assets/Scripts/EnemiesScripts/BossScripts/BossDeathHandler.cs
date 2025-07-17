@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossDeathHandler : MonoBehaviour
 {
@@ -42,11 +43,28 @@ public class BossDeathHandler : MonoBehaviour
         if (winScreen != null)
         {
             winScreen.SetActive(true);
+
+
             Debug.Log("Pantalla de victoria activada.");
         }
         else
         {
             Debug.LogWarning("No se asignó winScreen en el inspector.");
         }
+
+        StartCoroutine(SendBackToMenu());
+
     }
+
+
+
+
+
+    private IEnumerator SendBackToMenu()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+    }
+
 }

@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseTextUI; // Texto UI que dice "Juego en pausa"
     [SerializeField] private SoundManager soundManager; // Referencia al SoundManager
 
+    [SerializeField] private GameObject PauseMenu;
     private bool isPaused = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
         }
@@ -29,13 +32,26 @@ public class PauseManager : MonoBehaviour
     }
 
 
+    public void Menu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+        //Debug.Log("Saliste del juego");
+    }
+    
     public void Pause()
     {
         isPaused = true;
         Time.timeScale = 0f;
 
-        if (pauseTextUI != null)
-            pauseTextUI.SetActive(true);
+        PauseMenu.SetActive(true);
+
+        // if (pauseTextUI != null)
+        // pauseTextUI.SetActive(true);
 
         if (soundManager != null)
             soundManager.PauseMusic();
@@ -46,8 +62,11 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f;
 
-        if (pauseTextUI != null)
-            pauseTextUI.SetActive(false);
+        PauseMenu.SetActive(false);
+
+
+        // if (pauseTextUI != null)
+        //  pauseTextUI.SetActive(false);
 
         if (soundManager != null)
             soundManager.ResumeMusic();
