@@ -11,6 +11,9 @@ public class EnemyHealth : LifeSystem
     [SerializeField, Range(0f, 1f)] private float lifeOrbDropChance = 0.2f; // Chance to drop the orb
 
     // === Components ===
+    public float  MaxHealth => maxHealth;
+    public float CurrentHealth => currentHealth;
+
     [SerializeField] private HealthBarUI healthUI;
 
     private Rigidbody2D rb;
