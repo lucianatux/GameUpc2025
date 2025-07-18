@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5662b5ce73dec944b5f10ada163ad8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 10
+  attackRange: 7
   walkableLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2411dcf0369fd6249be4f139d943804c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 105
+  maxHealth: 150
   invulnerabilityTime: 0.2
   canHeal: 0
   lifeOrbPrefab: {fileID: 0}
@@ -1364,7 +1364,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

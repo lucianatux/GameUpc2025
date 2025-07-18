@@ -95,8 +95,7 @@ public class BombScript : MonoBehaviour
     private void FallingDamage()
     {
         Instantiate(fallPrefab, transform.position, Quaternion.identity);
-        int attackChoice = Random.Range(0, 2); // elige random entre 1 y 0
-                                               //segun el random anterior usa un ataque
+        int attackChoice = 1;
 
         switch (attackChoice)
         {

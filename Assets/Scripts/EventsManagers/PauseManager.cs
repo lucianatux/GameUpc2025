@@ -13,6 +13,17 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject PauseMenu;
     private bool isPaused = false;
 
+
+
+    public float pauseTime = 0.1f;  // Ajustalo según necesites
+
+    private IEnumerator Start()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(pauseTime);
+        Time.timeScale = 1f;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

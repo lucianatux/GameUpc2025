@@ -34333,10 +34333,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5300137128546354817, guid: 8471811e03256cf49836477a47ab0332, type: 3}
-      propertyPath: attackRange
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6147848477283111925, guid: 8471811e03256cf49836477a47ab0332, type: 3}
       propertyPath: playerTransform
       value: 
@@ -34353,10 +34349,6 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1777845583}
-    - target: {fileID: 7796154317694906645, guid: 8471811e03256cf49836477a47ab0332, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 7942442399093269778, guid: 8471811e03256cf49836477a47ab0332, type: 3}
       propertyPath: bossUI
       value: 
@@ -34365,10 +34357,6 @@ PrefabInstance:
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 2063466309}
-    - target: {fileID: 8336032641109631583, guid: 8471811e03256cf49836477a47ab0332, type: 3}
-      propertyPath: maxHealth
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -88096,6 +88084,7 @@ MonoBehaviour:
   pauseTextUI: {fileID: 1637215015}
   soundManager: {fileID: 1320272656}
   PauseMenu: {fileID: 558692830}
+  pauseTime: 0.1
 --- !u!4 &847772390
 Transform:
   m_ObjectHideFlags: 0
