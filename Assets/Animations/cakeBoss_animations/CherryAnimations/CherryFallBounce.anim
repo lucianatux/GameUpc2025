@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CherryFall
+  m_Name: CherryFallBounce
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,25 +20,33 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0.016666668
+    - time: 0
+      value: {fileID: 1538865218, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - time: 0.033333335
+      value: {fileID: 819745282, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - time: 0.11666667
+      value: {fileID: -829727982, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - time: 0.2
+      value: {fileID: -617754434, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - time: 0.26666668
       value: {fileID: 1428047917, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
-    - time: 0.13333334
+    - time: 0.38333333
       value: {fileID: 422883666, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.21666667
+    - time: 0.46666667
       value: {fileID: 706508363, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.33333334
-      value: {fileID: 1721120140, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.43333334
-      value: {fileID: 679769844, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
     - time: 0.5833333
+      value: {fileID: 1721120140, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+    - time: 0.68333334
+      value: {fileID: 679769844, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
+    - time: 0.8333333
       value: {fileID: 443655980, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.71666664
+    - time: 0.96666664
       value: {fileID: 1296263529, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.85
+    - time: 1.1
       value: {fileID: 609357297, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 0.98333335
+    - time: 1.2333333
       value: {fileID: -552312534, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
-    - time: 1.1333333
+    - time: 1.3833333
       value: {fileID: 1716897880, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
     attribute: m_Sprite
     path: 
@@ -62,6 +70,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
+    - {fileID: 1538865218, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - {fileID: 819745282, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - {fileID: -829727982, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
+    - {fileID: -617754434, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
     - {fileID: 1428047917, guid: 13e1b1da318684e409b1c191853566d6, type: 3}
     - {fileID: 422883666, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
     - {fileID: 706508363, guid: 632cfad7ee16f264199c1fb827bbbfab, type: 3}
@@ -77,12 +89,12 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.15
+    m_StopTime: 1.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -97,14 +109,21 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.53333336
+  - time: 0
+    functionName: StartChase
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6
     functionName: StopChase
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.8333333
+  - time: 0.96666664
     functionName: FallingDamage
     data: 
     objectReferenceParameter: {fileID: 0}

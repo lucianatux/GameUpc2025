@@ -196,11 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5662b5ce73dec944b5f10ada163ad8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 7
+  attackRange: 10
   walkableLayer:
     serializedVersion: 2
     m_Bits: 0
-  attackCooldown: 2
+  attackCooldown: 4
   bulletPrefab: {fileID: 0}
   weaponTransform: {fileID: 0}
   attackTimer: 0
@@ -293,6 +293,7 @@ MonoBehaviour:
   canHeal: 0
   lifeOrbPrefab: {fileID: 0}
   lifeOrbDropChance: 0
+  healthUI: {fileID: 0}
 --- !u!114 &7942442399093269778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08cee6f4ced0ab341a7578b1dc68e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossUI: {fileID: 0}
+  enemyHealth: {fileID: 8336032641109631583}
   winScreen: {fileID: 0}
+  sendToMenuDelay: 5
 --- !u!114 &388518689280418252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +404,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   closeSpeed: 5
   mediumSpeed: 7
-  farSpeed: 10
+  farSpeed: 15
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -682,7 +686,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   closeSpeed: 5
   mediumSpeed: 7
-  farSpeed: 10
+  farSpeed: 15
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -859,7 +863,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   closeSpeed: 5
   mediumSpeed: 7
-  farSpeed: 10
+  farSpeed: 15
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -1036,7 +1040,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   closeSpeed: 5
   mediumSpeed: 7
-  farSpeed: 10
+  farSpeed: 15
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -1213,7 +1217,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   closeSpeed: 5
   mediumSpeed: 7
-  farSpeed: 10
+  farSpeed: 15
   damage: 0
   fallPrefab: {fileID: 3864298482386872756, guid: ef59005897a26fd4789125007279f7d1, type: 3}
   explosionPrefab: {fileID: 3380004866022295596, guid: 92de42ceb42d92b4898f8df97efb834f, type: 3}
@@ -1378,7 +1382,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.2090589, y: 0.15}
-  m_Size: {x: 4.97, y: 6.51}
+  m_Size: {x: 6.34, y: 7.46}
   m_Direction: 0
 --- !u!50 &7495816930195022916
 Rigidbody2D:

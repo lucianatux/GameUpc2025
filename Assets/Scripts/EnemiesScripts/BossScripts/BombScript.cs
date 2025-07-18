@@ -17,7 +17,7 @@ public class BombScript : MonoBehaviour
 
     [SerializeField] private float closeSpeed = 5;
     [SerializeField] private float mediumSpeed = 7;
-    [SerializeField] private float farSpeed = 10;
+    [SerializeField] private float farSpeed = 14;
 
 
     private bool canChase;
@@ -30,12 +30,14 @@ public class BombScript : MonoBehaviour
 
     [Tooltip("Prefab instantiated when the bomb explodes.")]
     [SerializeField] private GameObject explosionPrefab;
-    
+
+    private Animator animator;
 
 
     //Set references and components
     private void Awake()
     {
+        animator = GetComponent<Animator>();    
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -67,14 +69,20 @@ public class BombScript : MonoBehaviour
         {
             agent.speed = closeSpeed;
         }
-        else if (GetDistanceToPlayer() >= 4 && GetDistanceToPlayer() < 13)
+        else if (GetDistanceToPlayer() >= 4 && GetDistanceToPlayer() < 10)
         {
             agent.speed = mediumSpeed;
         }
-        else if (GetDistanceToPlayer() >= 13)
+        else if (GetDistanceToPlayer() >= 10 && GetDistanceToPlayer() < 13)
         {
             agent.speed = farSpeed;
         }
+        else if (GetDistanceToPlayer() >= 13)
+        {
+            agent.speed = farSpeed + GetDistanceToPlayer();
+        }
+
+
         if (!canChase) return;
             
         agent.SetDestination(playerTransform.position);
@@ -87,11 +95,26 @@ public class BombScript : MonoBehaviour
     private void FallingDamage()
     {
         Instantiate(fallPrefab, transform.position, Quaternion.identity);
+        int attackChoice = Random.Range(0, 2); // elige random entre 1 y 0
+                                               //segun el random anterior usa un ataque
+
+        switch (attackChoice)
+        {
+            case 0:
+
+                break;
+            case 1:
+
+                animator.SetBool("Bounce", true);
+                break;
+        }
     }
 
     private void ExplosionDamage()
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        animator.SetBool("Bounce", false);
+
         StartCoroutine((BombExplosion(0f)));
     }
 
@@ -100,7 +123,10 @@ public class BombScript : MonoBehaviour
         agent.ResetPath();
         canChase = false;
     }
-
+    private void StartChase()
+    {
+        canChase = true;
+    }
     //Bomb Explosion CoRoutine
     private IEnumerator BombExplosion(float delay)
     {
