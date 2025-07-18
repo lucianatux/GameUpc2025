@@ -28553,10 +28553,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: -0.16666667
+    y: -0.16666666
+    width: 1.3333334
+    height: 1.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -28685,8 +28685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_AssetsPPU: 96
-  m_RefResolutionX: 2560
-  m_RefResolutionY: 1440
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
   m_CropFrame: 3
   m_GridSnapping: 2
   m_FilterMode: 0
