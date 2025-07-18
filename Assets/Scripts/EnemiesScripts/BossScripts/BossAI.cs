@@ -61,9 +61,13 @@ public class BossAI : EnemyAI
             Debug.Log("esta stunned");
             return;
         }
+
+
+
         Vector3 targetPosition = new Vector3(toChase.position.x, originalPosition.y, 0);
         Debug.DrawLine(transform.position, targetPosition, Color.red);
         agent.SetDestination(targetPosition);
+
 
         if (transform.position != targetPosition)
         {
@@ -72,10 +76,22 @@ public class BossAI : EnemyAI
         else
         {
             animator.SetBool("isWalking", false);
-
-
         }
+
+        if (toChase.position.x < transform.position.x)
+        {
+                animator.SetFloat("SpeedX", -1);
+        }
+        else
+        {
+                animator.SetFloat("SpeedX", 1);
+        }
+    
     }
+        public void UpdateSprite()
+        {
+        }
+
 
     /// <summary>
     /// Sends the boss back to its original Y position, keeping X unchanged.
