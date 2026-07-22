@@ -5,6 +5,8 @@ A **2D action-adventure** built in Unity (C#) by a team of four. Ricardo fights 
 **My role: Producer + Programmer.** I ran production end to end — boards, milestones, task breakdown and Git branch coordination — and programmed alongside the team.
 
 ---
+<img width="434" height="315" alt="rick" src="https://github.com/user-attachments/assets/b9d6c717-c3cf-4951-bd2e-0bb09cc92657" />
+
 
 ## Architecture
 
